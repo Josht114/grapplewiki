@@ -255,9 +255,14 @@
     if (p.kind === "technique") html += defenseBlock(p);
     const imgs = imageList(p.images);
     if (imgs.length) html += `<h2>Images</h2><div class="gallery">${imgs.map(im => `<figure><a href="${esc(im.src)}" target="_blank" rel="noopener"><img src="${esc(im.src)}" alt="${esc(im.caption || p.name)}" loading="lazy" referrerpolicy="no-referrer"></a>${im.caption ? `<figcaption>${wikiInline(im.caption)}</figcaption>` : ""}</figure>`).join("")}</div>`;
-    const yt = youtubeId(p.video);
-    if (yt) html += `<h2>Video</h2><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${yt}" title="Video" allowfullscreen loading="lazy"></iframe></div>`;
-    else if (safeUrl(p.video)) html += `<h2>Video</h2><p><a href="${esc(safeUrl(p.video))}" target="_blank" rel="noopener">${esc(p.video)}</a></p>`;
+    // one video URL per line: YouTube links embed, other links are listed
+    const vids = String(p.video || "").split(/\s+/).filter(Boolean);
+    const vidHtml = vids.map((u, i) => {
+      const yt = youtubeId(u);
+      if (yt) return `<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${yt}" title="Video ${i + 1}" allowfullscreen loading="lazy"></iframe></div>`;
+      return safeUrl(u) ? `<p><a href="${esc(safeUrl(u))}" target="_blank" rel="noopener">${esc(u)}</a></p>` : "";
+    }).join("");
+    if (vidHtml) html += `<h2>${vids.length > 1 ? "Videos" : "Video"}</h2>${vidHtml}`;
     if (p.notes) html += `<h2>Notes</h2><div class="notes">${wikiText(p.notes)}</div>`;
     return html;
   }
@@ -1108,7 +1113,7 @@
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense <small>(how to stop this move)</small><textarea name="defense" rows="3">${esc(p.defense || "")}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense steps <small>(one per line)</small><textarea name="defenseSteps" rows="4">${esc((p.defenseSteps || []).join("\n"))}</textarea></label>
           <label>Images <small>(one per line: ![Caption](https://image-url))</small><textarea name="images" rows="3">${esc((p.images || []).join("\n"))}</textarea></label>
-          <label>Video URL <small>(YouTube links embed)</small><input name="video" type="url" value="${esc(p.video || "")}"></label>
+          <label>Videos <small>(one URL per line; YouTube links embed)</small><textarea name="video" rows="2">${esc(p.video || "")}</textarea></label>
           <label>Notes <small>(link other pages with [[Page name]])</small><textarea name="notes" rows="6">${esc(p.notes || "")}</textarea></label>
           <p class="form-error" id="formError" role="alert" hidden></p>
           <div class="formbar">

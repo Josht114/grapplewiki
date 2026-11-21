@@ -58,10 +58,11 @@ Block the deep collar grip and keep the forearm off your neck.
 
 ## Video
 
+https://www.youtube.com/watch?v=ez-CO8kUpHA
 https://www.youtube.com/watch?v=T46fOa6N4eE
 
 ## Notes
 
-Video: "Paper Cutter Choke by Jeff Glover" (BJJ Fanatics).
+Videos: "BJJ: How To Do A Paper Cutter Choke From Side Control" (Evolve Mixed Martial Arts), and "Paper Cutter Choke by Jeff Glover" (BJJ Fanatics).
 
 Photos 1–3: Rob Hileman and Bernardo Faria, from the BJJ Fanatics article "The Paper Cutter Choke" (https://bjjfanatics.com/blogs/news/the-paper-cutter-choke). Photo 4: frame from "Stephen Pesadelo Hall Instructs a BJJ Paper Cutter Choke" (https://www.youtube.com/watch?v=cJgLSOlD3YQ). Photo 5: frame from "Intro to BJJ: Butcher Choke (aka Paper Cutter)", Bellingham BJJ (https://www.youtube.com/watch?v=Ck4wiqLa544). Photo 6: Evolve MMA, "Everything You Need To Know About The Paper Cutter Choke In BJJ" (https://evolve-mma.com/blog/everything-you-need-to-know-about-the-paper-cutter-choke-in-bjj/).

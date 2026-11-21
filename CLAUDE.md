@@ -51,7 +51,7 @@ After any such change, check that every id in `layout` and `simpleLayout` has a 
 4. **`## Detailed breakdown`:** the longer how-to, right after Key steps. `### Start: <position>` with a few bullets on the starting position, then one `### N. <key step text>` heading per key step with 1–4 detail bullets, then `### Common mistakes` (bold label, colon, explanation). Optionally `### If it fails`. Bullets start with `- `; `**bold**` and `[[Page name]]` links work. `pages/techniques/darce-choke.md` is the model. When you reword a key step, update its heading here too.
 5. **`## Defense`:** one sentence, then numbered steps.
 6. **`## Images`:** 3–6 photos in step order, one per line as `![N. What this photo shows (credit)](https://...)`. Each caption starts with its step number and matches a key step. The page links to the photos rather than storing copies. Good sources: photos in technique articles, and YouTube's still frames of a tutorial (`https://i.ytimg.com/vi/<videoId>/hqdefault.jpg`, `hq1.jpg`, `hq2.jpg`, `hq3.jpg`). Look at each frame before using it, and only caption what it actually shows.
-7. **`## Video`:** one YouTube tutorial URL. Check it's public and embeddable first; members-only videos don't play. The watch page's `"playabilityStatus":{"status":"OK"` and `"playableInEmbed":true` confirm both.
+7. **`## Video`:** one YouTube tutorial URL (or more, one per line; each one is embedded). Check it's public and embeddable first; members-only videos don't play. The watch page's `"playabilityStatus":{"status":"OK"` and `"playableInEmbed":true` confirm both.
 8. **`## Notes`:** credits: the video's title and channel, and the source of every photo, by number, with a link.
 
 When a page meets the standard, set `status: review`, never `complete`.

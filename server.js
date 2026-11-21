@@ -79,7 +79,8 @@ function clean(kind, input) {
     steps: Array.isArray(input.steps) ? input.steps.map(s => str(s).replace(/\s*\n\s*/g, " ")).filter(Boolean) : [],
     // "![Caption](https://...)" lines; anything that isn't an http(s) image line is dropped
     images: Array.isArray(input.images) ? input.images.map(s => str(s).replace(/\s*\n\s*/g, " ")).filter(s => /^!\[[^\]]*\]\(https?:\/\/[^\s)]+\)$/.test(s)) : [],
-    video: str(input.video).split(/\s/)[0],
+    // one or more video URLs, one per line
+    video: str(input.video).split(/\s+/).filter(u => /^https?:\/\/\S+$/.test(u)).slice(0, 5).join("\n"),
     notes: str(input.notes)
   };
   if (kind === "position") {
