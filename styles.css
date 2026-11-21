@@ -312,7 +312,9 @@ main.wide { max-width: 1680px; }
 #flow { max-width: 100%; height: auto; min-width: 640px; margin: 0 auto; }
 
 /* ---------- core game ---------- */
-.cg-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; margin-top: 16px; }
+.cg-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; margin-top: 8px; }
+.cg-count { margin: 16px 0 0; font-size: 14px; color: var(--muted); }
+.cg-count strong { color: var(--text); }
 .cg-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 760px; }
 .cg-table th, .cg-table td { padding: 6px 10px; border-bottom: 1px solid var(--border); text-align: left; }
 .cg-table thead th { color: #fff; font-weight: 600; position: sticky; top: 0; }

@@ -606,6 +606,14 @@
   let chartPicks = (() => { try { return JSON.parse(localStorage.getItem(CHART_KEY)); } catch (e) { return null; } })();
   let chartHtml = null; // the drawn chart for chartPicks, so coming back to the page doesn't lay it out again
   const chartStale = () => !!chartPicks && gameKey(chartPicks) !== gameKey(corePicks);
+  // how many moves the picks hold: { subs, transitions } (a move picked in both dropdowns of a pair counts once)
+  const pickCount = (picks = corePicks) => simpleIds().reduce((c, pid) => {
+    c.subs += picksFor(pid, "sub", picks).length; c.transitions += picksFor(pid, "transition", picks).length; return c;
+  }, { subs: 0, transitions: 0 });
+  const pickCountText = () => {
+    const { subs, transitions } = pickCount(), n = (k, w) => `${k} ${w}${k === 1 ? "" : "s"}`;
+    return `<strong>${n(subs + transitions, "move")}</strong> in your game: ${n(subs, "submission")} and ${n(transitions, "transition")}.`;
+  };
   const hasPicks = () => simpleIds().some(pid => picksFor(pid, "sub").length || picksFor(pid, "transition").length);
 
   // Unsaved picks survive moving around the wiki; they're only reloaded from the file when nothing is unsaved.
@@ -656,6 +664,7 @@
       <article class="page cg-page">
         <h1>Core game</h1>
         <p class="lead">Build your game: pick up to two submissions and two transitions from each position, then generate a flowchart of it.</p>
+        <p class="cg-count" id="cgCount" aria-live="polite">${pickCountText()}</p>
         <div class="cg-scroll">
           <table class="cg-table">
             <thead><tr><th>Position</th><th class="h-sub">Sub 1</th><th class="h-sub">Sub 2</th><th class="h-transition">Transition 1</th><th class="h-transition">Transition 2</th></tr></thead>
@@ -734,6 +743,7 @@
     const saved = !!(BASE.coreGame && BASE.coreGame.saved);
     const refresh = () => {
       const stale = chartStale();
+      document.getElementById("cgCount").innerHTML = pickCountText();
       genBtn.disabled = !hasPicks() && !stale;
       genBtn.textContent = chartPicks ? "Regenerate flowchart" : "Generate flowchart";
       genBtn.classList.toggle("needs-update", stale);
