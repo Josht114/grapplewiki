@@ -17,6 +17,28 @@ Inner thigh throw: lift the opponent's inner thigh with your leg while turning t
 3. Turn in and reap up between their legs.
 4. Turn your head and follow through to land on top.
 
+## Detailed breakdown
+
+### Start: standing
+- You have a sleeve grip and a collar or lapel grip, standing close.
+
+### 1. Grip sleeve and collar
+- Sleeve to pull their arm forward, collar to control their head and upper body.
+
+### 2. Pull them forward onto their toes
+- Pull up and forward with both grips so their weight goes onto their toes and their posture breaks.
+
+### 3. Turn in and reap up between their legs
+- Step in and turn so your back is to them, then swing your reaping leg up between their legs, hitting the inside of their thigh.
+
+### 4. Turn your head and follow through to land on top
+- Turn your head and upper body away, toward the sleeve hand, so they rotate over your hip and leg.
+- Keep the sleeve and follow through to land in side control.
+
+### Common mistakes
+- **Reaping with their weight on their heels:** pull them onto their toes first.
+- **Looking at them as you throw:** turn your head away to drive the rotation.
+
 ## Defense
 
 Keep your hips back and your feet wide.

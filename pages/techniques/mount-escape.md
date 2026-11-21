@@ -17,6 +17,27 @@ Elbow-knee escape: make space, shrimp and pull a knee through to recover half gu
 3. Shrimp away and slide your elbow to your knee.
 4. Pull your knee through and trap their leg in half guard.
 
+## Detailed breakdown
+
+### Start: bottom mount
+- They're mounted on you, low on your hips.
+
+### 1. Frame your forearm on their hip
+- Put your forearm (or both hands) on their hip, elbow tight to your body.
+
+### 2. Bridge to make space
+- Bridge your hips up hard, so their weight shifts forward and there's space under their hips.
+
+### 3. Shrimp away and slide your elbow to your knee
+- Come down, shrimp your hips out to the side, and bring your elbow and knee together, sliding your knee under their leg.
+
+### 4. Pull your knee through and trap their leg in half guard
+- Pull your knee through to the inside of their leg and lock your legs around it: half guard.
+
+### Common mistakes
+- **Pushing them away with straight arms:** they take an arm bar. Elbows in, use your hips.
+- **Shrimping without the bridge:** their weight pins you.
+
 ## Defense
 
 Stay low and heavy, and block their knee from sliding through.

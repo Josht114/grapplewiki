@@ -18,6 +18,30 @@ Half guard sweep from bottom half guard, used in BJJ and MMA and popularised by 
 4. Lift that leg and roll them toward the trapped side.
 5. Come up on top and settle into side control.
 
+## Detailed breakdown
+
+### Start: bottom half guard
+- They're on top in your half guard. You've got your half guard locked and you're on your side, not flat.
+
+### 1. Lock half guard on their leg and stay up on your hip
+- Lock your legs around their leg and turn onto your hip facing them. Flat on your back, there's no sweep.
+
+### 2. Grab the wrist on the side of their trapped leg so they can't post that hand
+- Take the wrist on the same side as the leg you've trapped. That hand is the one they'd post to stop the sweep.
+
+### 3. Reach your free arm under their other leg
+- Reach your other arm under their free leg, scooping behind the knee or thigh.
+
+### 4. Lift that leg and roll them toward the trapped side
+- Lift the free leg and turn them over toward the side of their trapped leg and wrist. With that hand controlled and that leg trapped, they can't post or step.
+
+### 5. Come up on top and settle into side control
+- Follow them as they land, free your legs, and settle chest to chest in side control.
+
+### Common mistakes
+- **Letting go of the wrist:** they post it and stop the sweep.
+- **Rolling them the wrong way:** they fall toward the trapped side.
+
 ## Defense
 
 Keep a free hand to post with and stop them getting under your free leg.
@@ -26,8 +50,6 @@ Keep a free hand to post with and stop them getting under your free leg.
 2. Crossface and flatten them back onto their back.
 3. Keep your free leg back and wide so it can't be scooped.
 4. If they start to roll you, post your free hand and widen your base.
-
-## Images
 
 ## Video
 

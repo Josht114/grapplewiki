@@ -16,6 +16,24 @@ Step over into mount when the opponent pushes your knee or turns away.
 2. Slide your knee across their belly.
 3. Step your far leg over and settle into mount.
 
+## Detailed breakdown
+
+### Start: knee on belly
+- Your knee is on their belly and your far leg is posted.
+
+### 1. Wait for them to push your knee or turn away
+- When they push the knee down or turn, their arms and hips move out of the way.
+
+### 2. Slide your knee across their belly
+- Let your knee slide across to the mat on the far side.
+
+### 3. Step your far leg over and settle into mount
+- Bring your other leg over so you're straddling them, then drop your hips and settle.
+
+### Common mistakes
+- **Forcing it before they react:** wait for the push.
+- **Sitting high too early:** settle low first, then climb.
+
 ## Defense
 
 Push the knee toward your hips and turn in, so there's no room to step over.

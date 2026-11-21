@@ -17,6 +17,27 @@ When the opponent turns away to escape mount, follow them and take the back.
 3. Insert your bottom hook, then the top hook.
 4. Roll to your side with them and settle.
 
+## Detailed breakdown
+
+### Start: mount
+- They turn onto their side to try to escape.
+
+### 1. Let them turn onto their side
+- Don't stop the turn; follow it and keep your weight on them.
+
+### 2. Get a seatbelt grip as they turn
+- One arm over their top shoulder, one under their bottom armpit, hands locked.
+
+### 3. Insert your bottom hook, then the top hook
+- Slide your bottom foot in front of their hips first, then the top foot.
+
+### 4. Roll to your side with them and settle
+- Fall to your side with them, seatbelt tight, and settle into back control.
+
+### Common mistakes
+- **Grabbing hooks before the seatbelt:** they roll back flat.
+- **Lying flat behind them:** stay on your side, chest glued to their back.
+
 ## Defense
 
 Never turn your back to escape mount; stay flat and escape toward them.

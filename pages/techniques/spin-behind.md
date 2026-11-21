@@ -17,6 +17,27 @@ From the front headlock, spin around to the opponent's back and insert hooks.
 3. Keep your chest on their back as you go.
 4. Insert your hooks and settle the seatbelt.
 
+## Detailed breakdown
+
+### Start: the front headlock
+- They're bent forward under your chest, trying to come up.
+
+### 1. Grip around their far armpit (a seatbelt from the front)
+- Reach over their back and grab under their far armpit, so one arm is wrapped around their upper body.
+
+### 2. Spin your hips around their shoulder to their back
+- Keeping the grip, swing your hips around their shoulder and head to their back, like a go-behind but turning on the spot.
+
+### 3. Keep your chest on their back as you go
+- Don't let space open; your chest stays glued to them all the way round.
+
+### 4. Insert your hooks and settle the seatbelt
+- Switch your grip into a seatbelt, then slide your hooks in as they sit or flatten.
+
+### Common mistakes
+- **Spinning without control of the far side:** they turn in with you and square up.
+- **Rushing the hooks:** get the seatbelt and chest contact first.
+
 ## Defense
 
 Stop the spin by turning into them and sitting to guard before they reach your back.

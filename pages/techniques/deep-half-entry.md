@@ -17,6 +17,26 @@ Slide under the opponent's hips from half guard into deep half.
 3. Hug the leg with both arms.
 4. Keep your legs locked around it.
 
+## Detailed breakdown
+
+### Start: bottom half guard
+- They're on top in your half guard, often posturing up or leaning back.
+
+### 1. Underhook their trapped leg
+- Reach your arm under the leg you've trapped, deep at the thigh.
+
+### 2. Turn your head and shoulders under their hips
+- Turn onto your side and slide your head and shoulders under their hips, so you're under their center.
+
+### 3. Hug the leg with both arms
+- Wrap both arms around that thigh, hugging it to your chest.
+
+### 4. Keep your legs locked around it
+- Keep your legs locked around their leg, so you're wrapped around it from underneath: deep half guard.
+
+### Common mistakes
+- **Going under while they're flattening you with a crossface:** get the underhook battle first.
+
 ## Defense
 
 Keep your weight back over your hips and whizzer the arm.

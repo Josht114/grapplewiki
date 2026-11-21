@@ -17,6 +17,27 @@ Sit up from open guard and slide your feet in as butterfly hooks.
 3. Slide both feet inside their thighs.
 4. Get an underhook.
 
+## Detailed breakdown
+
+### Start: bottom open guard
+- You're on your back with your feet on them, and they're not pressuring yet.
+
+### 1. Post on your hand and sit up
+- Post on one hand or elbow behind you and sit up toward them.
+
+### 2. Bring your knees in
+- Pull your knees in close to your chest, so your shins are between you and them.
+
+### 3. Slide both feet inside their thighs
+- Slide both insteps in to hook the inside of their thighs: butterfly hooks.
+
+### 4. Get an underhook
+- Pummel an arm under their armpit and come chest to chest with your head high.
+
+### Common mistakes
+- **Sitting up without a post:** they push you straight back down.
+- **Head lower than theirs:** they smash you flat.
+
 ## Defense
 
 Push their head or shoulder back down as they sit up.

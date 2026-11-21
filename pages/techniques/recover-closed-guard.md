@@ -17,6 +17,27 @@ Close your legs around the opponent's waist from open guard.
 3. Lock your ankles.
 4. Break their posture.
 
+## Detailed breakdown
+
+### Start: bottom open guard
+- They're close to you, kneeling between your legs or bending over you.
+
+### 1. Pull them in with your grips
+- Pull their sleeves, collar or head toward you so their hips come close to yours.
+
+### 2. Wrap both legs around their waist
+- Swing your legs up and around their waist, above their hips.
+
+### 3. Lock your ankles
+- Cross your ankles behind their back and squeeze your knees in.
+
+### 4. Break their posture
+- Pull their head and arms down with your grips while you pull with your legs, so they fall forward onto you.
+
+### Common mistakes
+- **Locking your ankles low on their hips:** they stand up easily. Lock high.
+- **Leaving them postured:** an upright opponent will soon open your guard.
+
 ## Defense
 
 Keep your hips back and don't let them pull you in.

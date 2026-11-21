@@ -17,6 +17,26 @@ Classic half guard sweep: underhook, come to your knees, grab the ankle and driv
 3. Come up to your knees.
 4. Drive into them to tip them over.
 
+## Detailed breakdown
+
+### Start: bottom half guard
+- You're on your side in half guard.
+
+### 1. Win the underhook and get on your side
+- Get an underhook on their far arm and turn onto your side, facing them.
+
+### 2. Reach the other arm under and grab their ankle
+- Reach your other arm under them and grab the ankle of their trapped leg.
+
+### 3. Come up to your knees
+- Come up to your knees, keeping hold of the ankle.
+
+### 4. Drive into them to tip them over
+- Drive your weight into them; with the ankle held they can't step, so they tip over and you come up on top.
+
+### Common mistakes
+- **Letting go of the ankle:** they step and stay up.
+
 ## Defense
 
 Sprawl your trapped leg back and keep your weight forward.

@@ -16,6 +16,27 @@ When the opponent pushes your knee with their far arm, step over their head and 
 3. Step your far leg over their head.
 4. Sit back, pinch your knees and lift your hips.
 
+## Detailed breakdown
+
+### Start: knee on belly
+- Your knee is on their belly and they're pushing on it to escape.
+
+### 1. Wait for them to push on your knee or hip with the far arm
+- When they push with the arm farther from you, it's extended and exposed.
+
+### 2. Grab that arm and keep it to your chest
+- Grip the arm and hug it to your chest so it can't come back.
+
+### 3. Step your far leg over their head
+- Step your leg over their head while keeping the knee pressure, swinging round to their far side.
+
+### 4. Sit back, pinch your knees and lift your hips
+- Sit close to their shoulder, pinch the knees, thumb up, lift the hips.
+
+### Common mistakes
+- **Taking the weight off their belly too soon:** they sit up into you.
+- **Sitting far from the shoulder:** the arm escapes.
+
 ## Defense
 
 Don't push with a straight arm; frame with bent arms and keep your elbows tight.

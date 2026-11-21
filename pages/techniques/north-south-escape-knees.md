@@ -17,6 +17,26 @@ Turn onto your knees when the opponent's weight comes off your chest.
 3. Come up to your knees.
 4. End in turtle with your elbows tight to your knees.
 
+## Detailed breakdown
+
+### Start: bottom north south
+- They're on top, head toward your hips.
+
+### 1. Frame on their hips
+- Hands or forearms on their hips.
+
+### 2. Turn onto your side
+- Turn onto your side toward one of their sides.
+
+### 3. Come up to your knees
+- Come up onto your knees, facing them.
+
+### 4. End in turtle with your elbows tight to your knees
+- Elbows tight, chin down: turtle. From here, fight to stand or recover guard.
+
+### Common mistakes
+- **Turning with your arms out:** they kimura or take your back.
+
 ## Defense
 
 Stay heavy and follow them to the back or side control.

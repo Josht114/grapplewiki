@@ -15,6 +15,24 @@ Sleeve choke: one hand inside your own sleeve, the other hand's edge across the 
 2. Bring the free hand across their throat.
 3. Drive the blade of the hand down as you pull with the sleeve grip.
 
+## Detailed breakdown
+
+### Start: mount
+- You're mounted and in a gi, chest low.
+
+### 1. Feed one arm behind their head and grab inside your opposite sleeve
+- Slide one arm under their head and grab inside the sleeve of your other arm with your fingers.
+
+### 2. Bring the free hand across their throat
+- Your other hand, the one whose sleeve you're holding, goes across their throat, blade first.
+
+### 3. Drive the blade of the hand down as you pull with the sleeve grip
+- Push the blade of the hand down into the neck while the sleeve grip pulls your arms together.
+
+### Common mistakes
+- **Using the palm instead of the blade:** it's a push, not a choke.
+- **Lifting your chest:** stay low, or they bridge and roll you.
+
 ## Defense
 
 Stop the hand from crossing your throat and escape while their arms are tied up.

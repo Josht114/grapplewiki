@@ -17,6 +17,26 @@ Major inner reap: hook the inside of the opponent's leg and drive them backward.
 3. Sweep the leg out in a circle.
 4. Drive forward to land on top.
 
+## Detailed breakdown
+
+### Start: standing
+- You have grips and they're upright.
+
+### 1. Grip and push them back so they step
+- Push them back so they widen their stance and step.
+
+### 2. Hook the inside of their leg with your leg
+- Hook the inside of one of their legs (from between their legs) with your leg, calf behind their calf.
+
+### 3. Sweep the leg out in a circle
+- Sweep their leg out to the side in a circle, like drawing a semicircle on the mat.
+
+### 4. Drive forward to land on top
+- Drive forward with your grips so they fall back; land between their legs, in their guard or passing.
+
+### Common mistakes
+- **Pulling instead of driving:** you need forward pressure to put them down.
+
 ## Defense
 
 Lift the hooked leg and step back.

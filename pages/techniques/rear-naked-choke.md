@@ -16,6 +16,26 @@ Blood choke from the back: your arm wraps the neck and is locked behind their he
 3. Put the other hand behind their head.
 4. Squeeze your elbows together and expand your chest.
 
+## Detailed breakdown
+
+### Start: back control
+- Seatbelt grip and hooks in.
+
+### 1. From the seatbelt, slide the choking arm under their chin so the elbow lines up with the chin
+- Slide the top arm under their chin until your elbow is under the chin, not your forearm.
+
+### 2. Grab your own biceps with the choking hand
+- The choking hand grabs your other biceps.
+
+### 3. Put the other hand behind their head
+- Your other hand goes behind their head, palm down.
+
+### 4. Squeeze your elbows together and expand your chest
+- Squeeze your elbows together and puff your chest forward into their back.
+
+### Common mistakes
+- **Arm across the jaw:** you're cranking the jaw, not choking. Get under the chin.
+
 ## Defense
 
 Hand-fight the choking arm with both hands and tuck your chin.

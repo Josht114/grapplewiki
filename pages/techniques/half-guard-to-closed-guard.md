@@ -17,6 +17,26 @@ Free your outside leg and close your full guard around the opponent.
 3. Bring both legs around their waist.
 4. Lock your ankles.
 
+## Detailed breakdown
+
+### Start: bottom half guard
+- They're in your half guard.
+
+### 1. Frame on their hips to make space
+- Push on their hips with your hands or forearms to make space between you.
+
+### 2. Pull your outside knee through
+- Pull your outside knee through the space to in front of their hips.
+
+### 3. Bring both legs around their waist
+- Swing both legs around their waist.
+
+### 4. Lock your ankles
+- Cross your ankles behind their back and squeeze, then break their posture.
+
+### Common mistakes
+- **Letting them pin your knee:** frame and pull it through fast.
+
 ## Defense
 
 Keep your hips heavy and your knee tight to theirs so their leg can't come through.

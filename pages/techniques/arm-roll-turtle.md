@@ -17,6 +17,27 @@ From turtle, overhook the arm the top player has around you and roll to that sid
 3. Drop your shoulder on that side, tuck your head and roll toward the trapped arm.
 4. They go over you; follow through and come up chest to chest on top.
 
+## Detailed breakdown
+
+### Start: bottom turtle
+- You're turtled and they're at your side, reaching around you.
+
+### 1. Wait for them to reach an arm around your waist or chest
+- Let them commit an arm around your body; that arm is your lever.
+
+### 2. Overhook that arm tight to your body at the elbow
+- Clamp your arm over theirs, trapping it at the elbow against your side so it can't slide out.
+
+### 3. Drop your shoulder on that side, tuck your head and roll toward the trapped arm
+- Drop the shoulder on the trapped-arm side to the mat, tuck your head and roll over that shoulder, toward the trapped arm.
+
+### 4. They go over you; follow through and come up chest to chest on top
+- Because their arm is trapped, they're pulled over with you; keep rolling and come up on top in side control.
+
+### Common mistakes
+- **Rolling without trapping the arm:** you just roll away and they follow.
+- **Rolling away from the trapped arm:** roll toward it.
+
 ## Defense
 
 Don't reach an arm around their body without your elbow tight; keep your weight back.

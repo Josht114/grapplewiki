@@ -16,6 +16,28 @@ Front choke with your forearm under the opponent's chin while their head is unde
 3. Grip your wrist or use an arm-in grip.
 4. Pull your elbow to your ribs, then close guard or sprawl and lift.
 
+## Detailed breakdown
+
+### Start: standing
+- They shoot for your legs or lower their head to tie up.
+
+### 1. Catch the head as they shoot or bend forward
+- Sprawl your hips back so their head comes forward under your arm.
+
+### 2. Wrap the arm under their chin, blade of the wrist into the throat
+- Wrap your arm around their neck so the bony edge of your forearm is under their chin.
+
+### 3. Grip your wrist or use an arm-in grip
+- Grab your choking wrist with the other hand, or your biceps if an arm is inside.
+
+### 4. Pull your elbow to your ribs, then close guard or sprawl and lift
+- Pull your elbow down and back to your ribs.
+- Either sit down and close your guard around them and arch, or stay standing, sprawl and lift your elbow up.
+
+### Common mistakes
+- **Choking with the bicep across the face:** it slips off. Blade of the wrist under the chin.
+- **Pulling guard far away:** the head pops out.
+
 ## Defense
 
 Clear the choking hand from your throat and move to the side where your head is.

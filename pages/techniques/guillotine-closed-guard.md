@@ -16,6 +16,27 @@ Guillotine from closed guard when the opponent's head drops forward.
 3. Close your guard and push them away with your legs.
 4. Arch your hips up and pull.
 
+## Detailed breakdown
+
+### Start: bottom closed guard
+- Their head drops forward, often when you pull them down or they try to pass.
+
+### 1. Wrap their head as it comes down
+- Wrap your arm around their neck from the front, as their head lowers to you.
+
+### 2. Lock your grip under their chin
+- Slide the blade of your forearm under their chin and grip your wrist (or your biceps if an arm is in).
+
+### 3. Close your guard and push them away with your legs
+- Lock your ankles around their waist and push their hips away with your legs, stretching them out.
+
+### 4. Arch your hips up and pull
+- Pull your elbow to your ribs and arch your hips up, so their neck is pulled up into your forearm.
+
+### Common mistakes
+- **Squeezing with your arms only:** stretch them with your legs and hips.
+- **Forearm across the face:** it slips off. Under the chin.
+
 ## Defense
 
 Keep your head up and posture back.

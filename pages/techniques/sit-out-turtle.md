@@ -17,6 +17,26 @@ Sit through from turtle to turn into the opponent and come up.
 3. Turn to face them.
 4. Come up to your feet.
 
+## Detailed breakdown
+
+### Start: bottom turtle
+- You're turtled and they're on your side.
+
+### 1. Post on your near hand
+- Post the hand nearest them on the mat, arm strong.
+
+### 2. Thread your outside leg through underneath you
+- Swing your outside leg (the one away from them) through under your body, so you sit on that hip.
+
+### 3. Turn to face them
+- Keep turning so your chest faces them, hips away.
+
+### 4. Come up to your feet
+- Plant your feet and come up into your stance.
+
+### Common mistakes
+- **Sitting out toward them:** sit through on the side away from them.
+
 ## Defense
 
 Follow their hips and keep your chest on their back.

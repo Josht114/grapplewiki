@@ -17,6 +17,26 @@ Kill or lift one butterfly hook and pass to the side.
 3. Swing your leg free over the dead hook.
 4. Drop into side control.
 
+## Detailed breakdown
+
+### Start: top of butterfly guard
+- They're sitting up with butterfly hooks in.
+
+### 1. Flatten them with head or shoulder control
+- Use a crossface, a hand on the shoulder or your head on their chest to push them back flat.
+
+### 2. Lift or pin one hook
+- Grip their foot or ankle and lift that hook out, or pin it to the mat with your hand or knee so it's "dead".
+
+### 3. Swing your leg free over the dead hook
+- Swing your leg on that side back and over the dead hook so it's no longer inside your legs.
+
+### 4. Drop into side control
+- Drop your hips to the mat beside them and settle chest to chest.
+
+### Common mistakes
+- **Passing while they're sitting up with an underhook:** they sweep you. Flatten first.
+
 ## Defense
 
 Keep your hooks active and sit up into them.

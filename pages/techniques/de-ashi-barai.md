@@ -17,6 +17,28 @@ Advanced foot sweep: sweep the opponent's foot just as they step, before their w
 3. Sweep the foot with the sole of your foot.
 4. Pull their upper body down the same way.
 
+## Detailed breakdown
+
+### Start: standing
+- You have grips (sleeve and collar in the gi, or wrist and collar tie) and you're moving.
+
+### 1. Move them so they step toward you
+- Circle or pull so they take a step, ideally sideways or toward you.
+
+### 2. Time it as their foot is about to land
+- The foot is lightest just before it touches down: that's the moment.
+
+### 3. Sweep the foot with the sole of your foot
+- Sweep their ankle in the direction it's already moving, with the sole of your foot, leg straight.
+
+### 4. Pull their upper body down the same way
+- Pull with your grips in the same direction so their upper body follows the foot to the mat.
+- Follow them down to side control.
+
+### Common mistakes
+- **Kicking a planted foot:** that just hurts. Sweep while it's moving.
+- **Sweeping with the toes:** use the sole, like brushing the floor.
+
 ## Defense
 
 Keep your steps short and your weight centred.

@@ -17,6 +17,26 @@ One arm over a leg, one arm under the other, with heavy shoulder pressure.
 3. Pressure with your head and shoulder.
 4. Walk your hips around to the side of the over arm.
 
+## Detailed breakdown
+
+### Start: in their open guard
+- You're on your knees between their legs.
+
+### 1. Underhook one leg, go over the top of the other
+- Scoop one arm under one leg and put the other arm over the other leg.
+
+### 2. Connect the over arm to their far hip
+- Reach the over arm around to grab their far hip or belt.
+
+### 3. Pressure with your head and shoulder
+- Drive your head and shoulder into their belly, stacking them.
+
+### 4. Walk your hips around to the side of the over arm
+- Walk around toward the over-arm side and settle into side control.
+
+### Common mistakes
+- **Not connecting the over arm:** they hip escape and recover.
+
 ## Defense
 
 Stopping pressure passes by keeping your knees between you and the opponent and refusing to be flattened.

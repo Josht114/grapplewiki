@@ -16,6 +16,27 @@ When the guard player hooks a foot in your hip, fall back with the leg trapped f
 3. Fall back to the side, keeping your knees pinched on their leg.
 4. Arch back to finish.
 
+## Detailed breakdown
+
+### Start: in their open guard
+- You're passing and they hook a foot in your hip or behind your leg.
+
+### 1. Trap their foot in your armpit as they hook in
+- Clamp their foot in your armpit, toes pointing behind you.
+
+### 2. Blade your forearm under their Achilles
+- Slide your forearm under their Achilles, blade of the wrist against the tendon, and grip your other arm or their shin.
+
+### 3. Fall back to the side, keeping your knees pinched on their leg
+- Sit and fall back to the side of the trapped leg, knees pinched together on their leg so it can't slip.
+
+### 4. Arch back to finish
+- Arch your back and lift your hips so your forearm drives up into the Achilles.
+
+### Common mistakes
+- **Forearm on the calf:** too high. It must be on the Achilles.
+- **Knees apart:** they pull the foot out.
+
 ## Defense
 
 Flex your foot and sit up into them before they fall back.

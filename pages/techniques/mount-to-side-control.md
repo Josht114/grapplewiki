@@ -17,6 +17,26 @@ When the opponent turns into you to escape mount, step back and settle into side
 3. Slide off to the side, keeping your chest on them.
 4. Get the crossface and underhook.
 
+## Detailed breakdown
+
+### Start: mount
+- They're turning onto their side to escape.
+
+### 1. Feel them turn onto their side toward you
+- When their hips turn and their knee comes up, mount is about to be lost.
+
+### 2. Step one leg back to the mat
+- Step the leg on the side they're turning to back and out.
+
+### 3. Slide off to the side, keeping your chest on them
+- Slide your hips down to the mat beside them, chest staying heavy.
+
+### 4. Get the crossface and underhook
+- Crossface their head, underhook the far arm, and settle.
+
+### Common mistakes
+- **Fighting to stay mounted:** you end up in half guard. Take side control instead.
+
 ## Defense
 
 Keep moving: recover guard as they come off mount.

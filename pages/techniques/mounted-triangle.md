@@ -16,6 +16,26 @@ Triangle choke locked from mount, after the opponent's arm is pushed across and 
 3. Lock the triangle with your other leg.
 4. Pull their head up and squeeze, or roll for an arm bar.
 
+## Detailed breakdown
+
+### Start: mount
+- High mount, their arms up.
+
+### 1. Climb to high mount and push one arm across their face
+- Walk high and push one arm across, so one arm is in and one out.
+
+### 2. Swing your leg over that arm and behind their neck
+- Swing the leg on that side over the arm and behind their neck.
+
+### 3. Lock the triangle with your other leg
+- Lock your other leg over your ankle in a figure-four, sitting up over their chest.
+
+### 4. Pull their head up and squeeze, or roll for an arm bar
+- Pull their head up and squeeze your knees; if it's not tight, fall to the side for the arm bar.
+
+### Common mistakes
+- **Triangle around the face instead of the neck:** angle your leg low behind the neck.
+
 ## Defense
 
 Stop them climbing high: keep your elbows tight and bridge when they move up.

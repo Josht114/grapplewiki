@@ -16,6 +16,28 @@ Gi choke from side control, using a deep collar grip and a forearm that cuts acr
 3. Drop your other forearm across their throat.
 4. Drive your elbow toward the mat like closing a paper cutter.
 
+## Detailed breakdown
+
+### Start: side control
+- Chest heavy on them, their far collar reachable behind their head. Gi only.
+
+### 1. Feed your near hand under their near armpit
+- Slide your near hand under their armpit on your side; this keeps their arm from framing.
+
+### 2. Grip deep into the far collar behind their head
+- Reach across behind their head and get a deep collar grip, fingers inside, as close to their ear as you can.
+
+### 3. Drop your other forearm across their throat
+- Bring your other forearm across their throat, blade of the arm on the neck.
+
+### 4. Drive your elbow toward the mat like closing a paper cutter
+- Drop the choking elbow to the mat across their neck while the collar grip pulls the other way.
+- If the elbow already touches the mat, draw a small circle with it to tighten.
+
+### Common mistakes
+- **Shallow collar grip:** the choke stays loose however hard you push.
+- **Lifting your chest:** stay heavy so they can't turn into you.
+
 ## Defense
 
 Block the deep collar grip and keep the forearm off your neck.

@@ -17,6 +17,26 @@ Climb from mount to S-mount to isolate an arm for the arm bar.
 3. Slide the other shin under their head.
 4. Lean your weight onto their chest.
 
+## Detailed breakdown
+
+### Start: mount
+- Mounted, usually with an arm isolated.
+
+### 1. Climb to high mount
+- Walk your knees up toward their armpits.
+
+### 2. Step a foot up beside their shoulder
+- Step the foot on one side up beside their shoulder, knee up.
+
+### 3. Slide the other shin under their head
+- Your other shin slides under their head or across their back, so your legs make an S.
+
+### 4. Lean your weight onto their chest
+- Put your weight onto their chest; they can't turn into you, and the arm bar is ready.
+
+### Common mistakes
+- **Sitting up tall:** you get rolled. Keep weight forward on their chest.
+
 ## Defense
 
 Keep your elbows in and bridge before they can climb high.

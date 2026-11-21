@@ -17,6 +17,28 @@ Break the turtle down by pulling a wrist and driving them onto their side.
 3. Pull the wrist out so they lose their post.
 4. Follow them to the mat and settle into side control.
 
+## Detailed breakdown
+
+### Start: top of turtle
+- They're on their knees and elbows, posting on their hands to stay up.
+
+### 1. Grab the near wrist or ankle
+- Take hold of their near wrist (or their near ankle, behind the knee). These are the posts holding them up.
+
+### 2. Drive your weight diagonally across their back
+- Drive your chest into their back, aiming across them toward their far shoulder, not straight down.
+- The diagonal pressure pushes them toward the side where you've taken the post.
+
+### 3. Pull the wrist out so they lose their post
+- Pull the wrist (or ankle) out toward you; with nothing to post on, they tip over onto their side.
+
+### 4. Follow them to the mat and settle into side control
+- Stay chest to chest as they fall and settle into side control with a crossface and underhook before they can turn in.
+
+### Common mistakes
+- **Pushing straight down:** a good turtle is built to take that. Go diagonal.
+- **Letting them land and recover guard:** follow them all the way down, chest first.
+
 ## Defense
 
 Keep your elbows to your knees and your weight forward so they can't flatten you.

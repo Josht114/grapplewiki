@@ -16,6 +16,29 @@ Hyperextends the elbow from closed guard after breaking the opponent's posture.
 3. Swing your leg over their face.
 4. Pinch your knees, thumb up, and lift your hips.
 
+## Detailed breakdown
+
+### Start: bottom closed guard
+- They're kneeling in your closed guard.
+
+### 1. Break their posture and control one arm across your chest
+- Pull your knees to your chest and pull with your grips so they fall forward onto you.
+- Take one arm across your chest by the sleeve or wrist, holding it tight to you.
+
+### 2. Put a foot on their hip and pivot your body perpendicular to theirs
+- Open your guard and put the foot on the opposite side to the trapped arm on their hip.
+- Push off it to swing your body round, so you lie at a right angle to them and your head moves away from their trapped arm.
+
+### 3. Swing your leg over their face
+- Swing your leg (on the trapped arm's side) high over their face, calf across their head or neck.
+
+### 4. Pinch your knees, thumb up, and lift your hips
+- Hug the arm to your chest with their thumb toward the ceiling, pinch your knees, and lift your hips slowly.
+
+### Common mistakes
+- **Not pivoting far enough:** your leg can't reach over their head, and they pull the arm out.
+- **Letting them posture up:** they stack you. Keep them bent forward.
+
 ## Defense
 
 Hide the elbow, stack the opponent and pull the arm out before the hips lift.

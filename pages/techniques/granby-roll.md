@@ -17,6 +17,26 @@ Roll over your shoulder from turtle to put your legs back in front.
 3. Bring your legs over and in front.
 4. Face them in open guard.
 
+## Detailed breakdown
+
+### Start: bottom turtle
+- You're turtled and want to get your guard back.
+
+### 1. Tuck your head to one side
+- Turn your head to one side and look under your armpit, so you roll on your shoulder, not your neck.
+
+### 2. Roll over your shoulder, not your neck
+- Drive off your feet and roll across your shoulders, diagonally, toward the side you're looking.
+
+### 3. Bring your legs over and in front
+- As you come over, swing your legs round so they end up between you and them.
+
+### 4. Face them in open guard
+- Land on your back facing them with your feet up, in open guard.
+
+### Common mistakes
+- **Rolling straight over your head:** that's a strain on the neck. Roll diagonally across your shoulders.
+
 ## Defense
 
 Stay on their hips and follow the roll to the back.

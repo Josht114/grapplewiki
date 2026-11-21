@@ -17,6 +17,27 @@ Slide your knee across the opponent's belly to step over into mount.
 3. Step your foot over and post on the mat.
 4. Settle into low mount before they can recover.
 
+## Detailed breakdown
+
+### Start: side control
+- Chest down, controlling the near arm and hips.
+
+### 1. Control their near arm and hip
+- Pin or trap their near arm so they can't put an elbow in your way, and keep their hips turned away.
+
+### 2. Slide your knee across their belly toward the far hip
+- Slide your near knee across their stomach, low, toward their far hip.
+
+### 3. Step your foot over and post on the mat
+- Clear their legs with your knee and step your foot over, posting it on the far side.
+
+### 4. Settle into low mount before they can recover
+- Drop your hips, knees tight to their sides, chest low. Then climb higher.
+
+### Common mistakes
+- **Knee too high on the chest:** they bump you off. Stay low on the belly.
+- **Leaving the near arm free:** their elbow blocks your knee.
+
 ## Defense
 
 Block the knee with your elbow or knee before it crosses your belly.

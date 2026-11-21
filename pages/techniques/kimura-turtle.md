@@ -16,6 +16,26 @@ Kimura from bottom turtle when the opponent reaches an arm around you.
 3. Roll toward the trapped arm.
 4. Rotate the arm behind them to finish.
 
+## Detailed breakdown
+
+### Start: bottom turtle
+- You're turtled; they reach an arm around your body or under your arm.
+
+### 1. Trap the arm that reaches around your body
+- Clamp the arm reaching round you to your body with your arm on that side.
+
+### 2. Grip their wrist and figure-four with your other arm
+- Grab their wrist, reach your other arm over their arm and grab your own wrist: the kimura grip.
+
+### 3. Roll toward the trapped arm
+- Roll over your shoulder toward the trapped arm; they come over with you.
+
+### 4. Rotate the arm behind them to finish
+- Land on top or side by side, keep their elbow bent, and rotate their hand up behind their back.
+
+### Common mistakes
+- **Letting the elbow straighten:** the kimura has no lever.
+
 ## Defense
 
 Don't leave your arm hanging under them; keep a seatbelt grip with elbows tight.

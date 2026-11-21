@@ -17,6 +17,28 @@ Knee across the belly and a chop to the base leg, sweeping with collar and sleev
 3. Drop your bottom leg against their knee.
 4. Pull them forward, scissor your legs and roll to mount.
 
+## Detailed breakdown
+
+### Start: bottom closed guard
+- They're kneeling in your closed guard. Mostly a gi sweep.
+
+### 1. Grip collar and same-side sleeve
+- One hand grips their collar high, the other their sleeve on the same side.
+
+### 2. Shrimp out and put your shin across their belly
+- Open your guard, shrimp your hips out to the side of the sleeve grip, and put your top shin across their belly, knee toward their shoulder.
+
+### 3. Drop your bottom leg against their knee
+- Drop your bottom leg flat to the mat against the outside of their knee on the same side, blocking it.
+
+### 4. Pull them forward, scissor your legs and roll to mount
+- Pull them onto your shin with both grips, then scissor: kick the top leg over and chop the bottom leg back against their knee.
+- They roll over toward the side of the blocked knee, and you follow into mount.
+
+### Common mistakes
+- **Not pulling them forward first:** their weight stays back and they don't budge.
+- **Shin low on their thighs:** put it across their belly.
+
 ## Defense
 
 Step your leg over the chopping leg and keep your weight centred.

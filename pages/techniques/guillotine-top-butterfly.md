@@ -16,6 +16,26 @@ Guillotine on the butterfly guard player when they sit in with their head low.
 3. Sprawl your hips back.
 4. Lift your elbow and arch.
 
+## Detailed breakdown
+
+### Start: top of butterfly guard
+- They're sitting up, and their head comes down in front of you as they go for a single leg or pull you.
+
+### 1. Wrap their head as it drops
+- Wrap your arm around their neck from the front.
+
+### 2. Lock your grip
+- Forearm blade under the chin, grip your wrist, or your biceps if an arm is in.
+
+### 3. Sprawl your hips back
+- Sprawl your legs back so their hooks can't lift you and their weight hangs on the choke.
+
+### 4. Lift your elbow and arch
+- Lift your choking elbow up and arch your back to finish.
+
+### Common mistakes
+- **Staying close with your hips:** their hooks sweep you. Sprawl back.
+
 ## Defense
 
 Keep your head up and higher than theirs when you sit up.

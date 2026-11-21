@@ -17,6 +17,26 @@ Push the knee across your body and trap the leg in half guard.
 3. Trap it with your legs.
 4. Get on your side in half guard.
 
+## Detailed breakdown
+
+### Start: bottom knee on belly
+- Their knee is on your belly.
+
+### 1. Push the knee across your belly
+- Push their knee across your belly toward the mat on the far side, so their leg slides down between yours.
+
+### 2. Hug the leg as it comes across
+- As the leg comes down, hug it, keeping it from going back up.
+
+### 3. Trap it with your legs
+- Wrap your legs around that leg and lock them: half guard.
+
+### 4. Get on your side in half guard
+- Turn onto your side facing them and fight for the underhook before they can crossface you flat.
+
+### Common mistakes
+- **Lying flat once you have half guard:** they crossface and pass. Get on your side.
+
 ## Defense
 
 Keep your far leg posted wide and don't let the knee cross over.

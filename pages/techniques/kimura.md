@@ -16,6 +16,28 @@ Figure-four shoulder lock that rotates the arm behind the opponent's back.
 3. Keep their elbow tight to your chest and bend the arm to 90°.
 4. Rotate the hand toward their head and behind their back for the finish.
 
+## Detailed breakdown
+
+### Start: side control
+- Chest down, hips low, their near arm on the mat or pushing at you.
+
+### 1. Grip the opponent's wrist with your hand that is closest to their lower body
+- Take a firm grip on their wrist, thumb around it like a ski pole grip.
+
+### 2. Thread your other arm under their triceps and grab your own wrist
+- Your other arm goes over and under their upper arm and grabs your own wrist: the figure-four.
+
+### 3. Keep their elbow tight to your chest and bend the arm to 90°
+- Pull their elbow in to your chest and keep it bent in an L. A straight arm can't be finished.
+
+### 4. Rotate the hand toward their head and behind their back for the finish
+- Turn their hand up toward their head and behind their back, like paintbrushing the floor behind them.
+- Step over their head if you need a better angle, and go slowly.
+
+### Common mistakes
+- **Space between their elbow and your chest:** they straighten the arm or grab their belt.
+- **Cranking fast:** shoulders tear quickly; give them time to tap.
+
 ## Defense
 
 Grab your own belt, pants or gi to stop the arm from rotating, then reposition.

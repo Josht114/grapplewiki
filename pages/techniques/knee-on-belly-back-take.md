@@ -17,6 +17,27 @@ When the opponent turns away from the knee, follow them and take the back.
 3. Get the seatbelt grip.
 4. Insert hooks and settle.
 
+## Detailed breakdown
+
+### Start: knee on belly
+- They turn away from your knee to get out from under the pressure.
+
+### 1. Feel them turn away from the pressure
+- Let them turn; their back comes toward you.
+
+### 2. Slide your knee behind their back as they turn
+- Slide your knee off their belly and behind their back so they can't roll back flat.
+
+### 3. Get the seatbelt grip
+- One arm over the shoulder, one under the armpit, hands locked.
+
+### 4. Insert hooks and settle
+- Hook in front of their hips, then fall to your side and settle in back control.
+
+### Common mistakes
+- **Letting them come up to their knees with space:** stay chest to back.
+- **Hooks before the seatbelt:** they roll out.
+
 ## Defense
 
 Turn into the knee to escape, never away from it.

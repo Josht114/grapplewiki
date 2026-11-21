@@ -17,6 +17,28 @@ Sacrifice throw: drop under the opponent, hook their inner thigh with your foot,
 3. Lift their inner thigh with your instep.
 4. Roll them over and follow to the top.
 
+## Detailed breakdown
+
+### Start: standing
+- They're bent forward with their head low (often in a defensive posture). You have an over-the-back grip and a sleeve. Mostly a gi throw.
+
+### 1. Grip the belt or back over the top, and a sleeve
+- Reach over their shoulder and grab their belt or the back of their jacket; the other hand holds their sleeve.
+
+### 2. Drop your hips under them as they bend forward
+- Step in close and sit down right under them, your back going to the mat between their feet.
+
+### 3. Lift their inner thigh with your instep
+- Put your instep inside one of their thighs, near the knee, and lift it up as you roll back.
+
+### 4. Roll them over and follow to the top
+- Pull with the belt and sleeve and lift with the foot so they flip over your head.
+- Roll back over your shoulder and follow them to land on top.
+
+### Common mistakes
+- **Sitting down far away:** you've just pulled guard. Get right under them.
+- **Letting go of the sleeve:** they post and stop the roll.
+
 ## Defense
 
 Keep your hips back and step over the lifting leg.

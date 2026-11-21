@@ -17,6 +17,28 @@ Pop up from side control and put your knee on the opponent's stomach.
 3. Slide your near knee onto their belly.
 4. Post the far leg wide for base.
 
+## Detailed breakdown
+
+### Start: side control
+- Chest to chest across them.
+
+### 1. Grip the far collar and near pants or hip
+- One hand on the far collar or shoulder, the other on their near hip or pants at the knee.
+
+### 2. Pop up onto your toes
+- Lift your hips and come up onto your toes, keeping your grips.
+
+### 3. Slide your near knee onto their belly
+- Put your near shin across their belly, knee toward the far hip, toes on the mat behind.
+
+### 4. Post the far leg wide for base
+- Your far leg posts out wide; your weight sits on the knee, not your feet.
+- Keep your shin angled and your hips up so they can't bridge you off.
+
+### Common mistakes
+- **Kneeling on the stomach with no weight:** they push the knee off easily.
+- **Far leg too close:** you get rolled. Post it wide.
+
 ## Defense
 
 Turn into them as they pop up and push the knee down toward your hips.

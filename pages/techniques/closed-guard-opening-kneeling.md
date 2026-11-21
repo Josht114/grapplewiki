@@ -17,6 +17,27 @@ Break the closed guard while staying on your knees.
 3. Step the other knee back.
 4. Push down on their thigh with your elbow to open the ankles.
 
+## Detailed breakdown
+
+### Start: inside their closed guard, kneeling
+- Their legs are locked around your waist.
+
+### 1. Posture up with grips on their hips or belt
+- Sit your hips back, back straight, head up, and push down on their hips or belt so they can't pull you down.
+
+### 2. Put one knee in their tailbone
+- Bring one knee forward right under their tailbone.
+
+### 3. Step the other knee back
+- Step the other knee back and out at an angle, so their legs have to stretch around you.
+
+### 4. Push down on their thigh with your elbow to open the ankles
+- Drive your elbow or hand down on their thigh on the side of the knee you stepped back; the ankles open.
+
+### Common mistakes
+- **Opening without posture:** they break you down and attack.
+- **Hands on their chest, arms straight:** an arm bar waiting to happen.
+
 ## Defense
 
 Keep your ankles locked and break their posture before they open the guard.

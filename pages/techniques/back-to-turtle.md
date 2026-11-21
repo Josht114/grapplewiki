@@ -17,6 +17,26 @@ When the opponent gets to their knees from back mount, keep the seatbelt and rid
 3. Pull your hooks out if needed and sprawl your weight.
 4. Re-insert hooks or break them down.
 
+## Detailed breakdown
+
+### Start: back control
+- They come up to their knees.
+
+### 1. Feel them come up to their knees
+- Their weight shifts forward onto their knees and hands.
+
+### 2. Keep your seatbelt and chest on their back
+- Don't let your chest come off them.
+
+### 3. Pull your hooks out if needed and sprawl your weight
+- If your feet get stuck, take the hooks out and sprawl your hips back.
+
+### 4. Re-insert hooks or break them down
+- Put the hooks back in or flatten them out from the turtle.
+
+### Common mistakes
+- **Holding hooks while they stand:** you fall off. Sprawl instead.
+
 ## Defense
 
 Keep moving once you're on your knees: sit out or roll before they settle.

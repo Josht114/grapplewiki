@@ -17,6 +17,26 @@ Sit down from the front headlock and put your butterfly hooks in.
 3. Slide your feet in as butterfly hooks.
 4. Sit up and get an underhook.
 
+## Detailed breakdown
+
+### Start: bottom of the front headlock
+- You're on your knees under their front headlock.
+
+### 1. Protect your neck with your hands
+- Get both hands up to the arm around your neck, pulling it away from your throat.
+
+### 2. Sit back onto your hips
+- Sit your hips back and down onto the mat, so you go from kneeling to sitting.
+
+### 3. Slide your feet in as butterfly hooks
+- Slide both feet inside their thighs as butterfly hooks.
+
+### 4. Sit up and get an underhook
+- Sit up into them, pummel an underhook, and get your head higher than theirs.
+
+### Common mistakes
+- **Sitting back with the choke still on:** that tightens it. Neck first.
+
 ## Defense
 
 Follow them down and keep the front headlock or spin to their back.

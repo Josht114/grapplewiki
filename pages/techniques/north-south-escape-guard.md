@@ -17,6 +17,26 @@ Frame on the hips, make space and turn in to recover guard.
 3. Turn your hips toward their legs.
 4. Bring your legs back in front.
 
+## Detailed breakdown
+
+### Start: bottom north south
+- They're on top, head toward your hips.
+
+### 1. Frame on their hips
+- Put your hands or forearms on their hips to hold them in place.
+
+### 2. Bridge to make space
+- Bridge to lift their weight off your chest.
+
+### 3. Turn your hips toward their legs
+- As they lift, turn your hips toward their legs, swinging under them.
+
+### 4. Bring your legs back in front
+- Bring your knees and feet up between you to recover guard.
+
+### Common mistakes
+- **Bridging without frames:** they just settle back down.
+
 ## Defense
 
 Keep your chest heavy and walk to side control as they turn.

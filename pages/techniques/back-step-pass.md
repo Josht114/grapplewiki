@@ -17,6 +17,26 @@ Turn your back and step your free leg back over to free your trapped leg (a reve
 3. Step your free leg back over their legs.
 4. Free your trapped leg and settle into side control.
 
+## Detailed breakdown
+
+### Start: top half guard
+- You're on top with an underhook or crossface, your leg trapped.
+
+### 1. Get a strong underhook or crossface
+- Pin their upper body so they can't turn into you or come up.
+
+### 2. Turn your hips away from them
+- Turn your hips to face their feet, sitting toward their legs.
+
+### 3. Step your free leg back over their legs
+- Step your free leg back and over their legs, so you're now facing away from their head on the other side.
+
+### 4. Free your trapped leg and settle into side control
+- Pull your trapped leg out, turn back toward them and settle into side control.
+
+### Common mistakes
+- **Losing the upper-body control as you turn:** they take your back.
+
 ## Defense
 
 Keep your legs locked and turn into them as they turn away.

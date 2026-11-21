@@ -17,6 +17,27 @@ Free your head and stand back up to face the opponent.
 3. Drive your head up into their chest.
 4. Step back and stand in your stance.
 
+## Detailed breakdown
+
+### Start: bottom of the front headlock
+- You're on your knees with their arm around your neck and their chest on your head.
+
+### 1. Hand-fight the arm around your neck
+- Grab the wrist of the arm around your neck with both hands and pull it down off your throat. Your neck comes first.
+
+### 2. Square your hips under you
+- Bring your knees up under your hips so you're square to them, not stretched out with your hips back.
+
+### 3. Drive your head up into their chest
+- Drive your head up into their chest or under their chin, lifting their weight off you.
+
+### 4. Step back and stand in your stance
+- Step one foot up, then the other, and stand back into a stance, hands up.
+
+### Common mistakes
+- **Pulling your head straight back:** you feed them a guillotine. Hand-fight first.
+- **Standing up with your hips behind you:** they snap you back down.
+
 ## Defense
 
 Keep their head down with your chest and stay square in front of them.

@@ -95,6 +95,7 @@ function clean(kind, input) {
     page.status = ["complete", "review"].includes(input.status) ? input.status : "draft";
     // how to stop this move: a paragraph plus optional steps, shown on this page
     page.defense = str(input.defense);
+    page.breakdown = str(input.breakdown).replace(/\r\n/g, "\n");
     page.defenseSteps = Array.isArray(input.defenseSteps) ? input.defenseSteps.map(s => str(s).replace(/\s*\n\s*/g, " ")).filter(Boolean) : [];
   }
   if (kind !== "position" && Number.isFinite(Number(input.order)) && input.order !== null && input.order !== "") page.order = Math.round(Number(input.order));

@@ -16,6 +16,25 @@ Walk around the opponent's head while keeping chest-to-chest pressure.
 2. Walk your feet around past their head, keeping their arms away from it.
 3. Settle head-to-hips in north south.
 
+## Detailed breakdown
+
+### Start: side control
+- Chest to chest, crossface and underhook.
+
+### 1. Keep your chest on theirs and your hips low
+- Stay heavy; this is a pressure move, not a jump.
+
+### 2. Walk your feet around past their head, keeping their arms away from it
+- Walk in small steps around their head, chest pivoting on theirs.
+- Keep their arms from framing near their head as you go.
+
+### 3. Settle head-to-hips in north south
+- Your chest is on their chest, your head toward their hips, and your hips low behind their head.
+
+### Common mistakes
+- **Lifting your chest to walk:** they turn in or recover guard.
+- **Big steps:** stay close and pivot.
+
 ## Defense
 
 Turn into them as they walk around so they can't settle.

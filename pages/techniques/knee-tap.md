@@ -17,6 +17,26 @@ Block the opponent's knee while pushing their upper body over the blocked leg.
 3. Block the outside of the stepping knee with your hand.
 4. Drive diagonally over the blocked knee.
 
+## Detailed breakdown
+
+### Start: standing
+- You're in a collar tie or head control.
+
+### 1. Get a collar tie or head control
+- Hand behind their neck, head close.
+
+### 2. Pull them forward so they step
+- Pull their head to make them step forward onto one leg.
+
+### 3. Block the outside of the stepping knee with your hand
+- Drop and put your free hand on the outside of the knee they just stepped with.
+
+### 4. Drive diagonally over the blocked knee
+- Drive your head and shoulder diagonally over the blocked knee; with the knee blocked they can't step, so they fall.
+
+### Common mistakes
+- **Driving straight forward:** go diagonally over the blocked leg.
+
 ## Defense
 
 Step the blocked leg back before they drive into it.

@@ -17,6 +17,26 @@ Push the knee off and turn to your knees.
 3. Come up to your knees.
 4. Elbows tight.
 
+## Detailed breakdown
+
+### Start: bottom knee on belly
+- Their knee is on your belly and you can't get guard back.
+
+### 1. Push the knee down
+- Push their knee down toward your hips to lighten it.
+
+### 2. Turn onto your side
+- Turn onto your side, away from the knee, tucking your elbows in.
+
+### 3. Come up to your knees
+- Bring your knees under you and come up onto all fours.
+
+### 4. Elbows tight
+- Elbows tight to your knees and chin down, so they can't get a seatbelt or hooks; from turtle, look to recover guard or stand.
+
+### Common mistakes
+- **Turning slowly or with your elbows out:** that's exactly when they take your back. Turn fast and tight.
+
 ## Defense
 
 Follow and take the back.

@@ -17,6 +17,12 @@
 //   1. First step.
 //   2. Second step.
 //
+//   ## Detailed breakdown  (techniques only: a longer how-to)
+//
+//   ### A sub-heading
+//   - A detail.
+//   Plain lines are paragraphs.
+//
 //   ## Defense            (techniques only: how to stop this move)
 //
 //   How the defender stops it.
@@ -43,7 +49,7 @@ const HEADER_FIELDS = {
   technique: ["name", "from", "to", "col", "type", "attire", "status", "order"],
   concept: ["name", "order"]
 };
-const BODY_FIELDS = ["summary", "steps", "defense", "defenseSteps", "images", "video", "notes"];
+const BODY_FIELDS = ["summary", "steps", "breakdown", "defense", "defenseSteps", "images", "video", "notes"];
 const numbered = l => /^\s*(?:\d+[.)]|[-*])\s+/.test(l);
 const stripNumber = l => l.replace(/^\s*(?:\d+[.)]|[-*])\s+/, "").trim();
 const ID_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -87,6 +93,8 @@ function parsePage(text) {
     const h = heading.toLowerCase();
     if (h === "key steps" || h === "key points" || h === "steps") {
       page.steps = content.split("\n").map(l => l.replace(/^\s*(?:\d+[.)]|[-*])\s+/, "").trim()).filter(Boolean);
+    } else if (h === "detailed breakdown" || h === "breakdown") {
+      page.breakdown = content;
     } else if (h === "images") {
       page.images = content.split("\n").map(l => l.trim()).filter(Boolean);
     } else if (h === "video") {
@@ -117,6 +125,7 @@ function serializePage(kind, page) {
   if (page.steps && page.steps.length) {
     out += `\n## ${kind === "technique" ? "Key steps" : "Key points"}\n\n` + page.steps.map((s, i) => `${i + 1}. ${s}`).join("\n") + "\n";
   }
+  if (page.breakdown) out += "\n## Detailed breakdown\n\n" + page.breakdown.trim() + "\n";
   if (page.defense || (page.defenseSteps && page.defenseSteps.length)) {
     out += "\n## Defense\n\n";
     if (page.defense) out += page.defense.trim() + "\n";

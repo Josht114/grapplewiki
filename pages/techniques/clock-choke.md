@@ -16,6 +16,31 @@ Collar choke against the turtle, finished by walking your legs around the oppone
 3. Sprawl your weight onto their back.
 4. Walk your legs around toward their head to tighten.
 
+## Detailed breakdown
+
+### Start: top of turtle
+- They're turtled with their elbows tight. You're at their side, chest on their back. Gi only.
+
+### 1. Feed a deep collar grip under their neck
+- Reach under their neck from the side you're on and feed your hand into the far collar, fingers inside, as deep toward the back of their neck as you can.
+- A deep grip means your forearm, not just your fist, ends up across their throat.
+
+### 2. Block their arm with your other hand
+- With your free hand, grab or block their near arm (at the elbow or wrist), or post on their far hip.
+- This stops them rolling forward under you or turning in, which are the two ways out.
+
+### 3. Sprawl your weight onto their back
+- Sprawl your legs out behind you, hips low, so your chest and shoulder weigh down on their upper back.
+- Your weight keeps their head low and stops them sitting up.
+
+### 4. Walk your legs around toward their head to tighten
+- Keeping the grip, walk your feet in a circle toward their head, like the hand of a clock.
+- Each step turns the collar tighter around their neck. Keep your weight on them the whole way.
+
+### Common mistakes
+- **Shallow grip:** a fist on the side of the neck won't close anything. Go deep first.
+- **Coming up on your feet to walk:** you take your weight off and they roll you. Stay sprawled and shuffle.
+
 ## Defense
 
 Block the collar grip, and turn or sit out toward the choke before they walk around.

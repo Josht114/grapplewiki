@@ -17,6 +17,26 @@ Elbow-knee escape on both sides to recover full guard.
 3. Shrimp the other way and bring the other knee through.
 4. Close your guard.
 
+## Detailed breakdown
+
+### Start: bottom mount
+- They're mounted, sitting low on your hips.
+
+### 1. Frame on the hip
+- Put your hands or forearm on their hip (one side) to hold it in place as you move.
+
+### 2. Shrimp and bring one knee through
+- Shrimp your hips out to that side and slide your knee in between their legs, on the inside of their thigh.
+
+### 3. Shrimp the other way and bring the other knee through
+- Shrimp back the other way and bring your other knee through on the other side.
+
+### 4. Close your guard
+- With both knees in front of them, wrap your legs around their waist and lock your ankles.
+
+### Common mistakes
+- **Trying to shrimp with them sitting high on your chest:** bridge first to bring them down to your hips.
+
 ## Defense
 
 Grapevine and stay heavy; pull the knee back out.

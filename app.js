@@ -231,11 +231,27 @@
       ? `<ol class="steps">${steps.map(x => `<li>${wikiInline(x)}</li>`).join("")}</ol>` : ""}</div>`;
   }
 
+  // "### Heading" lines, "- bullet" lines and plain paragraphs; **bold** and [[links]] work inside them
+  function breakdownHtml(raw) {
+    const inline = s => wikiInline(s).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    let html = "", list = false;
+    const close = () => { if (list) { html += "</ul>"; list = false; } };
+    String(raw).split("\n").map(l => l.trim()).forEach(l => {
+      if (!l) { close(); return; }
+      if (l.startsWith("### ")) { close(); html += `<h3>${inline(l.slice(4))}</h3>`; }
+      else if (/^[-*] /.test(l)) { if (!list) { html += "<ul>"; list = true; } html += `<li>${inline(l.slice(2))}</li>`; }
+      else { close(); html += `<p>${inline(l)}</p>`; }
+    });
+    close();
+    return html;
+  }
+
   function contentBlock(p) {
     let html = "";
     if (p.summary) html += `<p class="lead">${esc(p.summary)}</p>`;
     else html += `<div class="stub-box">This page is a stub. <a href="#/edit/${p.id}">Add a description</a>.</div>`;
     if (p.steps && p.steps.length) html += `<h2>${p.kind === "technique" ? "Key steps" : "Key points"}</h2><ol class="steps">${p.steps.map(s => `<li>${wikiInline(s)}</li>`).join("")}</ol>`;
+    if (p.breakdown) html += `<h2>Detailed breakdown</h2><div class="breakdown">${breakdownHtml(p.breakdown)}</div>`;
     if (p.kind === "technique") html += defenseBlock(p);
     const imgs = imageList(p.images);
     if (imgs.length) html += `<h2>Images</h2><div class="gallery">${imgs.map(im => `<figure><a href="${esc(im.src)}" target="_blank" rel="noopener"><img src="${esc(im.src)}" alt="${esc(im.caption || p.name)}" loading="lazy" referrerpolicy="no-referrer"></a>${im.caption ? `<figcaption>${wikiInline(im.caption)}</figcaption>` : ""}</figure>`).join("")}</div>`;
@@ -1088,6 +1104,7 @@
           </div>
           <label>Summary<textarea name="summary" rows="3">${esc(p.summary || "")}</textarea></label>
           <label>Key steps <small>(one per line)</small><textarea name="steps" rows="5">${esc((p.steps || []).join("\n"))}</textarea></label>
+          <label class="tech-only"${isTech ? "" : " hidden"}>Detailed breakdown <small>("### Heading" lines, "- bullet" lines, plain paragraphs)</small><textarea name="breakdown" rows="10">${esc(p.breakdown || "")}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense <small>(how to stop this move)</small><textarea name="defense" rows="3">${esc(p.defense || "")}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense steps <small>(one per line)</small><textarea name="defenseSteps" rows="4">${esc((p.defenseSteps || []).join("\n"))}</textarea></label>
           <label>Images <small>(one per line: ![Caption](https://image-url))</small><textarea name="images" rows="3">${esc((p.images || []).join("\n"))}</textarea></label>
@@ -1129,7 +1146,7 @@
         notes: f.get("notes").trim()
       };
       if (kind === "technique") Object.assign(rec, { from: f.get("from") || null, to: f.get("to") || null, col: f.get("col"), type: f.get("type"), attire: f.get("attire"), status: f.get("status"),
-        defense: f.get("defense").trim(), defenseSteps: f.get("defenseSteps").split("\n").map(s => s.trim()).filter(Boolean) });
+        breakdown: f.get("breakdown").trim(), defense: f.get("defense").trim(), defenseSteps: f.get("defenseSteps").split("\n").map(s => s.trim()).filter(Boolean) });
       else if (kind === "position") Object.assign(rec, { side: f.get("side"), counterpart: f.get("counterpart") || null });
       if (!isNew && pages.get(form.dataset.id).order !== undefined) rec.order = pages.get(form.dataset.id).order;
 

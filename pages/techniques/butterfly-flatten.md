@@ -17,6 +17,26 @@ Push the opponent flat and step over a hook so you land in top half guard.
 3. Step over that leg.
 4. Settle into top half guard.
 
+## Detailed breakdown
+
+### Start: top of butterfly guard
+- They're sitting up with both butterfly hooks inside your thighs.
+
+### 1. Push their shoulders flat to the mat
+- Get head or shoulder control (a crossface or a hand on their shoulder) and drive your weight forward so their back goes to the mat. Butterfly guard is weak once they're flat.
+
+### 2. Pin one hook with your knee
+- Drop one knee onto the inside of their thigh or onto the hooking foot, pinning that hook to the mat.
+
+### 3. Step over that leg
+- Step your other leg back and over the pinned leg, so that leg is now between yours.
+
+### 4. Settle into top half guard
+- Drop your hips, crossface and underhook, and settle into top half guard. Now pass from there.
+
+### Common mistakes
+- **Trying to pin a hook while they're sitting up:** they lift you. Flatten first.
+
 ## Defense
 
 Keep sitting up; don't let them push you flat.

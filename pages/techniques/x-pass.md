@@ -17,6 +17,27 @@ Standing speed pass: fake one way, then step across the opponent's legs in an X 
 3. Step your far leg across in front of them.
 4. Drop your knee and settle into side control.
 
+## Detailed breakdown
+
+### Start: in their open guard
+- You're standing, gripping their knees or pants, with their feet on your hips or legs.
+
+### 1. Grip their knees or pants
+- Grip both knees (or pants) so you control where their legs point.
+
+### 2. Fake a pass to one side
+- Make a strong move as if you're passing to one side so they shift to block it.
+
+### 3. Step your far leg across in front of them
+- Step your other leg across in front of their legs, crossing your legs in an X, to the side they've left open.
+
+### 4. Drop your knee and settle into side control
+- Drop your knee to the mat by their hip and your chest onto theirs, then settle into side control.
+
+### Common mistakes
+- **A fake they don't believe:** commit to it so they react.
+- **Staying tall after the step:** drop your weight at once or they recover.
+
 ## Defense
 
 Turn to face the side they step to and keep your knees in front.

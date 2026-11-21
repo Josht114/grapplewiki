@@ -17,6 +17,27 @@ Escape the back and turn into the opponent to recover guard.
 3. Clear the top hook.
 4. Turn in to face them and recover guard.
 
+## Detailed breakdown
+
+### Start: bottom back mount
+- They have your back with a seatbelt and hooks.
+
+### 1. Two-on-one the choking arm and keep your chin down
+- Grab the arm across your neck with both hands, pull it down off your throat, and tuck your chin.
+
+### 2. Slide your shoulders to the mat on the side of their bottom hook
+- Scoot your shoulders down to the mat on the side of their bottom hook, so your back lands on the mat beside them, not on top of them.
+
+### 3. Clear the top hook
+- Push their top hook off your hip with your hand or scrape it off with your leg.
+
+### 4. Turn in to face them and recover guard
+- Turn in to face them and bring your legs in front: open guard.
+
+### Common mistakes
+- **Escaping toward the top-hook side:** you fall into their body triangle or mount. Go to the bottom-hook side.
+- **Letting go of the hand fight early:** they choke you mid-escape.
+
 ## Defense
 
 Follow their hips and keep the top hook.

@@ -16,6 +16,28 @@ Triangle choke from open guard, usually off sleeve control or a spider guard.
 3. Shoot your leg over their shoulder and across the neck.
 4. Lock the figure-four, angle off and squeeze.
 
+## Detailed breakdown
+
+### Start: bottom open guard
+- You control both sleeves or wrists.
+
+### 1. Control both sleeves or wrists
+- Grip both their arms so you decide where they go.
+
+### 2. Push one arm in and pull the other out
+- Push one arm in toward their belly (or between your legs) and pull the other arm out to your side.
+- The triangle traps one arm and the head; the other arm must be out.
+
+### 3. Shoot your leg over their shoulder and across the neck
+- Kick the leg on the side of the arm that's out over their shoulder and across the back of their neck.
+
+### 4. Lock the figure-four, angle off and squeeze
+- Hook that foot behind your other knee to lock the triangle, swing your body to the side at an angle, pull their head down and squeeze your knees.
+
+### Common mistakes
+- **Both arms in or both out:** it won't choke. One in, one out.
+- **Staying square:** angle off or there's no squeeze.
+
 ## Defense
 
 Keep both arms on the same side: never one in and one out.

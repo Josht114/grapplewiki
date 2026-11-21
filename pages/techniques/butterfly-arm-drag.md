@@ -17,6 +17,26 @@ Drag the opponent's arm across from butterfly guard and climb to their back.
 3. Drag the arm across your body.
 4. Climb to their back and insert hooks.
 
+## Detailed breakdown
+
+### Start: bottom butterfly guard
+- You're sitting up with butterfly hooks in.
+
+### 1. Grab their wrist with your same-side hand
+- Grab their wrist on the same side (your right to their left).
+
+### 2. Reach the other hand behind their triceps
+- Reach across and cup the back of their arm just above the elbow.
+
+### 3. Drag the arm across your body
+- Pull the arm across your body and shift your hips out to the side, so their side and back open up.
+
+### 4. Climb to their back and insert hooks
+- Reach over their back, pull yourself up behind them, and slide your hooks in.
+
+### Common mistakes
+- **Pulling the arm without moving your hips:** you stay in front of them.
+
 ## Defense
 
 Pull your elbow back to your ribs and turn to face them.

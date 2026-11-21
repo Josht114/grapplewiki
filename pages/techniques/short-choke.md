@@ -16,6 +16,26 @@ Choke from the back when your arm can't get deep: the forearm squeezes across th
 3. Squeeze your elbow and chest together.
 4. Lean back and tighten.
 
+## Detailed breakdown
+
+### Start: back control
+- They're defending the RNC; you can't get under the chin.
+
+### 1. Slide the choking arm across their neck as far as you can
+- Get as deep as you can, even if not under the chin.
+
+### 2. Put the hand on their far shoulder or behind their head
+- Grip their far shoulder or put your hand behind their head.
+
+### 3. Squeeze your elbow and chest together
+- Squeeze, closing the space between elbow and chest.
+
+### 4. Lean back and tighten
+- Lean back slightly to tighten the choke.
+
+### Common mistakes
+- **Leaning too far back:** you lose position. Small adjustments.
+
 ## Defense
 
 Keep your chin down and hand-fight so the forearm can't settle across your neck.

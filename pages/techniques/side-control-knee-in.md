@@ -17,6 +17,26 @@ Make space with frames and slide your knee in to recover half guard.
 3. Shrimp away and slide your knee into the gap.
 4. Trap their leg to recover half guard.
 
+## Detailed breakdown
+
+### Start: bottom side control
+- They're across you.
+
+### 1. Frame on the neck and hip
+- Forearm frame on the neck, hand on the hip.
+
+### 2. Bridge into them
+- Bridge to lift their weight.
+
+### 3. Shrimp away and slide your knee into the gap
+- Shrimp your hips out and slide your bottom knee in between you.
+
+### 4. Trap their leg to recover half guard
+- Use the knee to get under their leg and lock your legs around it: half guard.
+
+### Common mistakes
+- **Knee too low:** they step over it. Get it high in the gap.
+
 ## Defense
 
 Block the near hip with your knee and keep your weight heavy.

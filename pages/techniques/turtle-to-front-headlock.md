@@ -17,6 +17,28 @@ Circle from the opponent's side to their head and snap them into a front headloc
 3. Grab their head and far arm.
 4. Sprawl your hips back into the front headlock.
 
+## Detailed breakdown
+
+### Start: top of turtle
+- They're turtled; you're at their side and they're trying to come up.
+
+### 1. Keep your chest on their back
+- Stay heavy on their upper back as you start to move, so they can't rise.
+
+### 2. Walk around toward their head
+- Walk in small steps around toward their head, keeping contact.
+
+### 3. Grab their head and far arm
+- Wrap your arm around their head, and take their far arm (at the triceps or elbow) with your other hand.
+
+### 4. Sprawl your hips back into the front headlock
+- Sprawl your hips away so your weight is on their head and shoulders: the front headlock.
+- From here: darce, anaconda, guillotine, or go behind.
+
+### Common mistakes
+- **Lifting your chest to walk round:** they pop up into a single leg.
+- **Grabbing only the head:** without the far arm they turn into you.
+
 ## Defense
 
 Square up and lift your head as they circle to the front.
