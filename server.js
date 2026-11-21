@@ -35,8 +35,8 @@ function writeFileAtomic(file, text) {
 }
 
 function readCoreGame() {
-  try { return JSON.parse(fs.readFileSync(CORE_GAME_FILE, "utf8")); }
-  catch (e) { return { picks: {} }; }
+  try { return Object.assign(JSON.parse(fs.readFileSync(CORE_GAME_FILE, "utf8")), { saved: true }); }
+  catch (e) { return { picks: {}, saved: false }; }
 }
 
 function readWikiJson() {
@@ -162,8 +162,11 @@ async function api(req, res, parts) {
     const picks = {};
     for (const [pos, pick] of Object.entries(body.picks)) {
       if (!ID_RE.test(pos) || !pick) continue;
-      const subs = ids(pick.subs), transitions = ids(pick.transitions);
-      if (subs.some(Boolean) || transitions.some(Boolean)) picks[pos] = { subs, transitions };
+      // empty slots are kept as null so a cleared dropdown stays cleared (and isn't pre-filled again)
+      const entry = {};
+      if (Array.isArray(pick.subs)) entry.subs = ids(pick.subs);
+      if (Array.isArray(pick.transitions)) entry.transitions = ids(pick.transitions);
+      if (Object.keys(entry).length) picks[pos] = entry;
     }
     writeFileAtomic(CORE_GAME_FILE, JSON.stringify({ picks }, null, 2) + "\n");
     return send(res, 200, { picks });

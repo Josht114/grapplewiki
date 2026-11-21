@@ -510,8 +510,31 @@
   const picksFor = (pid, kind) => [...new Set(((corePicks[pid] || {})[PICK_KEY[kind]] || []).filter(Boolean))].map(id => validPick(pid, kind, id)).filter(Boolean);
   const hasPicks = () => simpleIds().some(pid => picksFor(pid, "sub").length || picksFor(pid, "transition").length);
 
+  // Unsaved picks survive moving around the wiki; they're only reloaded from the file when nothing is unsaved.
+  let coreDirty = false;
+  window.addEventListener("beforeunload", e => { if (coreDirty) { e.preventDefault(); e.returnValue = ""; } });
+
+  // A position with only 1 or 2 options for a dropdown pair starts with them filled in,
+  // unless the saved game already says something for that pair (including an explicit clear).
+  function prefillCorePicks() {
+    let filled = false;
+    simpleIds().forEach(pid => ["sub", "transition"].forEach(kind => {
+      const key = PICK_KEY[kind];
+      if (corePicks[pid] && Array.isArray(corePicks[pid][key])) return;
+      const opts = techsFrom(pid, kind);
+      if (!opts.length || opts.length > 2) return;
+      corePicks[pid] = corePicks[pid] || {};
+      corePicks[pid][key] = [opts[0].id, opts[1] ? opts[1].id : null];
+      filled = true;
+    }));
+    return filled;
+  }
+
   function viewCoreGame() {
-    corePicks = JSON.parse(JSON.stringify((BASE.coreGame && BASE.coreGame.picks) || {}));
+    if (!coreDirty) {
+      corePicks = JSON.parse(JSON.stringify((BASE.coreGame && BASE.coreGame.picks) || {}));
+      if (prefillCorePicks()) coreDirty = true;
+    }
     const dropdown = (pid, kind, i) => {
       const opts = techsFrom(pid, kind);
       const label = `${pages.get(pid).name}: ${kind === "sub" ? "Sub" : "Transition"} ${i + 1}`;
@@ -543,6 +566,7 @@
         </div>
         <div class="formbar cg-actions">
           <button type="button" class="btn primary" id="cgGenerate">Generate flowchart</button>
+          <button type="button" class="btn" id="cgSave">Save game</button>
           <button type="button" class="btn" id="cgClear">Clear all</button>
           <span class="muted" id="cgStatus" role="status"></span>
         </div>
@@ -633,26 +657,37 @@
     if (!page) return;
     const status = document.getElementById("cgStatus");
     const genBtn = document.getElementById("cgGenerate");
-    const refreshBtn = () => { genBtn.disabled = !hasPicks(); };
-    let timer;
-    const save = () => {
-      clearTimeout(timer);
-      status.textContent = "Saving…";
-      timer = setTimeout(async () => {
-        try {
-          const res = await apiCall("PUT", "/api/core-game", { picks: corePicks });
-          BASE.coreGame = { picks: res.picks };
-          status.textContent = "Saved to core-game.json";
-        } catch (e) { status.textContent = "Couldn't save: " + e.message; }
-      }, 300);
+    const saveBtn = document.getElementById("cgSave");
+    const saved = !!(BASE.coreGame && BASE.coreGame.saved);
+    const refresh = () => {
+      genBtn.disabled = !hasPicks();
+      saveBtn.disabled = !coreDirty;
+      saveBtn.classList.toggle("primary", coreDirty);
+      genBtn.classList.toggle("primary", !coreDirty);
+      status.textContent = coreDirty ? (saved ? "Unsaved changes" : "Not saved yet") : (saved ? "Saved to core-game.json" : "");
     };
+    const setDirty = () => { coreDirty = true; refresh(); };
+    saveBtn.addEventListener("click", async () => {
+      saveBtn.disabled = true;
+      status.textContent = "Saving…";
+      try {
+        const res = await apiCall("PUT", "/api/core-game", { picks: corePicks });
+        BASE.coreGame = { picks: res.picks, saved: true };
+        coreDirty = false;
+        status.textContent = "Saved to core-game.json";
+        saveBtn.classList.remove("primary");
+        genBtn.classList.add("primary");
+      } catch (e) {
+        status.textContent = "Couldn't save: " + e.message;
+        saveBtn.disabled = false;
+      }
+    });
     page.querySelectorAll("select[data-pos]").forEach(sel => sel.addEventListener("change", () => {
       const { pos, kind, i } = sel.dataset;
-      const pick = corePicks[pos] = corePicks[pos] || { subs: [], transitions: [] };
-      const list = pick[PICK_KEY[kind]] = pick[PICK_KEY[kind]] || [];
+      const pick = corePicks[pos] = corePicks[pos] || {};
+      const list = pick[PICK_KEY[kind]] = pick[PICK_KEY[kind]] || [null, null];
       list[Number(i)] = sel.value || null;
-      refreshBtn();
-      save();
+      setDirty();
     }));
     genBtn.addEventListener("click", () => {
       const box = document.getElementById("cgChart");
@@ -660,14 +695,15 @@
       box.scrollIntoView({ behavior: "smooth", block: "start" });
     });
     document.getElementById("cgClear").addEventListener("click", () => {
-      if (!hasPicks() || !confirm("Clear every pick in your core game?")) return;
+      if (!hasPicks() || !confirm("Clear every pick in your core game? (Nothing changes in the file until you click Save game.)")) return;
+      // explicit empties, so cleared dropdowns don't get pre-filled again
       corePicks = {};
+      simpleIds().forEach(pid => { corePicks[pid] = { subs: [null, null], transitions: [null, null] }; });
       page.querySelectorAll("select[data-pos]").forEach(sel => { sel.value = ""; });
       document.getElementById("cgChart").innerHTML = "";
-      refreshBtn();
-      save();
+      setDirty();
     });
-    refreshBtn();
+    refresh();
   }
 
   // ---------- editor ----------

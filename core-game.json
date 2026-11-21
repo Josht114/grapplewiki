@@ -1,0 +1,34 @@
+{
+  "picks": {
+    "top-front-headlock": {
+      "subs": [
+        "darce-choke",
+        "anaconda-choke"
+      ],
+      "transitions": [
+        "go-behind",
+        "spin-behind"
+      ]
+    },
+    "top-side-control": {
+      "subs": [
+        "kimura",
+        "americana"
+      ],
+      "transitions": [
+        "side-control-to-mount",
+        "side-control-to-north-south"
+      ]
+    },
+    "top-knee-on-belly": {
+      "subs": [
+        "baseball-bat-choke",
+        "far-side-arm-bar"
+      ],
+      "transitions": [
+        "knee-on-belly-to-mount",
+        "knee-on-belly-to-side-control"
+      ]
+    }
+  }
+}
