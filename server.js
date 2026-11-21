@@ -76,6 +76,8 @@ function clean(kind, input) {
     name: str(input.name).replace(/\s+/g, " ").slice(0, 200),
     summary: str(input.summary),
     steps: Array.isArray(input.steps) ? input.steps.map(s => str(s).replace(/\s*\n\s*/g, " ")).filter(Boolean) : [],
+    // "![Caption](https://...)" lines; anything that isn't an http(s) image line is dropped
+    images: Array.isArray(input.images) ? input.images.map(s => str(s).replace(/\s*\n\s*/g, " ")).filter(s => /^!\[[^\]]*\]\(https?:\/\/[^\s)]+\)$/.test(s)) : [],
     video: str(input.video).split(/\s/)[0],
     notes: str(input.notes)
   };
@@ -88,7 +90,8 @@ function clean(kind, input) {
     page.to = idOrNull(input.to);
     page.col = input.col === "sub" ? "sub" : "transition";
     page.type = str(input.type).toLowerCase().slice(0, 40) || null;
-    page.status = input.status === "complete" ? "complete" : "draft";
+    page.attire = ["gi", "no-gi", "both"].includes(input.attire) ? input.attire : "both";
+    page.status = ["complete", "review"].includes(input.status) ? input.status : "draft";
     // how to stop this move: a paragraph plus optional steps, shown on this page
     page.defense = str(input.defense);
     page.defenseSteps = Array.isArray(input.defenseSteps) ? input.defenseSteps.map(s => str(s).replace(/\s*\n\s*/g, " ")).filter(Boolean) : [];

@@ -4,6 +4,7 @@ from: top-back-mount
 to: top-mount
 col: transition
 type: transition
+attire: both
 status: draft
 order: 1070
 ---

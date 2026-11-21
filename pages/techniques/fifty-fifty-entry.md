@@ -4,6 +4,7 @@ from: top-slx
 to: fifty-fifty
 col: transition
 type: transition
+attire: both
 status: draft
 order: 720
 ---

@@ -3,7 +3,8 @@ name: North south choke
 from: top-north-south
 col: sub
 type: submission
-status: draft
+attire: both
+status: review
 order: 190
 ---
 Choke from north south using the side of your chest and arm against the neck.
@@ -22,3 +23,19 @@ Keep your near arm inside and turn toward the opponent so their chest can't seal
 2. Frame on their hips.
 3. Turn into them to take the angle away.
 4. Recover guard as the pressure eases.
+
+## Images
+
+![1. Thread an arm under their neck and grip near their armpit (BJJ Fanatics)](https://i.ytimg.com/vi/HuwV3-g2knA/hq2.jpg)
+![2. Line up the side of your chest with their neck (BJJ Fanatics)](https://i.ytimg.com/vi/HuwV3-g2knA/hq3.jpg)
+![3. Drop your hips and sprawl to close the choke (BJJ Fanatics)](https://i.ytimg.com/vi/HuwV3-g2knA/hqdefault.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=HuwV3-g2knA
+
+## Notes
+
+Video: "North/South Strangle - Finishing With 2 Hands by John Danaher" (BJJ Fanatics).
+
+Photos 1, 2, 3: frames from "North/South Strangle - Finishing With 2 Hands by John Danaher", BJJ Fanatics (https://www.youtube.com/watch?v=HuwV3-g2knA).

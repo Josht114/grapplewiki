@@ -4,7 +4,8 @@ from: bottom-closed-guard-kneeling
 to: top-back-mount
 col: transition
 type: back take
-status: draft
+attire: both
+status: review
 order: 1650
 ---
 Drag the opponent's arm across from closed guard and climb to their back.
@@ -23,3 +24,18 @@ Pull your elbow back and turn to face them.
 1. Keep your elbows tight.
 2. Pull the arm back.
 3. Square up.
+
+## Images
+
+![1. Drag the arm across your body (Hurricane Jiu Jitsu)](https://i.ytimg.com/vi/eolJrphVaCU/hq2.jpg)
+![2. Open your guard and hip out (Hurricane Jiu Jitsu)](https://i.ytimg.com/vi/eolJrphVaCU/hq3.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=eolJrphVaCU
+
+## Notes
+
+Video: "Closed Guard: Arm Drag to the Back" (Hurricane Jiu Jitsu).
+
+Photos 1, 2: frames from "Closed Guard: Arm Drag to the Back", Hurricane Jiu Jitsu (https://www.youtube.com/watch?v=eolJrphVaCU).

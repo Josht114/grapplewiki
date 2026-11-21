@@ -3,7 +3,8 @@ name: Mounted triangle
 from: top-mount
 col: sub
 type: submission
-status: draft
+attire: both
+status: review
 order: 1440
 ---
 Triangle choke locked from mount, after the opponent's arm is pushed across and your leg swings over.
@@ -22,3 +23,20 @@ Stop them climbing high: keep your elbows tight and bridge when they move up.
 1. Keep your elbows by your ribs.
 2. Bridge as they climb.
 3. Posture your head back if the leg comes over.
+
+## Images
+
+![1. Climb to high mount and push one arm across their face (Gracie Jiu-Jitsu Academy)](https://i.ytimg.com/vi/gc5YRdv-wSw/hq1.jpg)
+![2. Swing your leg over that arm and behind their neck (Gracie Jiu-Jitsu Academy)](https://i.ytimg.com/vi/gc5YRdv-wSw/hqdefault.jpg)
+![3. Lock the triangle with your other leg (Absolute MMA St Kilda)](https://i.ytimg.com/vi/Q0hYV74kWvU/hq1.jpg)
+![4. Pull their head up and squeeze, or roll for the arm bar (Gracie Jiu-Jitsu Academy)](https://i.ytimg.com/vi/gc5YRdv-wSw/hq2.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=gc5YRdv-wSw
+
+## Notes
+
+Video: "Gracie Breakdown: Triangle Choke from the Mount" (Gracie Jiu-Jitsu Academy).
+
+Photos 1, 2, 4: frames from "Gracie Breakdown: Triangle Choke from the Mount", Gracie Jiu-Jitsu Academy (https://www.youtube.com/watch?v=gc5YRdv-wSw). Photo 3: frame from "Mounted triangle (Lachlan Giles)", Absolute MMA St Kilda (https://www.youtube.com/watch?v=Q0hYV74kWvU).

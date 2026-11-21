@@ -4,7 +4,8 @@ from: bottom-turtle
 to: top-half-guard
 col: transition
 type: takedown
-status: draft
+attire: both
+status: review
 order: 1800
 ---
 Grab the opponent's leg from turtle and drive through to reverse the position.
@@ -23,3 +24,19 @@ Keep your legs back and away from their hands.
 1. Sprawl the leg back.
 2. Crossface.
 3. Stay on their back.
+
+## Images
+
+![1. Reach and grab their near leg (Wim Deputter BJJ)](https://i.ytimg.com/vi/HE74rsRWziE/hq2.jpg)
+![2. Pull it to your chest (Wim Deputter BJJ)](https://i.ytimg.com/vi/HE74rsRWziE/hq3.jpg)
+![3. Drive through and come up on top (Wim Deputter BJJ)](https://i.ytimg.com/vi/HE74rsRWziE/hqdefault.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=HE74rsRWziE
+
+## Notes
+
+Video: "Single Leg From Turtle (3 options)" (Wim Deputter BJJ).
+
+Photos 1, 2, 3: frames from "Single Leg From Turtle (3 options)", Wim Deputter BJJ (https://www.youtube.com/watch?v=HE74rsRWziE).

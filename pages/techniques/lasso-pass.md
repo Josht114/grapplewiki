@@ -4,6 +4,7 @@ from: top-lasso
 to: top-side-control
 col: transition
 type: pass
+attire: gi
 status: draft
 order: 670
 ---

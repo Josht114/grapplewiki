@@ -4,7 +4,8 @@ from: bottom-closed-guard-kneeling
 to: top-mount
 col: transition
 type: sweep
-status: draft
+attire: both
+status: review
 order: 560
 ---
 Sit up, post on a hand and bump the opponent over with your hips. Chains to the kimura if they post.
@@ -23,3 +24,19 @@ Post your free hand wide and keep your posture, then pull the arm free if they s
 1. Keep your posture as they sit up.
 2. Post wide when they bump.
 3. Grab your belt if they lock the kimura.
+
+## Images
+
+![1. Sit up onto your elbow, then your hand (The Grappling Academy)](https://i.ytimg.com/vi/CCos35cv5T8/hq1.jpg)
+![2. Reach your other arm over their shoulder (The Grappling Academy)](https://i.ytimg.com/vi/CCos35cv5T8/hq2.jpg)
+![3. Bump your hips up and into them to roll them over (The Grappling Academy)](https://i.ytimg.com/vi/CCos35cv5T8/hq3.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=CCos35cv5T8
+
+## Notes
+
+Video: "The Kimura Hip Bump Sweep - Kimura Combo" (The Grappling Academy).
+
+Photos 1, 2, 3: frames from "The Kimura Hip Bump Sweep - Kimura Combo", The Grappling Academy (https://www.youtube.com/watch?v=CCos35cv5T8).

@@ -4,7 +4,8 @@ from: bottom-open-guard
 to: top-mount
 col: transition
 type: sweep
-status: draft
+attire: both
+status: review
 order: 1590
 ---
 Roll back with both feet on the opponent's hips and launch them over your head, following them into mount.
@@ -23,3 +24,19 @@ Keep your weight back and stay off their feet.
 1. Don't lean over them.
 2. Step back off the feet on your hips.
 3. Base out with your hands.
+
+## Images
+
+![1. Put both feet on their hips (Danny Fung)](https://i.ytimg.com/vi/MaRCmgehjo8/hq1.jpg)
+![2. Pull them forward as you roll back (Danny Fung)](https://i.ytimg.com/vi/MaRCmgehjo8/hq3.jpg)
+![3. Extend your legs to send them overhead and follow into mount (Danny Fung)](https://i.ytimg.com/vi/MaRCmgehjo8/hqdefault.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=MaRCmgehjo8
+
+## Notes
+
+Video: "Jiu-Jitsu Fundamentals: Balloon Sweep from the Open Guard" (Danny Fung).
+
+Photos 1, 2, 3: frames from "Jiu-Jitsu Fundamentals: Balloon Sweep from the Open Guard", Danny Fung (https://www.youtube.com/watch?v=MaRCmgehjo8).

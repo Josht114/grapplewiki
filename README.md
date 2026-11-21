@@ -39,6 +39,7 @@ name: Kimura
 from: top-side-control
 col: sub
 type: submission
+attire: both
 status: draft
 order: 50
 ---
@@ -67,10 +68,11 @@ Free text. Link other pages with [[Page name]].
 Header fields:
 
 - **Positions:** `name`, `side` (`top` / `bottom` / `neutral`), `counterpart` (id of the same position from the other side).
-- **Techniques:** `name`, `from`, `to`, `col`, `type`, `status`, `order`.
+- **Techniques:** `name`, `from`, `to`, `col`, `type`, `attire`, `status`, `order`.
+  - `attire` is `gi`, `no-gi` or `both` (missing counts as `both`). Gi-only and no-gi-only moves get a small tag on the home grid.
   - `col` is `sub` or `transition` (moves you to another position).
   - How to stop the move goes in its `## Defense` section, not a separate page.
-  - `status` is `complete` (green) or `draft` (yellow).
+  - `status` is `complete` (green, reviewed), `review` (orange, done but not reviewed yet) or `draft` (red, not finished).
   - `order` sets the order within a column on the home grid.
 - **Concepts:** `name`, `order`.
 

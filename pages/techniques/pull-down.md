@@ -4,6 +4,7 @@ from: top-back-take-standing
 to: top-back-mount
 col: transition
 type: takedown
+attire: both
 status: draft
 order: 10
 ---

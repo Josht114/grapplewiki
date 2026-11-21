@@ -4,7 +4,8 @@ from: top-butterfly
 to: top-side-control
 col: transition
 type: pass
-status: draft
+attire: both
+status: review
 order: 1210
 ---
 Kill or lift one butterfly hook and pass to the side.
@@ -23,3 +24,19 @@ Keep your hooks active and sit up into them.
 1. Re-insert your hook as soon as it's lifted.
 2. Sit up and get an underhook.
 3. Switch to half guard if a hook is lost.
+
+## Images
+
+![1. Flatten them with head or shoulder control (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/I1hYqSEXWbY/hq1.jpg)
+![2. Swing your leg free over the dead hook (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/I1hYqSEXWbY/hq2.jpg)
+![3. Drop into side control (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/I1hYqSEXWbY/hq3.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=I1hYqSEXWbY
+
+## Notes
+
+Video: "3 Ways to Pass Butterfly Guard! (Must Do)!" (BIG OSS Jiu-Jitsu Channel).
+
+Photos 1, 2, 3: frames from "3 Ways to Pass Butterfly Guard! (Must Do)!", BIG OSS Jiu-Jitsu Channel (https://www.youtube.com/watch?v=I1hYqSEXWbY).

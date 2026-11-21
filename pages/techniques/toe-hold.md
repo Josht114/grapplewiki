@@ -3,6 +3,7 @@ name: Toe hold
 from: fifty-fifty
 col: sub
 type: submission
+attire: both
 status: draft
 order: 750
 ---

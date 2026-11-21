@@ -4,6 +4,7 @@ from: top-body-lock
 to: top-half-guard
 col: transition
 type: takedown
+attire: both
 status: draft
 order: 20
 ---

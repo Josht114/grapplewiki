@@ -4,6 +4,7 @@ from: bottom-side-control
 to: bottom-turtle
 col: transition
 type: escape
+attire: both
 status: draft
 order: 1750
 ---

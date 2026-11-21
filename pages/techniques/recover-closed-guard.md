@@ -4,6 +4,7 @@ from: bottom-open-guard
 to: bottom-closed-guard-kneeling
 col: transition
 type: transition
+attire: both
 status: draft
 order: 1580
 ---

@@ -3,7 +3,8 @@ name: Lapel choke
 from: top-back-mount
 col: sub
 type: submission
-status: draft
+attire: gi
+status: review
 order: 140
 ---
 Choke from the back using the opponent's own lapel as the strangling grip.
@@ -23,3 +24,19 @@ Strip the collar grip and stop the opponent getting the angle for the bow and ar
 2. Keep your leg hidden from the pants grip.
 3. Turn toward the choking hand's side.
 4. Bring your back to the mat.
+
+## Images
+
+![1. Feed the lapel across their neck (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/eMbkVDRreIQ/hq1.jpg)
+![2. Grab behind their head or their far arm with your other hand (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/eMbkVDRreIQ/hq3.jpg)
+![3. Pull the lapel back while driving their head forward (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/eMbkVDRreIQ/hq2.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=eMbkVDRreIQ
+
+## Notes
+
+Video: "How To Do My 3 Favorite Jiu Jitsu Chokes From The Back!" (Matt Arroyo Jiu Jitsu).
+
+Photos 1, 2, 3: frames from "How To Do My 3 Favorite Jiu Jitsu Chokes From The Back!", Matt Arroyo Jiu Jitsu (https://www.youtube.com/watch?v=eMbkVDRreIQ).

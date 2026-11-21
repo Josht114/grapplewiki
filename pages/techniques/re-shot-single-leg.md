@@ -4,7 +4,8 @@ from: bottom-front-headlock
 to: top-half-guard
 col: transition
 type: takedown
-status: draft
+attire: both
+status: review
 order: 1260
 ---
 From a front headlock, shoot again for a single leg as the opponent leans on you.
@@ -23,3 +24,18 @@ Sprawl your hips back and keep their head down.
 1. Kick your legs back.
 2. Drop your hips on their shoulders.
 3. Keep the front headlock.
+
+## Images
+
+![1. Wait for them to lean their weight on you (The Art of Fighting)](https://i.ytimg.com/vi/DLKrtq9ai8U/hq2.jpg)
+![2. Drop and grab a leg (The Art of Fighting)](https://i.ytimg.com/vi/DLKrtq9ai8U/hqdefault.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=DLKrtq9ai8U
+
+## Notes
+
+Video: "Throw Off a Single Leg to Front Headlock" (The Art of Fighting).
+
+Photos 1, 2: frames from "Throw Off a Single Leg to Front Headlock", The Art of Fighting (https://www.youtube.com/watch?v=DLKrtq9ai8U).

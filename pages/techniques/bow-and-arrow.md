@@ -3,7 +3,8 @@ name: Bow and arrow
 from: top-back-mount
 col: sub
 type: submission
-status: draft
+attire: gi
+status: review
 order: 130
 ---
 Collar choke from the back, with the opponent stretched out like a drawn bow.
@@ -23,3 +24,19 @@ Strip the collar grip and stop the opponent getting the angle for the bow and ar
 2. Keep your leg hidden from the pants grip.
 3. Turn toward the choking hand's side.
 4. Bring your back to the mat.
+
+## Images
+
+![1. Get a deep collar grip with your choking hand (Evolve Mixed Martial Arts)](https://i.ytimg.com/vi/xqNhZVNhxnE/hq1.jpg)
+![2. Grab their pants at the knee with the other hand (Evolve Mixed Martial Arts)](https://i.ytimg.com/vi/xqNhZVNhxnE/hq3.jpg)
+![3. Swing your leg over their shoulder and turn to the side (Evolve Mixed Martial Arts)](https://i.ytimg.com/vi/xqNhZVNhxnE/hq2.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=xqNhZVNhxnE
+
+## Notes
+
+Video: "BJJ" (Evolve Mixed Martial Arts).
+
+Photos 1, 2, 3: frames from "BJJ", Evolve Mixed Martial Arts (https://www.youtube.com/watch?v=xqNhZVNhxnE).

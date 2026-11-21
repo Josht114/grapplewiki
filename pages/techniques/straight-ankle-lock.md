@@ -3,6 +3,7 @@ name: Straight ankle lock
 from: bottom-slx
 col: sub
 type: submission
+attire: both
 status: draft
 order: 740
 ---

@@ -4,7 +4,8 @@ from: standing
 to: top-back-take-standing
 col: transition
 type: back take
-status: draft
+attire: both
+status: review
 order: 280
 ---
 Pull the opponent's arm across your body to take the angle and get behind them.
@@ -23,3 +24,19 @@ Pull your elbow back to your ribs and turn to face them.
 1. Keep your elbows tight.
 2. Pull the arm back as they drag.
 3. Turn to face them.
+
+## Images
+
+![1. Grab their wrist with your same-side hand (Knight Jiu-Jitsu)](https://i.ytimg.com/vi/1sJ4m1ideDA/hq1.jpg)
+![2. Reach the other hand to the back of their triceps (Energia Martial Arts)](https://i.ytimg.com/vi/dnIqh4cMfz8/hq1.jpg)
+![3. Pull the arm across while stepping to the outside (Knight Jiu-Jitsu)](https://i.ytimg.com/vi/1sJ4m1ideDA/hq2.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=1sJ4m1ideDA
+
+## Notes
+
+Video: "Arm Drag Advanced Basics for Submission Grappling and More" (Knight Jiu-Jitsu).
+
+Photos 1, 3: frames from "Arm Drag Advanced Basics for Submission Grappling and More", Knight Jiu-Jitsu (https://www.youtube.com/watch?v=1sJ4m1ideDA). Photo 2: frame from "Arm drag TAKEDOWNS", Energia Martial Arts (https://www.youtube.com/watch?v=dnIqh4cMfz8).

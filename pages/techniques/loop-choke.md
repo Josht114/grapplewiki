@@ -3,6 +3,7 @@ name: Loop choke
 from: bottom-open-guard-seated
 col: sub
 type: submission
+attire: gi
 status: draft
 order: 460
 ---

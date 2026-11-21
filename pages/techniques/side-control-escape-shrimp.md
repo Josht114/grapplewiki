@@ -4,7 +4,8 @@ from: bottom-side-control
 to: bottom-open-guard
 col: transition
 type: escape
-status: draft
+attire: both
+status: review
 order: 800
 ---
 Frame on the opponent, shrimp away, and recover guard by putting your knee back in.
@@ -24,6 +25,20 @@ Crossface and underhook, and keep your weight heavy on their hips.
 2. Block the near hip with your knee.
 3. Follow their shrimp.
 
+## Images
+
+![1. Frame one forearm on the neck, the other hand on the hip (Focused Fight Team)](https://i.ytimg.com/vi/KmgkfQ2HCrQ/hq2.jpg)
+![2. Shrimp away to create space (Focused Fight Team)](https://i.ytimg.com/vi/KmgkfQ2HCrQ/hq1.jpg)
+![3. Slide your knee into the gap and recover guard (Focused Fight Team)](https://i.ytimg.com/vi/KmgkfQ2HCrQ/hq3.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=KmgkfQ2HCrQ
+
 ## Notes
 
 See [[Frames]].
+
+Video: "BJJ - Shrimp from Side Control" (Focused Fight Team).
+
+Photos 1, 2, 3: frames from "BJJ - Shrimp from Side Control", Focused Fight Team (https://www.youtube.com/watch?v=KmgkfQ2HCrQ).

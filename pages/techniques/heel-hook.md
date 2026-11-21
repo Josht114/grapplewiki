@@ -3,6 +3,7 @@ name: Heel hook
 from: bottom-saddle
 col: sub
 type: submission
+attire: no-gi
 status: draft
 order: 780
 ---

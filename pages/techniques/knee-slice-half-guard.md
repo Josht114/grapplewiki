@@ -4,7 +4,8 @@ from: top-half-guard
 to: top-side-control
 col: transition
 type: pass
-status: draft
+attire: both
+status: review
 order: 1160
 ---
 Slide your trapped knee across the opponent's thigh to free it and pass to side control.
@@ -23,3 +24,18 @@ Win the underhook and come up to your side, or switch to a knee shield.
 1. Keep your knee shield or underhook.
 2. Turn into them as the knee slides.
 3. Recover half guard or full guard.
+
+## Images
+
+![1. Get the crossface and underhook (Ante Dzolic)](https://i.ytimg.com/vi/1guSnAAkPC0/hqdefault.jpg)
+![2. Slice your knee across toward the mat (Ante Dzolic)](https://i.ytimg.com/vi/1guSnAAkPC0/hq3.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=1guSnAAkPC0
+
+## Notes
+
+Video: "BJJ Basics: Passing the Half Guard Knee Cut" (Ante Dzolic).
+
+Photos 1, 2: frames from "BJJ Basics: Passing the Half Guard Knee Cut", Ante Dzolic (https://www.youtube.com/watch?v=1guSnAAkPC0).

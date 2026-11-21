@@ -4,6 +4,7 @@ from: top-cccbg
 to: top-side-control
 col: transition
 type: pass
+attire: gi
 status: draft
 order: 620
 ---

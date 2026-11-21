@@ -4,6 +4,7 @@ from: top-butterfly
 to: top-half-guard
 col: transition
 type: pass
+attire: both
 status: draft
 order: 1220
 ---

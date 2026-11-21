@@ -3,7 +3,8 @@ name: Short choke
 from: top-back-mount
 col: sub
 type: submission
-status: draft
+attire: both
+status: review
 order: 1470
 ---
 Choke from the back when your arm can't get deep: the forearm squeezes across the neck with the hand on the far shoulder or head.
@@ -22,3 +23,19 @@ Keep your chin down and hand-fight so the forearm can't settle across your neck.
 1. Chin down, shoulders up.
 2. Pull the choking wrist down.
 3. Slide toward the bottom hook to escape.
+
+## Images
+
+![1. Slide the choking arm across their neck as far as you can (Cosens MMA LLC)](https://i.ytimg.com/vi/Sb-atqD_TqQ/hq1.jpg)
+![2. Squeeze your elbow and chest together (Cosens MMA LLC)](https://i.ytimg.com/vi/Sb-atqD_TqQ/hq2.jpg)
+![3. Lean back and tighten (Cosens MMA LLC)](https://i.ytimg.com/vi/Sb-atqD_TqQ/hq3.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=Sb-atqD_TqQ
+
+## Notes
+
+Video: "Short Choke from Back Position (Jiu Jitsu)" (Cosens MMA LLC).
+
+Photos 1, 2, 3: frames from "Short Choke from Back Position (Jiu Jitsu)", Cosens MMA LLC (https://www.youtube.com/watch?v=Sb-atqD_TqQ).

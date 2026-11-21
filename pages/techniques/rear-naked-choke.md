@@ -3,7 +3,8 @@ name: Rear naked choke
 from: top-back-mount
 col: sub
 type: submission
-status: draft
+attire: both
+status: review
 order: 160
 ---
 Blood choke from the back: your arm wraps the neck and is locked behind their head with the other arm.
@@ -24,6 +25,20 @@ Hand-fight the choking arm with both hands and tuck your chin.
 3. Keep the arm off your neck while you escape.
 4. Move to the [[Back escape]] once the choke is clear.
 
+## Images
+
+![1. From the seatbelt, slide the choking arm under their chin so the elbow lines up with the chin (Rez Jiujitsu)](https://i.ytimg.com/vi/svS5_yTn7M0/hq1.jpg)
+![2. Grab your own biceps with the choking hand (Rez Jiujitsu)](https://i.ytimg.com/vi/svS5_yTn7M0/hq2.jpg)
+![3. Squeeze your elbows together and expand your chest (Rez Jiujitsu)](https://i.ytimg.com/vi/svS5_yTn7M0/hq3.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=svS5_yTn7M0
+
 ## Notes
 
 Hand fighting is the battle. Win the [[Grip fighting]] first, and keep your hooks or body triangle so they can't turn in.
+
+Video: "Rear Naked Choke Tutorial" (Rez Jiujitsu).
+
+Photos 1, 2, 3: frames from "Rear Naked Choke Tutorial", Rez Jiujitsu (https://www.youtube.com/watch?v=svS5_yTn7M0).

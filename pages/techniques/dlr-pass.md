@@ -4,6 +4,7 @@ from: top-dlr
 to: top-side-control
 col: transition
 type: pass
+attire: both
 status: draft
 order: 630
 ---

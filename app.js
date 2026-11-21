@@ -12,9 +12,14 @@
     { key: "transition", label: "Transitions" }
   ];
   const TYPES = ["submission", "takedown", "pass", "sweep", "escape", "transition", "back take"];
-  const STATUS_LABEL = { complete: "Complete", draft: "Draft" };
-  // Set to true to colour techniques green (Complete) / yellow (Draft) again.
-  const SHOW_STATUS_COLOURS = false;
+  // Page file values: complete (green), review (orange: done, not reviewed yet), draft (red: not finished).
+  const STATUS_LABEL = { complete: "Complete", review: "Needs review", draft: "Not finished" };
+  // Whether a technique works in the gi, no-gi or both. Missing means both.
+  const ATTIRE_LABEL = { both: "Gi & no-gi", gi: "Gi only", "no-gi": "No-gi only" };
+  const attireOf = t => (ATTIRE_LABEL[t.attire] ? t.attire : "both");
+  const attireTag = t => attireOf(t) === "both" ? "" : ` <span class="attire attire-${attireOf(t)}" title="${ATTIRE_LABEL[attireOf(t)]}">${attireOf(t) === "gi" ? "Gi" : "No-gi"}</span>`;
+  // Colours techniques green / orange / red by status on the home tables. Set to false to hide.
+  const SHOW_STATUS_COLOURS = true;
   document.body.classList.toggle("status-colours", SHOW_STATUS_COLOURS);
   let ALIASES = {};
   const A = id => (id && ALIASES[id]) || id;
@@ -95,6 +100,14 @@
   function safeUrl(u) {
     try { const x = new URL(u); return /^https?:$/.test(x.protocol) ? x.href : null; } catch (e) { return null; }
   }
+  // Image lines look like "![Caption](https://...)"; a bare URL also works.
+  function imageList(lines) {
+    return (lines || []).map(l => {
+      const m = String(l).match(/^!\[([^\]]*)\]\((\S+?)\)$/);
+      const src = safeUrl(m ? m[2] : String(l).trim());
+      return src ? { src, caption: m ? m[1].trim() : "" } : null;
+    }).filter(Boolean);
+  }
   function youtubeId(u) {
     const m = String(u || "").match(/(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([\w-]{11})/);
     return m ? m[1] : null;
@@ -129,7 +142,7 @@
             rows += "<tr>";
             b.cols.forEach(col => {
               const t = col[i];
-              rows += t ? `<td class="tech st-${t.status}">${link(t.id)}</td>` : `<td class="tech"></td>`;
+              rows += t ? `<td class="tech st-${t.status}">${link(t.id)}${attireTag(t)}</td>` : `<td class="tech"></td>`;
             });
             rows += "</tr>";
           }
@@ -174,7 +187,8 @@
       </section>
       <div class="legend">
         <span><i class="sw st-complete"></i>Complete</span>
-        <span><i class="sw st-draft"></i>Draft</span>
+        <span><i class="sw st-review"></i>Needs review</span>
+        <span><i class="sw st-draft"></i>Not finished</span>
       </div>
       <div class="viewtoggle" role="group" aria-label="Table view">
         <button type="button" data-view="simple" aria-pressed="${view === "simple"}">Simplified</button>
@@ -214,6 +228,8 @@
     else html += `<div class="stub-box">This page is a stub. <a href="#/edit/${p.id}">Add a description</a>.</div>`;
     if (p.steps && p.steps.length) html += `<h2>${p.kind === "technique" ? "Key steps" : "Key points"}</h2><ol class="steps">${p.steps.map(s => `<li>${wikiInline(s)}</li>`).join("")}</ol>`;
     if (p.kind === "technique") html += defenseBlock(p);
+    const imgs = imageList(p.images);
+    if (imgs.length) html += `<h2>Images</h2><div class="gallery">${imgs.map(im => `<figure><a href="${esc(im.src)}" target="_blank" rel="noopener"><img src="${esc(im.src)}" alt="${esc(im.caption || p.name)}" loading="lazy" referrerpolicy="no-referrer"></a>${im.caption ? `<figcaption>${wikiInline(im.caption)}</figcaption>` : ""}</figure>`).join("")}</div>`;
     const yt = youtubeId(p.video);
     if (yt) html += `<h2>Video</h2><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${yt}" title="Video" allowfullscreen loading="lazy"></iframe></div>`;
     else if (safeUrl(p.video)) html += `<h2>Video</h2><p><a href="${esc(safeUrl(p.video))}" target="_blank" rel="noopener">${esc(p.video)}</a></p>`;
@@ -263,6 +279,7 @@
         </div>
         <div class="meta">
           <span class="badge">${esc(t.type || t.col)}</span>
+          <span class="badge attire-${attireOf(t)}">${ATTIRE_LABEL[attireOf(t)]}</span>
           <span class="badge st-${t.status}">${STATUS_LABEL[t.status]}</span>
         </div>
         <div class="flow">
@@ -301,7 +318,7 @@
         <ul class="multicol">${concepts.slice().sort(byName).map(p => `<li>${link(p.id)}</li>`).join("")}</ul>
         ${Object.keys(typeGroups).sort().map(k => `
           <h2>${esc(k[0].toUpperCase() + k.slice(1))}s (${typeGroups[k].length})</h2>
-          <ul class="multicol">${typeGroups[k].sort(byName).map(t => `<li><span class="dot st-${t.status}"></span>${link(t.id)}</li>`).join("")}</ul>`).join("")}
+          <ul class="multicol">${typeGroups[k].sort(byName).map(t => `<li><span class="dot st-${t.status}"></span>${link(t.id)}${attireTag(t)}</li>`).join("")}</ul>`).join("")}
       </article>`;
   }
 
@@ -626,11 +643,11 @@
       <article class="page flow-page">
         <h1>Flow chart</h1>
         <p class="lead">The positions in the simplified table, joined by the transitions between them. Click a position to see its submissions.</p>
-        <p class="muted flow-key">Arrows are transitions, routed between the positions so none runs behind a box; a number on an arrow means several transitions share that route. Hover an arrow to see its transitions. The number on a position is how many submissions it has.${offChart ? ` ${offChart} ${offChart === 1 ? "transition leads" : "transitions lead"} to positions outside the simplified table, so ${offChart === 1 ? "it's" : "they're"} listed in the side panel instead.` : ""}</p>
+        <p class="muted flow-key">Arrows are transitions, routed between the positions so none runs behind a box; a number on an arrow means several transitions share that route. Hover an arrow to see its transitions. Hover or click a position to pick out its arrows: gold ones leave it, blue ones lead into it. The number on a position is how many submissions it has.${offChart ? ` ${offChart} ${offChart === 1 ? "transition leads" : "transitions lead"} to positions outside the simplified table, so ${offChart === 1 ? "it's" : "they're"} listed in the side panel instead.` : ""}</p>
         <div class="flow-layout">
           <div class="flow-scroll">
             <svg id="flow" viewBox="0 0 ${width.toFixed(0)} ${height.toFixed(0)}" width="${width.toFixed(0)}" height="${height.toFixed(0)}" role="group" aria-label="Flow chart of positions and transitions">
-              <defs><marker id="flow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs>
+              <defs>${["flow-arrow", "flow-arrow-out", "flow-arrow-in"].map(m => `<marker id="${m}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker>`).join("")}</defs>
               ${bandsSvg(bands, width)}<g class="flow-edges">${edgeSvg}</g>${nodeSvg}
             </svg>
           </div>
@@ -656,20 +673,32 @@
     const svg = document.getElementById("flow");
     if (!svg) return;
     const panel = document.getElementById("flowPanel");
+    let current = null; // the clicked position; hovering shows another one's arrows until the mouse leaves
+    // gold arrows leave the position ("out"), blue arrows lead into it ("in"); id null clears the highlight
+    const mark = id => {
+      svg.classList.toggle("has-selection", !!id);
+      svg.querySelectorAll(".flow-edge").forEach(e => {
+        const isOut = !!id && e.dataset.from === id, isIn = !!id && e.dataset.to === id && !isOut;
+        e.classList.toggle("out", isOut);
+        e.classList.toggle("in", isIn);
+        e.querySelector("path.line").setAttribute("marker-end", `url(#${isOut ? "flow-arrow-out" : isIn ? "flow-arrow-in" : "flow-arrow"})`);
+      });
+    };
     const select = id => {
       if (!pages.has(id)) return;
-      svg.classList.add("has-selection");
+      current = id;
+      mark(id);
       svg.querySelectorAll(".flow-node").forEach(n => n.classList.toggle("selected", n.dataset.id === id));
-      svg.querySelectorAll(".flow-edge").forEach(e => {
-        e.classList.toggle("out", e.dataset.from === id);
-        e.classList.toggle("in", e.dataset.to === id);
-      });
       panel.innerHTML = flowPanelHtml(id);
       history.replaceState(null, "", "#/flow?node=" + encodeURIComponent(id));
     };
     svg.querySelectorAll(".flow-node").forEach(n => {
       n.addEventListener("click", () => select(n.dataset.id));
       n.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(n.dataset.id); } });
+      n.addEventListener("mouseenter", () => mark(n.dataset.id));
+      n.addEventListener("mouseleave", () => mark(current));
+      n.addEventListener("focus", () => mark(n.dataset.id));
+      n.addEventListener("blur", () => mark(current));
     });
     if (selected) select(selected);
   }
@@ -801,10 +830,11 @@
     const subCount = [...nodes.values()].reduce((a, n) => a + n.subs.length, 0);
     return `
       <h2>Your game</h2>
-      <p class="muted flow-key">${nodes.size} positions, ${edges.length} transitions, ${subCount} submissions. Arrows are your transitions; ⊗ marks a submission. Click anything to open its page.${[...nodes.values()].some(n => n.off) ? " Dashed positions on the far right aren't in the simplified table." : ""}</p>
+      <p class="muted flow-key">${nodes.size} positions, ${edges.length} transitions, ${subCount} submissions. Arrows are your transitions; ⊗ marks a submission. Hover a position to pick out its arrows: gold ones leave it, blue ones lead into it. Click anything to open its page.${[...nodes.values()].some(n => n.off) ? " Dashed positions on the far right aren't in the simplified table." : ""}</p>
       <div class="flow-scroll">
         <svg id="cgSvg" viewBox="0 0 ${width.toFixed(0)} ${height.toFixed(0)}" width="${width.toFixed(0)}" height="${height.toFixed(0)}" role="img" aria-label="Flowchart of your core game">
-          <defs><marker id="cg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs>
+          <defs><marker id="cg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker>
+            <marker id="cg-arrow-in" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs>
           ${bandsSvg(bands, width)}<g>${edgeSvg}</g>${nodeSvg}
         </svg>
       </div>`;
@@ -853,11 +883,24 @@
       const svg = document.getElementById("cgSvg");
       if (svg) svg.querySelectorAll(".cg-node").forEach(n => {
         const id = n.dataset.id;
+        // arrows leaving the hovered position stay gold ("out"); arrows coming into it turn blue ("in")
         n.addEventListener("mouseenter", () => {
           svg.classList.add("has-focus");
-          svg.querySelectorAll(".cg-edge").forEach(e => e.classList.toggle("focus", e.dataset.from === id || e.dataset.to === id));
+          svg.querySelectorAll(".cg-edge").forEach(e => {
+            const isIn = e.dataset.to === id, isOut = e.dataset.from === id;
+            e.classList.toggle("focus", isIn || isOut);
+            e.classList.toggle("in", isIn && !isOut);
+            e.classList.toggle("out", isOut);
+            e.querySelector("path").setAttribute("marker-end", `url(#${isIn && !isOut ? "cg-arrow-in" : "cg-arrow"})`);
+          });
         });
-        n.addEventListener("mouseleave", () => svg.classList.remove("has-focus"));
+        n.addEventListener("mouseleave", () => {
+          svg.classList.remove("has-focus");
+          svg.querySelectorAll(".cg-edge").forEach(e => {
+            e.classList.remove("in", "out");
+            e.querySelector("path").setAttribute("marker-end", "url(#cg-arrow)");
+          });
+        });
       });
       box.scrollIntoView({ behavior: "smooth", block: "start" });
     });
@@ -953,6 +996,7 @@
           <div class="row tech-only"${isTech ? "" : " hidden"}>
             <label>Home column<select name="col">${COLS.map(c => `<option value="${c.key}"${p.col === c.key ? " selected" : ""}>${c.label}</option>`).join("")}</select></label>
             <label>Type<select name="type">${TYPES.map(t => `<option${p.type === t ? " selected" : ""}>${t}</option>`).join("")}</select></label>
+            <label>Gi / no-gi<select name="attire">${Object.keys(ATTIRE_LABEL).map(s => `<option value="${s}"${attireOf(p) === s ? " selected" : ""}>${ATTIRE_LABEL[s]}</option>`).join("")}</select></label>
             <label>Status<select name="status">${Object.keys(STATUS_LABEL).map(s => `<option value="${s}"${p.status === s ? " selected" : ""}>${STATUS_LABEL[s]}</option>`).join("")}</select></label>
           </div>
           <div class="row pos-only"${isPos ? "" : " hidden"}>
@@ -965,6 +1009,7 @@
           <label>Key steps <small>(one per line)</small><textarea name="steps" rows="5">${esc((p.steps || []).join("\n"))}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense <small>(how to stop this move)</small><textarea name="defense" rows="3">${esc(p.defense || "")}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense steps <small>(one per line)</small><textarea name="defenseSteps" rows="4">${esc((p.defenseSteps || []).join("\n"))}</textarea></label>
+          <label>Images <small>(one per line: ![Caption](https://image-url))</small><textarea name="images" rows="3">${esc((p.images || []).join("\n"))}</textarea></label>
           <label>Video URL <small>(YouTube links embed)</small><input name="video" type="url" value="${esc(p.video || "")}"></label>
           <label>Notes <small>(link other pages with [[Page name]])</small><textarea name="notes" rows="6">${esc(p.notes || "")}</textarea></label>
           <p class="form-error" id="formError" role="alert" hidden></p>
@@ -998,10 +1043,11 @@
         name: f.get("name").trim(),
         summary: f.get("summary").trim(),
         steps: f.get("steps").split("\n").map(s => s.trim()).filter(Boolean),
+        images: f.get("images").split("\n").map(s => s.trim()).filter(Boolean),
         video: f.get("video").trim(),
         notes: f.get("notes").trim()
       };
-      if (kind === "technique") Object.assign(rec, { from: f.get("from") || null, to: f.get("to") || null, col: f.get("col"), type: f.get("type"), status: f.get("status"),
+      if (kind === "technique") Object.assign(rec, { from: f.get("from") || null, to: f.get("to") || null, col: f.get("col"), type: f.get("type"), attire: f.get("attire"), status: f.get("status"),
         defense: f.get("defense").trim(), defenseSteps: f.get("defenseSteps").split("\n").map(s => s.trim()).filter(Boolean) });
       else if (kind === "position") Object.assign(rec, { side: f.get("side"), counterpart: f.get("counterpart") || null });
       if (!isNew && pages.get(form.dataset.id).order !== undefined) rec.order = pages.get(form.dataset.id).order;
@@ -1071,6 +1117,47 @@
     window.scrollTo(0, 0);
   }
   window.addEventListener("hashchange", route);
+
+  // ---------- image viewer ----------
+  // Clicking a page image opens it large; arrows (buttons or keys) step through that page's images.
+  const viewer = document.createElement("dialog");
+  viewer.className = "lightbox";
+  viewer.setAttribute("aria-label", "Image viewer");
+  viewer.innerHTML = `
+    <button type="button" class="lb-close" aria-label="Close">×</button>
+    <button type="button" class="lb-nav lb-prev" aria-label="Previous image">‹</button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+    <button type="button" class="lb-nav lb-next" aria-label="Next image">›</button>
+    <div class="lb-count" aria-live="polite"></div>`;
+  document.body.appendChild(viewer);
+  let lbItems = [], lbIndex = 0;
+  function lbShow(i) {
+    lbIndex = (i + lbItems.length) % lbItems.length;
+    const it = lbItems[lbIndex];
+    const img = viewer.querySelector("img");
+    img.src = it.src; img.alt = it.alt;
+    viewer.querySelector("figcaption").innerHTML = it.caption;
+    viewer.querySelector(".lb-count").textContent = lbItems.length > 1 ? `${lbIndex + 1} / ${lbItems.length}` : "";
+    viewer.querySelectorAll(".lb-nav").forEach(b => (b.hidden = lbItems.length < 2));
+  }
+  document.addEventListener("click", e => {
+    const a = e.target.closest(".gallery a");
+    if (!a) return;
+    e.preventDefault();
+    const figs = [...a.closest(".gallery").querySelectorAll("figure")];
+    lbItems = figs.map(f => ({ src: f.querySelector("img").src, alt: f.querySelector("img").alt, caption: f.querySelector("figcaption") ? f.querySelector("figcaption").innerHTML : "" }));
+    lbShow(figs.indexOf(a.closest("figure")));
+    viewer.showModal();
+  });
+  viewer.querySelector(".lb-prev").addEventListener("click", () => lbShow(lbIndex - 1));
+  viewer.querySelector(".lb-next").addEventListener("click", () => lbShow(lbIndex + 1));
+  viewer.querySelector(".lb-close").addEventListener("click", () => viewer.close());
+  viewer.addEventListener("click", e => { if (e.target === viewer) viewer.close(); }); // click the backdrop
+  viewer.addEventListener("keydown", e => {
+    if (e.key === "ArrowLeft") { e.preventDefault(); lbShow(lbIndex - 1); }
+    else if (e.key === "ArrowRight") { e.preventDefault(); lbShow(lbIndex + 1); }
+  });
+  window.addEventListener("hashchange", () => viewer.open && viewer.close());
 
   // ---------- search / import / export ----------
   document.getElementById("searchForm").addEventListener("submit", e => {

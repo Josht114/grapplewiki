@@ -4,7 +4,8 @@ from: bottom-mount
 to: top-closed-guard-kneeling
 col: transition
 type: escape
-status: draft
+attire: both
+status: review
 order: 870
 ---
 Mount escape: trap one arm and the foot on the same side, then bridge over that shoulder to roll the opponent.
@@ -24,6 +25,20 @@ Post your hand and foot wide on the side they bridge toward.
 2. Post wide when they bridge.
 3. Climb back to low mount.
 
+## Images
+
+![1. Trap their arm by hugging it to your chest (Pure Art BJJ Portsmouth)](https://i.ytimg.com/vi/RbxKgjjRZeY/hq1.jpg)
+![2. Trap their foot on the same side with your foot (Pure Art BJJ Portsmouth)](https://i.ytimg.com/vi/RbxKgjjRZeY/hq2.jpg)
+![3. Land in their closed guard with good posture (Pure Art BJJ Portsmouth)](https://i.ytimg.com/vi/RbxKgjjRZeY/hq3.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=RbxKgjjRZeY
+
 ## Notes
 
 Not to be confused with the [[Arm roll (turtle)]].
+
+Video: "How To Escape the Mount: Upa Trap And Roll BJJ Mount Escape" (Pure Art BJJ Portsmouth).
+
+Photos 1, 2, 3: frames from "How To Escape the Mount: Upa Trap And Roll BJJ Mount Escape", Pure Art BJJ Portsmouth (https://www.youtube.com/watch?v=RbxKgjjRZeY).

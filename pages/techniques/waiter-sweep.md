@@ -4,6 +4,7 @@ from: bottom-half-guard-deep
 to: top-half-guard
 col: transition
 type: sweep
+attire: both
 status: draft
 order: 610
 ---

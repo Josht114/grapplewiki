@@ -4,6 +4,7 @@ from: bottom-dlr
 to: top-back-mount
 col: transition
 type: back take
+attire: both
 status: draft
 order: 640
 ---

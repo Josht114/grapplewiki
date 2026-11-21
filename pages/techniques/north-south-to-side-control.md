@@ -4,7 +4,8 @@ from: top-north-south
 to: top-side-control
 col: transition
 type: transition
-status: draft
+attire: both
+status: review
 order: 1100
 ---
 Walk back around to side control, keeping chest pressure.
@@ -23,3 +24,18 @@ Turn into them as they move to recover guard.
 1. Frame on their hips.
 2. Turn your hips toward them.
 3. Bring your knee in.
+
+## Images
+
+![1. Keep your chest heavy on theirs (Fuse Martial Arts & Fitness)](https://i.ytimg.com/vi/-O7SfSANtWU/hqdefault.jpg)
+![2. Settle with crossface and underhook (Fuse Martial Arts & Fitness)](https://i.ytimg.com/vi/-O7SfSANtWU/hq3.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=-O7SfSANtWU
+
+## Notes
+
+Video: "Top Side Control Drill - Side Control to North/South to Side Control" (Fuse Martial Arts & Fitness).
+
+Photos 1, 2: frames from "Top Side Control Drill - Side Control to North/South to Side Control", Fuse Martial Arts & Fitness (https://www.youtube.com/watch?v=-O7SfSANtWU).

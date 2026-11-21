@@ -4,7 +4,8 @@ from: top-open-guard
 to: top-side-control
 col: transition
 type: pass
-status: complete
+attire: both
+status: review
 order: 330
 ---
 Standing speed pass: control both knees, redirect the legs to one side and circle to side control.
@@ -26,3 +27,18 @@ See [[Frames]], [[Pressure]] and [[Technical stand-up]].
 2. Face the opponent: turn your hips toward them as they move.
 3. Frame on hips, shoulders or biceps with hands and feet.
 4. Pummel your legs back inside when they clear one.
+
+## Images
+
+![1. Grip both pant legs at the knees (Gordon Ryan)](https://i.ytimg.com/vi/i9rA2rDb05k/hq2.jpg)
+![2. Push the legs to one side and down to the mat (Gordon Ryan)](https://i.ytimg.com/vi/i9rA2rDb05k/hq3.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=i9rA2rDb05k
+
+## Notes
+
+Video: "How to Toreando Pass Like Gordon Ryan" (Gordon Ryan).
+
+Photos 1, 2: frames from "How to Toreando Pass Like Gordon Ryan", Gordon Ryan (https://www.youtube.com/watch?v=i9rA2rDb05k).

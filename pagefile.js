@@ -7,6 +7,7 @@
 //   from: top-side-control
 //   col: sub
 //   type: submission
+//   attire: both         (techniques only: gi, no-gi or both)
 //   status: draft
 //   ---
 //   One-paragraph summary.
@@ -22,6 +23,10 @@
 //
 //   1. First defense step.
 //
+//   ## Images
+//
+//   ![Caption](https://example.com/photo.jpg)   (one per line)
+//
 //   ## Video
 //
 //   https://youtube.com/...
@@ -35,10 +40,10 @@
 const KINDS = { position: "positions", technique: "techniques", concept: "concepts" };
 const HEADER_FIELDS = {
   position: ["name", "side", "counterpart"],
-  technique: ["name", "from", "to", "col", "type", "status", "order"],
+  technique: ["name", "from", "to", "col", "type", "attire", "status", "order"],
   concept: ["name", "order"]
 };
-const BODY_FIELDS = ["summary", "steps", "defense", "defenseSteps", "video", "notes"];
+const BODY_FIELDS = ["summary", "steps", "defense", "defenseSteps", "images", "video", "notes"];
 const numbered = l => /^\s*(?:\d+[.)]|[-*])\s+/.test(l);
 const stripNumber = l => l.replace(/^\s*(?:\d+[.)]|[-*])\s+/, "").trim();
 const ID_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -82,6 +87,8 @@ function parsePage(text) {
     const h = heading.toLowerCase();
     if (h === "key steps" || h === "key points" || h === "steps") {
       page.steps = content.split("\n").map(l => l.replace(/^\s*(?:\d+[.)]|[-*])\s+/, "").trim()).filter(Boolean);
+    } else if (h === "images") {
+      page.images = content.split("\n").map(l => l.trim()).filter(Boolean);
     } else if (h === "video") {
       page.video = content;
     } else if (h === "defense" || h === "defence") {
@@ -115,7 +122,8 @@ function serializePage(kind, page) {
     if (page.defense) out += page.defense.trim() + "\n";
     if (page.defenseSteps && page.defenseSteps.length) out += (page.defense ? "\n" : "") + page.defenseSteps.map((s, i) => `${i + 1}. ${s}`).join("\n") + "\n";
   }
-  if (page.video) out += "\n## Video\n\n" + page.video.trim() + "\n";
+  if (page.images && page.images.length) out += "\n## Images\n\n" + page.images.join("\n") + "\n";
+  if (page.video) out +="\n## Video\n\n" + page.video.trim() + "\n";
   if (page.notes) out += "\n## Notes\n\n" + page.notes.trim() + "\n";
   return out;
 }

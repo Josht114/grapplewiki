@@ -4,7 +4,8 @@ from: top-half-guard
 to: top-mount
 col: transition
 type: pass
-status: draft
+attire: both
+status: review
 order: 1170
 ---
 Free your trapped leg straight up into mount instead of passing to the side.
@@ -23,3 +24,18 @@ Keep your legs locked tight and win the underhook.
 1. Lock your feet and squeeze.
 2. Get your underhook.
 3. Bridge into them as they free the foot.
+
+## Images
+
+![1. Flatten them with crossface and underhook (Timeless Jiu-Jitsu Academy)](https://i.ytimg.com/vi/ICDvSkVNqns/hqdefault.jpg)
+![2. Walk your free knee up toward their armpit (Timeless Jiu-Jitsu Academy)](https://i.ytimg.com/vi/ICDvSkVNqns/hq1.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=ICDvSkVNqns
+
+## Notes
+
+Video: "Game-Changing HALF GUARD Passing Details by Rafael Lovato Jr." (Timeless Jiu-Jitsu Academy).
+
+Photos 1, 2: frames from "Game-Changing HALF GUARD Passing Details by Rafael Lovato Jr.", Timeless Jiu-Jitsu Academy (https://www.youtube.com/watch?v=ICDvSkVNqns).

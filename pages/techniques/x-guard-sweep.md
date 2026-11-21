@@ -4,6 +4,7 @@ from: bottom-x-guard
 to: top-open-guard
 col: transition
 type: sweep
+attire: both
 status: draft
 order: 680
 ---
