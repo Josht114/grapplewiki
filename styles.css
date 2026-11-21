@@ -344,3 +344,9 @@ main.wide { max-width: 1680px; }
 #cgSvg .cg-edge.in path { stroke: var(--h-defense); stroke-width: 3; }
 #cgSvg .cg-edge.in rect { stroke: var(--h-defense); }
 #cg-arrow-in path { fill: var(--h-defense); }
+
+/* core game: generated chart is out of date */
+.cg-stale { display: inline-block; margin-left: 10px; padding: 2px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; vertical-align: middle; color: #1b1300; background: var(--cat-neutral); }
+.cg-stale[hidden], .cg-stale-note[hidden] { display: none; }
+.cg-stale-note { margin: 0 0 8px; padding: 8px 12px; border: 1px solid var(--cat-neutral); border-radius: 8px; font-size: 14px; }
+.btn.needs-update::before { content: "⚠"; margin-right: 6px; }

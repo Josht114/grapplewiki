@@ -595,7 +595,17 @@
   const PICK_KEY = { sub: "subs", transition: "transitions" };
   const simpleIds = () => (BASE.simpleLayout || []).flatMap(s => s.groups.flatMap(g => g.positions)).filter(id => pages.has(id));
   const validPick = (pid, kind, id) => { const t = pages.get(id); return t && t.kind === "technique" && t.from === pid && t.col === kind ? t : null; };
-  const picksFor = (pid, kind) => [...new Set(((corePicks[pid] || {})[PICK_KEY[kind]] || []).filter(Boolean))].map(id => validPick(pid, kind, id)).filter(Boolean);
+  const picksFor = (pid, kind, picks = corePicks) => [...new Set(((picks[pid] || {})[PICK_KEY[kind]] || []).filter(Boolean))].map(id => validPick(pid, kind, id)).filter(Boolean);
+  // the game a set of picks makes, as text, so two sets of picks can be compared
+  const gameKey = picks => JSON.stringify(simpleIds().map(pid => ["sub", "transition"].map(kind => picksFor(pid, kind, picks).map(t => t.id))));
+
+  // The generated chart stays on the page until it's generated again: it's drawn from a copy of the picks made
+  // when Generate was clicked (kept in this browser, so it survives a reload), not from the live dropdowns.
+  // When the dropdowns no longer match that copy, the chart is marked out of date.
+  const CHART_KEY = "grapplewiki-core-chart";
+  let chartPicks = (() => { try { return JSON.parse(localStorage.getItem(CHART_KEY)); } catch (e) { return null; } })();
+  let chartHtml = null; // the drawn chart for chartPicks, so coming back to the page doesn't lay it out again
+  const chartStale = () => !!chartPicks && gameKey(chartPicks) !== gameKey(corePicks);
   const hasPicks = () => simpleIds().some(pid => picksFor(pid, "sub").length || picksFor(pid, "transition").length);
 
   // Unsaved picks survive moving around the wiki; they're only reloaded from the file when nothing is unsaved.
@@ -664,7 +674,7 @@
 
   // draw the built game: chosen positions, chosen transitions as labelled arrows, chosen subs inside each position.
   // Laid out by the same engine as the Flow chart page (layoutChart). Positions outside the simplified table are dashed.
-  async function coreGameChart() {
+  async function coreGameChart(picks) {
     const simple = flowNodes();
     const nodes = new Map(), edges = [];
     const addNode = id => {
@@ -673,7 +683,7 @@
       nodes.set(id, g ? Object.assign({}, g) : { id, off: true, cat: ((placements[id] || [])[0] || {}).cat || "neutral" });
     };
     simpleIds().forEach(pid => {
-      const subs = picksFor(pid, "sub"), trans = picksFor(pid, "transition");
+      const subs = picksFor(pid, "sub", picks), trans = picksFor(pid, "transition", picks);
       if (!subs.length && !trans.length) return;
       addNode(pid);
       nodes.get(pid).subs = subs;
@@ -703,7 +713,8 @@
     }).join("");
     const subCount = [...nodes.values()].reduce((a, n) => a + n.subs.length, 0);
     return `
-      <h2>Your game</h2>
+      <h2>Your game <span class="cg-stale" id="cgStale" hidden title="Your picks have changed since this chart was drawn">⚠ Out of date</span></h2>
+      <p class="cg-stale-note" id="cgStaleNote" hidden>You've changed your picks since this chart was drawn. Click <strong>Regenerate flowchart</strong> to update it.</p>
       <p class="muted flow-key">${nodes.size} positions, ${edges.length} transitions, ${subCount} submissions. Arrows are your transitions; ⊗ marks a submission. Hover a position to pick out its arrows: gold ones leave it, blue ones lead into it. Click anything to open its page.${[...nodes.values()].some(n => n.off) ? " Dashed positions aren't in the simplified table." : ""}</p>
       <div class="flow-scroll">
         <svg id="cgSvg" viewBox="0 0 ${width.toFixed(0)} ${height.toFixed(0)}" width="${width.toFixed(0)}" height="${height.toFixed(0)}" role="img" aria-label="Flowchart of your core game">
@@ -722,10 +733,15 @@
     const saveBtn = document.getElementById("cgSave");
     const saved = !!(BASE.coreGame && BASE.coreGame.saved);
     const refresh = () => {
-      genBtn.disabled = !hasPicks();
+      const stale = chartStale();
+      genBtn.disabled = !hasPicks() && !stale;
+      genBtn.textContent = chartPicks ? "Regenerate flowchart" : "Generate flowchart";
+      genBtn.classList.toggle("needs-update", stale);
+      genBtn.title = stale ? "Your picks have changed since the chart was drawn" : "";
       saveBtn.disabled = !coreDirty;
       saveBtn.classList.toggle("primary", coreDirty);
-      genBtn.classList.toggle("primary", !coreDirty);
+      genBtn.classList.toggle("primary", !chartPicks || stale || !coreDirty);
+      document.querySelectorAll("#cgStale, #cgStaleNote").forEach(el => { el.hidden = !stale; });
       status.textContent = coreDirty ? (saved ? "Unsaved changes" : "Not saved yet") : (saved ? "Saved to core-game.json" : "");
     };
     const setDirty = () => { coreDirty = true; refresh(); };
@@ -751,11 +767,18 @@
       list[Number(i)] = sel.value || null;
       setDirty();
     }));
-    genBtn.addEventListener("click", async () => {
-      const box = document.getElementById("cgChart");
-      box.innerHTML = `<p class="muted">Drawing your game…</p>`;
-      try { box.innerHTML = await coreGameChart(); }
-      catch (e) { box.innerHTML = `<p class="muted">Couldn't draw the chart: ${esc(e.message)}</p>`; return; }
+    const box = document.getElementById("cgChart");
+    // draw the chart for chartPicks into the page (from the cache when it's already been laid out)
+    const showChart = async () => {
+      if (!chartPicks) { box.innerHTML = ""; return; }
+      if (!chartHtml) {
+        box.innerHTML = `<p class="muted">Drawing your game…</p>`;
+        try { chartHtml = await coreGameChart(chartPicks); }
+        catch (e) { if (box.isConnected) box.innerHTML = `<p class="muted">Couldn't draw the chart: ${esc(e.message)}</p>`; return; }
+      }
+      if (!box.isConnected) return; // moved to another page meanwhile
+      box.innerHTML = chartHtml;
+      refresh();
       const svg = document.getElementById("cgSvg");
       if (svg) svg.querySelectorAll(".cg-node").forEach(n => {
         const id = n.dataset.id;
@@ -778,6 +801,13 @@
           });
         });
       });
+    };
+    genBtn.addEventListener("click", async () => {
+      chartPicks = JSON.parse(JSON.stringify(corePicks));
+      chartHtml = null;
+      try { localStorage.setItem(CHART_KEY, JSON.stringify(chartPicks)); } catch (e) { /* kept for this visit only */ }
+      refresh();
+      await showChart();
       box.scrollIntoView({ behavior: "smooth", block: "start" });
     });
     document.getElementById("cgClear").addEventListener("click", () => {
@@ -786,10 +816,10 @@
       corePicks = {};
       simpleIds().forEach(pid => { corePicks[pid] = { subs: [null, null], transitions: [null, null] }; });
       page.querySelectorAll("select[data-pos]").forEach(sel => { sel.value = ""; });
-      document.getElementById("cgChart").innerHTML = "";
-      setDirty();
+      setDirty(); // the chart stays, marked out of date, until it's generated again
     });
     refresh();
+    showChart();
   }
 
   // ---------- editor ----------
