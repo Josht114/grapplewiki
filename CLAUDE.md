@@ -19,6 +19,8 @@ Techniques don't need double entry: both tables are built from the same `pages/t
 
 The **Flow chart** page (`#/flow`, `viewFlow()` in `app.js`) is drawn from `simpleLayout` plus the transitions between those positions, so it updates itself whenever the simplified table or a transition changes. Don't hard-code positions into it.
 
+Both charts (Flow chart and the Core game chart) share one drawing engine in `app.js`: `flowGrid()` puts positions on whole rows and columns, and `routeChart()` routes every arrow along the free lanes between rows and columns, so no arrow runs behind a position or on top of another arrow. Fix or improve chart drawing there, not in one chart only.
+
 The **Core game** page (`#/core-game`, `viewCoreGame()` / `coreGameChart()` in `app.js`) also lists the positions from `simpleLayout`: each gets two sub and two transition dropdowns filled from that position's techniques. The user's picks are saved in `core-game.json` (`{ picks: { positionId: { subs: [id, id], transitions: [id, id] } } }`). When a technique or position id is renamed, merged or deleted, update `core-game.json` too, or that pick silently drops out.
 
 After any such change, check that every id in `layout` and `simpleLayout` has a file in `pages/positions/`.

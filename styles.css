@@ -302,3 +302,14 @@ main.wide { max-width: 1680px; }
 .cg-node .cg-sub { fill: var(--h-sub); font-size: 11px; font-weight: 600; text-anchor: middle; }
 .cg-node.off rect { stroke-dasharray: 5 4; }
 .cg-node a:hover rect { fill: var(--pos-row); }
+
+/* ---------- routed arrows (flow chart + core game) ---------- */
+.flow-edge path.hit { stroke: transparent; stroke-width: 12; opacity: 1; }
+.flow-edge path.line { stroke-linejoin: round; }
+.flow-edge:hover path.line { stroke: var(--text); opacity: 1; stroke-width: 2.2; }
+.flow-edge.out path.hit, .flow-edge.in path.hit { stroke: transparent; stroke-dasharray: none; }
+.flow-edge circle { stroke-width: 1.2; }
+.cg-edge path { stroke-linejoin: round; }
+#cgSvg.has-focus .cg-edge { opacity: 0.1; }
+#cgSvg.has-focus .cg-edge.focus { opacity: 1; }
+#cgSvg .cg-edge { transition: opacity 0.15s; }

@@ -335,12 +335,15 @@
   }
 
   // ---------- flow chart (built from the simplified table) ----------
-  // Nodes = positions in BASE.simpleLayout. Arrows = transitions between two of those positions.
-  // Rows: positive on top, the neutral guard pairs in the middle (top player above bottom player),
-  // negative at the bottom, each bottom position directly under its top counterpart.
-  const FLOW = { colW: 196, rowH: 116, nodeW: 164, nodeH: 50, left: 34, top: 24 };
+  // Nodes = positions in BASE.simpleLayout, on a grid of whole rows and columns:
+  //   row 0 positive, row 1 neutral top players (and standing), row 2 neutral bottom players, row 3 negative,
+  //   each bottom position directly under its top counterpart.
+  // Arrows are routed like a subway map along the free lanes between rows ("corridors") and between
+  // columns ("gaps"), so they never run behind a position. Each arrow gets its own lane, and the gaps
+  // grow to fit the traffic.
+  const FLOW = { nodeW: 164, nodeH: 50, left: 40, minGap: 36, minCorr: 30, vLane: 7, hLane: 9 };
 
-  function flowLayout() {
+  function flowGrid() {
     const L = BASE.simpleLayout || [];
     const sec = cat => L.find(s => s.cat === cat) || { groups: [] };
     const ids = (s, pred) => s.groups.filter(pred).flatMap(g => g.positions).filter(id => pages.has(id));
@@ -367,47 +370,222 @@
     });
 
     const maxCol = Math.max(S, ...[...nodes.values()].map(n => n.col));
-    standing.neutral.forEach((id, i) => put(id, "neutral", i, 1.5));
+    standing.neutral.forEach((id, i) => put(id, "neutral", i, 1));
 
-    // guard pairs: top player on row 1, bottom player on row 2, spread across the columns
+    // guard pairs: top player on row 1, bottom player on row 2, spread across whole columns
     const guard = ids(sec("neutral"), g => !isStanding(g));
     const tops = guard.filter(id => !id.startsWith("bottom-"));
     const pairs = tops.map(id => [id, guard.find(b => b.startsWith("bottom-") && pages.get(b).counterpart === id)]);
     guard.filter(id => id.startsWith("bottom-") && !pairs.some(p => p[1] === id)).forEach(id => pairs.push([null, id]));
     const span = Math.max(0, maxCol - S);
+    let prev = S - 1;
     pairs.forEach(([t, b], i) => {
-      const col = pairs.length > 1 ? S + (i * span) / (pairs.length - 1) : S + span / 2;
+      let col = pairs.length > 1 ? S + Math.round((i * span) / (pairs.length - 1)) : S + Math.round(span / 2);
+      col = Math.max(col, prev + 1);
+      prev = col;
       if (t) put(t, "neutral", col, 1);
       if (b) put(b, "neutral", col, 2);
     });
+    return nodes;
+  }
 
-    const rowY = r => FLOW.top + r * FLOW.rowH + (r >= 1 ? 26 : 0) + (r >= 3 ? 26 : 0);
-    nodes.forEach(n => { n.x = FLOW.left + n.col * FLOW.colW + FLOW.colW / 2; n.y = rowY(n.row) + FLOW.nodeH / 2; });
-    const width = FLOW.left + (maxCol + 1) * FLOW.colW + 10;
-    const height = rowY(3) + FLOW.nodeH + FLOW.top;
-    const bands = [
-      { cat: "positive", y1: rowY(0) - 16, y2: rowY(0) + FLOW.nodeH + 16 },
-      { cat: "neutral", y1: rowY(1) - 16, y2: rowY(2) + FLOW.nodeH + 16 },
-      { cat: "negative", y1: rowY(3) - 16, y2: rowY(3) + FLOW.nodeH + 16 }
-    ];
-
-    // one arrow per (from, to) pair; several transitions on the same route share it
+  // one arrow per (from, to) pair; several transitions on the same route share it
+  function flowEdges(nodes) {
     const edgeMap = new Map();
     techniques.filter(t => t.col === "transition" && nodes.has(t.from) && nodes.has(t.to) && t.from !== t.to).forEach(t => {
       const k = t.from + ">" + t.to;
       if (!edgeMap.has(k)) edgeMap.set(k, { from: t.from, to: t.to, techs: [] });
       edgeMap.get(k).techs.push(t);
     });
-    return { nodes, edges: [...edgeMap.values()], width, height, bands };
+    return [...edgeMap.values()];
   }
 
-  // point where the line from a node's centre towards (tx, ty) leaves the node's box
-  function boxExit(n, tx, ty, pad) {
-    const dx = tx - n.x, dy = ty - n.y;
-    const hw = FLOW.nodeW / 2 + pad, hh = FLOW.nodeH / 2 + pad;
-    const s = Math.min(dx ? hw / Math.abs(dx) : Infinity, dy ? hh / Math.abs(dy) : Infinity);
-    return [n.x + dx * s, n.y + dy * s];
+  // Lay out the grid and route every edge. nodes: Map id -> { col, row, h? }; edges: [{ from, to, labelW? }]
+  // Returns pixel positions for nodes and, for each edge, a list of points plus a label point.
+  function routeChart(nodes, edges, opts) {
+    opts = opts || {};
+    const hLane = opts.hLane || FLOW.hLane, vLane = FLOW.vLane, W = FLOW.nodeW;
+    const all = [...nodes.values()];
+    all.forEach(n => { n.h = n.h || FLOW.nodeH; });
+    const rows = Math.max(...all.map(n => n.row)) + 1;
+    const cols = Math.max(...all.map(n => n.col)) + 1;
+    const COLW = W + FLOW.minGap; // rough column width, only used to compare positions before pixels exist
+
+    // 1. which corridors and gaps each edge uses
+    const routes = edges.map(e => {
+      const a = nodes.get(e.from), b = nodes.get(e.to);
+      const segs = [];
+      let exitSide, enterSide;
+      if (a.row === b.row) {
+        const k = a.row <= 1 ? a.row : a.row + 1; // corridor above rows 0-1, below rows 2-3
+        exitSide = enterSide = k === a.row ? "top" : "bottom";
+        segs.push({ t: "H", k, x1: a.col, x2: b.col });
+      } else {
+        const down = b.row > a.row;
+        exitSide = down ? "bottom" : "top";
+        enterSide = down ? "top" : "bottom";
+        const kA = down ? a.row + 1 : a.row, kB = down ? b.row : b.row + 1;
+        if (kA === kB) segs.push({ t: "H", k: kA, x1: a.col, x2: b.col });
+        else {
+          const g = a.col === b.col ? b.col + 0.5 : b.col + (a.col < b.col ? -0.5 : 0.5);
+          segs.push({ t: "H", k: kA, x1: a.col, x2: g }, { t: "V", g, k1: kA, k2: kB }, { t: "H", k: kB, x1: g, x2: b.col });
+        }
+      }
+      return { e, a, b, exitSide, enterSide, segs };
+    });
+
+    // 2. spread the arrows that share a side of a box, ordered by the direction they head off in
+    const ports = new Map();
+    routes.forEach(r => {
+      const first = r.segs[0], last = r.segs[r.segs.length - 1];
+      const add = (node, side, toward, set) => {
+        const key = node.id + ":" + side;
+        if (!ports.has(key)) ports.set(key, []);
+        ports.get(key).push({ toward, set });
+      };
+      add(r.a, r.exitSide, first.x2, off => { r.exitOff = off; });
+      add(r.b, r.enterSide, last.x1, off => { r.enterOff = off; });
+    });
+    ports.forEach(list => {
+      list.sort((p, q) => p.toward - q.toward);
+      const step = Math.min(16, (W - 30) / Math.max(1, list.length - 1));
+      list.forEach((p, i) => p.set((i - (list.length - 1) / 2) * step));
+    });
+
+    // 3. give every horizontal and vertical run its own lane
+    const hRuns = {}, vRuns = {};
+    routes.forEach(r => {
+      // the label sits on the longest horizontal run
+      let best = null;
+      r.segs.forEach((s, i) => {
+        if (s.t === "H") {
+          const p1 = s.x1 + (i === 0 ? r.exitOff / COLW : 0);
+          const p2 = s.x2 + (i === r.segs.length - 1 ? r.enterOff / COLW : 0);
+          s.lo = Math.min(p1, p2); s.hi = Math.max(p1, p2);
+          if (!best || s.hi - s.lo > best.hi - best.lo) best = s;
+          (hRuns[s.k] = hRuns[s.k] || []).push(s);
+        } else {
+          s.lo = Math.min(s.k1, s.k2); s.hi = Math.max(s.k1, s.k2);
+          (vRuns[s.g] = vRuns[s.g] || []).push(s);
+        }
+      });
+      r.labelSeg = best;
+      if (best && r.e.labelW) {
+        const mid = (best.lo + best.hi) / 2, half = (r.e.labelW / 2 + 8) / COLW;
+        best.lo = Math.min(best.lo, mid - half); best.hi = Math.max(best.hi, mid + half);
+      }
+    });
+    // Which way each run's ends turn decides its lane group, which cuts down crossings:
+    // in a corridor, runs whose ends both turn up take the top lanes, both down the bottom lanes, mixed in between;
+    // in a column gap, runs whose ends both turn left take the left lanes, and so on.
+    routes.forEach(r => {
+      const segs = r.segs, last = segs.length - 1;
+      segs.forEach((s, i) => {
+        let toward = 0; // how many ends turn up (corridor) or left (gap)
+        if (s.t === "H") {
+          const startUp = i === 0 ? r.a.row === s.k - 1 : segs[i - 1].k1 < s.k;
+          const endUp = i === last ? r.b.row === s.k - 1 : segs[i + 1].k2 < s.k;
+          toward = (startUp ? 1 : 0) + (endUp ? 1 : 0);
+        } else {
+          toward = (segs[i - 1].x1 < s.g ? 1 : 0) + (segs[i + 1].x2 < s.g ? 1 : 0);
+        }
+        s.group = 2 - toward; // 0 = top/left lanes, 1 = middle, 2 = bottom/right lanes
+      });
+    });
+    const assignLanes = runs => {
+      let base = 0;
+      [0, 1, 2].forEach(group => {
+        const ends = [];
+        runs.filter(s => s.group === group).sort((p, q) => p.lo - q.lo || p.hi - q.hi).forEach(s => {
+          let lane = ends.findIndex(end => end < s.lo - 0.04);
+          if (lane < 0) { lane = ends.length; ends.push(0); }
+          ends[lane] = s.hi;
+          s.lane = base + lane;
+        });
+        base += ends.length;
+      });
+      return base;
+    };
+    const hCount = {}, vCount = {};
+    Object.keys(hRuns).forEach(k => { hCount[k] = assignLanes(hRuns[k]); });
+    Object.keys(vRuns).forEach(g => { vCount[g] = assignLanes(vRuns[g]); });
+
+    // 4. pixels: gaps and corridors are as wide as their traffic needs
+    const gapW = g => Math.max(FLOW.minGap, (vCount[g] || 0) * vLane + 18);
+    const center = [], gapLeft = {};
+    let x = FLOW.left;
+    for (let c = 0; c < cols; c++) {
+      gapLeft[c - 0.5] = x; x += gapW(c - 0.5);
+      center[c] = x + W / 2; x += W;
+    }
+    gapLeft[cols - 0.5] = x; x += gapW(cols - 0.5);
+    const width = x;
+    const rowH = [], corrH = [], corrTop = [], rowTop = [];
+    for (let r = 0; r < rows; r++) rowH[r] = Math.max(FLOW.nodeH, ...all.filter(n => n.row === r).map(n => n.h));
+    for (let k = 0; k <= rows; k++) corrH[k] = Math.max(k === 0 || k === rows ? 18 : FLOW.minCorr, (hCount[k] || 0) * hLane + 16);
+    let y = 0;
+    for (let k = 0; k <= rows; k++) {
+      corrTop[k] = y; y += corrH[k];
+      if (k < rows) { rowTop[k] = y; y += rowH[k]; }
+    }
+    const height = y;
+    const laneY = (k, lane) => corrTop[k] + (corrH[k] - ((hCount[k] || 1) - 1) * hLane) / 2 + lane * hLane;
+    const laneX = (g, lane) => gapLeft[g] + (gapW(g) - ((vCount[g] || 1) - 1) * vLane) / 2 + lane * vLane;
+    all.forEach(n => { n.x = center[n.col]; n.y = rowTop[n.row] + rowH[n.row] / 2; n.top = n.y - n.h / 2; n.bottom = n.y + n.h / 2; });
+
+    // 5. turn each route into points
+    routes.forEach(r => {
+      const { a, b } = r;
+      const sx = a.x + r.exitOff, sy = r.exitSide === "top" ? a.top : a.bottom;
+      const ex = b.x + r.enterOff, ey = r.enterSide === "top" ? b.top - 3 : b.bottom + 3;
+      const pts = [[sx, sy]];
+      const hs = r.segs.filter(s => s.t === "H"), v = r.segs.find(s => s.t === "V");
+      const y1 = laneY(hs[0].k, hs[0].lane);
+      pts.push([sx, y1]);
+      if (v) {
+        const gx = laneX(v.g, v.lane), y2 = laneY(hs[1].k, hs[1].lane);
+        pts.push([gx, y1], [gx, y2], [ex, y2]);
+      } else pts.push([ex, y1]);
+      pts.push([ex, ey]);
+      r.points = pts;
+      const ls = r.labelSeg;
+      const li = r.segs.indexOf(ls);
+      // label point: middle of the longest horizontal run
+      const segPts = v ? (li === 0 ? [pts[1], pts[2]] : [pts[3], pts[4]]) : [pts[1], pts[2]];
+      r.label = [(segPts[0][0] + segPts[1][0]) / 2, segPts[0][1]];
+    });
+
+    // background bands: positive / neutral / negative rows, split halfway across the corridors
+    const catRows = { positive: [], neutral: [], negative: [] };
+    all.forEach(n => { const c = n.cat || "neutral"; if (catRows[c] && !catRows[c].includes(n.row)) catRows[c].push(n.row); });
+    const bands = Object.entries(catRows).filter(([, rs]) => rs.length).map(([cat, rs]) => {
+      const r1 = Math.min(...rs), r2 = Math.max(...rs);
+      return { cat, y1: r1 === 0 ? 4 : corrTop[r1] + corrH[r1] / 2, y2: r2 === rows - 1 ? height - 4 : corrTop[r2 + 1] + corrH[r2 + 1] / 2 };
+    });
+    return { routes, width, height, bands };
   }
+
+  // SVG path through the points, with rounded corners
+  function roundedPath(pts, radius) {
+    let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+    for (let i = 1; i < pts.length - 1; i++) {
+      const [px, py] = pts[i - 1], [cx, cy] = pts[i], [nx, ny] = pts[i + 1];
+      const r = Math.min(radius, Math.hypot(cx - px, cy - py) / 2, Math.hypot(nx - cx, ny - cy) / 2);
+      if (r < 0.5) { d += ` L${cx.toFixed(1)},${cy.toFixed(1)}`; continue; }
+      const ax = cx - Math.sign(cx - px) * r, ay = cy - Math.sign(cy - py) * r;
+      const bx = cx + Math.sign(nx - cx) * r, by = cy + Math.sign(ny - cy) * r;
+      d += ` L${ax.toFixed(1)},${ay.toFixed(1)} Q${cx.toFixed(1)},${cy.toFixed(1)} ${bx.toFixed(1)},${by.toFixed(1)}`;
+    }
+    const [lx, ly] = pts[pts.length - 1];
+    return d + ` L${lx.toFixed(1)},${ly.toFixed(1)}`;
+  }
+
+  function bandsSvg(bands, width) {
+    return bands.map(b => `<rect class="flow-band band-${b.cat}" x="0" y="${b.y1.toFixed(1)}" width="${width}" height="${(b.y2 - b.y1).toFixed(1)}" rx="12"/>
+      <text class="flow-band-label" transform="translate(20 ${((b.y1 + b.y2) / 2).toFixed(1)}) rotate(-90)">${b.cat}</text>`).join("");
+  }
+
+  const fitText = (s, max) => (s.length <= max ? s : s.slice(0, max - 1).trimEnd() + "…");
 
   function wrapLabel(name) {
     if (name.length <= 20) return [name];
@@ -418,20 +596,18 @@
   }
 
   function viewFlow() {
-    const { nodes, edges, width, height, bands } = flowLayout();
-    const edgeSvg = edges.map(e => {
-      const a = nodes.get(e.from), b = nodes.get(e.to);
-      const [sx, sy] = boxExit(a, b.x, b.y, 2);
-      const [ex, ey] = boxExit(b, a.x, a.y, 6);
-      const dx = ex - sx, dy = ey - sy, len = Math.hypot(dx, dy) || 1;
-      const bend = Math.min(40, 14 + len * 0.06); // bend to the right of travel, so A→B and B→A don't overlap
-      const cx = (sx + ex) / 2 - (dy / len) * bend, cy = (sy + ey) / 2 + (dx / len) * bend;
-      const lx = 0.25 * sx + 0.5 * cx + 0.25 * ex, ly = 0.25 * sy + 0.5 * cy + 0.25 * ey;
-      const names = e.techs.map(t => t.name).join(", ");
+    const nodes = flowGrid();
+    const edges = flowEdges(nodes);
+    const { routes, width, height, bands } = routeChart(nodes, edges);
+    const edgeSvg = routes.map(r => {
+      const e = r.e, names = e.techs.map(t => t.name).join(", ");
+      const d = roundedPath(r.points, 8);
+      const [lx, ly] = r.label;
       return `<g class="flow-edge" data-from="${e.from}" data-to="${e.to}">
         <title>${esc(pages.get(e.from).name)} → ${esc(pages.get(e.to).name)}: ${esc(names)}</title>
-        <path d="M${sx.toFixed(1)},${sy.toFixed(1)} Q${cx.toFixed(1)},${cy.toFixed(1)} ${ex.toFixed(1)},${ey.toFixed(1)}" marker-end="url(#flow-arrow)"/>
-        ${e.techs.length > 1 ? `<circle cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="9"/><text x="${lx.toFixed(1)}" y="${(ly + 4).toFixed(1)}">${e.techs.length}</text>` : ""}
+        <path class="hit" d="${d}"/>
+        <path class="line" d="${d}" marker-end="url(#flow-arrow)"/>
+        ${e.techs.length > 1 ? `<circle cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="8"/><text x="${lx.toFixed(1)}" y="${(ly + 3.5).toFixed(1)}">${e.techs.length}</text>` : ""}
       </g>`;
     }).join("");
     const nodeSvg = [...nodes.values()].map(n => {
@@ -439,25 +615,23 @@
       const lines = wrapLabel(p.name);
       const subs = techsFrom(n.id, "sub").length;
       return `<g class="flow-node cat-${n.cat}" data-id="${n.id}" tabindex="0" role="button" aria-label="${esc(p.name)}: ${subs} submissions">
-        <rect x="${n.x - FLOW.nodeW / 2}" y="${n.y - FLOW.nodeH / 2}" width="${FLOW.nodeW}" height="${FLOW.nodeH}" rx="10"/>
+        <rect x="${n.x - FLOW.nodeW / 2}" y="${n.top}" width="${FLOW.nodeW}" height="${n.h}" rx="10"/>
         <text x="${n.x}" y="${n.y + (lines.length > 1 ? -3 : 4)}">${lines.map((l, i) => `<tspan x="${n.x}" dy="${i ? 14 : 0}">${esc(l)}</tspan>`).join("")}</text>
-        ${subs ? `<g class="flow-badge"><circle cx="${n.x + FLOW.nodeW / 2 - 4}" cy="${n.y - FLOW.nodeH / 2 + 4}" r="10"/><text x="${n.x + FLOW.nodeW / 2 - 4}" y="${n.y - FLOW.nodeH / 2 + 8}">${subs}</text></g>` : ""}
+        ${subs ? `<g class="flow-badge"><circle cx="${n.x + FLOW.nodeW / 2 - 4}" cy="${n.top + 4}" r="10"/><text x="${n.x + FLOW.nodeW / 2 - 4}" y="${n.top + 8}">${subs}</text></g>` : ""}
       </g>`;
     }).join("");
-    const bandSvg = bands.map(b => `<rect class="flow-band band-${b.cat}" x="0" y="${b.y1}" width="${width}" height="${b.y2 - b.y1}" rx="12"/>
-      <text class="flow-band-label" transform="translate(18 ${(b.y1 + b.y2) / 2}) rotate(-90)">${b.cat}</text>`).join("");
     const offChart = techniques.filter(t => t.col === "transition" && nodes.has(t.from) && t.to && !nodes.has(t.to)).length;
 
     return `
       <article class="page flow-page">
         <h1>Flow chart</h1>
         <p class="lead">The positions in the simplified table, joined by the transitions between them. Click a position to see its submissions.</p>
-        <p class="muted flow-key">Arrows are transitions; a number on an arrow means several transitions share that route (hover to see them). The number on a position is how many submissions it has.${offChart ? ` ${offChart} transitions lead to positions outside the simplified table, so they're listed in the side panel instead.` : ""}</p>
+        <p class="muted flow-key">Arrows are transitions, routed between the positions so none runs behind a box; a number on an arrow means several transitions share that route. Hover an arrow to see its transitions. The number on a position is how many submissions it has.${offChart ? ` ${offChart} ${offChart === 1 ? "transition leads" : "transitions lead"} to positions outside the simplified table, so ${offChart === 1 ? "it's" : "they're"} listed in the side panel instead.` : ""}</p>
         <div class="flow-layout">
           <div class="flow-scroll">
-            <svg id="flow" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="group" aria-label="Flow chart of positions and transitions">
-              <defs><marker id="flow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs>
-              ${bandSvg}<g class="flow-edges">${edgeSvg}</g>${nodeSvg}
+            <svg id="flow" viewBox="0 0 ${width.toFixed(0)} ${height.toFixed(0)}" width="${width.toFixed(0)}" height="${height.toFixed(0)}" role="group" aria-label="Flow chart of positions and transitions">
+              <defs><marker id="flow-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs>
+              ${bandsSvg(bands, width)}<g class="flow-edges">${edgeSvg}</g>${nodeSvg}
             </svg>
           </div>
           <aside class="flow-panel" id="flowPanel" aria-live="polite"><p class="muted">Click a position to see its submissions.</p></aside>
@@ -574,80 +748,64 @@
       </article>`;
   }
 
-  // draw the built game: chosen positions, chosen transitions as labelled arrows, chosen subs inside each position
+  // draw the built game: chosen positions, chosen transitions as labelled arrows, chosen subs inside each position.
+  // Uses the same grid and arrow routing as the Flow chart page.
   function coreGameChart() {
-    const base = flowLayout();
+    const grid = flowGrid();
     const nodes = new Map(), edges = [];
     const addNode = id => {
       if (nodes.has(id)) return;
-      const b = base.nodes.get(id);
-      nodes.set(id, b ? Object.assign({}, b) : { id, off: true });
+      const g = grid.get(id);
+      nodes.set(id, g ? Object.assign({}, g) : { id, off: true, cat: ((placements[id] || [])[0] || {}).cat || "neutral" });
     };
     simpleIds().forEach(pid => {
       const subs = picksFor(pid, "sub"), trans = picksFor(pid, "transition");
       if (!subs.length && !trans.length) return;
       addNode(pid);
       nodes.get(pid).subs = subs;
-      trans.forEach(t => { if (t.to && pages.has(t.to)) { addNode(t.to); edges.push({ from: pid, to: t.to, tech: t }); } });
+      trans.forEach(t => {
+        if (t.to && pages.has(t.to) && t.to !== pid) { addNode(t.to); edges.push({ from: pid, to: t.to, tech: t, labelW: t.name.length * 6 + 14 }); }
+      });
     });
-    // positions outside the simplified table go in an extra column on the right, in their band
-    const maxCol = Math.max(0, ...[...base.nodes.values()].map(n => n.col));
-    const rowOf = id => ({ positive: 0, negative: 3 }[((placements[id] || [])[0] || {}).cat] ?? 1.5);
-    let extra = 0;
-    const rowY = r => FLOW.top + r * FLOW.rowH + (r >= 1 ? 26 : 0) + (r >= 3 ? 26 : 0);
+    if (!nodes.size) return `<p class="muted">Pick some submissions or transitions first.</p>`;
+    // positions outside the simplified table go in extra columns on the right, in their own band
+    const maxCol = Math.max(0, ...[...grid.values()].map(n => n.col));
+    const taken = new Set([...nodes.values()].filter(n => !n.off).map(n => n.col + ":" + n.row));
     nodes.forEach(n => {
       if (!n.off) return;
-      n.col = maxCol + 1 + Math.floor(extra++ / 3);
-      n.row = rowOf(n.id);
-      n.x = FLOW.left + n.col * FLOW.colW + FLOW.colW / 2;
-      n.y = rowY(n.row) + FLOW.nodeH / 2;
+      const rowsFor = { positive: [0], neutral: [1, 2], negative: [3] }[n.cat] || [1, 2];
+      for (let c = maxCol + 1; ; c++) {
+        const r = rowsFor.find(r => !taken.has(c + ":" + r));
+        if (r !== undefined) { n.col = c; n.row = r; taken.add(c + ":" + r); break; }
+      }
     });
     nodes.forEach(n => { n.subs = n.subs || []; n.h = FLOW.nodeH + n.subs.length * 15; });
-    const width = Math.max(base.width, FLOW.left + (Math.max(...[...nodes.values()].map(n => n.col)) + 1) * FLOW.colW + 10);
-    const height = base.height + 30 + 24; // 24px headroom for labels lifted above the top row
 
-    const exit = (n, tx, ty, pad) => {
-      const dx = tx - n.x, dy = ty - n.y, hw = FLOW.nodeW / 2 + pad, hh = n.h / 2 + pad;
-      const s = Math.min(dx ? hw / Math.abs(dx) : Infinity, dy ? hh / Math.abs(dy) : Infinity);
-      return [n.x + dx * s, n.y + dy * s];
-    };
-    const pairCount = {};
-    const edgeSvg = edges.map(e => {
-      const a = nodes.get(e.from), b = nodes.get(e.to);
-      const k = e.from + ">" + e.to, idx = (pairCount[k] = (pairCount[k] || 0) + 1) - 1;
-      const [sx, sy] = exit(a, b.x, b.y, 2), [ex, ey] = exit(b, a.x, a.y, 6);
-      const dx = ex - sx, dy = ey - sy, len = Math.hypot(dx, dy) || 1;
-      const bend = Math.min(40, 14 + len * 0.06) + idx * 26;
-      const cx = (sx + ex) / 2 - (dy / len) * bend, cy = (sy + ey) / 2 + (dx / len) * bend;
-      let lx = 0.25 * sx + 0.5 * cx + 0.25 * ex, ly = 0.25 * sy + 0.5 * cy + 0.25 * ey;
-      const w = e.tech.name.length * 6 + 12;
-      // arrow too short for its label: lift the label above both boxes
-      if (len < w + 16) ly = Math.min(a.y - a.h / 2, b.y - b.h / 2) - 14 - idx * 20;
-      return `<g class="cg-edge"><title>${esc(e.tech.name)}</title>
-        <path d="M${sx.toFixed(1)},${sy.toFixed(1)} Q${cx.toFixed(1)},${cy.toFixed(1)} ${ex.toFixed(1)},${ey.toFixed(1)}" marker-end="url(#cg-arrow)"/>
-        <a href="${href(e.tech)}"><rect x="${(lx - w / 2).toFixed(1)}" y="${(ly - 9).toFixed(1)}" width="${w}" height="18" rx="9"/>
-        <text x="${lx.toFixed(1)}" y="${(ly + 4).toFixed(1)}">${esc(e.tech.name)}</text></a>
+    const { routes, width, height, bands } = routeChart(nodes, edges, { hLane: 24 });
+    const edgeSvg = routes.map(r => {
+      const t = r.e.tech, [lx, ly] = r.label, w = r.e.labelW;
+      return `<g class="cg-edge" data-from="${r.e.from}" data-to="${r.e.to}"><title>${esc(t.name)}</title>
+        <path d="${roundedPath(r.points, 8)}" marker-end="url(#cg-arrow)"/>
+        <a href="${href(t)}"><rect x="${(lx - w / 2).toFixed(1)}" y="${(ly - 9).toFixed(1)}" width="${w}" height="18" rx="9"/>
+        <text x="${lx.toFixed(1)}" y="${(ly + 4).toFixed(1)}">${esc(t.name)}</text></a>
       </g>`;
     }).join("");
     const nodeSvg = [...nodes.values()].map(n => {
-      const p = pages.get(n.id), lines = wrapLabel(p.name), top = n.y - n.h / 2;
-      const cat = ((placements[n.id] || [])[0] || {}).cat || "neutral";
-      return `<g class="flow-node cg-node cat-${cat}${n.off ? " off" : ""}">
+      const p = pages.get(n.id), lines = wrapLabel(p.name), top = n.top;
+      return `<g class="flow-node cg-node cat-${n.cat}${n.off ? " off" : ""}" data-id="${n.id}">
         <a href="${href(p)}"><rect x="${n.x - FLOW.nodeW / 2}" y="${top}" width="${FLOW.nodeW}" height="${n.h}" rx="10"/>
         <text x="${n.x}" y="${top + (lines.length > 1 ? 19 : 29)}">${lines.map((l, i) => `<tspan x="${n.x}" dy="${i ? 14 : 0}">${esc(l)}</tspan>`).join("")}</text></a>
-        ${n.subs.map((t, i) => `<a href="${href(t)}"><text class="cg-sub" x="${n.x}" y="${top + FLOW.nodeH + i * 15 + 2}">⊗ ${esc(t.name)}</text></a>`).join("")}
+        ${n.subs.map((t, i) => `<a href="${href(t)}"><title>${esc(t.name)}</title><text class="cg-sub" x="${n.x}" y="${top + FLOW.nodeH + i * 15 + 2}">⊗ ${esc(fitText(t.name, 24))}</text></a>`).join("")}
       </g>`;
     }).join("");
-    const bandSvg = base.bands.map(b => `<rect class="flow-band" x="0" y="${b.y1}" width="${width}" height="${b.y2 - b.y1 + (b.cat === "negative" ? 30 : 0)}" rx="12"/>
-      <text class="flow-band-label" transform="translate(18 ${(b.y1 + b.y2) / 2}) rotate(-90)">${b.cat}</text>`).join("");
     const subCount = [...nodes.values()].reduce((a, n) => a + n.subs.length, 0);
     return `
       <h2>Your game</h2>
-      <p class="muted flow-key">${nodes.size} positions, ${edges.length} transitions, ${subCount} submissions. Arrows are your transitions; ⊗ marks a submission. Click anything to open its page.${[...nodes.values()].some(n => n.off) ? " Positions on the far right aren't in the simplified table." : ""}</p>
+      <p class="muted flow-key">${nodes.size} positions, ${edges.length} transitions, ${subCount} submissions. Arrows are your transitions; ⊗ marks a submission. Click anything to open its page.${[...nodes.values()].some(n => n.off) ? " Dashed positions on the far right aren't in the simplified table." : ""}</p>
       <div class="flow-scroll">
-        <svg id="cgSvg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-label="Flowchart of your core game">
-          <defs><marker id="cg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs>
-          <g transform="translate(0 24)">${bandSvg}<g>${edgeSvg}</g>${nodeSvg}</g>
+        <svg id="cgSvg" viewBox="0 0 ${width.toFixed(0)} ${height.toFixed(0)}" width="${width.toFixed(0)}" height="${height.toFixed(0)}" role="img" aria-label="Flowchart of your core game">
+          <defs><marker id="cg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs>
+          ${bandsSvg(bands, width)}<g>${edgeSvg}</g>${nodeSvg}
         </svg>
       </div>`;
   }
@@ -692,6 +850,15 @@
     genBtn.addEventListener("click", () => {
       const box = document.getElementById("cgChart");
       box.innerHTML = coreGameChart();
+      const svg = document.getElementById("cgSvg");
+      if (svg) svg.querySelectorAll(".cg-node").forEach(n => {
+        const id = n.dataset.id;
+        n.addEventListener("mouseenter", () => {
+          svg.classList.add("has-focus");
+          svg.querySelectorAll(".cg-edge").forEach(e => e.classList.toggle("focus", e.dataset.from === id || e.dataset.to === id));
+        });
+        n.addEventListener("mouseleave", () => svg.classList.remove("has-focus"));
+      });
       box.scrollIntoView({ behavior: "smooth", block: "start" });
     });
     document.getElementById("cgClear").addEventListener("click", () => {

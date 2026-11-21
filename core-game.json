@@ -29,6 +29,178 @@
         "knee-on-belly-to-mount",
         "knee-on-belly-to-side-control"
       ]
+    },
+    "top-mount": {
+      "subs": [
+        "head-and-arm-choke",
+        "cross-collar-choke"
+      ],
+      "transitions": [
+        "back-take-from-mount",
+        null
+      ]
+    },
+    "top-back-mount": {
+      "subs": [
+        "bow-and-arrow",
+        "lapel-choke"
+      ],
+      "transitions": [
+        "back-to-mount",
+        null
+      ]
+    },
+    "top-turtle": {
+      "subs": [
+        "clock-choke",
+        null
+      ],
+      "transitions": [
+        "seatbelt-back-take",
+        "turtle-breakdown"
+      ]
+    },
+    "top-north-south": {
+      "subs": [
+        "north-south-choke",
+        "kimura-north-south"
+      ],
+      "transitions": [
+        "north-south-to-side-control",
+        null
+      ]
+    },
+    "standing": {
+      "subs": [
+        "guillotine",
+        null
+      ],
+      "transitions": [
+        "single-leg",
+        "guard-pull"
+      ]
+    },
+    "top-open-guard": {
+      "subs": [
+        "straight-ankle-lock-passing",
+        null
+      ],
+      "transitions": [
+        "double-under-pass",
+        "toreando-pass"
+      ]
+    },
+    "bottom-open-guard": {
+      "subs": [
+        "triangle-open-guard",
+        "omoplata-open-guard"
+      ],
+      "transitions": [
+        "tripod-sweep",
+        "sickle-sweep"
+      ]
+    },
+    "top-closed-guard-kneeling": {
+      "subs": [
+        "ezekiel-inside-guard",
+        "straight-ankle-lock-closed-guard"
+      ],
+      "transitions": [
+        "closed-guard-opening-standing",
+        null
+      ]
+    },
+    "top-half-guard": {
+      "subs": [
+        "knee-bar",
+        null
+      ],
+      "transitions": [
+        "knee-slice-half-guard",
+        "half-guard-mount-pass"
+      ]
+    },
+    "bottom-half-guard": {
+      "subs": [
+        "kimura-half-guard",
+        null
+      ],
+      "transitions": [
+        "nogueira-sweep",
+        "half-guard-to-closed-guard"
+      ]
+    },
+    "top-butterfly": {
+      "transitions": [
+        "butterfly-pass",
+        "butterfly-flatten"
+      ]
+    },
+    "bottom-butterfly": {
+      "subs": [
+        "arm-in-guillotine-butterfly",
+        null
+      ],
+      "transitions": [
+        "butterfly-sweep",
+        "butterfly-arm-drag"
+      ]
+    },
+    "bottom-knee-on-belly": {
+      "transitions": [
+        "knee-on-belly-guard-recovery",
+        "knee-on-belly-to-half-guard"
+      ]
+    },
+    "bottom-mount": {
+      "transitions": [
+        "mount-escape",
+        "upa"
+      ]
+    },
+    "bottom-back-mount": {
+      "transitions": [
+        "back-escape",
+        null
+      ]
+    },
+    "bottom-turtle": {
+      "subs": [
+        "kimura-turtle",
+        null
+      ],
+      "transitions": [
+        "arm-roll-turtle",
+        "turtle-guard-recovery"
+      ]
+    },
+    "bottom-north-south": {
+      "transitions": [
+        "north-south-escape-guard",
+        "north-south-escape-knees"
+      ]
+    },
+    "bottom-closed-guard-kneeling": {
+      "subs": [
+        "arm-bar-guard",
+        "triangle-choke"
+      ],
+      "transitions": [
+        "scissor-sweep",
+        "kimura-hip-bump"
+      ]
+    },
+    "bottom-front-headlock": {
+      "transitions": [
+        "sit-to-butterfly",
+        "re-shot-single-leg"
+      ]
+    },
+    "bottom-side-control": {
+      "transitions": [
+        "side-control-escape-shrimp",
+        "side-control-knee-in"
+      ]
     }
   }
 }
