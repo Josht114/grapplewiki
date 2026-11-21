@@ -29,8 +29,8 @@ Stopping pressure passes by keeping your knees between you and the opponent and 
 ## Images
 
 ![1. Scoop both arms under their thighs (BJJ Fanatics)](https://i.ytimg.com/vi/PizdshB63kw/hq1.jpg)
-![2. Stack their hips up over their shoulders (BJJ Fanatics)](https://i.ytimg.com/vi/PizdshB63kw/hq2.jpg)
-![3. Walk around one side and drop into side control (BJJ Fanatics)](https://i.ytimg.com/vi/PizdshB63kw/hqdefault.jpg)
+![3. Stack their hips up over their shoulders (BJJ Fanatics)](https://i.ytimg.com/vi/PizdshB63kw/hq2.jpg)
+![4. Walk around one side and drop into side control (BJJ Fanatics)](https://i.ytimg.com/vi/PizdshB63kw/hqdefault.jpg)
 
 ## Video
 
@@ -40,4 +40,4 @@ https://www.youtube.com/watch?v=PizdshB63kw
 
 Video: "Passing With Double Unders by Jeff Glover" (BJJ Fanatics).
 
-Photos 1, 2, 3: frames from "Passing With Double Unders by Jeff Glover", BJJ Fanatics (https://www.youtube.com/watch?v=PizdshB63kw).
+Photos 1, 3, 4: frames from "Passing With Double Unders by Jeff Glover", BJJ Fanatics (https://www.youtube.com/watch?v=PizdshB63kw).

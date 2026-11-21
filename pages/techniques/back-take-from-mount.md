@@ -29,7 +29,8 @@ Never turn your back to escape mount; stay flat and escape toward them.
 
 ![1. Let them turn onto their side (MMA Leech)](https://i.ytimg.com/vi/UIWX13Sx-zw/hq2.jpg)
 ![2. Get a seatbelt grip as they turn (Sticks and Stones BJJ)](https://i.ytimg.com/vi/Ed76Mg2NYgQ/hq1.jpg)
-![3. Hooks in, then roll to your side with them and settle (Sticks and Stones BJJ)](https://i.ytimg.com/vi/Ed76Mg2NYgQ/hq2.jpg)
+![3. Insert your bottom hook, then the top hook (Sticks and Stones BJJ)](https://i.ytimg.com/vi/Ed76Mg2NYgQ/hq2.jpg)
+![4. Settled on their back after rolling to your side (Sticks and Stones BJJ)](https://i.ytimg.com/vi/Ed76Mg2NYgQ/hqdefault.jpg)
 
 ## Video
 
@@ -39,4 +40,4 @@ https://www.youtube.com/watch?v=Ed76Mg2NYgQ
 
 Video: "Back takes from mount" (Sticks and Stones BJJ).
 
-Photo 1: frame from "3 Back Takes From Mount Using The Gift Wrap Control", MMA Leech (https://www.youtube.com/watch?v=UIWX13Sx-zw). Photos 2, 3: frames from "Back takes from mount", Sticks and Stones BJJ (https://www.youtube.com/watch?v=Ed76Mg2NYgQ).
+Photo 1: frame from "3 Back Takes From Mount Using The Gift Wrap Control", MMA Leech (https://www.youtube.com/watch?v=UIWX13Sx-zw). Photos 2–4: frames and thumbnail from "Back takes from mount", Sticks and Stones BJJ (https://www.youtube.com/watch?v=Ed76Mg2NYgQ).

@@ -28,8 +28,8 @@ Crossface and underhook, and keep your weight heavy on their hips.
 ## Images
 
 ![1. Frame one forearm on the neck, the other hand on the hip (Focused Fight Team)](https://i.ytimg.com/vi/KmgkfQ2HCrQ/hq2.jpg)
-![2. Shrimp away to create space (Focused Fight Team)](https://i.ytimg.com/vi/KmgkfQ2HCrQ/hq1.jpg)
-![3. Slide your knee into the gap and recover guard (Focused Fight Team)](https://i.ytimg.com/vi/KmgkfQ2HCrQ/hq3.jpg)
+![3. Shrimp away to create space (Focused Fight Team)](https://i.ytimg.com/vi/KmgkfQ2HCrQ/hq1.jpg)
+![4. Slide your knee into the gap and recover guard (Focused Fight Team)](https://i.ytimg.com/vi/KmgkfQ2HCrQ/hq3.jpg)
 
 ## Video
 
@@ -41,4 +41,4 @@ See [[Frames]].
 
 Video: "BJJ - Shrimp from Side Control" (Focused Fight Team).
 
-Photos 1, 2, 3: frames from "BJJ - Shrimp from Side Control", Focused Fight Team (https://www.youtube.com/watch?v=KmgkfQ2HCrQ).
+Photos 1, 3, 4: frames from "BJJ - Shrimp from Side Control", Focused Fight Team (https://www.youtube.com/watch?v=KmgkfQ2HCrQ).

@@ -29,6 +29,7 @@ Keep your ankles locked and break their posture as they stand.
 
 ![1. Establish posture with grips on their chest or belt (Gallerr)](https://i.ytimg.com/vi/ec86htjh3eY/hq1.jpg)
 ![2. Step one foot up, then the other (Gallerr)](https://i.ytimg.com/vi/ec86htjh3eY/hq3.jpg)
+![3. Keep your back straight and hips forward (Gallerr)](https://i.ytimg.com/vi/ec86htjh3eY/hqdefault.jpg)
 
 ## Video
 
@@ -38,4 +39,4 @@ https://www.youtube.com/watch?v=ec86htjh3eY
 
 Video: "BJJ: Renzo Gracie's tip for opening any guard" (Gallerr).
 
-Photos 1, 2: frames from "BJJ: Renzo Gracie's tip for opening any guard", Gallerr (https://www.youtube.com/watch?v=ec86htjh3eY).
+Photos 1, 2: frames from "BJJ: Renzo Gracie's tip for opening any guard", Gallerr (https://www.youtube.com/watch?v=ec86htjh3eY). Photo 3: thumbnail from "BJJ: Renzo Gracie's tip for opening any guard", Gallerr (https://www.youtube.com/watch?v=ec86htjh3eY).

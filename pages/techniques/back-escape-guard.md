@@ -12,10 +12,10 @@ Escape the back and turn into the opponent to recover guard.
 
 ## Key steps
 
-1. Hand-fight the choke.
-2. Slide your shoulders to the mat.
+1. Two-on-one the choking arm and keep your chin down.
+2. Slide your shoulders to the mat on the side of their bottom hook.
 3. Clear the top hook.
-4. Turn in and recover guard.
+4. Turn in to face them and recover guard.
 
 ## Defense
 
@@ -27,8 +27,8 @@ Follow their hips and keep the top hook.
 
 ## Images
 
-![1. Hand-fight the choke (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/N6lKNqUOZoY/hq1.jpg)
-![2. Slide your shoulders to the mat (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/N6lKNqUOZoY/hq2.jpg)
+![1. Two-on-one the choking arm and keep your chin down (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/N6lKNqUOZoY/hq1.jpg)
+![2. Slide your shoulders to the mat on the side of their bottom hook (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/N6lKNqUOZoY/hq2.jpg)
 ![3. Clear the top hook (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/N6lKNqUOZoY/hq3.jpg)
 
 ## Video

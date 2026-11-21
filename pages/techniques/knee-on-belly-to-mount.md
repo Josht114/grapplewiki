@@ -12,10 +12,9 @@ Step over into mount when the opponent pushes your knee or turns away.
 
 ## Key steps
 
-1. Feel them push the knee down or turn.
-2. Slide the knee across their belly.
-3. Step your far leg over.
-4. Settle into mount.
+1. Wait for them to push your knee or turn away.
+2. Slide your knee across their belly.
+3. Step your far leg over and settle into mount.
 
 ## Defense
 
@@ -27,8 +26,8 @@ Push the knee toward your hips and turn in, so there's no room to step over.
 
 ## Images
 
-![1. From knee on belly, feel them push the knee down or turn (Great Grappling)](https://i.ytimg.com/vi/hboiOvqegus/hqdefault.jpg)
-![2. Slide the knee across their belly (Great Grappling)](https://i.ytimg.com/vi/hboiOvqegus/hq2.jpg)
+![1. From knee on belly, wait for them to push your knee or turn away (Great Grappling)](https://i.ytimg.com/vi/hboiOvqegus/hqdefault.jpg)
+![2. Slide your knee across their belly (Great Grappling)](https://i.ytimg.com/vi/hboiOvqegus/hq2.jpg)
 ![3. Step your far leg over and settle into mount (Great Grappling)](https://i.ytimg.com/vi/hboiOvqegus/hq3.jpg)
 
 ## Video

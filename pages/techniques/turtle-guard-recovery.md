@@ -28,7 +28,8 @@ Stay on their hips and don't reach under their arms.
 ## Images
 
 ![1. Keep elbows tight to knees and the neck protected (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/i08uQgulYmc/hq1.jpg)
-![2. Roll over your shoulder or sit through (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/i08uQgulYmc/hq2.jpg)
+![2. Post on one foot toward the side they're on, circled (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/i08uQgulYmc/hqdefault.jpg)
+![3. Roll over your shoulder or sit through (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/i08uQgulYmc/hq2.jpg)
 
 ## Video
 
@@ -38,4 +39,4 @@ https://www.youtube.com/watch?v=i08uQgulYmc
 
 Video: "5 Ways To Recover Guard From Turtle Position" (BIG OSS Jiu-Jitsu Channel).
 
-Photos 1, 2: frames from "5 Ways To Recover Guard From Turtle Position", BIG OSS Jiu-Jitsu Channel (https://www.youtube.com/watch?v=i08uQgulYmc).
+Photos 1, 3: frames from "5 Ways To Recover Guard From Turtle Position", BIG OSS Jiu-Jitsu Channel (https://www.youtube.com/watch?v=i08uQgulYmc). Photo 2: thumbnail from "5 Ways To Recover Guard From Turtle Position", BIG OSS Jiu-Jitsu Channel (https://www.youtube.com/watch?v=i08uQgulYmc).

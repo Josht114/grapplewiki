@@ -28,7 +28,7 @@ Grab your own belt or pants to stop the rotation, then turn into them.
 
 ![1. Trap their near arm off the mat (Chess Club Jiu-Jitsu)](https://i.ytimg.com/vi/nPie9yUU4LM/hq1.jpg)
 ![2. Grip their wrist and thread your other arm under to grab your wrist (Chess Club Jiu-Jitsu)](https://i.ytimg.com/vi/nPie9yUU4LM/hq2.jpg)
-![3. Rotate the arm up toward their head (Chess Club Jiu-Jitsu)](https://i.ytimg.com/vi/nPie9yUU4LM/hq3.jpg)
+![4. Rotate the arm up toward their head (Chess Club Jiu-Jitsu)](https://i.ytimg.com/vi/nPie9yUU4LM/hq3.jpg)
 
 ## Video
 

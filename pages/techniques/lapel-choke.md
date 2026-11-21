@@ -27,9 +27,9 @@ Strip the collar grip and stop the opponent getting the angle for the bow and ar
 
 ## Images
 
-![1. Feed the lapel across their neck (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/eMbkVDRreIQ/hq1.jpg)
-![2. Grab behind their head or their far arm with your other hand (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/eMbkVDRreIQ/hq3.jpg)
-![3. Pull the lapel back while driving their head forward (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/eMbkVDRreIQ/hq2.jpg)
+![2. Feed the lapel across their neck (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/eMbkVDRreIQ/hq1.jpg)
+![3. Grab behind their head or their far arm with your other hand (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/eMbkVDRreIQ/hq3.jpg)
+![4. Pull the lapel back while driving their head forward (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/eMbkVDRreIQ/hq2.jpg)
 
 ## Video
 
@@ -39,4 +39,4 @@ https://www.youtube.com/watch?v=eMbkVDRreIQ
 
 Video: "How To Do My 3 Favorite Jiu Jitsu Chokes From The Back!" (Matt Arroyo Jiu Jitsu).
 
-Photos 1, 2, 3: frames from "How To Do My 3 Favorite Jiu Jitsu Chokes From The Back!", Matt Arroyo Jiu Jitsu (https://www.youtube.com/watch?v=eMbkVDRreIQ).
+Photos 2, 3, 4: frames from "How To Do My 3 Favorite Jiu Jitsu Chokes From The Back!", Matt Arroyo Jiu Jitsu (https://www.youtube.com/watch?v=eMbkVDRreIQ).

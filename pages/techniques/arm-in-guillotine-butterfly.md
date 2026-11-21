@@ -11,7 +11,7 @@ Guillotine with their arm trapped inside, finished from butterfly guard.
 
 ## Key steps
 
-1. Wrap their head with their near arm inside.
+1. Wrap their head, trapping their near arm inside your arm.
 2. Lock your hands (gable grip).
 3. Hip out to the side of the trapped arm.
 4. Squeeze and pull up with your elbow.
@@ -26,9 +26,9 @@ Keep your posture and pass toward the side of the trapped arm.
 
 ## Images
 
-![1. Wrap their head with their near arm inside (Pathfinder Jiu-Jitsu Team)](https://i.ytimg.com/vi/4QlF2kk1JBY/hqdefault.jpg)
+![1. Wrap their head, trapping their near arm inside your arm (Pathfinder Jiu-Jitsu Team)](https://i.ytimg.com/vi/4QlF2kk1JBY/hqdefault.jpg)
 ![2. Lock your hands (gable grip) (Pathfinder Jiu-Jitsu Team)](https://i.ytimg.com/vi/4QlF2kk1JBY/hq1.jpg)
-![3. Squeeze and pull up with your elbow (Pathfinder Jiu-Jitsu Team)](https://i.ytimg.com/vi/4QlF2kk1JBY/hq3.jpg)
+![4. Squeeze and pull up with your elbow (Pathfinder Jiu-Jitsu Team)](https://i.ytimg.com/vi/4QlF2kk1JBY/hq3.jpg)
 
 ## Video
 
@@ -38,4 +38,4 @@ https://www.youtube.com/watch?v=4QlF2kk1JBY
 
 Video: "Arm In Guillotine Choke From Butterfly Guard & Double Leg Attempt" (Pathfinder Jiu-Jitsu Team).
 
-Photos 1, 2, 3: frames from "Arm In Guillotine Choke From Butterfly Guard & Double Leg Attempt", Pathfinder Jiu-Jitsu Team (https://www.youtube.com/watch?v=4QlF2kk1JBY).
+Photos 1, 2, 4: frames from "Arm In Guillotine Choke From Butterfly Guard & Double Leg Attempt", Pathfinder Jiu-Jitsu Team (https://www.youtube.com/watch?v=4QlF2kk1JBY).

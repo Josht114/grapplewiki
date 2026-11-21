@@ -29,7 +29,7 @@ Keep your elbows to your knees and your weight forward so they can't flatten you
 
 ![1. Grab the near wrist or ankle (jason bircher)](https://i.ytimg.com/vi/xgPifw7i5SM/hqdefault.jpg)
 ![2. Drive your weight diagonally across their back (jason bircher)](https://i.ytimg.com/vi/xgPifw7i5SM/hq2.jpg)
-![3. Follow them to the mat and settle into side control (jason bircher)](https://i.ytimg.com/vi/xgPifw7i5SM/hq1.jpg)
+![4. Follow them to the mat and settle into side control (jason bircher)](https://i.ytimg.com/vi/xgPifw7i5SM/hq1.jpg)
 
 ## Video
 

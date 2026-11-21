@@ -28,8 +28,9 @@ Block the knee with your elbow or knee before it crosses your belly.
 ## Images
 
 ![1. Heavy side control: chest down, control the near arm and hip (Absolute MMA)](https://i.ytimg.com/vi/0Dfp_gdsMUs/hq1.jpg)
-![2. Slide your knee across their belly and step the foot over (Chewjitsu)](https://i.ytimg.com/vi/3KCm38aFuV8/hq3.jpg)
-![3. Settle low into mount before they can recover (Absolute MMA)](https://i.ytimg.com/vi/0Dfp_gdsMUs/hq3.jpg)
+![2. Slide your knee across their belly toward the far hip (Alliance Jiu Jitsu Knoxville)](https://i.ytimg.com/vi/mv9RWzQiDVw/hqdefault.jpg)
+![3. Step your foot over and post on the mat (Chewjitsu)](https://i.ytimg.com/vi/3KCm38aFuV8/hq3.jpg)
+![4. Settle low into mount before they can recover (Absolute MMA)](https://i.ytimg.com/vi/0Dfp_gdsMUs/hq3.jpg)
 
 ## Video
 
@@ -39,4 +40,4 @@ https://www.youtube.com/watch?v=3KCm38aFuV8
 
 Video: "Side Control to Mount Transition for White Belts" (Chewjitsu).
 
-Photos 1, 3: frames from "BJJ Intro 1.8: Side Control, to Knee on Belly, to Mount", Absolute MMA (https://www.youtube.com/watch?v=0Dfp_gdsMUs). Photo 2: frame from "Side Control to Mount Transition for White Belts", Chewjitsu (https://www.youtube.com/watch?v=3KCm38aFuV8).
+Photos 1, 4: frames from "BJJ Intro 1.8: Side Control, to Knee on Belly, to Mount", Absolute MMA (https://www.youtube.com/watch?v=0Dfp_gdsMUs). Photo 2: thumbnail from "BJJ For Beginners: Transitioning From Side Control to Mount Position Using the Sneaky Knee!", Alliance Jiu Jitsu Knoxville TN (https://www.youtube.com/watch?v=mv9RWzQiDVw). Photo 3: frame from "Side Control to Mount Transition for White Belts", Chewjitsu (https://www.youtube.com/watch?v=3KCm38aFuV8).

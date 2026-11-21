@@ -28,8 +28,8 @@ Block the collar grip, and turn or sit out toward the choke before they walk aro
 ## Images
 
 ![1. Feed a deep collar grip under their neck (Rituals Jiu Jitsu)](https://i.ytimg.com/vi/1qVlaITDNGI/hq2.jpg)
-![2. Sprawl your weight onto their back (John Machado)](https://i.ytimg.com/vi/_qmq81d5X0M/hq2.jpg)
-![3. Walk your legs around toward their head to tighten (Rituals Jiu Jitsu)](https://i.ytimg.com/vi/1qVlaITDNGI/hqdefault.jpg)
+![3. Sprawl your weight onto their back (John Machado)](https://i.ytimg.com/vi/_qmq81d5X0M/hq2.jpg)
+![4. Walk your legs around toward their head to tighten (Rituals Jiu Jitsu)](https://i.ytimg.com/vi/1qVlaITDNGI/hqdefault.jpg)
 
 ## Video
 

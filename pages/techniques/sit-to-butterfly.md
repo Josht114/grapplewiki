@@ -28,7 +28,7 @@ Follow them down and keep the front headlock or spin to their back.
 ## Images
 
 ![1. Protect your neck with your hands (Marcelo Garcia Jiu-Jitsu)](https://i.ytimg.com/vi/stbA8YEzP8k/hq2.jpg)
-![2. Slide your feet in as butterfly hooks (Marcelo Garcia Jiu-Jitsu)](https://i.ytimg.com/vi/stbA8YEzP8k/hqdefault.jpg)
+![3. Slide your feet in as butterfly hooks (Marcelo Garcia Jiu-Jitsu)](https://i.ytimg.com/vi/stbA8YEzP8k/hqdefault.jpg)
 
 ## Video
 
@@ -38,4 +38,4 @@ https://www.youtube.com/watch?v=stbA8YEzP8k
 
 Video: "Marcelo Garcia: Front Head Lock Sequence vs Take Down" (Marcelo Garcia Jiu-Jitsu).
 
-Photos 1, 2: frames from "Marcelo Garcia: Front Head Lock Sequence vs Take Down", Marcelo Garcia Jiu-Jitsu (https://www.youtube.com/watch?v=stbA8YEzP8k).
+Photos 1, 3: frames from "Marcelo Garcia: Front Head Lock Sequence vs Take Down", Marcelo Garcia Jiu-Jitsu (https://www.youtube.com/watch?v=stbA8YEzP8k).

@@ -29,6 +29,7 @@ Keep your legs locked tight and win the underhook.
 
 ![1. Flatten them with crossface and underhook (Timeless Jiu-Jitsu Academy)](https://i.ytimg.com/vi/ICDvSkVNqns/hqdefault.jpg)
 ![2. Walk your free knee up toward their armpit (Timeless Jiu-Jitsu Academy)](https://i.ytimg.com/vi/ICDvSkVNqns/hq1.jpg)
+![4. Slide the foot out and settle in mount (Precision Boxing & MMA)](https://i.ytimg.com/vi/5IFvWdyO7kQ/hq3.jpg)
 
 ## Video
 
@@ -38,4 +39,4 @@ https://www.youtube.com/watch?v=ICDvSkVNqns
 
 Video: "Game-Changing HALF GUARD Passing Details by Rafael Lovato Jr." (Timeless Jiu-Jitsu Academy).
 
-Photos 1, 2: frames from "Game-Changing HALF GUARD Passing Details by Rafael Lovato Jr.", Timeless Jiu-Jitsu Academy (https://www.youtube.com/watch?v=ICDvSkVNqns).
+Photos 1, 2: frames from "Game-Changing HALF GUARD Passing Details by Rafael Lovato Jr.", Timeless Jiu-Jitsu Academy (https://www.youtube.com/watch?v=ICDvSkVNqns). Photo 4: frame from "Half Guard Pass to Mount - Learn to Grapple", Precision Boxing & MMA (https://www.youtube.com/watch?v=5IFvWdyO7kQ).

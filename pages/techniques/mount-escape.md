@@ -28,7 +28,8 @@ Stay low and heavy, and block their knee from sliding through.
 ## Images
 
 ![1. Frame your forearm on their hip (Tyler Spangler)](https://i.ytimg.com/vi/PItD1wkwU5g/hq1.jpg)
-![2. Shrimp away and slide your elbow to your knee (Tyler Spangler)](https://i.ytimg.com/vi/PItD1wkwU5g/hq2.jpg)
+![2. Bridge to make space (solo drill) (Ritchie Yip)](https://i.ytimg.com/vi/_D_Sl_OHii4/hqdefault.jpg)
+![3. Shrimp away and slide your elbow to your knee (Tyler Spangler)](https://i.ytimg.com/vi/PItD1wkwU5g/hq2.jpg)
 
 ## Video
 
@@ -38,4 +39,4 @@ https://www.youtube.com/watch?v=PItD1wkwU5g
 
 Video: "How To Mount Escape ANYONE In BJJ" (Tyler Spangler).
 
-Photos 1, 2: frames from "How To Mount Escape ANYONE In BJJ", Tyler Spangler (https://www.youtube.com/watch?v=PItD1wkwU5g).
+Photos 1, 3: frames from "How To Mount Escape ANYONE In BJJ", Tyler Spangler (https://www.youtube.com/watch?v=PItD1wkwU5g). Photo 2: thumbnail from "BJJ Breakdown: How to do the Elbow Knee Escape from Bottom Mount", Ritchie Yip (https://www.youtube.com/watch?v=_D_Sl_OHii4).

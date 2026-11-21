@@ -28,8 +28,8 @@ Stop the second grip, then use the opponent's forward posture to escape.
 
 ![1. Feed the first hand deep into the collar, fingers in (Gracie Barra)](https://i.ytimg.com/vi/_OsvE4wwJKI/hq1.jpg)
 ![2. Place the second grip on the opposite collar (Gracie Barra)](https://i.ytimg.com/vi/_OsvE4wwJKI/hq2.jpg)
-![3. Wrists crossed, both grips deep (Stephan Kesting)](https://i.ytimg.com/vi/WXFIycNajOw/hq2.jpg)
-![4. Drop your elbows, pull them apart and bring your head down to finish (Stephan Kesting)](https://i.ytimg.com/vi/WXFIycNajOw/hq3.jpg)
+![2. Both grips deep, wrists crossed (Stephan Kesting)](https://i.ytimg.com/vi/WXFIycNajOw/hq2.jpg)
+![3. Drop your elbows, pull them apart and bring your head down to finish (Stephan Kesting)](https://i.ytimg.com/vi/WXFIycNajOw/hq3.jpg)
 
 ## Video
 

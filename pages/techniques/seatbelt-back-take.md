@@ -13,9 +13,9 @@ Establish the seatbelt grip on the turtle and roll or insert hooks to take the b
 ## Key steps
 
 1. Seatbelt: one arm over the shoulder, one under the armpit, hands locked.
-2. Chest glued to their back.
+2. Glue your chest to their back.
 3. Insert the near hook.
-4. Roll to the side of the under-arm and insert the second hook.
+4. Roll to your underhook side and insert the second hook.
 
 ## Defense
 
@@ -28,9 +28,9 @@ Keep your elbows tight and turn into them before the hooks go in.
 ## Images
 
 ![1. Seatbelt: one arm over the shoulder, one under the armpit, hands locked (Submission Systems American Jiu-Jitsu)](https://i.ytimg.com/vi/Bm6bAMVyxk0/hqdefault.jpg)
-![2. Chest glued to their back (Submission Systems American Jiu-Jitsu)](https://i.ytimg.com/vi/Bm6bAMVyxk0/hq1.jpg)
+![2. Glue your chest to their back (Submission Systems American Jiu-Jitsu)](https://i.ytimg.com/vi/Bm6bAMVyxk0/hq1.jpg)
 ![3. Insert the near hook (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/bC5_zvXCtlY/hq2.jpg)
-![4. Roll to the side of the under-arm and insert the second hook (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/bC5_zvXCtlY/hq3.jpg)
+![4. Roll to your underhook side and insert the second hook (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/bC5_zvXCtlY/hq3.jpg)
 
 ## Video
 

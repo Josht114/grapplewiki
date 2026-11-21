@@ -27,8 +27,9 @@ Sprawl your hips back and keep their head down.
 
 ## Images
 
-![1. Wait for them to lean their weight on you (The Art of Fighting)](https://i.ytimg.com/vi/DLKrtq9ai8U/hq2.jpg)
-![2. Drop and grab a leg (The Art of Fighting)](https://i.ytimg.com/vi/DLKrtq9ai8U/hqdefault.jpg)
+![1. Hand-fight the arm on your neck (FANATIC WRESTLING)](https://i.ytimg.com/vi/xtluwrLDZug/hq1.jpg)
+![2. Wait for them to lean their weight on you (The Art of Fighting)](https://i.ytimg.com/vi/DLKrtq9ai8U/hq2.jpg)
+![3. Drop and grab a leg (The Art of Fighting)](https://i.ytimg.com/vi/DLKrtq9ai8U/hqdefault.jpg)
 
 ## Video
 
@@ -38,4 +39,4 @@ https://www.youtube.com/watch?v=DLKrtq9ai8U
 
 Video: "Throw Off a Single Leg to Front Headlock" (The Art of Fighting).
 
-Photos 1, 2: frames from "Throw Off a Single Leg to Front Headlock", The Art of Fighting (https://www.youtube.com/watch?v=DLKrtq9ai8U).
+Photos 2, 3: frames from "Throw Off a Single Leg to Front Headlock", The Art of Fighting (https://www.youtube.com/watch?v=DLKrtq9ai8U). Photo 1: frame from "Single Leg Shot Recovery (Front Headlock) by Hayden Zillmer", FANATIC WRESTLING (https://www.youtube.com/watch?v=xtluwrLDZug).

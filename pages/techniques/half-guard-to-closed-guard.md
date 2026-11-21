@@ -29,7 +29,7 @@ Keep your hips heavy and your knee tight to theirs so their leg can't come throu
 
 ![1. Frame on their hips to make space (Absolute MMA St Kilda - Melbourne)](https://i.ytimg.com/vi/xTtpyWLs6PM/hqdefault.jpg)
 ![2. Pull your outside knee through (Absolute MMA St Kilda - Melbourne)](https://i.ytimg.com/vi/xTtpyWLs6PM/hq2.jpg)
-![3. Lock your ankles (Absolute MMA St Kilda - Melbourne)](https://i.ytimg.com/vi/xTtpyWLs6PM/hq3.jpg)
+![4. Lock your ankles (Absolute MMA St Kilda - Melbourne)](https://i.ytimg.com/vi/xTtpyWLs6PM/hq3.jpg)
 
 ## Video
 
@@ -39,4 +39,4 @@ https://www.youtube.com/watch?v=xTtpyWLs6PM
 
 Video: "Getting to closed guard from half guard (Lachlan Giles)" (Absolute MMA St Kilda - Melbourne).
 
-Photos 1, 2, 3: frames from "Getting to closed guard from half guard (Lachlan Giles)", Absolute MMA St Kilda - Melbourne (https://www.youtube.com/watch?v=xTtpyWLs6PM).
+Photos 1, 2, 4: frames from "Getting to closed guard from half guard (Lachlan Giles)", Absolute MMA St Kilda - Melbourne (https://www.youtube.com/watch?v=xTtpyWLs6PM).
