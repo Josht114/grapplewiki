@@ -18,6 +18,7 @@ const STATIC = {
   "/": ["index.html", "text/html; charset=utf-8"],
   "/index.html": ["index.html", "text/html; charset=utf-8"],
   "/app.js": ["app.js", "text/javascript; charset=utf-8"],
+  "/vendor/elk.bundled.js": ["vendor/elk.bundled.js", "text/javascript; charset=utf-8"], // chart layout library (elkjs 0.9.3, EPL-2.0)
   "/styles.css": ["styles.css", "text/css; charset=utf-8"]
 };
 const MAX_BODY = 512 * 1024;

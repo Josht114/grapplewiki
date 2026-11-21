@@ -271,8 +271,9 @@ pre { background: var(--bg); border: 1px solid var(--border); border-radius: 8px
 /* ---------- flow chart ---------- */
 .flow-page .flow-key { font-size: 13px; max-width: 80ch; }
 .flow-layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 16px; align-items: start; margin-top: 12px; }
-.flow-scroll { overflow: auto; border: 1px solid var(--border); border-radius: 10px; background: var(--bg); max-height: 78vh; }
+.flow-scroll { overflow: auto; border: 1px solid var(--border); border-radius: 10px; background: var(--bg); }
 #flow { display: block; font-family: inherit; }
+.flow-wait { margin: 0; padding: 24px; }
 .flow-band { fill: var(--surface); stroke: var(--border); }
 .flow-band-label { fill: var(--muted); font-size: 12px; font-weight: 600; text-transform: capitalize; text-anchor: middle; letter-spacing: 0.05em; }
 
@@ -280,8 +281,6 @@ pre { background: var(--bg); border: 1px solid var(--border); border-radius: 8px
 #flow-arrow path { fill: var(--muted); }
 #flow-arrow-out path { fill: var(--h-transition); }
 #flow-arrow-in path { fill: var(--h-defense); }
-.flow-edge circle { fill: var(--surface); stroke: var(--muted); }
-.flow-edge text { fill: var(--text); font-size: 10px; font-weight: 600; text-anchor: middle; }
 #flow.has-selection .flow-edge { opacity: 0.12; }
 #flow.has-selection .flow-edge.out, #flow.has-selection .flow-edge.in { opacity: 1; }
 .flow-edge.out path { stroke: var(--h-transition); stroke-width: 2.4; opacity: 1; }
@@ -310,7 +309,7 @@ pre { background: var(--bg); border: 1px solid var(--border); border-radius: 8px
   .flow-panel { position: static; }
 }
 main.wide { max-width: 1680px; }
-#flow { width: 100%; height: auto; min-width: 980px; }
+#flow { max-width: 100%; height: auto; min-width: 640px; margin: 0 auto; }
 
 /* ---------- core game ---------- */
 .cg-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; margin-top: 16px; }
@@ -324,7 +323,7 @@ main.wide { max-width: 1680px; }
 .cg-table select:disabled { opacity: 0.5; }
 .cg-actions { margin: 16px 0; flex-wrap: wrap; }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-#cgSvg { display: block; width: 100%; height: auto; min-width: 980px; font-family: inherit; }
+#cgSvg { display: block; margin: 0 auto; font-family: inherit; } /* full size: the labels need it, so a big game scrolls sideways */
 .cg-edge path { fill: none; stroke: var(--h-transition); stroke-width: 2.2; }
 #cg-arrow path { fill: var(--h-transition); }
 .cg-edge rect { fill: var(--surface); stroke: var(--h-transition); }
@@ -335,11 +334,7 @@ main.wide { max-width: 1680px; }
 .cg-node a:hover rect { fill: var(--pos-row); }
 
 /* ---------- routed arrows (flow chart + core game) ---------- */
-.flow-edge path.hit { stroke: transparent; stroke-width: 12; opacity: 1; }
 .flow-edge path.line { stroke-linejoin: round; }
-.flow-edge:hover path.line { stroke: var(--text); opacity: 1; stroke-width: 2.2; }
-.flow-edge.out path.hit, .flow-edge.in path.hit { stroke: transparent; stroke-dasharray: none; }
-.flow-edge circle { stroke-width: 1.2; }
 .cg-edge path { stroke-linejoin: round; }
 #cgSvg.has-focus .cg-edge { opacity: 0.1; }
 #cgSvg.has-focus .cg-edge.focus { opacity: 1; }

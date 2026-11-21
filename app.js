@@ -351,58 +351,21 @@
       </article>`;
   }
 
-  // ---------- flow chart (built from the simplified table) ----------
-  // Nodes = positions in BASE.simpleLayout, on a grid of whole rows and columns:
-  //   row 0 positive, row 1 neutral top players (and standing), row 2 neutral bottom players, row 3 negative,
-  //   each bottom position directly under its top counterpart.
-  // Arrows are routed like a subway map along the free lanes between rows ("corridors") and between
-  // columns ("gaps"), so they never run behind a position. Each arrow gets its own lane, and the gaps
-  // grow to fit the traffic.
-  const FLOW = { nodeW: 164, nodeH: 50, left: 40, minGap: 36, minCorr: 30, vLane: 7, hLane: 9 };
+  // ---------- chart drawing (Flow chart + Core game) ----------
+  // Both charts are laid out by ELK, the Eclipse Layout Kernel (vendor/elk.bundled.js), with its "layered" algorithm.
+  // Positions climb from negative at the bottom, through neutral, to positive at the top: each category is an ELK
+  // partition, so it gets its own horizontal band, and inside it better positions sit higher. Inside the bands ELK picks the order of the positions to keep arrows short
+  // and crossings few, and routes every arrow at right angles between the boxes, never behind one.
+  const FLOW = { nodeW: 168, nodeH: 50, labelH: 18 };
+  const CAT_ORDER = ["negative", "neutral", "positive"];
+  let elk = null;
 
-  function flowGrid() {
-    const L = BASE.simpleLayout || [];
-    const sec = cat => L.find(s => s.cat === cat) || { groups: [] };
-    const ids = (s, pred) => s.groups.filter(pred).flatMap(g => g.positions).filter(id => pages.has(id));
-    const isStanding = g => g.group === "standing";
+  // the positions of the simplified table, in table order (that order is ELK's tie-breaker, so pairs stay close)
+  function flowNodes() {
     const nodes = new Map();
-    const put = (id, cat, col, row) => { if (!nodes.has(id)) nodes.set(id, { id, cat, col, row }); };
-
-    // standing positions take the left-most columns of their row
-    const standing = { positive: ids(sec("positive"), isStanding), neutral: ids(sec("neutral"), isStanding), negative: ids(sec("negative"), isStanding) };
-    const S = Math.max(standing.positive.length, standing.neutral.length, standing.negative.length);
-
-    standing.positive.forEach((id, i) => put(id, "positive", i, 0));
-    ids(sec("positive"), g => !isStanding(g)).forEach((id, i) => put(id, "positive", S + i, 0));
-
-    standing.negative.forEach((id, i) => put(id, "negative", i, 3));
-    let free = S;
-    const usedNeg = new Set();
-    ids(sec("negative"), g => !isStanding(g)).forEach(id => {
-      const cp = pages.get(id).counterpart;
-      let col = cp && nodes.has(cp) ? nodes.get(cp).col : null;
-      if (col === null || usedNeg.has(col)) { while (usedNeg.has(free)) free++; col = free++; }
-      usedNeg.add(col);
-      put(id, "negative", col, 3);
-    });
-
-    const maxCol = Math.max(S, ...[...nodes.values()].map(n => n.col));
-    standing.neutral.forEach((id, i) => put(id, "neutral", i, 1));
-
-    // guard pairs: top player on row 1, bottom player on row 2, spread across whole columns
-    const guard = ids(sec("neutral"), g => !isStanding(g));
-    const tops = guard.filter(id => !id.startsWith("bottom-"));
-    const pairs = tops.map(id => [id, guard.find(b => b.startsWith("bottom-") && pages.get(b).counterpart === id)]);
-    guard.filter(id => id.startsWith("bottom-") && !pairs.some(p => p[1] === id)).forEach(id => pairs.push([null, id]));
-    const span = Math.max(0, maxCol - S);
-    let prev = S - 1;
-    pairs.forEach(([t, b], i) => {
-      let col = pairs.length > 1 ? S + Math.round((i * span) / (pairs.length - 1)) : S + Math.round(span / 2);
-      col = Math.max(col, prev + 1);
-      prev = col;
-      if (t) put(t, "neutral", col, 1);
-      if (b) put(b, "neutral", col, 2);
-    });
+    (BASE.simpleLayout || []).forEach(sec => sec.groups.forEach(g => g.positions.forEach(id => {
+      if (pages.has(id) && !nodes.has(id)) nodes.set(id, { id, cat: sec.cat });
+    })));
     return nodes;
   }
 
@@ -417,168 +380,84 @@
     return [...edgeMap.values()];
   }
 
-  // Lay out the grid and route every edge. nodes: Map id -> { col, row, h? }; edges: [{ from, to, labelW? }]
-  // Returns pixel positions for nodes and, for each edge, a list of points plus a label point.
-  function routeChart(nodes, edges, opts) {
+  // Lay out a chart. nodes: Map id -> { id, cat, h? }; edges: [{ from, to, labelW? }] (labelW reserves room for a label).
+  // opts.merge: arrows into (or out of) the same position join into one trunk, which keeps a busy chart tidy.
+  // Sets x, y (centre), left, top, bottom and h on each node, and resolves to
+  // { routes: [{ e, points: [[x, y], ...], label: [x, y] }], width, height, bands }.
+  async function layoutChart(nodes, edges, opts) {
     opts = opts || {};
-    const hLane = opts.hLane || FLOW.hLane, vLane = FLOW.vLane, W = FLOW.nodeW;
+    if (!window.ELK) throw new Error("the chart library (vendor/elk.bundled.js) didn't load");
+    elk = elk || new window.ELK();
     const all = [...nodes.values()];
     all.forEach(n => { n.h = n.h || FLOW.nodeH; });
-    const rows = Math.max(...all.map(n => n.row)) + 1;
-    const cols = Math.max(...all.map(n => n.col)) + 1;
-    const COLW = W + FLOW.minGap; // rough column width, only used to compare positions before pixels exist
-
-    // 1. which corridors and gaps each edge uses
-    const routes = edges.map(e => {
-      const a = nodes.get(e.from), b = nodes.get(e.to);
-      const segs = [];
-      let exitSide, enterSide;
-      if (a.row === b.row) {
-        const k = a.row <= 1 ? a.row : a.row + 1; // corridor above rows 0-1, below rows 2-3
-        exitSide = enterSide = k === a.row ? "top" : "bottom";
-        segs.push({ t: "H", k, x1: a.col, x2: b.col });
-      } else {
-        const down = b.row > a.row;
-        exitSide = down ? "bottom" : "top";
-        enterSide = down ? "top" : "bottom";
-        const kA = down ? a.row + 1 : a.row, kB = down ? b.row : b.row + 1;
-        if (kA === kB) segs.push({ t: "H", k: kA, x1: a.col, x2: b.col });
-        else {
-          const g = a.col === b.col ? b.col + 0.5 : b.col + (a.col < b.col ? -0.5 : 0.5);
-          segs.push({ t: "H", k: kA, x1: a.col, x2: g }, { t: "V", g, k1: kA, k2: kB }, { t: "H", k: kB, x1: g, x2: b.col });
-        }
-      }
-      return { e, a, b, exitSide, enterSide, segs };
-    });
-
-    // 2. spread the arrows that share a side of a box, ordered by the direction they head off in
-    const ports = new Map();
-    routes.forEach(r => {
-      const first = r.segs[0], last = r.segs[r.segs.length - 1];
-      const add = (node, side, toward, set) => {
-        const key = node.id + ":" + side;
-        if (!ports.has(key)) ports.set(key, []);
-        ports.get(key).push({ toward, set });
-      };
-      add(r.a, r.exitSide, first.x2, off => { r.exitOff = off; });
-      add(r.b, r.enterSide, last.x1, off => { r.enterOff = off; });
-    });
-    ports.forEach(list => {
-      list.sort((p, q) => p.toward - q.toward);
-      const step = Math.min(16, (W - 30) / Math.max(1, list.length - 1));
-      list.forEach((p, i) => p.set((i - (list.length - 1) / 2) * step));
-    });
-
-    // 3. give every horizontal and vertical run its own lane
-    const hRuns = {}, vRuns = {};
-    routes.forEach(r => {
-      // the label sits on the longest horizontal run
-      let best = null;
-      r.segs.forEach((s, i) => {
-        if (s.t === "H") {
-          const p1 = s.x1 + (i === 0 ? r.exitOff / COLW : 0);
-          const p2 = s.x2 + (i === r.segs.length - 1 ? r.enterOff / COLW : 0);
-          s.lo = Math.min(p1, p2); s.hi = Math.max(p1, p2);
-          if (!best || s.hi - s.lo > best.hi - best.lo) best = s;
-          (hRuns[s.k] = hRuns[s.k] || []).push(s);
-        } else {
-          s.lo = Math.min(s.k1, s.k2); s.hi = Math.max(s.k1, s.k2);
-          (vRuns[s.g] = vRuns[s.g] || []).push(s);
-        }
-      });
-      r.labelSeg = best;
-      if (best && r.e.labelW) {
-        const mid = (best.lo + best.hi) / 2, half = (r.e.labelW / 2 + 8) / COLW;
-        best.lo = Math.min(best.lo, mid - half); best.hi = Math.max(best.hi, mid + half);
-      }
-    });
-    // Which way each run's ends turn decides its lane group, which cuts down crossings:
-    // in a corridor, runs whose ends both turn up take the top lanes, both down the bottom lanes, mixed in between;
-    // in a column gap, runs whose ends both turn left take the left lanes, and so on.
-    routes.forEach(r => {
-      const segs = r.segs, last = segs.length - 1;
-      segs.forEach((s, i) => {
-        let toward = 0; // how many ends turn up (corridor) or left (gap)
-        if (s.t === "H") {
-          const startUp = i === 0 ? r.a.row === s.k - 1 : segs[i - 1].k1 < s.k;
-          const endUp = i === last ? r.b.row === s.k - 1 : segs[i + 1].k2 < s.k;
-          toward = (startUp ? 1 : 0) + (endUp ? 1 : 0);
-        } else {
-          toward = (segs[i - 1].x1 < s.g ? 1 : 0) + (segs[i + 1].x2 < s.g ? 1 : 0);
-        }
-        s.group = 2 - toward; // 0 = top/left lanes, 1 = middle, 2 = bottom/right lanes
-      });
-    });
-    const assignLanes = runs => {
-      let base = 0;
-      [0, 1, 2].forEach(group => {
-        const ends = [];
-        runs.filter(s => s.group === group).sort((p, q) => p.lo - q.lo || p.hi - q.hi).forEach(s => {
-          let lane = ends.findIndex(end => end < s.lo - 0.04);
-          if (lane < 0) { lane = ends.length; ends.push(0); }
-          ends[lane] = s.hi;
-          s.lane = base + lane;
-        });
-        base += ends.length;
-      });
-      return base;
+    const graph = {
+      id: "root",
+      layoutOptions: {
+        "elk.algorithm": "layered",
+        "elk.direction": "UP",
+        "elk.edgeRouting": "ORTHOGONAL",
+        "elk.partitioning.activate": "true",
+        "elk.padding": "[top=20,left=44,bottom=20,right=24]",
+        "elk.spacing.nodeNode": "24",
+        "elk.layered.spacing.nodeNodeBetweenLayers": "40",
+        "elk.spacing.edgeNode": "16",
+        "elk.spacing.edgeEdge": "8",
+        "elk.layered.spacing.edgeNodeBetweenLayers": "14",
+        "elk.layered.spacing.edgeEdgeBetweenLayers": "8",
+        "elk.layered.thoroughness": "20",
+        "elk.layered.nodePlacement.strategy": "NETWORK_SIMPLEX",
+        "elk.layered.considerModelOrder.strategy": "PREFER_NODES",
+        "elk.layered.mergeEdges": String(!!opts.merge)
+      },
+      children: all.map(n => ({
+        id: n.id, width: FLOW.nodeW, height: n.h,
+        layoutOptions: { "elk.partitioning.partition": String(Math.max(0, CAT_ORDER.indexOf(n.cat))) }
+      })),
+      edges: edges.map((e, i) => ({
+        id: "e" + i, sources: [e.from], targets: [e.to],
+        labels: e.labelW ? [{ id: "l" + i, text: " ", width: e.labelW, height: FLOW.labelH,
+          layoutOptions: { "elk.edgeLabels.placement": "CENTER", "elk.edgeLabels.inline": "true" } }] : []
+      }))
     };
-    const hCount = {}, vCount = {};
-    Object.keys(hRuns).forEach(k => { hCount[k] = assignLanes(hRuns[k]); });
-    Object.keys(vRuns).forEach(g => { vCount[g] = assignLanes(vRuns[g]); });
+    const out = await elk.layout(graph);
 
-    // 4. pixels: gaps and corridors are as wide as their traffic needs
-    const gapW = g => Math.max(FLOW.minGap, (vCount[g] || 0) * vLane + 18);
-    const center = [], gapLeft = {};
-    let x = FLOW.left;
-    for (let c = 0; c < cols; c++) {
-      gapLeft[c - 0.5] = x; x += gapW(c - 0.5);
-      center[c] = x + W / 2; x += W;
-    }
-    gapLeft[cols - 0.5] = x; x += gapW(cols - 0.5);
-    const width = x;
-    const rowH = [], corrH = [], corrTop = [], rowTop = [];
-    for (let r = 0; r < rows; r++) rowH[r] = Math.max(FLOW.nodeH, ...all.filter(n => n.row === r).map(n => n.h));
-    for (let k = 0; k <= rows; k++) corrH[k] = Math.max(k === 0 || k === rows ? 18 : FLOW.minCorr, (hCount[k] || 0) * hLane + 16);
-    let y = 0;
-    for (let k = 0; k <= rows; k++) {
-      corrTop[k] = y; y += corrH[k];
-      if (k < rows) { rowTop[k] = y; y += rowH[k]; }
-    }
-    const height = y;
-    const laneY = (k, lane) => corrTop[k] + (corrH[k] - ((hCount[k] || 1) - 1) * hLane) / 2 + lane * hLane;
-    const laneX = (g, lane) => gapLeft[g] + (gapW(g) - ((vCount[g] || 1) - 1) * vLane) / 2 + lane * vLane;
-    all.forEach(n => { n.x = center[n.col]; n.y = rowTop[n.row] + rowH[n.row] / 2; n.top = n.y - n.h / 2; n.bottom = n.y + n.h / 2; });
-
-    // 5. turn each route into points
-    routes.forEach(r => {
-      const { a, b } = r;
-      const sx = a.x + r.exitOff, sy = r.exitSide === "top" ? a.top : a.bottom;
-      const ex = b.x + r.enterOff, ey = r.enterSide === "top" ? b.top - 3 : b.bottom + 3;
-      const pts = [[sx, sy]];
-      const hs = r.segs.filter(s => s.t === "H"), v = r.segs.find(s => s.t === "V");
-      const y1 = laneY(hs[0].k, hs[0].lane);
-      pts.push([sx, y1]);
-      if (v) {
-        const gx = laneX(v.g, v.lane), y2 = laneY(hs[1].k, hs[1].lane);
-        pts.push([gx, y1], [gx, y2], [ex, y2]);
-      } else pts.push([ex, y1]);
-      pts.push([ex, ey]);
-      r.points = pts;
-      const ls = r.labelSeg;
-      const li = r.segs.indexOf(ls);
-      // label point: middle of the longest horizontal run
-      const segPts = v ? (li === 0 ? [pts[1], pts[2]] : [pts[3], pts[4]]) : [pts[1], pts[2]];
-      r.label = [(segPts[0][0] + segPts[1][0]) / 2, segPts[0][1]];
+    const placed = new Map(out.children.map(c => [c.id, c]));
+    all.forEach(n => {
+      const c = placed.get(n.id);
+      n.left = c.x; n.top = c.y; n.x = c.x + FLOW.nodeW / 2; n.y = c.y + n.h / 2; n.bottom = c.y + n.h;
     });
 
-    // background bands: positive / neutral / negative rows, split halfway across the corridors
-    const catRows = { positive: [], neutral: [], negative: [] };
-    all.forEach(n => { const c = n.cat || "neutral"; if (catRows[c] && !catRows[c].includes(n.row)) catRows[c].push(n.row); });
-    const bands = Object.entries(catRows).filter(([, rs]) => rs.length).map(([cat, rs]) => {
-      const r1 = Math.min(...rs), r2 = Math.max(...rs);
-      return { cat, y1: r1 === 0 ? 4 : corrTop[r1] + corrH[r1] / 2, y2: r2 === rows - 1 ? height - 4 : corrTop[r2 + 1] + corrH[r2 + 1] / 2 };
+    const routes = out.edges.map((oe, i) => {
+      const s = oe.sections[0];
+      const points = [s.startPoint, ...(s.bendPoints || []), s.endPoint].map(p => [p.x, p.y]);
+      // pull the end back a little so the arrowhead's tip touches the box instead of overlapping it
+      const [px, py] = points[points.length - 2], end = points[points.length - 1];
+      const len = Math.hypot(end[0] - px, end[1] - py) || 1, back = Math.min(3, len / 2);
+      end[0] -= ((end[0] - px) / len) * back; end[1] -= ((end[1] - py) / len) * back;
+      const l = (oe.labels || [])[0];
+      let label;
+      if (l) label = [l.x + l.width / 2, l.y + l.height / 2];
+      else { // middle of the longest straight run
+        let best = 0;
+        for (let k = 1; k < points.length; k++) {
+          const [ax, ay] = points[k - 1], [bx, by] = points[k], d = Math.hypot(bx - ax, by - ay);
+          if (d > best) { best = d; label = [(ax + bx) / 2, (ay + by) / 2]; }
+        }
+      }
+      return { e: edges[i], points, label };
     });
+
+    // background bands: one per category (positive on top), split halfway across the space between categories
+    const width = out.width, height = out.height;
+    const spans = CAT_ORDER.slice().reverse().map(cat => {
+      const ns = all.filter(n => (n.cat || "neutral") === cat);
+      return ns.length ? { cat, lo: Math.min(...ns.map(n => n.top)), hi: Math.max(...ns.map(n => n.bottom)) } : null;
+    }).filter(Boolean);
+    const bands = spans.map((s, i) => ({
+      cat: s.cat,
+      y1: i === 0 ? 4 : (spans[i - 1].hi + s.lo) / 2,
+      y2: i === spans.length - 1 ? height - 4 : (s.hi + spans[i + 1].lo) / 2
+    }));
     return { routes, width, height, bands };
   }
 
@@ -598,8 +477,8 @@
   }
 
   function bandsSvg(bands, width) {
-    return bands.map(b => `<rect class="flow-band band-${b.cat}" x="0" y="${b.y1.toFixed(1)}" width="${width}" height="${(b.y2 - b.y1).toFixed(1)}" rx="12"/>
-      <text class="flow-band-label" transform="translate(20 ${((b.y1 + b.y2) / 2).toFixed(1)}) rotate(-90)">${b.cat}</text>`).join("");
+    return bands.map(b => `<rect class="flow-band band-${b.cat}" x="4" y="${b.y1.toFixed(1)}" width="${(width - 8).toFixed(1)}" height="${(b.y2 - b.y1).toFixed(1)}" rx="12"/>
+      <text class="flow-band-label" transform="translate(22 ${((b.y1 + b.y2) / 2).toFixed(1)}) rotate(-90)">${b.cat}</text>`).join("");
   }
 
   const fitText = (s, max) => (s.length <= max ? s : s.slice(0, max - 1).trimEnd() + "…");
@@ -612,48 +491,44 @@
     return mid > 0 ? [name.slice(0, mid), name.slice(mid + 1)] : [name];
   }
 
+  // The page is drawn straight away; the chart itself is laid out by ELK, which is asynchronous, so wireFlow() fills it in.
   function viewFlow() {
-    const nodes = flowGrid();
+    const nodes = flowNodes();
+    const offChart = techniques.filter(t => t.col === "transition" && nodes.has(t.from) && t.to && !nodes.has(t.to)).length;
+    return `
+      <article class="page flow-page">
+        <h1>Flow chart</h1>
+        <p class="lead">The positions in the simplified table, joined by the transitions between them. Click a position to see its submissions.</p>
+        <p class="muted flow-key">Positions climb from negative at the bottom, through neutral, to positive at the top, so most arrows point up: towards a better position. Arrows are transitions; arrows heading to the same position join up before they arrive. Hover a position to pick out its arrows: gold ones leave it, blue ones lead into it. Click it to list its submissions and transitions. The number on a position is how many submissions it has.${offChart ? ` ${offChart} ${offChart === 1 ? "transition leads" : "transitions lead"} to positions outside the simplified table, so ${offChart === 1 ? "it's" : "they're"} listed in the side panel instead.` : ""}</p>
+        <div class="flow-layout">
+          <div class="flow-scroll" id="flowBox"><p class="muted flow-wait">Drawing the chart…</p></div>
+          <aside class="flow-panel" id="flowPanel" aria-live="polite"><p class="muted">Click a position to see its submissions.</p></aside>
+        </div>
+      </article>`;
+  }
+
+  async function flowChartSvg() {
+    const nodes = flowNodes();
     const edges = flowEdges(nodes);
-    const { routes, width, height, bands } = routeChart(nodes, edges);
-    const edgeSvg = routes.map(r => {
-      const e = r.e, names = e.techs.map(t => t.name).join(", ");
-      const d = roundedPath(r.points, 8);
-      const [lx, ly] = r.label;
-      return `<g class="flow-edge" data-from="${e.from}" data-to="${e.to}">
-        <title>${esc(pages.get(e.from).name)} → ${esc(pages.get(e.to).name)}: ${esc(names)}</title>
-        <path class="hit" d="${d}"/>
-        <path class="line" d="${d}" marker-end="url(#flow-arrow)"/>
-        ${e.techs.length > 1 ? `<circle cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="8"/><text x="${lx.toFixed(1)}" y="${(ly + 3.5).toFixed(1)}">${e.techs.length}</text>` : ""}
-      </g>`;
-    }).join("");
+    const { routes, width, height, bands } = await layoutChart(nodes, edges, { merge: true });
+    // arrows share trunks, so an arrow on its own can't say which transitions it carries: the side panel lists them
+    const edgeSvg = routes.map(r => `<g class="flow-edge" data-from="${r.e.from}" data-to="${r.e.to}">
+        <path class="line" d="${roundedPath(r.points, 6)}" marker-end="url(#flow-arrow)"/>
+      </g>`).join("");
     const nodeSvg = [...nodes.values()].map(n => {
       const p = pages.get(n.id);
       const lines = wrapLabel(p.name);
       const subs = techsFrom(n.id, "sub").length;
       return `<g class="flow-node cat-${n.cat}" data-id="${n.id}" tabindex="0" role="button" aria-label="${esc(p.name)}: ${subs} submissions">
-        <rect x="${n.x - FLOW.nodeW / 2}" y="${n.top}" width="${FLOW.nodeW}" height="${n.h}" rx="10"/>
+        <rect x="${n.left}" y="${n.top}" width="${FLOW.nodeW}" height="${n.h}" rx="10"/>
         <text x="${n.x}" y="${n.y + (lines.length > 1 ? -3 : 4)}">${lines.map((l, i) => `<tspan x="${n.x}" dy="${i ? 14 : 0}">${esc(l)}</tspan>`).join("")}</text>
-        ${subs ? `<g class="flow-badge"><circle cx="${n.x + FLOW.nodeW / 2 - 4}" cy="${n.top + 4}" r="10"/><text x="${n.x + FLOW.nodeW / 2 - 4}" y="${n.top + 8}">${subs}</text></g>` : ""}
+        ${subs ? `<g class="flow-badge"><circle cx="${n.left + FLOW.nodeW - 4}" cy="${n.top + 4}" r="10"/><text x="${n.left + FLOW.nodeW - 4}" y="${n.top + 8}">${subs}</text></g>` : ""}
       </g>`;
     }).join("");
-    const offChart = techniques.filter(t => t.col === "transition" && nodes.has(t.from) && t.to && !nodes.has(t.to)).length;
-
-    return `
-      <article class="page flow-page">
-        <h1>Flow chart</h1>
-        <p class="lead">The positions in the simplified table, joined by the transitions between them. Click a position to see its submissions.</p>
-        <p class="muted flow-key">Arrows are transitions, routed between the positions so none runs behind a box; a number on an arrow means several transitions share that route. Hover an arrow to see its transitions. Hover or click a position to pick out its arrows: gold ones leave it, blue ones lead into it. The number on a position is how many submissions it has.${offChart ? ` ${offChart} ${offChart === 1 ? "transition leads" : "transitions lead"} to positions outside the simplified table, so ${offChart === 1 ? "it's" : "they're"} listed in the side panel instead.` : ""}</p>
-        <div class="flow-layout">
-          <div class="flow-scroll">
-            <svg id="flow" viewBox="0 0 ${width.toFixed(0)} ${height.toFixed(0)}" width="${width.toFixed(0)}" height="${height.toFixed(0)}" role="group" aria-label="Flow chart of positions and transitions">
-              <defs>${["flow-arrow", "flow-arrow-out", "flow-arrow-in"].map(m => `<marker id="${m}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker>`).join("")}</defs>
-              ${bandsSvg(bands, width)}<g class="flow-edges">${edgeSvg}</g>${nodeSvg}
-            </svg>
-          </div>
-          <aside class="flow-panel" id="flowPanel" aria-live="polite"><p class="muted">Click a position to see its submissions.</p></aside>
-        </div>
-      </article>`;
+    return `<svg id="flow" viewBox="0 0 ${width.toFixed(0)} ${height.toFixed(0)}" width="${width.toFixed(0)}" height="${height.toFixed(0)}" role="group" aria-label="Flow chart of positions and transitions">
+        <defs>${["flow-arrow", "flow-arrow-out", "flow-arrow-in"].map(m => `<marker id="${m}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker>`).join("")}</defs>
+        ${bandsSvg(bands, width)}<g class="flow-edges">${edgeSvg}</g>${nodeSvg}
+      </svg>`;
   }
 
   function flowPanelHtml(id) {
@@ -669,9 +544,18 @@
       ${trans.length ? `<ul>${trans.map(t => `<li>${link(t.id)} <span class="muted">→ ${t.to ? link(t.to, "muted") : "?"}${t.to && !onChart.has(t.to) ? " (not on chart)" : ""}</span></li>`).join("")}</ul>` : `<p class="muted">None yet.</p>`}`;
   }
 
-  function wireFlow(selected) {
+  async function wireFlow(selected) {
+    const box = document.getElementById("flowBox");
+    if (!box) return;
+    try {
+      const svgHtml = await flowChartSvg();
+      if (!box.isConnected) return; // moved to another page while the chart was being laid out
+      box.innerHTML = svgHtml;
+    } catch (e) {
+      if (box.isConnected) box.innerHTML = `<p class="muted flow-wait">Couldn't draw the chart: ${esc(e.message)}</p>`;
+      return;
+    }
     const svg = document.getElementById("flow");
-    if (!svg) return;
     const panel = document.getElementById("flowPanel");
     let current = null; // the clicked position; hovering shows another one's arrows until the mouse leaves
     // gold arrows leave the position ("out"), blue arrows lead into it ("in"); id null clears the highlight
@@ -682,6 +566,7 @@
         e.classList.toggle("out", isOut);
         e.classList.toggle("in", isIn);
         e.querySelector("path.line").setAttribute("marker-end", `url(#${isOut ? "flow-arrow-out" : isIn ? "flow-arrow-in" : "flow-arrow"})`);
+        if (isOut || isIn) e.parentNode.appendChild(e); // draw picked-out arrows over the shared trunks
       });
     };
     const select = id => {
@@ -778,13 +663,13 @@
   }
 
   // draw the built game: chosen positions, chosen transitions as labelled arrows, chosen subs inside each position.
-  // Uses the same grid and arrow routing as the Flow chart page.
-  function coreGameChart() {
-    const grid = flowGrid();
+  // Laid out by the same engine as the Flow chart page (layoutChart). Positions outside the simplified table are dashed.
+  async function coreGameChart() {
+    const simple = flowNodes();
     const nodes = new Map(), edges = [];
     const addNode = id => {
       if (nodes.has(id)) return;
-      const g = grid.get(id);
+      const g = simple.get(id);
       nodes.set(id, g ? Object.assign({}, g) : { id, off: true, cat: ((placements[id] || [])[0] || {}).cat || "neutral" });
     };
     simpleIds().forEach(pid => {
@@ -797,20 +682,9 @@
       });
     });
     if (!nodes.size) return `<p class="muted">Pick some submissions or transitions first.</p>`;
-    // positions outside the simplified table go in extra columns on the right, in their own band
-    const maxCol = Math.max(0, ...[...grid.values()].map(n => n.col));
-    const taken = new Set([...nodes.values()].filter(n => !n.off).map(n => n.col + ":" + n.row));
-    nodes.forEach(n => {
-      if (!n.off) return;
-      const rowsFor = { positive: [0], neutral: [1, 2], negative: [3] }[n.cat] || [1, 2];
-      for (let c = maxCol + 1; ; c++) {
-        const r = rowsFor.find(r => !taken.has(c + ":" + r));
-        if (r !== undefined) { n.col = c; n.row = r; taken.add(c + ":" + r); break; }
-      }
-    });
     nodes.forEach(n => { n.subs = n.subs || []; n.h = FLOW.nodeH + n.subs.length * 15; });
 
-    const { routes, width, height, bands } = routeChart(nodes, edges, { hLane: 24 });
+    const { routes, width, height, bands } = await layoutChart(nodes, edges);
     const edgeSvg = routes.map(r => {
       const t = r.e.tech, [lx, ly] = r.label, w = r.e.labelW;
       return `<g class="cg-edge" data-from="${r.e.from}" data-to="${r.e.to}"><title>${esc(t.name)}</title>
@@ -830,7 +704,7 @@
     const subCount = [...nodes.values()].reduce((a, n) => a + n.subs.length, 0);
     return `
       <h2>Your game</h2>
-      <p class="muted flow-key">${nodes.size} positions, ${edges.length} transitions, ${subCount} submissions. Arrows are your transitions; ⊗ marks a submission. Hover a position to pick out its arrows: gold ones leave it, blue ones lead into it. Click anything to open its page.${[...nodes.values()].some(n => n.off) ? " Dashed positions on the far right aren't in the simplified table." : ""}</p>
+      <p class="muted flow-key">${nodes.size} positions, ${edges.length} transitions, ${subCount} submissions. Arrows are your transitions; ⊗ marks a submission. Hover a position to pick out its arrows: gold ones leave it, blue ones lead into it. Click anything to open its page.${[...nodes.values()].some(n => n.off) ? " Dashed positions aren't in the simplified table." : ""}</p>
       <div class="flow-scroll">
         <svg id="cgSvg" viewBox="0 0 ${width.toFixed(0)} ${height.toFixed(0)}" width="${width.toFixed(0)}" height="${height.toFixed(0)}" role="img" aria-label="Flowchart of your core game">
           <defs><marker id="cg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker>
@@ -877,9 +751,11 @@
       list[Number(i)] = sel.value || null;
       setDirty();
     }));
-    genBtn.addEventListener("click", () => {
+    genBtn.addEventListener("click", async () => {
       const box = document.getElementById("cgChart");
-      box.innerHTML = coreGameChart();
+      box.innerHTML = `<p class="muted">Drawing your game…</p>`;
+      try { box.innerHTML = await coreGameChart(); }
+      catch (e) { box.innerHTML = `<p class="muted">Couldn't draw the chart: ${esc(e.message)}</p>`; return; }
       const svg = document.getElementById("cgSvg");
       if (svg) svg.querySelectorAll(".cg-node").forEach(n => {
         const id = n.dataset.id;
