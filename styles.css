@@ -352,3 +352,10 @@ main.wide { max-width: 1680px; }
 .cg-stale[hidden], .cg-stale-note[hidden] { display: none; }
 .cg-stale-note { margin: 0 0 8px; padding: 8px 12px; border: 1px solid var(--cat-neutral); border-radius: 8px; font-size: 14px; }
 .btn.needs-update::before { content: "⚠"; margin-right: 6px; }
+
+/* home tables: moves in your core game */
+.core-mark { display: inline-flex; align-items: center; gap: 6px; margin: 0 0 10px 16px; font-size: 14px; cursor: pointer; vertical-align: middle; }
+.core-mark-sw, .mark-core td.in-game::before { color: var(--accent); font-weight: 700; }
+.mark-core td.in-game { box-shadow: inset 0 0 0 2px var(--accent); }
+.mark-core td.in-game a { font-weight: 700; }
+.mark-core td.in-game::before { content: "★ "; }

@@ -116,7 +116,7 @@
   // ---------- views ----------
   // Both home tables (full and simplified) are built here from the same technique data,
   // so only the list of positions differs between them.
-  function gridTable(layout) {
+  function gridTable(layout, inGame) {
     let rows = "";
     layout.forEach(sec => {
       const groupBlocks = sec.groups.filter(g => g.positions.length).map(g => {
@@ -142,7 +142,7 @@
             rows += "<tr>";
             b.cols.forEach(col => {
               const t = col[i];
-              rows += t ? `<td class="tech st-${t.status}">${link(t.id)}${attireTag(t)}</td>` : `<td class="tech"></td>`;
+              rows += t ? `<td class="tech st-${t.status}${inGame.has(t.id) ? " in-game" : ""}"${inGame.has(t.id) ? ` title="In your core game"` : ""}>${link(t.id)}${attireTag(t)}</td>` : `<td class="tech"></td>`;
             });
             rows += "</tr>";
           }
@@ -167,8 +167,16 @@
     document.querySelectorAll(".viewtoggle button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.view === v)));
   }
 
+  const CORE_MARK_KEY = "grapplewiki.markCoreGame";
+  const markCore = () => { try { return localStorage.getItem(CORE_MARK_KEY) !== "off"; } catch (e) { return true; } };
+  function setMarkCore(on) {
+    try { localStorage.setItem(CORE_MARK_KEY, on ? "on" : "off"); } catch (e) { /* not saved; still switches */ }
+    document.querySelectorAll(".grid-wrap").forEach(el => el.classList.toggle("mark-core", on));
+  }
+
   function viewHome() {
     const view = homeView();
+    const inGame = coreGameIds(), mark = markCore();
     const counts = {
       pos: positions.length, tech: techniques.length,
       complete: techniques.filter(t => t.status === "complete").length,
@@ -194,8 +202,9 @@
         <button type="button" data-view="simple" aria-pressed="${view === "simple"}">Simplified</button>
         <button type="button" data-view="full" aria-pressed="${view === "full"}">Full</button>
       </div>
-      <div class="grid-wrap" data-grid="simple"${view === "simple" ? "" : " hidden"}>${gridTable(BASE.simpleLayout || [])}</div>
-      <div class="grid-wrap" data-grid="full"${view === "full" ? "" : " hidden"}>${gridTable(BASE.layout)}</div>
+      <label class="core-mark"><input type="checkbox" id="markCore"${mark ? " checked" : ""}> Highlight my <a href="#/core-game">core game</a> <span class="core-mark-sw" aria-hidden="true">★</span> <span class="muted">(${inGame.size} ${inGame.size === 1 ? "move" : "moves"})</span></label>
+      <div class="grid-wrap${mark ? " mark-core" : ""}" data-grid="simple"${view === "simple" ? "" : " hidden"}>${gridTable(BASE.simpleLayout || [], inGame)}</div>
+      <div class="grid-wrap${mark ? " mark-core" : ""}" data-grid="full"${view === "full" ? "" : " hidden"}>${gridTable(BASE.layout, inGame)}</div>
       <section class="concepts">
         <h2>Concepts</h2>
         <div class="chips">${concepts.map(c => link(c.id, "chip")).join("")}</div>
@@ -622,18 +631,31 @@
 
   // A position with only 1 or 2 options for a dropdown pair starts with them filled in,
   // unless the saved game already says something for that pair (including an explicit clear).
-  function prefillCorePicks() {
+  function prefillCorePicks(picks = corePicks) {
     let filled = false;
     simpleIds().forEach(pid => ["sub", "transition"].forEach(kind => {
       const key = PICK_KEY[kind];
-      if (corePicks[pid] && Array.isArray(corePicks[pid][key])) return;
+      if (picks[pid] && Array.isArray(picks[pid][key])) return;
       const opts = techsFrom(pid, kind);
       if (!opts.length || opts.length > 2) return;
-      corePicks[pid] = corePicks[pid] || {};
-      corePicks[pid][key] = [opts[0].id, opts[1] ? opts[1].id : null];
+      picks[pid] = picks[pid] || {};
+      picks[pid][key] = [opts[0].id, opts[1] ? opts[1].id : null];
       filled = true;
     }));
     return filled;
+  }
+
+  // The ids of every move in the current core game, as the Core game page would show it:
+  // the unsaved picks if there are any, otherwise the saved game (with the same pre-filled dropdowns).
+  function coreGameIds() {
+    let picks = corePicks;
+    if (!coreDirty) {
+      picks = JSON.parse(JSON.stringify((BASE.coreGame && BASE.coreGame.picks) || {}));
+      prefillCorePicks(picks);
+    }
+    const ids = new Set();
+    simpleIds().forEach(pid => ["sub", "transition"].forEach(kind => picksFor(pid, kind, picks).forEach(t => ids.add(t.id))));
+    return ids;
   }
 
   function viewCoreGame() {
@@ -1029,6 +1051,8 @@
     if (parts[0] === "flow") wireFlow(params.get("node"));
     if (parts[0] === "core-game") wireCoreGame();
     document.querySelectorAll(".viewtoggle button").forEach(b => b.addEventListener("click", () => setHomeView(b.dataset.view)));
+    const markBox = document.getElementById("markCore");
+    if (markBox) markBox.addEventListener("change", () => setMarkCore(markBox.checked));
     document.querySelectorAll(".nav a").forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#/" + (parts[0] || "")));
     window.scrollTo(0, 0);
   }
