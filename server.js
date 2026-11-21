@@ -157,16 +157,16 @@ async function api(req, res, parts) {
     return send(res, 200, Object.assign(readAllPages(), readWikiJson(), { coreGame: readCoreGame() }));
   }
 
-  // PUT /api/core-game  -> save the Core game picks: { picks: { positionId: { subs: [id, id], transitions: [id, id] } } }
+  // PUT /api/core-game  -> save the Core game picks: { picks: { positionId: { subs: [id, ...], transitions: [id, ...] } } }
   if (req.method === "PUT" && parts[0] === "core-game" && parts.length === 1) {
     checkOrigin(req);
     const body = await readBody(req);
     if (!body.picks || typeof body.picks !== "object") throw new HttpError(400, "Send picks as an object.");
-    const ids = list => (Array.isArray(list) ? list.slice(0, 2).map(v => (typeof v === "string" && ID_RE.test(v) ? v : null)) : []);
+    const ids = list => (Array.isArray(list) ? [...new Set(list.slice(0, 200).filter(v => typeof v === "string" && ID_RE.test(v)))] : []);
     const picks = {};
     for (const [pos, pick] of Object.entries(body.picks)) {
       if (!ID_RE.test(pos) || !pick) continue;
-      // empty slots are kept as null so a cleared dropdown stays cleared (and isn't pre-filled again)
+      // an empty list is kept, so a cleared position stays cleared (and isn't pre-filled again)
       const entry = {};
       if (Array.isArray(pick.subs)) entry.subs = ids(pick.subs);
       if (Array.isArray(pick.transitions)) entry.transitions = ids(pick.transitions);

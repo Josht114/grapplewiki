@@ -629,8 +629,8 @@
   let coreDirty = false;
   window.addEventListener("beforeunload", e => { if (coreDirty) { e.preventDefault(); e.returnValue = ""; } });
 
-  // A position with only 1 or 2 options for a dropdown pair starts with them filled in,
-  // unless the saved game already says something for that pair (including an explicit clear).
+  // A position with only 1 or 2 options for subs (or transitions) starts with them all picked,
+  // unless the saved game already has a list for it (an empty list means you cleared it).
   function prefillCorePicks(picks = corePicks) {
     let filled = false;
     simpleIds().forEach(pid => ["sub", "transition"].forEach(kind => {
@@ -639,7 +639,7 @@
       const opts = techsFrom(pid, kind);
       if (!opts.length || opts.length > 2) return;
       picks[pid] = picks[pid] || {};
-      picks[pid][key] = [opts[0].id, opts[1] ? opts[1].id : null];
+      picks[pid][key] = opts.map(t => t.id);
       filled = true;
     }));
     return filled;
@@ -658,38 +658,51 @@
     return ids;
   }
 
+  // One cell of the picker: a dropdown for each picked move, each with a remove button, then an Add button.
+  // A dropdown only offers moves not already picked in the same cell.
+  function coreCellHtml(pid, kind) {
+    const opts = techsFrom(pid, kind);
+    if (!opts.length) return `<span class="muted">None yet</span>`;
+    const word = kind === "sub" ? "submission" : "transition", name = esc(pages.get(pid).name);
+    const list = (corePicks[pid] || {})[PICK_KEY[kind]] || [];
+    const optLabel = t => esc(t.name) + (t.col === "transition" && t.to ? " → " + esc((pages.get(t.to) || { name: t.to }).name) : "");
+    const picks = list.map((cur, i) => {
+      const taken = new Set(list.filter((v, j) => v && j !== i));
+      return `<div class="cg-pick">
+          <select data-i="${i}" aria-label="${name}: ${word} ${i + 1}">
+            <option value="">—</option>${opts.filter(t => !taken.has(t.id)).map(t => `<option value="${t.id}"${t.id === cur ? " selected" : ""}>${optLabel(t)}</option>`).join("")}
+          </select>
+          <button type="button" class="cg-remove" data-i="${i}" title="Remove" aria-label="Remove ${name} ${word} ${i + 1}">×</button>
+        </div>`;
+    }).join("");
+    const full = list.length >= opts.length;
+    return picks + `<button type="button" class="cg-add"${full ? " disabled" : ""} title="${full ? "Every " + word + " from here is already added" : ""}">+ Add ${word}</button>`;
+  }
+
   function viewCoreGame() {
     if (!coreDirty) {
       corePicks = JSON.parse(JSON.stringify((BASE.coreGame && BASE.coreGame.picks) || {}));
+      Object.values(corePicks).forEach(p => Object.values(PICK_KEY).forEach(k => { if (Array.isArray(p[k])) p[k] = p[k].filter(Boolean); }));
       if (prefillCorePicks()) coreDirty = true;
     }
-    const dropdown = (pid, kind, i) => {
-      const opts = techsFrom(pid, kind);
-      const label = `${pages.get(pid).name}: ${kind === "sub" ? "Sub" : "Transition"} ${i + 1}`;
-      if (!opts.length) return `<select disabled aria-label="${esc(label)}"><option>None yet</option></select>`;
-      const cur = ((corePicks[pid] || {})[PICK_KEY[kind]] || [])[i] || "";
-      return `<select data-pos="${pid}" data-kind="${kind}" data-i="${i}" aria-label="${esc(label)}">
-        <option value="">—</option>${opts.map(t => `<option value="${t.id}"${t.id === cur ? " selected" : ""}>${esc(t.name)}${t.col === "transition" && t.to ? " → " + esc((pages.get(t.to) || { name: t.to }).name) : ""}</option>`).join("")}
-      </select>`;
-    };
     const rows = (BASE.simpleLayout || []).map(sec => {
       const ids = sec.groups.flatMap(g => g.positions).filter(id => pages.has(id));
       if (!ids.length) return "";
-      return `<tr class="cg-band"><th colspan="5" class="cat-${sec.cat}">${esc(sec.cat)}</th></tr>` + ids.map(pid => `
+      return `<tr class="cg-band"><th colspan="3" class="cat-${sec.cat}">${esc(sec.cat)}</th></tr>` + ids.map(pid => `
         <tr>
           <th scope="row">${link(pid)}</th>
-          <td>${dropdown(pid, "sub", 0)}</td><td>${dropdown(pid, "sub", 1)}</td>
-          <td>${dropdown(pid, "transition", 0)}</td><td>${dropdown(pid, "transition", 1)}</td>
+          <td class="cg-cell" data-pos="${pid}" data-kind="sub">${coreCellHtml(pid, "sub")}</td>
+          <td class="cg-cell" data-pos="${pid}" data-kind="transition">${coreCellHtml(pid, "transition")}</td>
         </tr>`).join("");
     }).join("");
     return `
       <article class="page cg-page">
         <h1>Core game</h1>
-        <p class="lead">Build your game: pick up to two submissions and two transitions from each position, then generate a flowchart of it.</p>
+        <p class="lead">Build your game: add as many submissions and transitions as you like to each position, then generate a flowchart of it.</p>
         <p class="cg-count" id="cgCount" aria-live="polite">${pickCountText()}</p>
         <div class="cg-scroll">
           <table class="cg-table">
-            <thead><tr><th>Position</th><th class="h-sub">Sub 1</th><th class="h-sub">Sub 2</th><th class="h-transition">Transition 1</th><th class="h-transition">Transition 2</th></tr></thead>
+            <thead><tr><th>Position</th><th class="h-sub">Submissions</th><th class="h-transition">Transitions</th></tr></thead>
             <tbody>${rows}</tbody>
           </table>
         </div>
@@ -781,7 +794,12 @@
       saveBtn.disabled = true;
       status.textContent = "Saving…";
       try {
-        const res = await apiCall("PUT", "/api/core-game", { picks: corePicks });
+        const clean = {};
+        Object.entries(corePicks).forEach(([pid, p]) => {
+          clean[pid] = {};
+          Object.values(PICK_KEY).forEach(k => { if (Array.isArray(p[k])) clean[pid][k] = p[k].filter(Boolean); });
+        });
+        const res = await apiCall("PUT", "/api/core-game", { picks: clean });
         BASE.coreGame = { picks: res.picks, saved: true };
         coreDirty = false;
         status.textContent = "Saved to core-game.json";
@@ -792,13 +810,31 @@
         saveBtn.disabled = false;
       }
     });
-    page.querySelectorAll("select[data-pos]").forEach(sel => sel.addEventListener("change", () => {
-      const { pos, kind, i } = sel.dataset;
+    // the picker cells: change a dropdown, add one, or remove one; the cell is redrawn so its dropdowns' options stay right
+    const listFor = (pos, kind) => {
       const pick = corePicks[pos] = corePicks[pos] || {};
-      const list = pick[PICK_KEY[kind]] = pick[PICK_KEY[kind]] || [null, null];
-      list[Number(i)] = sel.value || null;
+      return pick[PICK_KEY[kind]] = pick[PICK_KEY[kind]] || [];
+    };
+    const redraw = (cell, focusIndex) => {
+      cell.innerHTML = coreCellHtml(cell.dataset.pos, cell.dataset.kind);
+      const sels = cell.querySelectorAll("select");
+      if (focusIndex !== undefined) (sels[focusIndex] || cell.querySelector(".cg-add:not([disabled])") || sels[sels.length - 1] || { focus() {} }).focus();
+    };
+    page.querySelector(".cg-table").addEventListener("change", e => {
+      const sel = e.target.closest(".cg-cell select"), cell = sel && sel.closest(".cg-cell");
+      if (!cell) return;
+      listFor(cell.dataset.pos, cell.dataset.kind)[Number(sel.dataset.i)] = sel.value || null;
+      redraw(cell, Number(sel.dataset.i));
       setDirty();
-    }));
+    });
+    page.querySelector(".cg-table").addEventListener("click", e => {
+      const btn = e.target.closest(".cg-add, .cg-remove"), cell = btn && btn.closest(".cg-cell");
+      if (!cell || btn.disabled) return;
+      const list = listFor(cell.dataset.pos, cell.dataset.kind);
+      if (btn.classList.contains("cg-add")) { list.push(null); redraw(cell, list.length - 1); }
+      else { const i = Number(btn.dataset.i); list.splice(i, 1); redraw(cell, Math.min(i, list.length)); }
+      setDirty();
+    });
     const box = document.getElementById("cgChart");
     // draw the chart for chartPicks into the page (from the cache when it's already been laid out)
     const showChart = async () => {
@@ -846,8 +882,8 @@
       if (!hasPicks() || !confirm("Clear every pick in your core game? (Nothing changes in the file until you click Save game.)")) return;
       // explicit empties, so cleared dropdowns don't get pre-filled again
       corePicks = {};
-      simpleIds().forEach(pid => { corePicks[pid] = { subs: [null, null], transitions: [null, null] }; });
-      page.querySelectorAll("select[data-pos]").forEach(sel => { sel.value = ""; });
+      simpleIds().forEach(pid => { corePicks[pid] = { subs: [], transitions: [] }; });
+      page.querySelectorAll(".cg-cell").forEach(cell => redraw(cell));
       setDirty(); // the chart stays, marked out of date, until it's generated again
     });
     refresh();

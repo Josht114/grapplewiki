@@ -359,3 +359,13 @@ main.wide { max-width: 1680px; }
 .mark-core td.in-game { box-shadow: inset 0 0 0 2px var(--accent); }
 .mark-core td.in-game a { font-weight: 700; }
 .mark-core td.in-game::before { content: "★ "; }
+
+/* core game picker: any number of moves per position */
+.cg-table td.cg-cell { vertical-align: top; width: 42%; }
+.cg-pick { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; }
+.cg-pick select { flex: 1; }
+.cg-remove { flex: none; width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-size: 17px; line-height: 1; cursor: pointer; }
+.cg-remove:hover { color: var(--redlink); border-color: var(--redlink); }
+.cg-add { font: inherit; font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px dashed var(--border); background: transparent; color: var(--accent); cursor: pointer; }
+.cg-add:hover:not([disabled]) { border-style: solid; border-color: var(--accent); }
+.cg-add[disabled] { color: var(--muted); opacity: 0.5; cursor: default; }
