@@ -1,0 +1,25 @@
+---
+name: Bow and arrow
+from: top-back-mount
+col: sub
+type: submission
+status: draft
+order: 130
+---
+Collar choke from the back, with the opponent stretched out like a drawn bow.
+
+## Key steps
+
+1. Get a deep collar grip with your choking hand.
+2. Grab their pants at the knee with the other hand.
+3. Swing your leg over their shoulder and turn to the side.
+4. Stretch back with the collar and pull the leg toward you.
+
+## Defense
+
+Strip the collar grip and stop the opponent getting the angle for the bow and arrow or lapel choke.
+
+1. Grab the choking hand at the wrist and pull it down.
+2. Keep your leg hidden from the pants grip.
+3. Turn toward the choking hand's side.
+4. Bring your back to the mat.

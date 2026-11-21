@@ -1,0 +1,12 @@
+{
+  "name": "grapplewiki",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A wiki-style map of BJJ techniques, one Markdown file per page.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -4,3 +4,4 @@ Thumbs.db
 *.log
 node_modules/
 grapplewiki-edits.json
+*.tmp

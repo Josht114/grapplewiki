@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "grapplewiki",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8417"],
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server.js"],
       "port": 8417
     }
   ]

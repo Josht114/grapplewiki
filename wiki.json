@@ -1,0 +1,241 @@
+{
+  "layout": [
+    {
+      "cat": "positive",
+      "groups": [
+        {
+          "group": "standing",
+          "positions": [
+            "top-back-take-standing",
+            "top-body-lock",
+            "top-front-headlock"
+          ]
+        },
+        {
+          "group": "post guard",
+          "positions": [
+            "top-side-control",
+            "top-side-control-kesa",
+            "top-knee-on-belly",
+            "top-mount",
+            "top-mount-s",
+            "top-mount-technical",
+            "top-back-mount",
+            "top-crucifix",
+            "top-turtle",
+            "top-north-south"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "neutral",
+      "groups": [
+        {
+          "group": "standing",
+          "positions": [
+            "standing"
+          ]
+        },
+        {
+          "group": "guard",
+          "positions": [
+            "top-open-guard",
+            "bottom-open-guard",
+            "top-open-guard-seated",
+            "bottom-open-guard-seated",
+            "top-closed-guard-kneeling",
+            "bottom-closed-guard-kneeling",
+            "top-closed-guard-standing",
+            "bottom-closed-guard-standing",
+            "top-half-guard",
+            "bottom-half-guard",
+            "top-half-guard-knee-shield",
+            "bottom-half-guard-knee-shield",
+            "top-half-guard-deep",
+            "bottom-half-guard-deep",
+            "top-cccbg",
+            "bottom-cccbg",
+            "top-dlr",
+            "bottom-dlr",
+            "top-reverse-dlr",
+            "bottom-reverse-dlr",
+            "top-lasso",
+            "bottom-lasso",
+            "top-lapel-guard",
+            "bottom-lapel-guard",
+            "top-kguard",
+            "bottom-kguard",
+            "top-x-guard",
+            "bottom-x-guard",
+            "top-rubber-guard",
+            "bottom-rubber-guard",
+            "top-butterfly",
+            "bottom-butterfly",
+            "top-spider",
+            "bottom-spider"
+          ]
+        },
+        {
+          "group": "legs",
+          "positions": [
+            "top-slx",
+            "bottom-slx",
+            "fifty-fifty",
+            "top-saddle",
+            "bottom-saddle"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "negative",
+      "groups": [
+        {
+          "group": "standing",
+          "positions": [
+            "bottom-back-take-standing",
+            "bottom-body-lock",
+            "bottom-front-headlock"
+          ]
+        },
+        {
+          "group": "post guard",
+          "positions": [
+            "bottom-side-control",
+            "bottom-side-control-kesa",
+            "bottom-knee-on-belly",
+            "bottom-mount",
+            "bottom-mount-s",
+            "bottom-mount-technical",
+            "bottom-back-mount",
+            "bottom-crucifix",
+            "bottom-turtle",
+            "bottom-north-south"
+          ]
+        }
+      ]
+    }
+  ],
+  "simpleLayout": [
+    {
+      "cat": "positive",
+      "groups": [
+        {
+          "group": "standing",
+          "positions": [
+            "top-front-headlock"
+          ]
+        },
+        {
+          "group": "post guard",
+          "positions": [
+            "top-side-control",
+            "top-knee-on-belly",
+            "top-mount",
+            "top-back-mount",
+            "top-turtle",
+            "top-north-south"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "neutral",
+      "groups": [
+        {
+          "group": "standing",
+          "positions": [
+            "standing"
+          ]
+        },
+        {
+          "group": "guard",
+          "positions": [
+            "top-open-guard",
+            "bottom-open-guard",
+            "top-closed-guard-kneeling",
+            "bottom-closed-guard-kneeling",
+            "top-half-guard",
+            "bottom-half-guard",
+            "top-butterfly",
+            "bottom-butterfly"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "negative",
+      "groups": [
+        {
+          "group": "standing",
+          "positions": [
+            "bottom-front-headlock"
+          ]
+        },
+        {
+          "group": "post guard",
+          "positions": [
+            "bottom-side-control",
+            "bottom-knee-on-belly",
+            "bottom-mount",
+            "bottom-back-mount",
+            "bottom-turtle",
+            "bottom-north-south"
+          ]
+        }
+      ]
+    }
+  ],
+  "aliases": {
+    "standing-standing": "standing",
+    "top-standing-back-take": "top-back-take-standing",
+    "bottom-standing-back-take": "bottom-back-take-standing",
+    "top-standing-open-guard": "top-open-guard",
+    "top-kneeling-open-guard": "top-open-guard",
+    "top-kneeling-closed-guard": "top-closed-guard-kneeling",
+    "top-standing-closed-guard": "top-closed-guard-standing",
+    "saddle": "bottom-saddle",
+    "top-s-mount": "top-mount-s",
+    "top-technical-mount": "top-mount-technical",
+    "top-kesa-gatame": "top-side-control-kesa",
+    "bottom-deep-half": "bottom-half-guard-deep",
+    "bottom-z-guard": "bottom-half-guard-knee-shield",
+    "bottom-seated-guard": "bottom-open-guard-seated",
+    "bottom-worm-lapel": "bottom-lapel-guard",
+    "standing-guard-open": "closed-guard-opening-standing",
+    "slx-to-5050": "fifty-fifty-entry",
+    "trap-and-roll": "arm-roll-turtle",
+    "top-open-guard-standing": "top-open-guard",
+    "top-open-guard-kneeling": "top-open-guard",
+    "bottom-open-guard-standing": "bottom-open-guard",
+    "bottom-open-guard-kneeling": "bottom-open-guard",
+    "americana-defense": "americana",
+    "arm-bar-defense-back": "arm-bar-back",
+    "arm-bar-defense-guard": "arm-bar-guard",
+    "arm-bar-defense": "arm-bar-mount",
+    "arm-in-choke-defense": "darce-choke",
+    "baseball-bat-choke-defense": "baseball-bat-choke",
+    "clock-choke-defense": "clock-choke",
+    "collar-choke-defense-back": "bow-and-arrow",
+    "cross-collar-choke-defense": "cross-collar-choke",
+    "ezekiel-choke-defense": "ezekiel-choke",
+    "guard-retention-kneeling": "double-under-pass",
+    "guard-retention": "toreando-pass",
+    "guillotine-defense": "guillotine",
+    "head-and-arm-choke-defense": "head-and-arm-choke",
+    "heel-hook-defense": "heel-hook",
+    "kimura-defense": "kimura",
+    "knee-bar-defense": "knee-bar",
+    "loop-choke-defense": "loop-choke",
+    "north-south-choke-defense": "north-south-choke",
+    "omoplata-defense": "omoplata",
+    "paper-cutter-choke-defense": "paper-cutter-choke",
+    "rear-naked-choke-defense": "rear-naked-choke",
+    "sprawl": "double-leg",
+    "straight-ankle-lock-defense": "straight-ankle-lock",
+    "toe-hold-defense": "toe-hold",
+    "triangle-defense": "triangle-choke"
+  },
+  "wanted": []
+}
