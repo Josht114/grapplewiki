@@ -647,15 +647,122 @@
 
   // The ids of every move in the current core game, as the Core game page would show it:
   // the unsaved picks if there are any, otherwise the saved game (with the same pre-filled dropdowns).
+  function currentGamePicks() {
+    if (coreDirty) return corePicks;
+    const picks = JSON.parse(JSON.stringify((BASE.coreGame && BASE.coreGame.picks) || {}));
+    prefillCorePicks(picks);
+    return picks;
+  }
   function coreGameIds() {
-    let picks = corePicks;
-    if (!coreDirty) {
-      picks = JSON.parse(JSON.stringify((BASE.coreGame && BASE.coreGame.picks) || {}));
-      prefillCorePicks(picks);
-    }
+    const picks = currentGamePicks();
     const ids = new Set();
     simpleIds().forEach(pid => ["sub", "transition"].forEach(kind => picksFor(pid, kind, picks).forEach(t => ids.add(t.id))));
     return ids;
+  }
+
+  // ---------- your game: a readable report of everything in the core game ----------
+  function viewYourGame() {
+    const picks = currentGamePicks();
+    const game = (BASE.simpleLayout || []).map(sec => ({
+      cat: sec.cat,
+      positions: sec.groups.flatMap(g => g.positions).filter(pid => pages.has(pid))
+        .map(pid => ({ pid, subs: picksFor(pid, "sub", picks), transitions: picksFor(pid, "transition", picks) }))
+    }));
+    const all = game.flatMap(sec => sec.positions);
+    const played = all.filter(p => p.subs.length || p.transitions.length);
+    const moves = played.flatMap(p => [...p.subs, ...p.transitions]);
+    if (!moves.length) return `
+      <article class="page yg-page"><h1>Your game</h1>
+      <p class="lead">You haven't picked any moves yet. Build your game on the <a href="#/core-game">Core game</a> page.</p></article>`;
+
+    const nSubs = played.reduce((a, p) => a + p.subs.length, 0), nTrans = moves.length - nSubs;
+    const gi = moves.filter(t => attireOf(t) === "gi").length, nogi = moves.filter(t => attireOf(t) === "no-gi").length;
+    const unfinished = moves.filter(t => t.status === "draft");
+    const posName = id => (pages.get(id) || { name: id }).name;
+
+    // where the game gets stuck, or never goes
+    const playedIds = new Set(played.map(p => p.pid));
+    const reached = new Set(moves.filter(t => t.col === "transition" && t.to).map(t => t.to));
+    const deadEnds = [...reached].filter(id => !playedIds.has(id));
+    const noExit = played.filter(p => !p.transitions.length).map(p => p.pid);
+    const unused = all.filter(p => !playedIds.has(p.pid)).map(p => p.pid);
+
+    const steps = t => t.steps && t.steps.length ? `<ol class="yg-steps">${t.steps.map(x => `<li>${wikiInline(x)}</li>`).join("")}</ol>` : "";
+    const move = t => `
+      <li class="yg-move">
+        <div class="yg-move-head">${link(t.id)}${t.col === "transition" && t.to ? ` <span class="yg-to">→ ${link(t.to)}</span>` : ""}${attireTag(t)}${t.status === "draft" ? ` <span class="badge st-draft">Not finished</span>` : ""}</div>
+        ${t.summary ? `<p class="yg-summary">${esc(t.summary)}</p>` : ""}
+        ${steps(t)}
+      </li>`;
+    const column = (label, kind, ts) => `
+      <div class="yg-col yg-${kind}">
+        <h4>${label} <span class="muted">(${ts.length})</span></h4>
+        ${ts.length ? `<ul class="yg-moves">${ts.map(move).join("")}</ul>` : `<p class="muted yg-none">None picked</p>`}
+      </div>`;
+
+    const glance = game.map(sec => {
+      const rows = sec.positions.filter(p => playedIds.has(p.pid));
+      if (!rows.length) return "";
+      return `<tr class="cg-band"><th colspan="3" class="cat-${sec.cat}">${esc(sec.cat)}</th></tr>` + rows.map(p => `
+        <tr>
+          <th scope="row"><a href="#/your-game" data-jump="yg-${p.pid}">${esc(posName(p.pid))}</a></th>
+          <td>${p.subs.map(t => esc(t.name)).join("<br>") || `<span class="muted">—</span>`}</td>
+          <td>${p.transitions.map(t => `${esc(t.name)} <span class="muted">→ ${esc(posName(t.to))}</span>`).join("<br>") || `<span class="muted">—</span>`}</td>
+        </tr>`).join("");
+    }).join("");
+
+    const detail = game.map(sec => {
+      const ps = sec.positions.filter(p => playedIds.has(p.pid));
+      if (!ps.length) return "";
+      return `<section class="yg-cat">
+        <h3 class="yg-cat-h cat-${sec.cat}">${esc(sec.cat)}</h3>
+        ${ps.map(p => `
+          <div class="yg-pos" id="yg-${p.pid}">
+            <h4 class="yg-pos-h">${link(p.pid)}</h4>
+            <div class="yg-cols">${column("Submissions", "sub", p.subs)}${column("Transitions", "transition", p.transitions)}</div>
+          </div>`).join("")}
+      </section>`;
+    }).join("");
+
+    const gap = (title, ids, note) => ids.length ? `<li><strong>${title}</strong> ${note}<br>${ids.map(id => link(id)).join(", ")}</li>` : "";
+    const gaps = gap("Dead ends.", deadEnds, "Your transitions lead here, but you have no moves picked from here:")
+      + gap("No way out.", noExit, "You have submissions here but no transition to move on:")
+      + gap("Not in your game.", unused, "Positions in the simplified table with nothing picked:");
+    const source = coreDirty ? "Includes changes on the Core game page that aren't saved yet."
+      : (BASE.coreGame && BASE.coreGame.saved ? "From your saved game (core-game.json)." : "Not saved yet.");
+
+    return `
+      <article class="page yg-page">
+        <div class="titlebar">
+          <h1>Your game</h1>
+          <div class="actions"><a class="btn" href="#/core-game">Edit picks</a><button type="button" class="btn" id="ygPrint">Print</button></div>
+        </div>
+        <p class="lead">Everything in your core game, position by position: how you finish from each one, how you move on, and how each move goes.</p>
+        <p class="muted yg-source">${source}</p>
+
+        <div class="yg-stats">
+          <div><b>${played.length}</b><span>positions</span></div>
+          <div><b>${moves.length}</b><span>moves</span></div>
+          <div class="yg-stat-sub"><b>${nSubs}</b><span>submissions</span></div>
+          <div class="yg-stat-transition"><b>${nTrans}</b><span>transitions</span></div>
+          <div><b>${gi}</b><span>gi only</span></div>
+          <div><b>${nogi}</b><span>no-gi only</span></div>
+        </div>
+
+        <h2>At a glance</h2>
+        <div class="cg-scroll">
+          <table class="cg-table yg-glance">
+            <thead><tr><th>Position</th><th class="h-sub">Submissions</th><th class="h-transition">Transitions</th></tr></thead>
+            <tbody>${glance}</tbody>
+          </table>
+        </div>
+
+        ${gaps ? `<h2>Gaps to look at</h2><ul class="yg-gaps">${gaps}</ul>` : ""}
+        ${unfinished.length ? `<p class="muted yg-unfinished">${unfinished.length} ${unfinished.length === 1 ? "move in your game isn't" : "moves in your game aren't"} finished in the wiki yet: ${unfinished.map(t => link(t.id)).join(", ")}.</p>` : ""}
+
+        <h2>Move by move</h2>
+        ${detail}
+      </article>`;
   }
 
   // One cell of the picker: a dropdown for each picked move, each with a remove button, then an Add button.
@@ -1070,6 +1177,7 @@
     }
     else if (parts[0] === "core-game") { html = viewCoreGame(); title = "Core game · GrappleWiki"; }
     else if (parts[0] === "flow") { html = viewFlow(); title = "Flow chart · GrappleWiki"; }
+    else if (parts[0] === "your-game") { html = viewYourGame(); title = "Your game · GrappleWiki"; }
     else if (parts[0] === "all") { html = viewAll(); title = "All pages · GrappleWiki"; }
     else if (parts[0] === "wanted") { html = viewWanted(); title = "Wanted pages · GrappleWiki"; }
     else if (parts[0] === "search") { html = viewSearch(params.get("q") || ""); title = "Search · GrappleWiki"; }
@@ -1086,6 +1194,16 @@
     app.classList.toggle("wide", parts[0] === "flow" || parts[0] === "core-game");
     if (parts[0] === "flow") wireFlow(params.get("node"));
     if (parts[0] === "core-game") wireCoreGame();
+    if (parts[0] === "your-game") {
+      const printBtn = document.getElementById("ygPrint");
+      if (printBtn) printBtn.addEventListener("click", () => window.print());
+      // the at-a-glance table jumps to each position's details without changing the page address
+      document.querySelectorAll("[data-jump]").forEach(a => a.addEventListener("click", e => {
+        e.preventDefault();
+        const el = document.getElementById(a.dataset.jump);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }));
+    }
     document.querySelectorAll(".viewtoggle button").forEach(b => b.addEventListener("click", () => setHomeView(b.dataset.view)));
     const markBox = document.getElementById("markCore");
     if (markBox) markBox.addEventListener("change", () => setMarkCore(markBox.checked));

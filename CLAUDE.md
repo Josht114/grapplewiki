@@ -23,6 +23,8 @@ Both charts (Flow chart and the Core game chart) share one drawing engine in `ap
 
 The **Core game** page (`#/core-game`, `viewCoreGame()` / `coreGameChart()` in `app.js`) also lists the positions from `simpleLayout`: each has a Submissions cell and a Transitions cell holding any number of dropdowns (filled from that position's techniques), each with a × to remove it, plus an "+ Add" button (`coreCellHtml()`). The user's picks are saved in `core-game.json` (`{ picks: { positionId: { subs: [id, ...], transitions: [id, ...] } } }`; an empty list means the user cleared it, a missing list means a position with 1–2 options gets them all pre-picked). When a technique or position id is renamed, merged or deleted, update `core-game.json` too, or that pick silently drops out. The generated chart stays on the page until it's generated again: it's drawn from a copy of the picks taken when Generate was clicked (`chartPicks`, kept in the browser's localStorage), and when the dropdowns stop matching that copy the page shows an "Out of date" marker and a ⚠ on the Regenerate button.
 
+The **Your game** page (`#/your-game`, `viewYourGame()` in `app.js`) is a read-only report of the same core game: stats, an at-a-glance table, gaps (dead ends, positions with no way out, positions not in the game), and every picked move with its summary and key steps, grouped by position. It reads the picks through `currentGamePicks()` (unsaved picks if there are any, otherwise the saved game), the same source as the home-table highlight, so it needs no separate updating.
+
 After any such change, check that every id in `layout` and `simpleLayout` has a file in `pages/positions/`.
 
 ## Project conventions
