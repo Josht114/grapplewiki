@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GrappleWiki</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/">GrappleWiki</a>
+    <nav class="nav">
+      <a href="#/">Home</a>
+      <a href="#/all">All pages</a>
+      <a href="#/wanted">Wanted pages</a>
+      <a href="#/new">New page</a>
+    </nav>
+    <form class="search" id="searchForm" role="search">
+      <input id="searchInput" type="search" placeholder="Search techniques…" aria-label="Search" autocomplete="off">
+    </form>
+  </header>
+  <main id="app"></main>
+  <footer class="footer">
+    <span>Your edits are saved in this browser.</span>
+    <button type="button" id="exportBtn" class="linkbtn">Export edits</button>
+    <label class="linkbtn">Import edits<input type="file" id="importInput" accept="application/json" hidden></label>
+  </footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
