@@ -6,8 +6,7 @@
         "anaconda-choke"
       ],
       "transitions": [
-        "go-behind",
-        "spin-behind"
+        "go-behind"
       ]
     },
     "top-side-control": {
@@ -36,8 +35,7 @@
         "cross-collar-choke"
       ],
       "transitions": [
-        "back-take-from-mount",
-        null
+        "back-take-from-mount"
       ]
     },
     "top-back-mount": {
@@ -46,14 +44,12 @@
         "lapel-choke"
       ],
       "transitions": [
-        "back-to-mount",
-        null
+        "back-to-mount"
       ]
     },
     "top-turtle": {
       "subs": [
-        "clock-choke",
-        null
+        "clock-choke"
       ],
       "transitions": [
         "seatbelt-back-take",
@@ -66,14 +62,12 @@
         "kimura-north-south"
       ],
       "transitions": [
-        "north-south-to-side-control",
-        null
+        "north-south-to-side-control"
       ]
     },
     "standing": {
       "subs": [
-        "guillotine",
-        null
+        "guillotine"
       ],
       "transitions": [
         "single-leg",
@@ -82,8 +76,7 @@
     },
     "top-open-guard": {
       "subs": [
-        "straight-ankle-lock-passing",
-        null
+        "straight-ankle-lock-passing"
       ],
       "transitions": [
         "double-under-pass",
@@ -97,44 +90,33 @@
       ],
       "transitions": [
         "tripod-sweep",
-        "sickle-sweep"
+        "recover-closed-guard"
       ]
     },
     "top-closed-guard-kneeling": {
       "subs": [
-        "ezekiel-inside-guard",
-        "straight-ankle-lock-closed-guard"
+        "ezekiel-inside-guard"
       ],
       "transitions": [
-        "closed-guard-opening-standing",
-        null
+        "closed-guard-opening-standing"
       ]
     },
     "top-half-guard": {
-      "subs": [
-        "knee-bar",
-        null
-      ],
+      "subs": [],
       "transitions": [
         "knee-slice-half-guard",
         "half-guard-mount-pass"
       ]
     },
     "bottom-half-guard": {
-      "subs": [
-        "kimura-half-guard",
-        null
-      ],
+      "subs": [],
       "transitions": [
         "nogueira-sweep",
         "half-guard-to-closed-guard"
       ]
     },
     "top-butterfly": {
-      "subs": [
-        "guillotine-top-butterfly",
-        null
-      ],
+      "subs": [],
       "transitions": [
         "butterfly-pass",
         "butterfly-flatten"
@@ -142,12 +124,10 @@
     },
     "bottom-butterfly": {
       "subs": [
-        "arm-in-guillotine-butterfly",
-        null
+        "arm-in-guillotine-butterfly"
       ],
       "transitions": [
-        "butterfly-sweep",
-        "butterfly-arm-drag"
+        "butterfly-sweep"
       ]
     },
     "bottom-knee-on-belly": {
@@ -165,13 +145,12 @@
     "bottom-back-mount": {
       "transitions": [
         "back-escape",
-        null
+        "back-escape-guard"
       ]
     },
     "bottom-turtle": {
       "subs": [
-        "kimura-turtle",
-        null
+        "kimura-turtle"
       ],
       "transitions": [
         "arm-roll-turtle",
