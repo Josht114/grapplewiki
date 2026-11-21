@@ -131,6 +131,10 @@
       ]
     },
     "top-butterfly": {
+      "subs": [
+        "guillotine-top-butterfly",
+        null
+      ],
       "transitions": [
         "butterfly-pass",
         "butterfly-flatten"
