@@ -12,7 +12,8 @@
     "top-side-control": {
       "subs": [
         "kimura",
-        "americana"
+        "americana",
+        "paper-cutter-choke"
       ],
       "transitions": [
         "side-control-to-mount",
@@ -41,7 +42,8 @@
     "top-back-mount": {
       "subs": [
         "bow-and-arrow",
-        "lapel-choke"
+        "lapel-choke",
+        "rear-naked-choke"
       ],
       "transitions": [
         "back-to-mount"
@@ -80,13 +82,17 @@
       ],
       "transitions": [
         "double-under-pass",
-        "toreando-pass"
+        "toreando-pass",
+        "over-under-pass",
+        "knee-cut-pass",
+        "smash-pass"
       ]
     },
     "bottom-open-guard": {
       "subs": [
         "triangle-open-guard",
-        "omoplata-open-guard"
+        "omoplata-open-guard",
+        "arm-bar-open-guard"
       ],
       "transitions": [
         "tripod-sweep",
@@ -166,7 +172,10 @@
     "bottom-closed-guard-kneeling": {
       "subs": [
         "arm-bar-guard",
-        "triangle-choke"
+        "triangle-choke",
+        "omoplata",
+        "guillotine-closed-guard",
+        "cross-collar-choke-guard"
       ],
       "transitions": [
         "scissor-sweep",
@@ -182,7 +191,9 @@
     "bottom-side-control": {
       "transitions": [
         "side-control-escape-shrimp",
-        "side-control-knee-in"
+        "side-control-knee-in",
+        "side-control-turn-to-turtle",
+        "side-control-bridge-roll"
       ]
     }
   }
