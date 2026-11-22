@@ -12,8 +12,9 @@
     { key: "transition", label: "Transitions" }
   ];
   const TYPES = ["submission", "takedown", "pass", "sweep", "escape", "transition", "back take"];
-  // Page file values: complete (green), review (orange: done, not reviewed yet), draft (red: not finished).
-  const STATUS_LABEL = { complete: "Reviewed", review: "Needs work", draft: "Draft" };
+  // Page file values: learnt (bright green: the user has learnt the move), complete (green: reviewed),
+  // review (orange: done, not reviewed yet), draft (red: not finished).
+  const STATUS_LABEL = { learnt: "Learnt", complete: "Reviewed", review: "Needs work", draft: "Draft" };
   // Whether a technique works in the gi, no-gi or both. Missing means both.
   const ATTIRE_LABEL = { both: "Gi & no-gi", gi: "Gi only", "no-gi": "No-gi only" };
   const attireOf = t => (ATTIRE_LABEL[t.attire] ? t.attire : "both");
@@ -166,6 +167,7 @@
     try { localStorage.setItem(VIEW_KEY, v); } catch (e) { /* not saved; still switches */ }
     document.querySelectorAll("[data-grid]").forEach(el => { el.hidden = el.dataset.grid !== v; });
     document.querySelectorAll(".viewtoggle button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.view === v)));
+    document.querySelectorAll(".stats-table [data-stat]").forEach(el => el.classList.toggle("on", el.dataset.stat === v));
   }
 
   const CORE_MARK_KEY = "grapplewiki.markCoreGame";
@@ -178,23 +180,32 @@
   function viewHome() {
     const view = homeView();
     const inGame = coreGameIds(), mark = markCore();
-    const counts = {
-      pos: positions.length, tech: techniques.length,
-      complete: techniques.filter(t => t.status === "complete").length,
-      wanted: allWanted().length
-    };
+    // stats for each of the three home tables, in the same order as the table toggle
+    const layoutIds = L => new Set((L || []).flatMap(s => s.groups.flatMap(g => g.positions)).filter(id => pages.has(id)));
+    const statsFor = (posIds, techs) => ({ pos: posIds.size, tech: techs.length,
+      complete: techs.filter(t => t.status === "complete").length, learnt: techs.filter(t => t.status === "learnt").length });
+    const tableStats = L => { const ids = layoutIds(L); return statsFor(ids, techniques.filter(t => ids.has(t.from))); };
+    const gameTechs = techniques.filter(t => inGame.has(t.id));
+    const stats = [
+      ["simple", "Simplified", tableStats(BASE.simpleLayout)],
+      ["full", "Full", tableStats(BASE.layout)],
+      ["game", "Your game", statsFor(new Set(gameTechs.map(t => t.from)), gameTechs)]
+    ];
+    const wanted = allWanted().length;
     return `
       <section class="hero">
         <h1>GrappleWiki</h1>
         <p>A map of Brazilian jiu-jitsu, organised by position. Every position links to its submissions and transitions, and every technique page shows how to defend it.</p>
-        <div class="stats">
-          <span><b>${counts.pos}</b> positions</span>
-          <span><b>${counts.tech}</b> techniques</span>
-          <span><b>${counts.complete}</b> complete</span>
-          <a href="#/wanted"><b>${counts.wanted}</b> wanted pages</a>
-        </div>
+        <table class="stats-table">
+          <thead><tr><th></th>${stats.map(([v, label]) => `<th scope="col" data-stat="${v}"${v === view ? ' class="on"' : ""}><button type="button" data-view="${v}" title="Show the ${esc(label)} table">${esc(label)}</button></th>`).join("")}</tr></thead>
+          <tbody>${[["pos", "positions"], ["tech", "techniques"], ["complete", "complete"], ["learnt", "learnt"]].map(([k, label]) => `
+            <tr><th scope="row">${label}</th>${stats.map(([v, , s]) => `<td data-stat="${v}"${v === view ? ' class="on"' : ""}>${s[k]}</td>`).join("")}</tr>`).join("")}
+          </tbody>
+        </table>
+        <div class="stats"><a href="#/wanted"><b>${wanted}</b> wanted pages</a></div>
       </section>
       <div class="legend">
+        <span><i class="sw st-learnt"></i>${STATUS_LABEL.learnt}</span>
         <span><i class="sw st-complete"></i>${STATUS_LABEL.complete}</span>
         <span><i class="sw st-review"></i>${STATUS_LABEL.review}</span>
         <span><i class="sw st-draft"></i>${STATUS_LABEL.draft}</span>
@@ -306,9 +317,9 @@
       </article>`;
   }
 
-  // Status buttons on a technique page: red draft, orange needs work, green reviewed.
+  // Status buttons on a technique page: red draft, orange needs work, green reviewed, bright green learnt.
   // Clicking one saves the page file straight away, so the home tables pick up the new colour.
-  const STATUS_ORDER = ["draft", "review", "complete"];
+  const STATUS_ORDER = ["draft", "review", "complete", "learnt"];
   function statusPickerHtml(t) {
     return `<span class="status-pick" role="group" aria-label="Page status" data-id="${t.id}">
       ${STATUS_ORDER.map(s => `<button type="button" class="st-btn st-${s}" data-status="${s}" aria-pressed="${t.status === s}">${STATUS_LABEL[s]}</button>`).join("")}
@@ -1149,6 +1160,165 @@
     });
   }
 
+  // ---------- quiz: multiple-choice questions about the submissions in the current game ----------
+  // Questions are built from each submission's own page (position, summary, first key step, defense);
+  // wrong answers come from the other submissions in the game. Same source as the Move list (currentGamePicks).
+  const QUIZ_TYPES = [
+    ["position", "Which position it's done from"],
+    ["identify", "Name it from its description"],
+    ["step", "Its first key step"],
+    ["defense", "How to defend it"]
+  ];
+  const QUIZ_LAST_KEY = "grapplewiki.quizLast";
+  let quizKeyHandler = null;
+  function quizSubs() {
+    const picks = currentGamePicks();
+    return simpleIds().flatMap(pid => picksFor(pid, "sub", picks));
+  }
+  const shuffle = list => {
+    const a = list.slice();
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  };
+  const firstSentence = s => { const m = String(s || "").match(/^[\s\S]*?[.!?](?=\s|$)/); return (m ? m[0] : String(s || "")).trim(); };
+  // hide a move's own name in text about it, so the answer isn't given away
+  function maskName(text, t) {
+    const base = t.name.replace(/\s*\(.*\)\s*$/, "").trim();
+    const re = new RegExp(base.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
+    return String(text).replace(re, "____");
+  }
+  function quizQuestions(subs, types) {
+    const qs = [];
+    // the right answer plus up to three different wrong ones, shuffled
+    const choices = (answer, pool) => {
+      const wrong = shuffle([...new Set(pool.filter(x => x && x !== answer))]).slice(0, 3);
+      return wrong.length ? shuffle([answer, ...wrong]) : null;
+    };
+    const posNames = [...new Set(subs.map(o => (pages.get(o.from) || {}).name).concat(simpleIds().map(id => pages.get(id).name)))];
+    subs.forEach(t => {
+      const others = subs.filter(o => o.id !== t.id);
+      const pos = pages.get(t.from);
+      if (types.has("position") && pos) {
+        const opts = choices(pos.name, posNames);
+        if (opts) qs.push({ t, type: "position", q: `Which position is the <b>${esc(t.name)}</b> done from?`, opts, answer: pos.name });
+      }
+      if (types.has("identify") && t.summary) {
+        const opts = choices(t.name, others.map(o => o.name));
+        if (opts) qs.push({ t, type: "identify", q: `Which submission is this?<blockquote>${esc(maskName(t.summary, t))}</blockquote>`, opts, answer: t.name });
+      }
+      if (types.has("step") && t.steps && t.steps.length) {
+        const answer = maskName(t.steps[0], t);
+        const opts = choices(answer, others.filter(o => o.steps && o.steps.length).map(o => maskName(o.steps[0], o)));
+        if (opts) qs.push({ t, type: "step", q: `What's the first key step of the <b>${esc(t.name)}</b>?`, opts, answer });
+      }
+      if (types.has("defense") && t.defense) {
+        const answer = maskName(firstSentence(t.defense), t);
+        const opts = choices(answer, others.filter(o => o.defense).map(o => maskName(firstSentence(o.defense), o)));
+        if (opts) qs.push({ t, type: "defense", q: `How do you defend the <b>${esc(t.name)}</b>?`, opts, answer });
+      }
+    });
+    return qs;
+  }
+
+  function viewQuiz() {
+    const subs = quizSubs();
+    if (subs.length < 2) return `<article class="page"><h1>Quiz</h1>
+      <p class="lead">The quiz needs at least two submissions in your game. Pick some on the <a href="#/core-game">Game picker</a>.</p></article>`;
+    let last = null;
+    try { last = JSON.parse(localStorage.getItem(QUIZ_LAST_KEY)); } catch (e) { /* no last score */ }
+    return `
+      <article class="page quiz-page">
+        <h1>Quiz</h1>
+        <p class="lead">Multiple-choice questions about the ${subs.length} submissions in your game, written from their own pages.</p>
+        <div id="quizBox">
+          <form id="quizSetup" class="quiz-setup">
+            <fieldset><legend>Ask about</legend>
+              ${QUIZ_TYPES.map(([k, label]) => `<label><input type="checkbox" name="type" value="${k}" checked> ${label}</label>`).join("")}
+            </fieldset>
+            <label>Questions <select name="count">
+              <option value="10">10</option><option value="20">20</option><option value="all">All</option>
+            </select></label>
+            <div class="formbar"><button type="submit" class="btn primary">Start quiz</button>
+              ${last ? `<span class="muted">Last time: ${last.score} / ${last.total}</span>` : ""}</div>
+          </form>
+        </div>
+      </article>`;
+  }
+
+  function wireQuiz() {
+    const box = document.getElementById("quizBox");
+    const setup = document.getElementById("quizSetup");
+    if (!box || !setup) return;
+    let questions = [], i = 0, score = 0, missed = [], answered = false;
+
+    const showQuestion = () => {
+      const q = questions[i];
+      answered = false;
+      box.innerHTML = `
+        <div class="quiz-progress muted">Question ${i + 1} of ${questions.length} · Score ${score}</div>
+        <div class="quiz-q">${q.q}</div>
+        <div class="quiz-opts" role="group" aria-label="Answers">${q.opts.map((o, n) => `
+          <button type="button" class="quiz-opt" data-n="${n}"><span class="quiz-key">${n + 1}</span>${esc(o)}</button>`).join("")}
+        </div>
+        <div class="quiz-feedback" id="quizFeedback" role="status"></div>`;
+      box.querySelectorAll(".quiz-opt").forEach(b => b.addEventListener("click", () => answer(Number(b.dataset.n))));
+    };
+
+    const answer = n => {
+      if (answered) return;
+      answered = true;
+      const q = questions[i], right = q.opts[n] === q.answer;
+      if (right) score++; else missed.push(q);
+      box.querySelectorAll(".quiz-opt").forEach((b, k) => {
+        b.disabled = true;
+        if (q.opts[k] === q.answer) b.classList.add("right");
+        else if (k === n) b.classList.add("wrong");
+      });
+      const last = i === questions.length - 1;
+      document.getElementById("quizFeedback").innerHTML = `
+        <p><b>${right ? "Correct." : "Not quite."}</b> ${right ? "" : `The answer is: ${esc(q.answer)}. `}Read more on the ${link(q.t.id)} page.</p>
+        <button type="button" class="btn primary" id="quizNext">${last ? "See results" : "Next question"}</button>`;
+      document.getElementById("quizNext").addEventListener("click", () => { i++; if (i < questions.length) showQuestion(); else showResults(); });
+      document.getElementById("quizNext").focus();
+    };
+
+    const showResults = () => {
+      try { localStorage.setItem(QUIZ_LAST_KEY, JSON.stringify({ score, total: questions.length })); } catch (e) { /* not kept */ }
+      const pct = Math.round((score / questions.length) * 100);
+      box.innerHTML = `
+        <div class="quiz-result"><span class="quiz-score">${score} / ${questions.length}</span> <span class="muted">${pct}%</span></div>
+        ${missed.length ? `<h2>To revise</h2><ul class="quiz-missed">${missed.map(q => `<li>${link(q.t.id)}: ${esc(QUIZ_TYPES.find(([k]) => k === q.type)[1].toLowerCase())} <span class="muted">(${esc(q.answer)})</span></li>`).join("")}</ul>`
+          : `<p>Perfect score. Every answer was right.</p>`}
+        <div class="formbar"><button type="button" class="btn primary" id="quizAgain">New quiz</button></div>`;
+      document.getElementById("quizAgain").addEventListener("click", route);
+    };
+
+    setup.addEventListener("submit", e => {
+      e.preventDefault();
+      const f = new FormData(setup);
+      const types = new Set(f.getAll("type"));
+      if (!types.size) return;
+      const all = shuffle(quizQuestions(quizSubs(), types));
+      if (!all.length) return;
+      const count = f.get("count") === "all" ? all.length : Math.min(all.length, Number(f.get("count")));
+      questions = all.slice(0, count);
+      i = 0; score = 0; missed = [];
+      showQuestion();
+    });
+
+    // keys 1-4 answer (one listener at a time, replaced each time the quiz page opens)
+    if (quizKeyHandler) document.removeEventListener("keydown", quizKeyHandler);
+    const onKey = quizKeyHandler = e => {
+      if (!document.getElementById("quizBox")) return;
+      if (/^(INPUT|SELECT|TEXTAREA)$/.test((e.target || {}).tagName || "")) return;
+      if (!answered && /^[1-4]$/.test(e.key) && box.querySelector(".quiz-opt")) {
+        const b = box.querySelector(`.quiz-opt[data-n="${Number(e.key) - 1}"]`);
+        if (b) b.click();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+  }
+
   // ---------- editor ----------
   const posOptions = (sel, allowNone) =>
     (allowNone ? `<option value="">— none —</option>` : "") +
@@ -1333,6 +1503,7 @@
     else if (parts[0] === "flow") { html = viewFlow(); title = "Flow chart · GrappleWiki"; }
     else if (parts[0] === "your-game") { html = viewYourGame(); title = "Your game · GrappleWiki"; }
     else if (parts[0] === "move-list") { html = viewMoveList(); title = "Move list · GrappleWiki"; }
+    else if (parts[0] === "quiz") { html = viewQuiz(); title = "Quiz · GrappleWiki"; }
     else if (parts[0] === "all") { html = viewAll(); title = "All pages · GrappleWiki"; }
     else if (parts[0] === "wanted") { html = viewWanted(); title = "Wanted pages · GrappleWiki"; }
     else if (parts[0] === "search") { html = viewSearch(params.get("q") || ""); title = "Search · GrappleWiki"; }
@@ -1351,6 +1522,7 @@
     if (parts[0] === "flow") wireFlow(params.get("node"));
     if (parts[0] === "core-game") wireCoreGame();
     if (parts[0] === "move-list") wireMoveList();
+    if (parts[0] === "quiz") wireQuiz();
     if (parts[0] === "your-game") {
       wireYourGameChart();
       const printBtn = document.getElementById("ygPrint");
@@ -1362,7 +1534,7 @@
         if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
       }));
     }
-    document.querySelectorAll(".viewtoggle button").forEach(b => b.addEventListener("click", () => setHomeView(b.dataset.view)));
+    document.querySelectorAll(".viewtoggle button, .stats-table button[data-view]").forEach(b => b.addEventListener("click", () => setHomeView(b.dataset.view)));
     const markBox = document.getElementById("markCore");
     if (markBox) markBox.addEventListener("change", () => setMarkCore(markBox.checked));
     document.querySelectorAll(".nav a").forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#/" + (parts[0] || "")));

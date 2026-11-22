@@ -4,7 +4,7 @@ from: bottom-open-guard
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 1120
 ---
 Triangle choke from open guard, usually off sleeve control or a spider guard.

@@ -4,7 +4,7 @@ from: bottom-closed-guard-kneeling
 col: sub
 type: submission
 attire: both
-status: review
+status: learnt
 order: 530
 ---
 Shoulder lock using your legs to rotate the opponent's arm behind their back.

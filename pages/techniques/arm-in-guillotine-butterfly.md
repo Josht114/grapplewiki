@@ -4,7 +4,7 @@ from: bottom-butterfly
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 1230
 ---
 Guillotine with their arm trapped inside, finished from butterfly guard.

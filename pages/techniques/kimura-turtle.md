@@ -4,7 +4,7 @@ from: bottom-turtle
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 1350
 ---
 Kimura from bottom turtle when the opponent reaches an arm around you.

@@ -90,11 +90,7 @@
       ]
     },
     "bottom-open-guard": {
-      "subs": [
-        "triangle-open-guard",
-        "omoplata-open-guard",
-        "arm-bar-open-guard"
-      ],
+      "subs": [],
       "transitions": [
         "tripod-sweep",
         "recover-closed-guard"

@@ -4,7 +4,7 @@ from: bottom-open-guard
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 1130
 ---
 Shoulder lock from open guard, swinging your leg over the opponent's shoulder.

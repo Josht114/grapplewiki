@@ -95,7 +95,7 @@ function clean(kind, input) {
     page.col = input.col === "sub" ? "sub" : "transition";
     page.type = str(input.type).toLowerCase().slice(0, 40) || null;
     page.attire = ["gi", "no-gi", "both"].includes(input.attire) ? input.attire : "both";
-    page.status = ["complete", "review"].includes(input.status) ? input.status : "draft";
+    page.status = ["learnt", "complete", "review"].includes(input.status) ? input.status : "draft";
     // how to stop this move: a paragraph plus optional steps, shown on this page
     page.defense = str(input.defense);
     page.breakdown = str(input.breakdown).replace(/\r\n/g, "\n");

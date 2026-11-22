@@ -4,7 +4,7 @@ from: top-closed-guard-kneeling
 col: sub
 type: submission
 attire: gi
-status: review
+status: complete
 order: 1140
 ---
 Sleeve choke you can apply from inside the opponent's closed guard when they pull your head down.

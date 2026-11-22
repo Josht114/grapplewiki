@@ -4,7 +4,7 @@ from: bottom-closed-guard-kneeling
 col: sub
 type: submission
 attire: gi
-status: review
+status: learnt
 order: 1630
 ---
 Gi choke from closed guard using two deep cross collar grips.

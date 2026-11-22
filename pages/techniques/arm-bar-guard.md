@@ -4,7 +4,7 @@ from: bottom-closed-guard-kneeling
 col: sub
 type: submission
 attire: both
-status: review
+status: learnt
 order: 520
 ---
 Hyperextends the elbow from closed guard after breaking the opponent's posture.

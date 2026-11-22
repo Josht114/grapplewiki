@@ -4,7 +4,7 @@ from: bottom-closed-guard-kneeling
 col: sub
 type: submission
 attire: both
-status: review
+status: learnt
 order: 510
 ---
 Leg choke that traps the opponent's head and one arm inside a figure-four of your legs.

@@ -4,7 +4,7 @@ from: top-side-control
 col: sub
 type: submission
 attire: both
-status: complete
+status: learnt
 order: 60
 ---
 Figure-four shoulder lock with the opponent's arm bent palm-up beside their head.

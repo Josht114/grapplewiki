@@ -72,7 +72,7 @@ Header fields:
   - `attire` is `gi`, `no-gi` or `both` (missing counts as `both`). Gi-only and no-gi-only moves get a small tag on the home grid.
   - `col` is `sub` or `transition` (moves you to another position).
   - How to stop the move goes in its `## Defense` section, not a separate page.
-  - `status` is `complete` (green, reviewed), `review` (orange, done but not reviewed yet) or `draft` (red, not finished).
+  - `status` is `learnt` (bright green, you've learnt the move), `complete` (green, reviewed), `review` (orange, done but not reviewed yet) or `draft` (red, not finished).
   - `order` sets the order within a column on the home grid.
 - **Concepts:** `name`, `order`.
 

@@ -28,6 +28,8 @@ The **Your game** page (`#/your-game`, `viewYourGame()` in `app.js`) is a read-o
 
 The **Move list** page (`#/move-list`, `viewMoveList()` / `moveListText()` in `app.js`) is the same game as a plain list grouped by position, with a Copy list button that copies it as plain text. It also reads `currentGamePicks()`, so it needs no separate updating.
 
+The **Quiz** page (`#/quiz`, `viewQuiz()` / `quizQuestions()` / `wireQuiz()` in `app.js`) asks multiple-choice questions about the submissions in the same game (`currentGamePicks()`), built from each submission's page: its position, its summary (with the move's name hidden), its first key step and the first sentence of its Defense. Wrong answers come from the other submissions in the game, so keeping those page sections filled in keeps the quiz working; it needs no separate updating.
+
 After any such change, check that every id in `layout` and `simpleLayout` has a file in `pages/positions/`.
 
 ## Project conventions
@@ -39,7 +41,8 @@ After any such change, check that every id in `layout` and `simpleLayout` has a 
 - **Defenses live on the page of the move they stop**, in that technique's `## Defense` section (a paragraph, then numbered steps). When adding a defense, add it to the attacking technique's file; never create a standalone defense page. Every submission should have a Defense section.
 - Position pages list "Attacks to defend here" automatically from the `counterpart` position's techniques.
 - Every technique has `attire: gi | no-gi | both`: `gi` for moves that need the gi (collar, lapel, sleeve grips), `no-gi` for moves only legal or practical without it (e.g. heel hooks under IBJJF gi rules), `both` otherwise. Set it on every new technique.
-- `status` colours the move on the home tables (`SHOW_STATUS_COLOURS` in `app.js` switches the colours off). The user can change it with the Draft / Needs work / Reviewed buttons at the top of each technique page (`statusPickerHtml()` in `app.js`), which save the file straight away:
+- `status` colours the move on the home tables (`SHOW_STATUS_COLOURS` in `app.js` switches the colours off). The user can change it with the Draft / Needs work / Reviewed / Learnt buttons at the top of each technique page (`statusPickerHtml()` in `app.js`), which save the file straight away:
+  - `learnt` (bright green, "Learnt"): the user has learnt the move. Only the user sets this; never change it.
   - `complete` (green, "Reviewed"): the user has reviewed the page and signed it off. Only the user sets this.
   - `review` (orange, "Needs work"): the page meets the standard below but the user hasn't reviewed it yet. Set this when you finish bringing a page up to standard.
   - `draft` (red, "Draft"): the page doesn't meet the standard yet.
