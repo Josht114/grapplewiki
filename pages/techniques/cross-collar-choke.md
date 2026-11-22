@@ -4,7 +4,7 @@ from: top-mount
 col: sub
 type: submission
 attire: gi
-status: review
+status: complete
 order: 90
 ---
 Gi choke using both collar grips, crossing the wrists to close the sides of the neck.

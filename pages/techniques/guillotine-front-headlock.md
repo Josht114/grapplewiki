@@ -4,7 +4,7 @@ from: top-front-headlock
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 1360
 ---
 Guillotine finished from the front headlock, either high-elbow (arm out) or arm-in.

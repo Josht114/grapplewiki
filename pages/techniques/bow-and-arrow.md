@@ -4,7 +4,7 @@ from: top-back-mount
 col: sub
 type: submission
 attire: gi
-status: review
+status: complete
 order: 130
 ---
 Collar choke from the back, with the opponent stretched out like a drawn bow.

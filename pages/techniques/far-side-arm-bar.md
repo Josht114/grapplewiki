@@ -4,7 +4,7 @@ from: top-knee-on-belly
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 1030
 ---
 When the opponent pushes your knee with their far arm, step over their head and arm bar it.

@@ -4,7 +4,7 @@ from: top-mount
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 100
 ---
 Arm triangle: their own shoulder and your arm close off the neck.

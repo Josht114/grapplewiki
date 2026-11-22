@@ -34,7 +34,10 @@
     "top-mount": {
       "subs": [
         "head-and-arm-choke",
-        "cross-collar-choke"
+        "cross-collar-choke",
+        "arm-bar-mount",
+        "ezekiel-choke",
+        "americana-mount"
       ],
       "transitions": [
         "back-take-from-mount"

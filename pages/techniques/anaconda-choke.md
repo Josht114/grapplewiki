@@ -4,7 +4,7 @@ from: top-front-headlock
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 40
 ---
 Arm-in choke from the front headlock, finished by rolling under the opponent.

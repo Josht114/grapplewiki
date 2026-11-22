@@ -703,7 +703,7 @@
     return filled;
   }
 
-  // The ids of every move in the current core game, as the Core game page would show it:
+  // The ids of every move in the current core game, as the Game picker page would show it:
   // the unsaved picks if there are any, otherwise the saved game (with the same pre-filled dropdowns).
   function currentGamePicks() {
     if (coreDirty) return corePicks;
@@ -731,7 +731,7 @@
     const moves = played.flatMap(p => [...p.subs, ...p.transitions]);
     if (!moves.length) return `
       <article class="page yg-page"><h1>Your game</h1>
-      <p class="lead">You haven't picked any moves yet. Build your game on the <a href="#/core-game">Core game</a> page.</p></article>`;
+      <p class="lead">You haven't picked any moves yet. Build your game on the <a href="#/core-game">Game picker</a> page.</p></article>`;
 
     const nSubs = played.reduce((a, p) => a + p.subs.length, 0), nTrans = moves.length - nSubs;
     const gi = moves.filter(t => attireOf(t) === "gi").length, nogi = moves.filter(t => attireOf(t) === "no-gi").length;
@@ -786,7 +786,7 @@
     const gaps = gap("Dead ends.", deadEnds, "Your transitions lead here, but you have no moves picked from here:")
       + gap("No way out.", noExit, "You have submissions here but no transition to move on:")
       + gap("Not in your game.", unused, "Positions in the simplified table with nothing picked:");
-    const source = coreDirty ? "Includes changes on the Core game page that aren't saved yet."
+    const source = coreDirty ? "Includes changes on the Game picker page that aren't saved yet."
       : (BASE.coreGame && BASE.coreGame.saved ? "From your saved game (core-game.json)." : "Not saved yet.");
 
     return `
@@ -814,6 +814,9 @@
             <tbody>${glance}</tbody>
           </table>
         </div>
+
+        <h2>Flowchart</h2>
+        <div id="ygChart" class="yg-chart"></div>
 
         ${gaps ? `<h2>Gaps to look at</h2><ul class="yg-gaps">${gaps}</ul>` : ""}
         ${unfinished.length ? `<p class="muted yg-unfinished">${unfinished.length} ${unfinished.length === 1 ? "move in your game isn't" : "moves in your game aren't"} finished in the wiki yet: ${unfinished.map(t => link(t.id)).join(", ")}.</p>` : ""}
@@ -862,7 +865,7 @@
     }).join("");
     return `
       <article class="page cg-page">
-        <h1>Core game</h1>
+        <h1>Game picker</h1>
         <p class="lead">Build your game: add as many submissions and transitions as you like to each position, then generate a flowchart of it.</p>
         <p class="cg-count" id="cgCount" aria-live="polite">${pickCountText()}</p>
         <div class="cg-scroll">
@@ -883,7 +886,8 @@
 
   // draw the built game: chosen positions, chosen transitions as labelled arrows, chosen subs inside each position.
   // Laid out by the same engine as the Flow chart page (layoutChart). Positions outside the simplified table are dashed.
-  async function coreGameChart(picks) {
+  // opts.report: drawn on the Your game page, so it gets its own heading and no "out of date" marker
+  async function coreGameChart(picks, opts = {}) {
     const simple = flowNodes();
     const nodes = new Map(), edges = [];
     const addNode = id => {
@@ -922,8 +926,8 @@
     }).join("");
     const subCount = [...nodes.values()].reduce((a, n) => a + n.subs.length, 0);
     return `
-      <h2>Your game <span class="cg-stale" id="cgStale" hidden title="Your picks have changed since this chart was drawn">⚠ Out of date</span></h2>
-      <p class="cg-stale-note" id="cgStaleNote" hidden>You've changed your picks since this chart was drawn. Click <strong>Regenerate flowchart</strong> to update it.</p>
+      ${opts.report ? "" : `<h2>Your game <span class="cg-stale" id="cgStale" hidden title="Your picks have changed since this chart was drawn">⚠ Out of date</span></h2>
+      <p class="cg-stale-note" id="cgStaleNote" hidden>You've changed your picks since this chart was drawn. Click <strong>Regenerate flowchart</strong> to update it.</p>`}
       <p class="muted flow-key">${nodes.size} positions, ${edges.length} transitions, ${subCount} submissions. Arrows are your transitions; ⊗ marks a submission. Hover a position to pick out its arrows: gold ones leave it, blue ones lead into it. Click anything to open its page.${[...nodes.values()].some(n => n.off) ? " Dashed positions aren't in the simplified table." : ""}</p>
       <div class="flow-scroll">
         <svg id="cgSvg" viewBox="0 0 ${width.toFixed(0)} ${height.toFixed(0)}" width="${width.toFixed(0)}" height="${height.toFixed(0)}" role="img" aria-label="Flowchart of your core game">
@@ -932,6 +936,49 @@
           ${bandsSvg(bands, width)}<g>${edgeSvg}</g>${nodeSvg}
         </svg>
       </div>`;
+  }
+
+  // Hovering a position on a game chart: arrows leaving it stay gold ("out"); arrows coming into it turn blue ("in").
+  // Used by the chart on the Game picker page and the one on the Your game page.
+  function wireGameChartHover(svg) {
+    if (!svg) return;
+    svg.querySelectorAll(".cg-node").forEach(n => {
+      const id = n.dataset.id;
+      n.addEventListener("mouseenter", () => {
+        svg.classList.add("has-focus");
+        svg.querySelectorAll(".cg-edge").forEach(e => {
+          const isIn = e.dataset.to === id, isOut = e.dataset.from === id;
+          e.classList.toggle("focus", isIn || isOut);
+          e.classList.toggle("in", isIn && !isOut);
+          e.classList.toggle("out", isOut);
+          e.querySelector("path").setAttribute("marker-end", `url(#${isIn && !isOut ? "cg-arrow-in" : "cg-arrow"})`);
+        });
+      });
+      n.addEventListener("mouseleave", () => {
+        svg.classList.remove("has-focus");
+        svg.querySelectorAll(".cg-edge").forEach(e => {
+          e.classList.remove("in", "out");
+          e.querySelector("path").setAttribute("marker-end", "url(#cg-arrow)");
+        });
+      });
+    });
+  }
+
+  // The Your game page draws its flowchart from the same picks as the rest of the report (currentGamePicks),
+  // laid out once per set of picks and kept, so coming back to the page doesn't lay it out again.
+  let ygChart = { key: null, html: null };
+  async function wireYourGameChart() {
+    const box = document.getElementById("ygChart");
+    if (!box) return;
+    const picks = currentGamePicks(), key = gameKey(picks);
+    if (ygChart.key !== key) {
+      box.innerHTML = `<p class="muted">Drawing your game…</p>`;
+      try { ygChart = { key, html: await coreGameChart(picks, { report: true }) }; }
+      catch (e) { if (box.isConnected) box.innerHTML = `<p class="muted">Couldn't draw the chart: ${esc(e.message)}</p>`; return; }
+    }
+    if (!box.isConnected) return; // moved to another page meanwhile
+    box.innerHTML = ygChart.html;
+    wireGameChartHover(box.querySelector("#cgSvg"));
   }
 
   function wireCoreGame() {
@@ -1012,28 +1059,7 @@
       if (!box.isConnected) return; // moved to another page meanwhile
       box.innerHTML = chartHtml;
       refresh();
-      const svg = document.getElementById("cgSvg");
-      if (svg) svg.querySelectorAll(".cg-node").forEach(n => {
-        const id = n.dataset.id;
-        // arrows leaving the hovered position stay gold ("out"); arrows coming into it turn blue ("in")
-        n.addEventListener("mouseenter", () => {
-          svg.classList.add("has-focus");
-          svg.querySelectorAll(".cg-edge").forEach(e => {
-            const isIn = e.dataset.to === id, isOut = e.dataset.from === id;
-            e.classList.toggle("focus", isIn || isOut);
-            e.classList.toggle("in", isIn && !isOut);
-            e.classList.toggle("out", isOut);
-            e.querySelector("path").setAttribute("marker-end", `url(#${isIn && !isOut ? "cg-arrow-in" : "cg-arrow"})`);
-          });
-        });
-        n.addEventListener("mouseleave", () => {
-          svg.classList.remove("has-focus");
-          svg.querySelectorAll(".cg-edge").forEach(e => {
-            e.classList.remove("in", "out");
-            e.querySelector("path").setAttribute("marker-end", "url(#cg-arrow)");
-          });
-        });
-      });
+      wireGameChartHover(document.getElementById("cgSvg"));
     };
     genBtn.addEventListener("click", async () => {
       chartPicks = JSON.parse(JSON.stringify(corePicks));
@@ -1235,7 +1261,7 @@
       const p = pages.get(parts[1]);
       if (p) { html = p.kind === "position" ? viewPosition(p) : p.kind === "concept" ? viewConcept(p) : viewTechnique(p); title = p.name + " · GrappleWiki"; }
     }
-    else if (parts[0] === "core-game") { html = viewCoreGame(); title = "Core game · GrappleWiki"; }
+    else if (parts[0] === "core-game") { html = viewCoreGame(); title = "Game picker · GrappleWiki"; }
     else if (parts[0] === "flow") { html = viewFlow(); title = "Flow chart · GrappleWiki"; }
     else if (parts[0] === "your-game") { html = viewYourGame(); title = "Your game · GrappleWiki"; }
     else if (parts[0] === "all") { html = viewAll(); title = "All pages · GrappleWiki"; }
@@ -1256,6 +1282,7 @@
     if (parts[0] === "flow") wireFlow(params.get("node"));
     if (parts[0] === "core-game") wireCoreGame();
     if (parts[0] === "your-game") {
+      wireYourGameChart();
       const printBtn = document.getElementById("ygPrint");
       if (printBtn) printBtn.addEventListener("click", () => window.print());
       // the at-a-glance table jumps to each position's details without changing the page address
