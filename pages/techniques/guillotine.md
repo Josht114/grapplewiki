@@ -4,7 +4,7 @@ from: standing
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 200
 ---
 Front choke with your forearm under the opponent's chin while their head is under your armpit.

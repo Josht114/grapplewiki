@@ -4,7 +4,7 @@ from: top-mount
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 110
 ---
 Arm bar that comes from high mount or S-mount when the opponent pushes up on your chest.

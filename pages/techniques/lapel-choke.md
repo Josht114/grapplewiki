@@ -4,7 +4,7 @@ from: top-back-mount
 col: sub
 type: submission
 attire: gi
-status: review
+status: complete
 order: 140
 ---
 Choke from the back using the opponent's own lapel as the strangling grip.

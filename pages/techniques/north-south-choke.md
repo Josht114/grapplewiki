@@ -4,7 +4,7 @@ from: top-north-south
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 190
 ---
 Choke from north south using the side of your chest and arm against the neck.

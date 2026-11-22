@@ -14,6 +14,7 @@ The home page has two tables, switched with the **Simplified / Full** toggle:
 - New or moved position: put it in the full table; also put it in the simplified table if it is one of the simplified positions or replaces one. Ask the user if it isn't clear whether it belongs in the simplified table.
 - Re-ordering or re-grouping (e.g. top/bottom pairs, standing/guard/legs/post guard groups): apply the same order and grouping in both tables wherever the position appears in both.
 - Code changes to how the grid is drawn go in `gridTable()` in `app.js`, which builds both tables; never special-case only one of them.
+- A third toggle, **Your game**, shows the simplified table cut down to the moves in the user's game (`gridTable(simpleLayout, …, only)`, using `coreGameIds()`), dropping positions with no picked moves. It needs no separate updating.
 
 Techniques don't need double entry: both tables are built from the same `pages/techniques/*.md` files.
 

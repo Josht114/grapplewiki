@@ -4,7 +4,7 @@ from: top-mount
 col: sub
 type: submission
 attire: gi
-status: review
+status: complete
 order: 120
 ---
 Sleeve choke: one hand inside your own sleeve, the other hand's edge across the throat.

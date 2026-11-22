@@ -114,17 +114,18 @@
   }
 
   // ---------- views ----------
-  // Both home tables (full and simplified) are built here from the same technique data,
-  // so only the list of positions differs between them.
-  function gridTable(layout, inGame) {
+  // All the home tables (full, simplified and your game) are built here from the same technique data,
+  // so only the list of positions differs between them. `only` (a Set of technique ids) keeps just those
+  // moves and drops positions left with none: the "Your game" view.
+  function gridTable(layout, inGame, only) {
     let rows = "";
     layout.forEach(sec => {
       const groupBlocks = sec.groups.filter(g => g.positions.length).map(g => {
         const blocks = g.positions.filter(pid => pages.has(pid)).map(pid => {
-          const cols = COLS.map(c => techsFrom(pid, c.key));
+          const cols = COLS.map(c => techsFrom(pid, c.key).filter(t => !only || only.has(t.id)));
           const n = Math.max(1, ...cols.map(c => c.length));
           return { pid, cols, n, span: n + 1 };
-        });
+        }).filter(b => !only || b.cols.some(c => c.length));
         return { g, blocks, span: blocks.reduce((a, b) => a + b.span, 0) };
       }).filter(gb => gb.blocks.length);
       const catSpan = groupBlocks.reduce((a, b) => a + b.span, 0);
@@ -159,7 +160,7 @@
 
   const VIEW_KEY = "grapplewiki.homeView";
   function homeView() {
-    try { return localStorage.getItem(VIEW_KEY) === "full" ? "full" : "simple"; } catch (e) { return "simple"; }
+    try { const v = localStorage.getItem(VIEW_KEY); return v === "full" || v === "game" ? v : "simple"; } catch (e) { return "simple"; }
   }
   function setHomeView(v) {
     try { localStorage.setItem(VIEW_KEY, v); } catch (e) { /* not saved; still switches */ }
@@ -201,10 +202,14 @@
       <div class="viewtoggle" role="group" aria-label="Table view">
         <button type="button" data-view="simple" aria-pressed="${view === "simple"}">Simplified</button>
         <button type="button" data-view="full" aria-pressed="${view === "full"}">Full</button>
+        <button type="button" data-view="game" aria-pressed="${view === "game"}" title="Only the moves in your game">Your game</button>
       </div>
       <label class="core-mark"><input type="checkbox" id="markCore"${mark ? " checked" : ""}> Highlight my <a href="#/core-game">core game</a> <span class="core-mark-sw" aria-hidden="true">★</span> <span class="muted">(${inGame.size} ${inGame.size === 1 ? "move" : "moves"})</span></label>
       <div class="grid-wrap${mark ? " mark-core" : ""}" data-grid="simple"${view === "simple" ? "" : " hidden"}>${gridTable(BASE.simpleLayout || [], inGame)}</div>
       <div class="grid-wrap${mark ? " mark-core" : ""}" data-grid="full"${view === "full" ? "" : " hidden"}>${gridTable(BASE.layout, inGame)}</div>
+      <div class="grid-wrap" data-grid="game"${view === "game" ? "" : " hidden"}>${inGame.size
+        ? gridTable(BASE.simpleLayout || [], new Set(), inGame)
+        : `<p class="muted">You haven't picked any moves yet. Build your game on the <a href="#/core-game">Game picker</a> page.</p>`}</div>
       <section class="concepts">
         <h2>Concepts</h2>
         <div class="chips">${concepts.map(c => link(c.id, "chip")).join("")}</div>

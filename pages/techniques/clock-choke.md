@@ -4,7 +4,7 @@ from: top-turtle
 col: sub
 type: submission
 attire: gi
-status: review
+status: complete
 order: 170
 ---
 Collar choke against the turtle, finished by walking your legs around the opponent's head like a clock hand.

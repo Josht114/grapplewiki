@@ -4,7 +4,7 @@ from: top-mount
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 1430
 ---
 Shoulder lock from mount on an arm pinned beside the opponent's head.

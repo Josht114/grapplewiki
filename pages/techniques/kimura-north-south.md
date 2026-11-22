@@ -4,7 +4,7 @@ from: top-north-south
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 1090
 ---
 Figure-four shoulder lock on the near arm while you're in north south.

@@ -4,7 +4,7 @@ from: top-back-mount
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 160
 ---
 Blood choke from the back: your arm wraps the neck and is locked behind their head with the other arm.
