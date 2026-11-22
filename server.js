@@ -86,6 +86,8 @@ function clean(kind, input) {
   if (kind === "position") {
     page.side = ["top", "bottom", "neutral"].includes(input.side) ? input.side : "neutral";
     page.counterpart = idOrNull(input.counterpart);
+    // how to play the position: "### Heading" lines, "- bullet" and "1. numbered" lines
+    page.principles = str(input.principles).replace(/\r\n/g, "\n");
   }
   if (kind === "technique") {
     page.from = idOrNull(input.from);

@@ -36,10 +36,10 @@ After any such change, check that every id in `layout` and `simpleLayout` has a 
 - **Defenses live on the page of the move they stop**, in that technique's `## Defense` section (a paragraph, then numbered steps). When adding a defense, add it to the attacking technique's file; never create a standalone defense page. Every submission should have a Defense section.
 - Position pages list "Attacks to defend here" automatically from the `counterpart` position's techniques.
 - Every technique has `attire: gi | no-gi | both`: `gi` for moves that need the gi (collar, lapel, sleeve grips), `no-gi` for moves only legal or practical without it (e.g. heel hooks under IBJJF gi rules), `both` otherwise. Set it on every new technique.
-- `status` colours the move on the home tables (`SHOW_STATUS_COLOURS` in `app.js` switches the colours off):
-  - `complete` (green, "Complete"): the user has reviewed the page and signed it off. Only the user sets this.
-  - `review` (orange, "Needs review"): the page meets the standard below but the user hasn't reviewed it yet. Set this when you finish bringing a page up to standard.
-  - `draft` (red, "Not finished"): the page doesn't meet the standard yet.
+- `status` colours the move on the home tables (`SHOW_STATUS_COLOURS` in `app.js` switches the colours off). The user can change it with the Draft / Needs work / Reviewed buttons at the top of each technique page (`statusPickerHtml()` in `app.js`), which save the file straight away:
+  - `complete` (green, "Reviewed"): the user has reviewed the page and signed it off. Only the user sets this.
+  - `review` (orange, "Needs work"): the page meets the standard below but the user hasn't reviewed it yet. Set this when you finish bringing a page up to standard.
+  - `draft` (red, "Draft"): the page doesn't meet the standard yet.
 
 ## How to do a move page: the standard
 
@@ -55,3 +55,23 @@ After any such change, check that every id in `layout` and `simpleLayout` has a 
 8. **`## Notes`:** credits: the video's title and channel, and the source of every photo, by number, with a link.
 
 When a page meets the standard, set `status: review`, never `complete`.
+
+## How to do a position page: the standard
+
+Position pages teach how to play the position, not just which moves start there (the move lists are drawn automatically). `pages/positions/bottom-side-control.md` is the model page. Every position page has, in this order:
+
+1. **Header:** `name`, `side`, `counterpart`.
+2. **Summary:** one or two sentences: what the position is and what you want from it.
+3. **`## Key points`:** 3–5 short numbered points, the quick version.
+4. **`## Principles`:** the general principles, as `### ` headings with `- ` bullets (and `1. ` numbered lines under Priorities). Same format as a move page's Detailed breakdown; `**bold**` and `[[Page name]]` links work. Headings, in this order:
+   - `### Goal`: one or two bullets: what you're trying to do here (attack, pin, escape, recover guard).
+   - `### Base and posture`: where your hips, head and weight go.
+   - `### Hands and arms`: where your hands and elbows go and which grips to get. Note gi vs no-gi differences when the grips change ("Gi: ... No-gi: ...").
+   - `### Frames`: bottom and defensive positions only: which frames to make and how they make space. Leave it out on top positions.
+   - `### Priorities`: 3–4 numbered steps in the order you do them.
+   - `### Common mistakes`: 3 bullets, `**Mistake:** what it costs you.`
+5. Optional `## Images`, `## Video`, `## Notes`, as on move pages.
+
+Top and bottom counterparts should complement each other: what the top player wants (Priorities), the bottom page's Frames and Priorities stop, and each side's Common mistakes are usually what the other side exploits. Keep the Principles consistent with the page's Key points. Leg-entanglement positions are named from the attacker's side: `bottom-saddle` holds the saddle and `top-saddle` is the defender. Write for the defender on those pages, and note that IBJJF gi rules ban heel hooks.
+
+The section is stored in the page's `principles` field (`pagefile.js`), cleaned in `server.js` (positions only), rendered by `contentBlock()` in `app.js` with the same `breakdownHtml()` as Detailed breakdown, and edited in the position editor's Principles box.

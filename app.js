@@ -13,7 +13,7 @@
   ];
   const TYPES = ["submission", "takedown", "pass", "sweep", "escape", "transition", "back take"];
   // Page file values: complete (green), review (orange: done, not reviewed yet), draft (red: not finished).
-  const STATUS_LABEL = { complete: "Complete", review: "Needs review", draft: "Not finished" };
+  const STATUS_LABEL = { complete: "Reviewed", review: "Needs work", draft: "Draft" };
   // Whether a technique works in the gi, no-gi or both. Missing means both.
   const ATTIRE_LABEL = { both: "Gi & no-gi", gi: "Gi only", "no-gi": "No-gi only" };
   const attireOf = t => (ATTIRE_LABEL[t.attire] ? t.attire : "both");
@@ -194,9 +194,9 @@
         </div>
       </section>
       <div class="legend">
-        <span><i class="sw st-complete"></i>Complete</span>
-        <span><i class="sw st-review"></i>Needs review</span>
-        <span><i class="sw st-draft"></i>Not finished</span>
+        <span><i class="sw st-complete"></i>${STATUS_LABEL.complete}</span>
+        <span><i class="sw st-review"></i>${STATUS_LABEL.review}</span>
+        <span><i class="sw st-draft"></i>${STATUS_LABEL.draft}</span>
       </div>
       <div class="viewtoggle" role="group" aria-label="Table view">
         <button type="button" data-view="simple" aria-pressed="${view === "simple"}">Simplified</button>
@@ -231,15 +231,17 @@
       ? `<ol class="steps">${steps.map(x => `<li>${wikiInline(x)}</li>`).join("")}</ol>` : ""}</div>`;
   }
 
-  // "### Heading" lines, "- bullet" lines and plain paragraphs; **bold** and [[links]] work inside them
+  // "### Heading" lines, "- bullet" lines, "1. numbered" lines and plain paragraphs; **bold** and [[links]] work inside them
   function breakdownHtml(raw) {
     const inline = s => wikiInline(s).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
-    let html = "", list = false;
-    const close = () => { if (list) { html += "</ul>"; list = false; } };
+    let html = "", list = "";
+    const close = () => { if (list) { html += `</${list}>`; list = ""; } };
+    const open = tag => { if (list !== tag) { close(); html += `<${tag}>`; list = tag; } };
     String(raw).split("\n").map(l => l.trim()).forEach(l => {
       if (!l) { close(); return; }
       if (l.startsWith("### ")) { close(); html += `<h3>${inline(l.slice(4))}</h3>`; }
-      else if (/^[-*] /.test(l)) { if (!list) { html += "<ul>"; list = true; } html += `<li>${inline(l.slice(2))}</li>`; }
+      else if (/^[-*] /.test(l)) { open("ul"); html += `<li>${inline(l.slice(2))}</li>`; }
+      else if (/^\d+[.)] /.test(l)) { open("ol"); html += `<li>${inline(l.replace(/^\d+[.)] /, ""))}</li>`; }
       else { close(); html += `<p>${inline(l)}</p>`; }
     });
     close();
@@ -251,6 +253,7 @@
     if (p.summary) html += `<p class="lead">${esc(p.summary)}</p>`;
     else html += `<div class="stub-box">This page is a stub. <a href="#/edit/${p.id}">Add a description</a>.</div>`;
     if (p.steps && p.steps.length) html += `<h2>${p.kind === "technique" ? "Key steps" : "Key points"}</h2><ol class="steps">${p.steps.map(s => `<li>${wikiInline(s)}</li>`).join("")}</ol>`;
+    if (p.principles) html += `<h2>Principles</h2><div class="breakdown principles">${breakdownHtml(p.principles)}</div>`;
     if (p.breakdown) html += `<h2>Detailed breakdown</h2><div class="breakdown">${breakdownHtml(p.breakdown)}</div>`;
     if (p.kind === "technique") html += defenseBlock(p);
     const imgs = imageList(p.images);
@@ -298,6 +301,40 @@
       </article>`;
   }
 
+  // Status buttons on a technique page: red draft, orange needs work, green reviewed.
+  // Clicking one saves the page file straight away, so the home tables pick up the new colour.
+  const STATUS_ORDER = ["draft", "review", "complete"];
+  function statusPickerHtml(t) {
+    return `<span class="status-pick" role="group" aria-label="Page status" data-id="${t.id}">
+      ${STATUS_ORDER.map(s => `<button type="button" class="st-btn st-${s}" data-status="${s}" aria-pressed="${t.status === s}">${STATUS_LABEL[s]}</button>`).join("")}
+      <span class="status-msg muted" role="status"></span>
+    </span>`;
+  }
+  function wireStatusPicker() {
+    const box = document.querySelector(".status-pick");
+    if (!box) return;
+    const msg = box.querySelector(".status-msg");
+    box.querySelectorAll(".st-btn").forEach(btn => btn.addEventListener("click", async () => {
+      const t = pages.get(box.dataset.id);
+      const status = btn.dataset.status;
+      if (!t || t.status === status) return;
+      box.querySelectorAll(".st-btn").forEach(b => (b.disabled = true));
+      msg.textContent = "Saving…";
+      try {
+        const rec = Object.assign({}, t, { status });
+        delete rec.kind; delete rec.id;
+        const saved = await apiCall("PUT", `/api/pages/technique/${t.id}`, rec);
+        storePage("technique", saved);
+        box.querySelectorAll(".st-btn").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.status === saved.status)));
+        msg.textContent = "Saved";
+        setTimeout(() => { if (msg.textContent === "Saved") msg.textContent = ""; }, 1500);
+      } catch (e) {
+        msg.textContent = "Couldn't save: " + e.message;
+      }
+      box.querySelectorAll(".st-btn").forEach(b => (b.disabled = false));
+    }));
+  }
+
   function viewTechnique(t) {
     const siblings = techsFrom(t.from).filter(x => x.id !== t.id);
     return `
@@ -310,7 +347,7 @@
         <div class="meta">
           <span class="badge">${esc(t.type || t.col)}</span>
           <span class="badge attire-${attireOf(t)}">${ATTIRE_LABEL[attireOf(t)]}</span>
-          <span class="badge st-${t.status}">${STATUS_LABEL[t.status]}</span>
+          ${statusPickerHtml(t)}
         </div>
         <div class="flow">
           <div class="flow-node"><small>From</small>${t.from ? link(t.from) : "—"}</div>
@@ -371,7 +408,7 @@
 
   function viewSearch(q) {
     const n = q.trim().toLowerCase();
-    const hits = n ? [...pages.values()].filter(p => (p.name + " " + (p.summary || "") + " " + (p.notes || "") + " " + (p.defense || "")).toLowerCase().includes(n)) : [];
+    const hits = n ? [...pages.values()].filter(p => (p.name + " " + (p.summary || "") + " " + (p.notes || "") + " " + (p.principles || "") + " " + (p.defense || "")).toLowerCase().includes(n)) : [];
     hits.sort((a, b) => (b.name.toLowerCase().includes(n) - a.name.toLowerCase().includes(n)) || a.name.localeCompare(b.name));
     return `
       <article class="page">
@@ -711,7 +748,7 @@
     const steps = t => t.steps && t.steps.length ? `<ol class="yg-steps">${t.steps.map(x => `<li>${wikiInline(x)}</li>`).join("")}</ol>` : "";
     const move = t => `
       <li class="yg-move">
-        <div class="yg-move-head">${link(t.id)}${t.col === "transition" && t.to ? ` <span class="yg-to">→ ${link(t.to)}</span>` : ""}${attireTag(t)}${t.status === "draft" ? ` <span class="badge st-draft">Not finished</span>` : ""}</div>
+        <div class="yg-move-head">${link(t.id)}${t.col === "transition" && t.to ? ` <span class="yg-to">→ ${link(t.to)}</span>` : ""}${attireTag(t)}${t.status === "draft" ? ` <span class="badge st-draft">${STATUS_LABEL.draft}</span>` : ""}</div>
         ${t.summary ? `<p class="yg-summary">${esc(t.summary)}</p>` : ""}
         ${steps(t)}
       </li>`;
@@ -1109,6 +1146,7 @@
           </div>
           <label>Summary<textarea name="summary" rows="3">${esc(p.summary || "")}</textarea></label>
           <label>Key steps <small>(one per line)</small><textarea name="steps" rows="5">${esc((p.steps || []).join("\n"))}</textarea></label>
+          <label class="pos-only"${isPos ? "" : " hidden"}>Principles <small>("### Heading" lines: Goal, Base and posture, Hands and arms, Frames, Priorities, Common mistakes; then "- bullet" or "1. numbered" lines)</small><textarea name="principles" rows="14">${esc(p.principles || "")}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Detailed breakdown <small>("### Heading" lines, "- bullet" lines, plain paragraphs)</small><textarea name="breakdown" rows="10">${esc(p.breakdown || "")}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense <small>(how to stop this move)</small><textarea name="defense" rows="3">${esc(p.defense || "")}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense steps <small>(one per line)</small><textarea name="defenseSteps" rows="4">${esc((p.defenseSteps || []).join("\n"))}</textarea></label>
@@ -1152,7 +1190,7 @@
       };
       if (kind === "technique") Object.assign(rec, { from: f.get("from") || null, to: f.get("to") || null, col: f.get("col"), type: f.get("type"), attire: f.get("attire"), status: f.get("status"),
         breakdown: f.get("breakdown").trim(), defense: f.get("defense").trim(), defenseSteps: f.get("defenseSteps").split("\n").map(s => s.trim()).filter(Boolean) });
-      else if (kind === "position") Object.assign(rec, { side: f.get("side"), counterpart: f.get("counterpart") || null });
+      else if (kind === "position") Object.assign(rec, { side: f.get("side"), counterpart: f.get("counterpart") || null, principles: f.get("principles").trim() });
       if (!isNew && pages.get(form.dataset.id).order !== undefined) rec.order = pages.get(form.dataset.id).order;
 
       const btn = form.querySelector("button[type=submit]");
@@ -1213,6 +1251,7 @@
     app.innerHTML = html;
     document.title = title;
     wireEditor();
+    wireStatusPicker();
     app.classList.toggle("wide", parts[0] === "flow" || parts[0] === "core-game");
     if (parts[0] === "flow") wireFlow(params.get("node"));
     if (parts[0] === "core-game") wireCoreGame();

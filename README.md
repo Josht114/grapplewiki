@@ -67,7 +67,7 @@ Free text. Link other pages with [[Page name]].
 
 Header fields:
 
-- **Positions:** `name`, `side` (`top` / `bottom` / `neutral`), `counterpart` (id of the same position from the other side).
+- **Positions:** `name`, `side` (`top` / `bottom` / `neutral`), `counterpart` (id of the same position from the other side). In the body, after `## Key points`, a `## Principles` section explains how to play the position (`### Goal`, `### Base and posture`, `### Hands and arms`, `### Frames`, `### Priorities`, `### Common mistakes`).
 - **Techniques:** `name`, `from`, `to`, `col`, `type`, `attire`, `status`, `order`.
   - `attire` is `gi`, `no-gi` or `both` (missing counts as `both`). Gi-only and no-gi-only moves get a small tag on the home grid.
   - `col` is `sub` or `transition` (moves you to another position).
