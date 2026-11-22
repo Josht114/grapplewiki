@@ -1086,6 +1086,69 @@
     showChart();
   }
 
+  // ---------- move list: the current game as a plain list, easy to copy ----------
+  // Same source as the Your game page (currentGamePicks), grouped by simplified-table position.
+  function moveListSections() {
+    const picks = currentGamePicks();
+    return simpleIds().map(pid => ({
+      pid,
+      moves: ["sub", "transition"].flatMap(kind => picksFor(pid, kind, picks))
+    })).filter(s => s.moves.length);
+  }
+  const moveLine = t => t.name + (t.col === "transition" && t.to ? " → " + (pages.get(t.to) || { name: t.to }).name : "");
+  function moveListText(sections) {
+    return sections.map(s => pages.get(s.pid).name + "\n" + s.moves.map(t => "- " + moveLine(t)).join("\n")).join("\n\n") + "\n";
+  }
+
+  function viewMoveList() {
+    const sections = moveListSections();
+    const total = sections.reduce((n, s) => n + s.moves.length, 0);
+    if (!total) return `<article class="page"><h1>Move list</h1>
+      <p class="lead">Your game is empty. Pick some moves on the <a href="#/core-game">Game picker</a> first.</p></article>`;
+    return `
+      <article class="page ml-page">
+        <div class="titlebar">
+          <h1>Move list</h1>
+          <div class="actions"><button type="button" class="btn primary" id="mlCopy">Copy list</button></div>
+        </div>
+        <p class="muted">${total} moves in ${sections.length} positions.${coreDirty ? " Includes unsaved picks from the Game picker." : ""} <span id="mlStatus" role="status"></span></p>
+        <div class="ml-list" id="mlList">${sections.map(s => `
+          <section>
+            <h2>${link(s.pid)}</h2>
+            <ul>${s.moves.map(t => `<li>${link(t.id)}${t.col === "transition" && t.to ? ` <span class="muted">→ ${esc((pages.get(t.to) || { name: t.to }).name)}</span>` : ""}</li>`).join("")}</ul>
+          </section>`).join("")}
+        </div>
+      </article>`;
+  }
+
+  function wireMoveList() {
+    const btn = document.getElementById("mlCopy");
+    if (!btn) return;
+    const status = document.getElementById("mlStatus");
+    btn.addEventListener("click", async () => {
+      const sections = moveListSections();
+      const text = moveListText(sections);
+      const count = sections.reduce((n, s) => n + s.moves.length, 0);
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (e) {
+        // older browsers / blocked clipboard: copy through a hidden text box
+        const box = document.createElement("textarea");
+        box.value = text;
+        box.setAttribute("readonly", "");
+        box.style.position = "fixed"; box.style.opacity = "0";
+        document.body.appendChild(box);
+        box.select();
+        const ok = document.execCommand("copy");
+        box.remove();
+        if (!ok) { status.textContent = "Couldn't copy. Select the list and copy it by hand."; return; }
+      }
+      status.textContent = `Copied ${count} moves.`;
+      btn.textContent = "Copied ✓";
+      setTimeout(() => { btn.textContent = "Copy list"; }, 1800);
+    });
+  }
+
   // ---------- editor ----------
   const posOptions = (sel, allowNone) =>
     (allowNone ? `<option value="">— none —</option>` : "") +
@@ -1269,6 +1332,7 @@
     else if (parts[0] === "core-game") { html = viewCoreGame(); title = "Game picker · GrappleWiki"; }
     else if (parts[0] === "flow") { html = viewFlow(); title = "Flow chart · GrappleWiki"; }
     else if (parts[0] === "your-game") { html = viewYourGame(); title = "Your game · GrappleWiki"; }
+    else if (parts[0] === "move-list") { html = viewMoveList(); title = "Move list · GrappleWiki"; }
     else if (parts[0] === "all") { html = viewAll(); title = "All pages · GrappleWiki"; }
     else if (parts[0] === "wanted") { html = viewWanted(); title = "Wanted pages · GrappleWiki"; }
     else if (parts[0] === "search") { html = viewSearch(params.get("q") || ""); title = "Search · GrappleWiki"; }
@@ -1286,6 +1350,7 @@
     app.classList.toggle("wide", parts[0] === "flow" || parts[0] === "core-game");
     if (parts[0] === "flow") wireFlow(params.get("node"));
     if (parts[0] === "core-game") wireCoreGame();
+    if (parts[0] === "move-list") wireMoveList();
     if (parts[0] === "your-game") {
       wireYourGameChart();
       const printBtn = document.getElementById("ygPrint");

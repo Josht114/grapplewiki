@@ -26,6 +26,8 @@ The **Game picker** page (`#/core-game`, named "Game picker" in the nav; called 
 
 The **Your game** page (`#/your-game`, `viewYourGame()` in `app.js`) is a read-only report of the same core game: stats, an at-a-glance table, a flowchart (`coreGameChart(picks, { report: true })`, drawn by `wireYourGameChart()`), gaps (dead ends, positions with no way out, positions not in the game), and every picked move with its summary and key steps, grouped by position. It reads the picks through `currentGamePicks()` (unsaved picks if there are any, otherwise the saved game), the same source as the home-table highlight, so it needs no separate updating.
 
+The **Move list** page (`#/move-list`, `viewMoveList()` / `moveListText()` in `app.js`) is the same game as a plain list grouped by position, with a Copy list button that copies it as plain text. It also reads `currentGamePicks()`, so it needs no separate updating.
+
 After any such change, check that every id in `layout` and `simpleLayout` has a file in `pages/positions/`.
 
 ## Project conventions

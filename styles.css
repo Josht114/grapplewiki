@@ -430,3 +430,10 @@ main.wide { max-width: 1680px; }
 .status-pick .st-btn.st-complete[aria-pressed="true"] { background: var(--st-complete); }
 .status-pick .st-btn:disabled { cursor: wait; }
 .status-pick .status-msg { margin-left: 8px; font-size: 12px; }
+
+/* ---------- move list ---------- */
+.ml-list { columns: 3 260px; column-gap: 28px; margin-top: 8px; }
+.ml-list section { break-inside: avoid; margin: 0 0 16px; }
+.ml-list h2 { font-size: 15px; margin: 0 0 4px; padding: 0; border: 0; text-transform: none; }
+.ml-list ul { margin: 0; padding-left: 18px; }
+.ml-list li { margin: 2px 0; }
