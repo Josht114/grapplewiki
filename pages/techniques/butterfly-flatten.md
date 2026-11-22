@@ -5,7 +5,7 @@ to: top-half-guard
 col: transition
 type: pass
 attire: both
-status: draft
+status: review
 order: 1220
 ---
 Push the opponent flat and step over a hook so you land in top half guard.
@@ -48,6 +48,7 @@ Keep sitting up; don't let them push you flat.
 ## Images
 
 ![1. Drive your weight in to push them flat (Giancarlo Bodoni)](https://i.ytimg.com/vi/XYPRBfjewPc/hq1.jpg)
+![1. Drive your head and shoulder in to flatten them (Giancarlo Bodoni)](https://i.ytimg.com/vi/XYPRBfjewPc/hqdefault.jpg)
 ![4. Settle into top half guard (Giancarlo Bodoni)](https://i.ytimg.com/vi/XYPRBfjewPc/hq2.jpg)
 
 ## Video
@@ -58,4 +59,4 @@ https://www.youtube.com/watch?v=XYPRBfjewPc
 
 Video: "Butterfly Guard Pass Using Underhook To Force Half Guard" (Giancarlo Bodoni).
 
-Photos 1, 4: frames from "Butterfly Guard Pass Using Underhook To Force Half Guard", Giancarlo Bodoni (https://www.youtube.com/watch?v=XYPRBfjewPc).
+Photos 1, 4: frames from "Butterfly Guard Pass Using Underhook To Force Half Guard", Giancarlo Bodoni (https://www.youtube.com/watch?v=XYPRBfjewPc). Photo 1: thumbnail from "Butterfly Guard Pass Using Underhook To Force Half Guard", Giancarlo Bodoni (https://www.youtube.com/watch?v=XYPRBfjewPc).

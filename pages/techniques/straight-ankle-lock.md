@@ -4,7 +4,7 @@ from: bottom-slx
 col: sub
 type: submission
 attire: both
-status: draft
+status: review
 order: 740
 ---
 Foot lock that hyperextends the ankle, with the foot trapped in your armpit.
@@ -16,6 +16,27 @@ Foot lock that hyperextends the ankle, with the foot trapped in your armpit.
 3. Grip your own arm or lapel.
 4. Keep the knee pinched, arch back and lift the forearm.
 
+## Detailed breakdown
+
+### Start: bottom single leg X
+- You have one of their legs trapped between yours, their foot by your hip.
+
+### 1. Trap the foot in your armpit, toes pointing out
+- Clamp their foot in your armpit, toes pointing behind you, so it can't turn.
+
+### 2. Blade of the forearm under the Achilles
+- Slide your forearm under their leg so the bony edge of your wrist sits on the Achilles tendon, just above the heel.
+
+### 3. Grip your own arm or lapel
+- Lock the grip: grab your other forearm, or your own lapel in the gi, so the forearm can't slip.
+
+### 4. Keep the knee pinched, arch back and lift the forearm
+- Pinch your knees together on their leg, arch your back and drive your hips forward, lifting the forearm into the Achilles.
+
+### Common mistakes
+- **Forearm up on the calf:** no pressure. It must be on the Achilles.
+- **Loose knees:** they pull the foot out or sit up into you.
+
 ## Defense
 
 Flex your foot and sit up, stepping over so the forearm comes off the Achilles.
@@ -24,3 +45,19 @@ Flex your foot and sit up, stepping over so the forearm comes off the Achilles.
 2. Sit up and grab their collar or arm.
 3. Push the attacking arm down off your Achilles.
 4. Pull the foot out.
+
+## Images
+
+![1. Single leg X with their foot trapped (Stay Safe Martial Arts)](https://i.ytimg.com/vi/gI4hvmb2OB4/hq1.jpg)
+![2. Blade of the forearm under the Achilles (arrowed) (Stay Safe Martial Arts)](https://i.ytimg.com/vi/gI4hvmb2OB4/hqdefault.jpg)
+![4. Knees pinched on the leg, arch to finish (Stay Safe Martial Arts)](https://i.ytimg.com/vi/gI4hvmb2OB4/hq2.jpg)
+
+## Video
+
+https://www.youtube.com/watch?v=gI4hvmb2OB4
+
+## Notes
+
+Video: "Straight Ankle Lock from Single Leg X" (Stay Safe Martial Arts).
+
+Photos 1, 2, 4: frame and thumbnails from "Straight Ankle Lock from Single Leg X", Stay Safe Martial Arts (https://www.youtube.com/watch?v=gI4hvmb2OB4).

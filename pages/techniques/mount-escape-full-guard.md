@@ -49,6 +49,7 @@ Grapevine and stay heavy; pull the knee back out.
 
 ![1. Frame on the hip (Tyler Spangler)](https://i.ytimg.com/vi/PItD1wkwU5g/hq1.jpg)
 ![2. Shrimp and bring one knee through (Gordon Ryan)](https://i.ytimg.com/vi/uSrYAzVADsw/hq2.jpg)
+![4. Legs up and around them to close your guard (Tyler Spangler)](https://i.ytimg.com/vi/PItD1wkwU5g/hq2.jpg)
 
 ## Video
 
@@ -58,4 +59,4 @@ https://www.youtube.com/watch?v=uSrYAzVADsw
 
 Video: "Mount Escapes for Blue Belts and ADCC Champions by Gordon Ryan" (Gordon Ryan).
 
-Photo 1: frame from "How To Mount Escape ANYONE In BJJ", Tyler Spangler (https://www.youtube.com/watch?v=PItD1wkwU5g). Photo 2: frame from "Mount Escapes for Blue Belts and ADCC Champions by Gordon Ryan", Gordon Ryan (https://www.youtube.com/watch?v=uSrYAzVADsw).
+Photo 1: frame from "How To Mount Escape ANYONE In BJJ", Tyler Spangler (https://www.youtube.com/watch?v=PItD1wkwU5g). Photo 2: frame from "Mount Escapes for Blue Belts and ADCC Champions by Gordon Ryan", Gordon Ryan (https://www.youtube.com/watch?v=uSrYAzVADsw). Photo 4: frame from "How To Mount Escape ANYONE In BJJ | Gi And No Gi Jiu Jitsu", Tyler Spangler (https://www.youtube.com/watch?v=PItD1wkwU5g).

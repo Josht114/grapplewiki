@@ -49,6 +49,7 @@ Follow their hips and keep your chest on their back.
 
 ![1. Post on your near hand (DCS - Diaz Combat Sports)](https://i.ytimg.com/vi/7biwctrcRck/hq2.jpg)
 ![2. Thread your outside leg through underneath you (DCS - Diaz Combat Sports)](https://i.ytimg.com/vi/7biwctrcRck/hq3.jpg)
+![2. Thread your outside leg through underneath you (DCS - Diaz Combat Sports)](https://i.ytimg.com/vi/7biwctrcRck/hqdefault.jpg)
 
 ## Video
 
@@ -58,4 +59,4 @@ https://www.youtube.com/watch?v=7biwctrcRck
 
 Video: "How To Do A Turtle Sit Out Escape In Brazilian Jiu-Jitsu" (DCS - Diaz Combat Sports).
 
-Photos 1, 2: frames from "How To Do A Turtle Sit Out Escape In Brazilian Jiu-Jitsu", DCS - Diaz Combat Sports (https://www.youtube.com/watch?v=7biwctrcRck).
+Photos 1, 2: frames from "How To Do A Turtle Sit Out Escape In Brazilian Jiu-Jitsu", DCS - Diaz Combat Sports (https://www.youtube.com/watch?v=7biwctrcRck). Photo 2: thumbnail from "How To Do A Turtle Sit Out Escape In Brazilian Jiu-Jitsu", DCS - Diaz Combat Sports (https://www.youtube.com/watch?v=7biwctrcRck).

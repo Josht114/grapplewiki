@@ -49,6 +49,7 @@ Keep your legs locked and turn into them as they turn away.
 
 ![1. Turn your hips away from them (Stephan Kesting)](https://i.ytimg.com/vi/M6C0CahEywA/hq2.jpg)
 ![2. Step your free leg back over their legs (Stephan Kesting)](https://i.ytimg.com/vi/M6C0CahEywA/hq3.jpg)
+![3. Step your free leg back over their legs (Stephan Kesting)](https://i.ytimg.com/vi/M6C0CahEywA/hqdefault.jpg)
 
 ## Video
 
@@ -58,4 +59,4 @@ https://www.youtube.com/watch?v=M6C0CahEywA
 
 Video: "How to do the Backstep Half Guard Pass" (Stephan Kesting).
 
-Photos 1, 2: frames from "How to do the Backstep Half Guard Pass", Stephan Kesting (https://www.youtube.com/watch?v=M6C0CahEywA).
+Photos 1, 2: frames from "How to do the Backstep Half Guard Pass", Stephan Kesting (https://www.youtube.com/watch?v=M6C0CahEywA). Photo 3: thumbnail from "How to do the Backstep Half Guard Pass", Stephan Kesting (https://www.youtube.com/watch?v=M6C0CahEywA).

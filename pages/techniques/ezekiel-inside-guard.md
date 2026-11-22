@@ -43,6 +43,7 @@ Don't pull them into you with your head exposed; block the free hand.
 ## Images
 
 ![1. Feed one arm behind their neck and grab inside your own sleeve (Revolution BJJ)](https://i.ytimg.com/vi/5vLZ1RB10fU/hq1.jpg)
+![2. Arm behind their neck, free hand coming across the throat (Black Dragon BJJ / Cobra Kai Karate Dungannon)](https://i.ytimg.com/vi/Z0O5kLgxZbw/hqdefault.jpg)
 ![3. Drop your weight and drive the blade of the hand down (Revolution BJJ)](https://i.ytimg.com/vi/5vLZ1RB10fU/hq3.jpg)
 
 ## Video
@@ -53,4 +54,4 @@ https://www.youtube.com/watch?v=5vLZ1RB10fU
 
 Video: "Ezekiel Choke from Inside Closed Guard" (Revolution BJJ).
 
-Photos 1, 3: frames from "Ezekiel Choke from Inside Closed Guard", Revolution BJJ (https://www.youtube.com/watch?v=5vLZ1RB10fU).
+Photos 1, 3: frames from "Ezekiel Choke from Inside Closed Guard", Revolution BJJ (https://www.youtube.com/watch?v=5vLZ1RB10fU). Photo 2: thumbnail from "Ezekiel choke defence from inside the closed guard (week 2)", Black Dragon BJJ / Cobra Kai Karate Dungannon (https://www.youtube.com/watch?v=Z0O5kLgxZbw).

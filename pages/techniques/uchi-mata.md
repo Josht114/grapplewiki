@@ -51,6 +51,7 @@ Keep your hips back and your feet wide.
 
 ![1. Grip sleeve and collar (Teaching you MMA & BJJ)](https://i.ytimg.com/vi/uJjOj-uSIOI/hq3.jpg)
 ![2. Turn in and reap up between their legs (Teaching you MMA & BJJ)](https://i.ytimg.com/vi/uJjOj-uSIOI/hq2.jpg)
+![4. Follow through as they go over (Teaching you MMA & BJJ)](https://i.ytimg.com/vi/uJjOj-uSIOI/hqdefault.jpg)
 
 ## Video
 
@@ -60,4 +61,4 @@ https://www.youtube.com/watch?v=uJjOj-uSIOI
 
 Video: "Easy Beginner Takedown - Uchi-Mata" (Teaching you MMA & BJJ).
 
-Photos 1, 2: frames from "Easy Beginner Takedown - Uchi-Mata", Teaching you MMA & BJJ (https://www.youtube.com/watch?v=uJjOj-uSIOI).
+Photos 1, 2: frames from "Easy Beginner Takedown - Uchi-Mata", Teaching you MMA & BJJ (https://www.youtube.com/watch?v=uJjOj-uSIOI). Photo 4: thumbnail from "Easy Beginner Takedown - Uchi-Mata", Teaching you MMA & BJJ (https://www.youtube.com/watch?v=uJjOj-uSIOI).

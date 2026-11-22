@@ -51,6 +51,7 @@ Stopping pressure passes by keeping your knees between you and the opponent and 
 
 ![1. Drive your hip into the back of their legs (Knight Jiu-Jitsu)](https://i.ytimg.com/vi/p0jmzdeeww8/hq1.jpg)
 ![2. Walk around and settle in side control (Knight Jiu-Jitsu)](https://i.ytimg.com/vi/p0jmzdeeww8/hq3.jpg)
+![3. Keep your chest heavy so they can't turn in (Knight Jiu-Jitsu)](https://i.ytimg.com/vi/p0jmzdeeww8/hqdefault.jpg)
 
 ## Video
 
@@ -60,4 +61,4 @@ https://www.youtube.com/watch?v=p0jmzdeeww8
 
 Video: "The Smashiest Jiu-Jitsu Guard Pass" (Knight Jiu-Jitsu).
 
-Photos 1, 2: frames from "The Smashiest Jiu-Jitsu Guard Pass", Knight Jiu-Jitsu (https://www.youtube.com/watch?v=p0jmzdeeww8).
+Photos 1, 2: frames from "The Smashiest Jiu-Jitsu Guard Pass", Knight Jiu-Jitsu (https://www.youtube.com/watch?v=p0jmzdeeww8). Photo 3: thumbnail from "The Smashiest Jiu-Jitsu Guard Pass | The São Paulo Pass for Big Guys", Knight Jiu-Jitsu (https://www.youtube.com/watch?v=p0jmzdeeww8).

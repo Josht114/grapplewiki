@@ -45,6 +45,7 @@ Turn into them as they move to recover guard.
 ## Images
 
 ![1. Keep your chest heavy on theirs (Fuse Martial Arts & Fitness)](https://i.ytimg.com/vi/-O7SfSANtWU/hqdefault.jpg)
+![2. Walk your feet around toward their side (Fuse Martial Arts & Fitness)](https://i.ytimg.com/vi/-O7SfSANtWU/hq2.jpg)
 ![3. Settle with crossface and underhook (Fuse Martial Arts & Fitness)](https://i.ytimg.com/vi/-O7SfSANtWU/hq3.jpg)
 
 ## Video
@@ -55,4 +56,4 @@ https://www.youtube.com/watch?v=-O7SfSANtWU
 
 Video: "Top Side Control Drill - Side Control to North/South to Side Control" (Fuse Martial Arts & Fitness).
 
-Photos 1, 2: frames from "Top Side Control Drill - Side Control to North/South to Side Control", Fuse Martial Arts & Fitness (https://www.youtube.com/watch?v=-O7SfSANtWU).
+Photos 1, 2: frames from "Top Side Control Drill - Side Control to North/South to Side Control", Fuse Martial Arts & Fitness (https://www.youtube.com/watch?v=-O7SfSANtWU). Photo 2: frame from "Top Side Control Drill - Side Control to North/South to Side Control", Fuse Martial Arts & Fitness (https://www.youtube.com/watch?v=-O7SfSANtWU).

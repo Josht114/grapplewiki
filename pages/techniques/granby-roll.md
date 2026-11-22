@@ -49,6 +49,7 @@ Stay on their hips and follow the roll to the back.
 
 ![1. Tuck your head to one side (Ben Egli)](https://i.ytimg.com/vi/BKeIzgngC18/hq1.jpg)
 ![2. Roll over your shoulder, not your neck (Ben Egli)](https://i.ytimg.com/vi/BKeIzgngC18/hqdefault.jpg)
+![3. Bring your legs over as you roll across your shoulder (solo) (Grappling SMARTY)](https://i.ytimg.com/vi/exkwjkM0P7U/hqdefault.jpg)
 
 ## Video
 
@@ -58,4 +59,4 @@ https://www.youtube.com/watch?v=BKeIzgngC18
 
 Video: "How to roll and escape the turtle position in BJJ/MMA- the Granby roll" (Ben Egli).
 
-Photos 1, 2: frames from "How to roll and escape the turtle position in BJJ/MMA- the Granby roll", Ben Egli (https://www.youtube.com/watch?v=BKeIzgngC18).
+Photos 1, 2: frames from "How to roll and escape the turtle position in BJJ/MMA- the Granby roll", Ben Egli (https://www.youtube.com/watch?v=BKeIzgngC18). Photo 3: thumbnail from "The Shoulder Roll (aka Granby Roll) Tutorial - 5 Easy Steps! (White Belt Grappling Basics)", Grappling SMARTY (https://www.youtube.com/watch?v=exkwjkM0P7U).

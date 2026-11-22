@@ -51,6 +51,7 @@ Step the chopped leg back and keep your weight on the front foot.
 
 ![1. Hook your foot behind their far heel (Sudbury MMA)](https://i.ytimg.com/vi/tdubmvrHSqc/hqdefault.jpg)
 ![2. Come up on top (Sudbury MMA)](https://i.ytimg.com/vi/tdubmvrHSqc/hq3.jpg)
+![2. Hook your foot behind their far heel, gripping the near ankle (Sudbury MMA)](https://i.ytimg.com/vi/tdubmvrHSqc/hq2.jpg)
 
 ## Video
 
@@ -60,4 +61,4 @@ https://www.youtube.com/watch?v=tdubmvrHSqc
 
 Video: "Tripod Sweep to the Sickle Sweep" (Sudbury MMA).
 
-Photos 1, 2: frames from "Tripod Sweep to the Sickle Sweep", Sudbury MMA (https://www.youtube.com/watch?v=tdubmvrHSqc).
+Photos 1, 2: frames from "Tripod Sweep to the Sickle Sweep", Sudbury MMA (https://www.youtube.com/watch?v=tdubmvrHSqc). Photo 2: frame from "Tripod Sweep to the Sickle Sweep", Sudbury MMA (https://www.youtube.com/watch?v=tdubmvrHSqc).

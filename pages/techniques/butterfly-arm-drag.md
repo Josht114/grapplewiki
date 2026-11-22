@@ -49,6 +49,7 @@ Pull your elbow back to your ribs and turn to face them.
 
 ![1. Grab their wrist with your same-side hand (10th Planet Colorado Springs)](https://i.ytimg.com/vi/pvYETRZUvmU/hq1.jpg)
 ![2. Drag the arm across your body (10th Planet Colorado Springs)](https://i.ytimg.com/vi/pvYETRZUvmU/hq2.jpg)
+![3. Drag the arm across your body (10th Planet Colorado Springs)](https://i.ytimg.com/vi/pvYETRZUvmU/hq3.jpg)
 
 ## Video
 
@@ -58,4 +59,4 @@ https://www.youtube.com/watch?v=pvYETRZUvmU
 
 Video: "No Gi BJJ - Arm Drag to Back Take from Butterfly Guard" (10th Planet Colorado Springs).
 
-Photos 1, 2: frames from "No Gi BJJ - Arm Drag to Back Take from Butterfly Guard", 10th Planet Colorado Springs (https://www.youtube.com/watch?v=pvYETRZUvmU).
+Photos 1, 2: frames from "No Gi BJJ - Arm Drag to Back Take from Butterfly Guard", 10th Planet Colorado Springs (https://www.youtube.com/watch?v=pvYETRZUvmU). Photo 3: frame from "No Gi BJJ - Arm Drag to Back Take from Butterfly Guard", 10th Planet Colorado Springs (https://www.youtube.com/watch?v=pvYETRZUvmU).

@@ -49,6 +49,7 @@ Re-guard or sit up as soon as your legs open, keeping your feet away from their 
 
 ![1. Trap one leg under your arm as it opens (United BJJ Hawaii)](https://i.ytimg.com/vi/AyQ3mu7T444/hq2.jpg)
 ![2. Fall back with your knees pinched and arch (United BJJ Hawaii)](https://i.ytimg.com/vi/AyQ3mu7T444/hq3.jpg)
+![4. Fall back with your knees pinched and arch (Gorilla BJJ Academy)](https://i.ytimg.com/vi/jhWxu6NejoQ/hq2.jpg)
 
 ## Video
 
@@ -58,4 +59,4 @@ https://www.youtube.com/watch?v=AyQ3mu7T444
 
 Video: "MIND-BLOWING: Straight ankle lock from closed guard!!!" (United BJJ Hawaii).
 
-Photos 1, 2: frames from "MIND-BLOWING: Straight ankle lock from closed guard!!!", United BJJ Hawaii (https://www.youtube.com/watch?v=AyQ3mu7T444).
+Photos 1, 2: frames from "MIND-BLOWING: Straight ankle lock from closed guard!!!", United BJJ Hawaii (https://www.youtube.com/watch?v=AyQ3mu7T444). Photo 4: frame from "BJJ Basics • Straight Ankle Lock", Gorilla BJJ Academy (https://www.youtube.com/watch?v=jhWxu6NejoQ).

@@ -51,6 +51,7 @@ Keep your hips back and step over the lifting leg.
 
 ![1. Grip the belt or back over the top, and a sleeve (Shintaro Higashi)](https://i.ytimg.com/vi/HNtpb3yp6Do/hq1.jpg)
 ![2. Roll them over and follow to the top (Shintaro Higashi)](https://i.ytimg.com/vi/HNtpb3yp6Do/hqdefault.jpg)
+![4. Roll them over and follow through (40 & FIGHTING)](https://i.ytimg.com/vi/7HkXaEUYdkA/hq2.jpg)
 
 ## Video
 
@@ -60,4 +61,4 @@ https://www.youtube.com/watch?v=HNtpb3yp6Do
 
 Video: "Can you hit all 3 of these Sumi Gaeshi?" (Shintaro Higashi).
 
-Photos 1, 2: frames from "Can you hit all 3 of these Sumi Gaeshi?", Shintaro Higashi (https://www.youtube.com/watch?v=HNtpb3yp6Do).
+Photos 1, 2: frames from "Can you hit all 3 of these Sumi Gaeshi?", Shintaro Higashi (https://www.youtube.com/watch?v=HNtpb3yp6Do). Photo 4: frame from "Mastering Sumi Gaeshi | Judo Throw Tutorial with Sensei Juan (3rd Dan Kodokan)", 40 & FIGHTING (https://www.youtube.com/watch?v=7HkXaEUYdkA).
