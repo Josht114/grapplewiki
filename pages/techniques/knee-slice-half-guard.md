@@ -5,7 +5,7 @@ to: top-side-control
 col: transition
 type: pass
 attire: both
-status: review
+status: complete
 order: 1160
 ---
 Slide your trapped knee across the opponent's thigh to free it and pass to side control.

@@ -5,7 +5,7 @@ to: top-half-guard
 col: transition
 type: takedown
 attire: both
-status: review
+status: learnt
 order: 220
 ---
 Takedown that controls one leg, then finishes by running the pipe, tripping or lifting.

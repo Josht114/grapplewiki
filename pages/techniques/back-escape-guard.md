@@ -5,7 +5,7 @@ to: bottom-open-guard
 col: transition
 type: escape
 attire: both
-status: review
+status: learnt
 order: 1790
 ---
 Escape the back and turn into the opponent to recover guard.

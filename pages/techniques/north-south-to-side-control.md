@@ -5,7 +5,7 @@ to: top-side-control
 col: transition
 type: transition
 attire: both
-status: review
+status: learnt
 order: 1100
 ---
 Walk back around to side control, keeping chest pressure.

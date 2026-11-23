@@ -5,7 +5,7 @@ to: bottom-open-guard
 col: transition
 type: escape
 attire: both
-status: review
+status: learnt
 order: 1290
 ---
 Push the knee off, shrimp away and recover open guard.

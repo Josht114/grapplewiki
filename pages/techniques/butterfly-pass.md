@@ -5,7 +5,7 @@ to: top-side-control
 col: transition
 type: pass
 attire: both
-status: review
+status: complete
 order: 1210
 ---
 Kill or lift one butterfly hook and pass to the side.

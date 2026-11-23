@@ -5,7 +5,7 @@ to: top-side-control
 col: transition
 type: pass
 attire: both
-status: review
+status: learnt
 order: 380
 ---
 Both arms under the legs to stack the opponent, then pass around one side.

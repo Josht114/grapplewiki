@@ -5,7 +5,7 @@ to: top-side-control
 col: transition
 type: pass
 attire: both
-status: review
+status: complete
 order: 400
 ---
 Slide your knee across the opponent's thigh while controlling the upper body.

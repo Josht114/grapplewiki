@@ -5,7 +5,7 @@ to: top-mount
 col: transition
 type: sweep
 attire: both
-status: review
+status: learnt
 order: 540
 ---
 Knee across the belly and a chop to the base leg, sweeping with collar and sleeve grips.

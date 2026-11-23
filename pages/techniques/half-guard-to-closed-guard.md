@@ -5,7 +5,7 @@ to: bottom-closed-guard-kneeling
 col: transition
 type: transition
 attire: both
-status: review
+status: complete
 order: 1200
 ---
 Free your outside leg and close your full guard around the opponent.

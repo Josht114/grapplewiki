@@ -5,7 +5,7 @@ to: top-side-control
 col: transition
 type: escape
 attire: both
-status: review
+status: complete
 order: 1760
 ---
 Trap the opponent's arm and bridge them over you to reverse side control.

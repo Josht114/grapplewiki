@@ -5,7 +5,7 @@ to: top-side-control
 col: transition
 type: sweep
 attire: both
-status: draft
+status: complete
 order: 580
 ---
 Half guard sweep from bottom half guard, used in BJJ and MMA and popularised by Antônio Rodrigo "Minotauro" Nogueira, who used it to sweep Tim Sylvia at UFC 81.

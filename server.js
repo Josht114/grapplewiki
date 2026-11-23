@@ -10,8 +10,13 @@ const { KINDS, HEADER_FIELDS, ID_RE, parsePage, serializePage } = require("./pag
 
 const ROOT = __dirname;
 const PAGES_DIR = path.join(ROOT, "pages");
+const IMAGES_DIR = path.join(ROOT, "images"); // your own photos, shown on pages as images/<file>
+const IMAGE_TYPES = { ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".gif": "image/gif", ".webp": "image/webp", ".avif": "image/avif" };
+// "images/<folder>/<file>.jpg": letters, digits, - _ . and %20 for spaces; no "..", no other file types
+const LOCAL_IMAGE_RE = /^images\/(?:[A-Za-z0-9_-](?:[A-Za-z0-9._-]|%20)*\/)*[A-Za-z0-9_-](?:[A-Za-z0-9._-]|%20)*\.(?:jpe?g|png|gif|webp|avif)$/i;
 const WIKI_FILE = path.join(ROOT, "wiki.json");
 const CORE_GAME_FILE = path.join(ROOT, "core-game.json"); // the game built on the Core game page
+const STUDY_GUIDE_FILE = path.join(ROOT, "study-guide.json"); // the order of moves on the Study guide page
 const PORT = Number(process.env.PORT) || 8417;
 const HOST = process.env.HOST || "127.0.0.1"; // only reachable from this computer
 const STATIC = {
@@ -38,6 +43,11 @@ function writeFileAtomic(file, text) {
 function readCoreGame() {
   try { return Object.assign(JSON.parse(fs.readFileSync(CORE_GAME_FILE, "utf8")), { saved: true }); }
   catch (e) { return { picks: {}, saved: false }; }
+}
+
+function readStudyGuide() {
+  try { const d = JSON.parse(fs.readFileSync(STUDY_GUIDE_FILE, "utf8")); return { order: Array.isArray(d.order) ? d.order : [] }; }
+  catch (e) { return { order: [] }; }
 }
 
 function readWikiJson() {
@@ -77,8 +87,11 @@ function clean(kind, input) {
     name: str(input.name).replace(/\s+/g, " ").slice(0, 200),
     summary: str(input.summary),
     steps: Array.isArray(input.steps) ? input.steps.map(s => str(s).replace(/\s*\n\s*/g, " ")).filter(Boolean) : [],
-    // "![Caption](https://...)" lines; anything that isn't an http(s) image line is dropped
-    images: Array.isArray(input.images) ? input.images.map(s => str(s).replace(/\s*\n\s*/g, " ")).filter(s => /^!\[[^\]]*\]\(https?:\/\/[^\s)]+\)$/.test(s)) : [],
+    // "![Caption](https://...)" or "![Caption](images/file.jpg)" lines; anything else is dropped
+    images: Array.isArray(input.images) ? input.images.map(s => str(s).replace(/\s*\n\s*/g, " ")).filter(s => {
+      const m = s.match(/^!\[[^\]]*\]\(([^\s)]+)\)$/);
+      return !!m && (/^https?:\/\/\S+$/.test(m[1]) || LOCAL_IMAGE_RE.test(m[1]));
+    }) : [],
     // one or more video URLs, one per line
     video: str(input.video).split(/\s+/).filter(u => /^https?:\/\/\S+$/.test(u)).slice(0, 5).join("\n"),
     notes: str(input.notes)
@@ -158,7 +171,7 @@ function checkOrigin(req) {
 async function api(req, res, parts) {
   // GET /api/wiki  -> everything the app needs
   if (req.method === "GET" && parts[0] === "wiki" && parts.length === 1) {
-    return send(res, 200, Object.assign(readAllPages(), readWikiJson(), { coreGame: readCoreGame() }));
+    return send(res, 200, Object.assign(readAllPages(), readWikiJson(), { coreGame: readCoreGame(), studyGuide: readStudyGuide() }));
   }
 
   // PUT /api/core-game  -> save the Core game picks: { picks: { positionId: { subs: [id, ...], transitions: [id, ...] } } }
@@ -178,6 +191,16 @@ async function api(req, res, parts) {
     }
     writeFileAtomic(CORE_GAME_FILE, JSON.stringify({ picks }, null, 2) + "\n");
     return send(res, 200, { picks });
+  }
+
+  // PUT /api/study-guide  -> save the Study guide order: { order: [techniqueId, ...] }
+  if (req.method === "PUT" && parts[0] === "study-guide" && parts.length === 1) {
+    checkOrigin(req);
+    const body = await readBody(req);
+    if (!Array.isArray(body.order)) throw new HttpError(400, "Send order as an array.");
+    const order = [...new Set(body.order.slice(0, 1000).filter(v => typeof v === "string" && ID_RE.test(v)))];
+    writeFileAtomic(STUDY_GUIDE_FILE, JSON.stringify({ order }, null, 2) + "\n");
+    return send(res, 200, { order });
   }
 
   if (req.method !== "GET") checkOrigin(req);
@@ -245,6 +268,17 @@ async function api(req, res, parts) {
   throw new HttpError(405, "Method not allowed.");
 }
 
+// GET /images/... -> a photo from the images folder (only image files, never outside the folder)
+function serveImage(req, res, rel) {
+  if (req.method !== "GET" && req.method !== "HEAD") throw new HttpError(405, "Method not allowed.");
+  if (!LOCAL_IMAGE_RE.test(rel)) throw new HttpError(404, "Not found.");
+  const file = path.resolve(ROOT, decodeURIComponent(rel));
+  if (!file.startsWith(IMAGES_DIR + path.sep)) throw new HttpError(404, "Not found.");
+  let data;
+  try { data = fs.readFileSync(file); } catch (e) { throw new HttpError(404, "Not found."); }
+  return send(res, 200, data, IMAGE_TYPES[path.extname(file).toLowerCase()]);
+}
+
 // ---------- server ----------
 const server = http.createServer(async (req, res) => {
   try {
@@ -253,6 +287,7 @@ const server = http.createServer(async (req, res) => {
       const parts = url.pathname.slice(5).split("/").filter(Boolean).map(decodeURIComponent);
       return await api(req, res, parts);
     }
+    if (url.pathname.startsWith("/images/")) return serveImage(req, res, url.pathname.slice(1));
     const entry = STATIC[url.pathname];
     if (!entry || (req.method !== "GET" && req.method !== "HEAD")) throw new HttpError(404, "Not found.");
     return send(res, 200, fs.readFileSync(path.join(ROOT, entry[0])), entry[1]);
@@ -267,6 +302,7 @@ if (require.main === module) {
   server.listen(PORT, HOST, () => {
     console.log(`GrappleWiki running at http://localhost:${PORT}`);
     console.log(`Pages are read from and saved to ${PAGES_DIR}`);
+    console.log(`Your own photos go in ${IMAGES_DIR}`);
   });
 }
 

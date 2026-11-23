@@ -5,7 +5,7 @@ to: top-open-guard
 col: transition
 type: sweep
 attire: both
-status: review
+status: complete
 order: 340
 ---
 Hook behind one ankle, push the other hip, and topple the standing opponent backward.

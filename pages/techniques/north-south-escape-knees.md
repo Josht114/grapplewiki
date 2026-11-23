@@ -5,7 +5,7 @@ to: bottom-turtle
 col: transition
 type: escape
 attire: both
-status: review
+status: learnt
 order: 1340
 ---
 Turn onto your knees when the opponent's weight comes off your chest.

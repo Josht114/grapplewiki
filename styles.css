@@ -443,6 +443,19 @@ main.wide { max-width: 1680px; }
 .ml-list ul { margin: 0; padding-left: 18px; }
 .ml-list li { margin: 2px 0; }
 
+/* ---------- study guide ---------- */
+.sg-page { max-width: 720px; }
+.sg-list { list-style: none; counter-reset: sg; margin: 12px 0 0; padding: 0; display: grid; gap: 6px; }
+.sg-list li { counter-increment: sg; display: flex; align-items: center; gap: 10px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); cursor: grab; }
+.sg-list li::before { content: counter(sg) "."; min-width: 2.2em; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+.sg-list li.dragging { opacity: 0.45; border-style: dashed; }
+.sg-handle { color: var(--muted); letter-spacing: -3px; user-select: none; }
+.sg-name { flex: 1; }
+.sg-btns { display: flex; gap: 4px; }
+.sg-move { font: inherit; width: 30px; height: 28px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); color: var(--text); cursor: pointer; }
+.sg-move:hover { border-color: var(--text); }
+.sg-list li:first-child .sg-move[data-dir="-1"], .sg-list li:last-child .sg-move[data-dir="1"] { visibility: hidden; }
+
 /* ---------- home stats: one column per table ---------- */
 .stats-table { border-collapse: collapse; font-size: 14px; margin: 4px 0 8px; }
 .stats-table th, .stats-table td { padding: 3px 14px; text-align: right; border-bottom: 1px solid var(--border); }

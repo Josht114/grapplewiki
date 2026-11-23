@@ -5,7 +5,7 @@ to: top-side-control
 col: transition
 type: transition
 attire: both
-status: review
+status: complete
 order: 1080
 ---
 Break the turtle down by pulling a wrist and driving them onto their side.

@@ -5,7 +5,7 @@ to: top-mount
 col: transition
 type: transition
 attire: both
-status: review
+status: learnt
 order: 1070
 ---
 When the opponent escapes their back to the mat, follow over the top into mount.

@@ -5,7 +5,7 @@ to: bottom-closed-guard-kneeling
 col: transition
 type: transition
 attire: both
-status: review
+status: learnt
 order: 1580
 ---
 Close your legs around the opponent's waist from open guard.

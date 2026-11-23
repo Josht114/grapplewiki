@@ -5,7 +5,7 @@ to: bottom-half-guard
 col: transition
 type: escape
 attire: both
-status: review
+status: learnt
 order: 1280
 ---
 Make space with frames and slide your knee in to recover half guard.

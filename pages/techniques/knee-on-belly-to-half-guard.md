@@ -5,7 +5,7 @@ to: bottom-half-guard
 col: transition
 type: escape
 attire: both
-status: review
+status: learnt
 order: 1300
 ---
 Push the knee across your body and trap the leg in half guard.

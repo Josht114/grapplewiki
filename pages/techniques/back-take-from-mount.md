@@ -5,7 +5,7 @@ to: top-back-mount
 col: transition
 type: back take
 attire: both
-status: review
+status: learnt
 order: 1060
 ---
 When the opponent turns away to escape mount, follow them and take the back.

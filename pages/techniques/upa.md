@@ -5,7 +5,7 @@ to: top-closed-guard-kneeling
 col: transition
 type: escape
 attire: both
-status: review
+status: learnt
 order: 870
 ---
 Mount escape: trap one arm and the foot on the same side, then bridge over that shoulder to roll the opponent.

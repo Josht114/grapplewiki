@@ -5,7 +5,7 @@ to: top-mount
 col: transition
 type: pass
 attire: both
-status: review
+status: learnt
 order: 1170
 ---
 Free your trapped leg straight up into mount instead of passing to the side.

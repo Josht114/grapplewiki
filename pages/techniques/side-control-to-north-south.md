@@ -5,7 +5,7 @@ to: top-north-south
 col: transition
 type: transition
 attire: both
-status: review
+status: complete
 order: 1020
 ---
 Walk around the opponent's head while keeping chest-to-chest pressure.

@@ -5,7 +5,7 @@ to: bottom-closed-guard-kneeling
 col: transition
 type: transition
 attire: both
-status: review
+status: learnt
 order: 240
 ---
 Taking the fight to the ground by sitting or jumping into your guard.

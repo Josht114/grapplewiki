@@ -5,7 +5,7 @@ to: top-mount
 col: transition
 type: transition
 attire: both
-status: review
+status: learnt
 order: 1000
 ---
 Slide your knee across the opponent's belly to step over into mount.

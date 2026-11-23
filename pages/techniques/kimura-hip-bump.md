@@ -5,7 +5,7 @@ to: top-mount
 col: transition
 type: sweep
 attire: both
-status: review
+status: learnt
 order: 560
 ---
 Sit up, post on a hand and bump the opponent over with your hips. Chains to the kimura if they post.

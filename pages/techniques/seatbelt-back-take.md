@@ -5,7 +5,7 @@ to: top-back-mount
 col: transition
 type: back take
 attire: both
-status: review
+status: learnt
 order: 180
 ---
 Establish the seatbelt grip on the turtle and roll or insert hooks to take the back.

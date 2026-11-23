@@ -5,7 +5,7 @@ to: bottom-half-guard
 col: transition
 type: escape
 attire: both
-status: review
+status: complete
 order: 860
 ---
 Elbow-knee escape: make space, shrimp and pull a knee through to recover half guard.

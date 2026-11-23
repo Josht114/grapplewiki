@@ -5,7 +5,7 @@ to: top-half-guard
 col: transition
 type: escape
 attire: both
-status: review
+status: complete
 order: 920
 ---
 Protect the neck, slide your back to the mat on the side of the bottom hook, and turn in.

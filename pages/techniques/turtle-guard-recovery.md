@@ -5,7 +5,7 @@ to: bottom-open-guard
 col: transition
 type: escape
 attire: both
-status: review
+status: complete
 order: 970
 ---
 Roll or sit out from turtle to put your legs back between you and the opponent.

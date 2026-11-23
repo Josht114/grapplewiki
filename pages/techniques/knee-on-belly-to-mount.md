@@ -5,7 +5,7 @@ to: top-mount
 col: transition
 type: transition
 attire: both
-status: review
+status: learnt
 order: 1040
 ---
 Step over into mount when the opponent pushes your knee or turns away.

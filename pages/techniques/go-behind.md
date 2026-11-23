@@ -5,7 +5,7 @@ to: top-turtle
 col: transition
 type: transition
 attire: both
-status: review
+status: complete
 order: 980
 ---
 Circle from the front headlock to the opponent's side and back while keeping their head down.

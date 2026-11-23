@@ -4,7 +4,7 @@ from: bottom-closed-guard-kneeling
 col: sub
 type: submission
 attire: both
-status: review
+status: complete
 order: 1640
 ---
 Guillotine from closed guard when the opponent's head drops forward.

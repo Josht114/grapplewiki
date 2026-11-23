@@ -5,7 +5,7 @@ to: bottom-open-guard
 col: transition
 type: escape
 attire: both
-status: review
+status: learnt
 order: 800
 ---
 Frame on the opponent, shrimp away, and recover guard by putting your knee back in.

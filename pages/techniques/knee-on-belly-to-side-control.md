@@ -5,7 +5,7 @@ to: top-side-control
 col: transition
 type: transition
 attire: both
-status: review
+status: learnt
 order: 1050
 ---
 Drop your chest back to side control when the opponent turns into you or makes space.

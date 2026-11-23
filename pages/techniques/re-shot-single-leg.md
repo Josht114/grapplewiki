@@ -5,7 +5,7 @@ to: top-half-guard
 col: transition
 type: takedown
 attire: both
-status: review
+status: complete
 order: 1260
 ---
 From a front headlock, shoot again for a single leg as the opponent leans on you.

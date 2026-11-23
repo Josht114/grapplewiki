@@ -101,11 +101,14 @@
   function safeUrl(u) {
     try { const x = new URL(u); return /^https?:$/.test(x.protocol) ? x.href : null; } catch (e) { return null; }
   }
-  // Image lines look like "![Caption](https://...)"; a bare URL also works.
+  // Your own photos live in the project's images/ folder and are written as "images/<file>" (same rule as server.js).
+  const LOCAL_IMAGE_RE = /^images\/(?:[A-Za-z0-9_-](?:[A-Za-z0-9._-]|%20)*\/)*[A-Za-z0-9_-](?:[A-Za-z0-9._-]|%20)*\.(?:jpe?g|png|gif|webp|avif)$/i;
+  // Image lines look like "![Caption](https://...)" or "![Caption](images/file.jpg)"; a bare URL or path also works.
   function imageList(lines) {
     return (lines || []).map(l => {
       const m = String(l).match(/^!\[([^\]]*)\]\((\S+?)\)$/);
-      const src = safeUrl(m ? m[2] : String(l).trim());
+      const raw = m ? m[2] : String(l).trim();
+      const src = LOCAL_IMAGE_RE.test(raw) ? raw : safeUrl(raw);
       return src ? { src, caption: m ? m[1].trim() : "" } : null;
     }).filter(Boolean);
   }
@@ -1160,6 +1163,109 @@
     });
   }
 
+  // ---------- study guide: the moves in the current game as one list the user puts in order ----------
+  // The order is saved in study-guide.json; moves new to the game go at the end (in Move list order),
+  // and moves no longer in the game drop out of the list but keep their place in the file.
+  function studyGuideMoves() {
+    const inGame = moveListSections().flatMap(s => s.moves);
+    const byId = new Map(inGame.map(t => [t.id, t]));
+    const saved = ((BASE.studyGuide && BASE.studyGuide.order) || []).filter(id => byId.has(id));
+    const seen = new Set(saved);
+    return saved.map(id => byId.get(id)).concat(inGame.filter(t => !seen.has(t.id)));
+  }
+  const studyLine = t => t.name + " (" + ((pages.get(t.from) || { name: t.from || "?" }).name) + ")";
+
+  function viewStudyGuide() {
+    const moves = studyGuideMoves();
+    if (!moves.length) return `<article class="page"><h1>Study guide</h1>
+      <p class="lead">Your game is empty. Pick some moves on the <a href="#/core-game">Game picker</a> first.</p></article>`;
+    return `
+      <article class="page sg-page">
+        <div class="titlebar">
+          <h1>Study guide</h1>
+          <div class="actions"><button type="button" class="btn" id="sgCopy">Copy list</button></div>
+        </div>
+        <p class="muted">${moves.length} moves. Drag a move, or use its ↑ ↓ buttons, to put them in the order you want to study them. The order saves automatically. <span id="sgStatus" role="status"></span></p>
+        <ol class="sg-list" id="sgList">${moves.map(t => `
+          <li draggable="true" data-id="${esc(t.id)}">
+            <span class="sg-handle" aria-hidden="true">⋮⋮</span>
+            <span class="sg-name">${link(t.id)} <span class="muted">(${esc((pages.get(t.from) || { name: t.from || "?" }).name)})</span></span>
+            <span class="sg-btns">
+              <button type="button" class="sg-move" data-dir="-1" aria-label="Move ${esc(t.name)} up">↑</button>
+              <button type="button" class="sg-move" data-dir="1" aria-label="Move ${esc(t.name)} down">↓</button>
+            </span>
+          </li>`).join("")}
+        </ol>
+      </article>`;
+  }
+
+  function wireStudyGuide() {
+    const list = document.getElementById("sgList");
+    if (!list) return;
+    const status = document.getElementById("sgStatus");
+    const currentOrder = () => [...list.children].map(li => li.dataset.id);
+    let saveTimer = null;
+    function save() {
+      // keep moves that are out of the game for now at their saved place, after the visible ones
+      const visible = currentOrder();
+      const rest = ((BASE.studyGuide && BASE.studyGuide.order) || []).filter(id => !visible.includes(id));
+      const order = visible.concat(rest);
+      BASE.studyGuide = { order };
+      status.textContent = "Saving…";
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(async () => {
+        try { await apiCall("PUT", "/api/study-guide", { order }); status.textContent = "Saved"; }
+        catch (e) { status.textContent = "Couldn't save: " + e.message; }
+      }, 300);
+    }
+
+    // up / down buttons
+    list.addEventListener("click", e => {
+      const b = e.target.closest(".sg-move");
+      if (!b) return;
+      const li = b.closest("li");
+      if (b.dataset.dir === "-1" && li.previousElementSibling) list.insertBefore(li, li.previousElementSibling);
+      else if (b.dataset.dir === "1" && li.nextElementSibling) list.insertBefore(li.nextElementSibling, li);
+      else return;
+      b.focus();
+      save();
+    });
+
+    // drag and drop
+    let dragging = null;
+    list.addEventListener("dragstart", e => {
+      dragging = e.target.closest("li");
+      if (!dragging) return;
+      dragging.classList.add("dragging");
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", dragging.dataset.id);
+    });
+    list.addEventListener("dragover", e => {
+      if (!dragging) return;
+      e.preventDefault();
+      const over = e.target.closest("li");
+      if (!over || over === dragging) return;
+      const r = over.getBoundingClientRect();
+      list.insertBefore(dragging, e.clientY > r.top + r.height / 2 ? over.nextElementSibling : over);
+    });
+    list.addEventListener("drop", e => e.preventDefault());
+    list.addEventListener("dragend", () => {
+      if (!dragging) return;
+      dragging.classList.remove("dragging");
+      dragging = null;
+      save();
+    });
+
+    // copy as plain text, one "Move (Position)" per line
+    const btn = document.getElementById("sgCopy");
+    btn.addEventListener("click", async () => {
+      const byId = new Map(studyGuideMoves().map(t => [t.id, t]));
+      const text = currentOrder().map(id => byId.get(id)).filter(Boolean).map((t, i) => `${i + 1}. ${studyLine(t)}`).join("\n") + "\n";
+      try { await navigator.clipboard.writeText(text); status.textContent = "Copied the list."; }
+      catch (e) { status.textContent = "Couldn't copy. Select the list and copy it by hand."; }
+    });
+  }
+
   // ---------- quiz: multiple-choice questions about the submissions in the current game ----------
   // Questions are built from each submission's own page (position, summary, first key step, defense);
   // wrong answers come from the other submissions in the game. Same source as the Move list (currentGamePicks).
@@ -1414,7 +1520,7 @@
           <label class="tech-only"${isTech ? "" : " hidden"}>Detailed breakdown <small>("### Heading" lines, "- bullet" lines, plain paragraphs)</small><textarea name="breakdown" rows="10">${esc(p.breakdown || "")}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense <small>(how to stop this move)</small><textarea name="defense" rows="3">${esc(p.defense || "")}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense steps <small>(one per line)</small><textarea name="defenseSteps" rows="4">${esc((p.defenseSteps || []).join("\n"))}</textarea></label>
-          <label>Images <small>(one per line: ![Caption](https://image-url))</small><textarea name="images" rows="3">${esc((p.images || []).join("\n"))}</textarea></label>
+          <label>Images <small>(one per line: ![Caption](https://image-url) or, for your own photos in the images folder, ![Caption](images/file.jpg))</small><textarea name="images" rows="3">${esc((p.images || []).join("\n"))}</textarea></label>
           <label>Videos <small>(one URL per line; YouTube links embed)</small><textarea name="video" rows="2">${esc(p.video || "")}</textarea></label>
           <label>Notes <small>(link other pages with [[Page name]])</small><textarea name="notes" rows="6">${esc(p.notes || "")}</textarea></label>
           <p class="form-error" id="formError" role="alert" hidden></p>
@@ -1503,6 +1609,7 @@
     else if (parts[0] === "flow") { html = viewFlow(); title = "Flow chart · GrappleWiki"; }
     else if (parts[0] === "your-game") { html = viewYourGame(); title = "Your game · GrappleWiki"; }
     else if (parts[0] === "move-list") { html = viewMoveList(); title = "Move list · GrappleWiki"; }
+    else if (parts[0] === "study-guide") { html = viewStudyGuide(); title = "Study guide · GrappleWiki"; }
     else if (parts[0] === "quiz") { html = viewQuiz(); title = "Quiz · GrappleWiki"; }
     else if (parts[0] === "all") { html = viewAll(); title = "All pages · GrappleWiki"; }
     else if (parts[0] === "wanted") { html = viewWanted(); title = "Wanted pages · GrappleWiki"; }
@@ -1522,6 +1629,7 @@
     if (parts[0] === "flow") wireFlow(params.get("node"));
     if (parts[0] === "core-game") wireCoreGame();
     if (parts[0] === "move-list") wireMoveList();
+    if (parts[0] === "study-guide") wireStudyGuide();
     if (parts[0] === "quiz") wireQuiz();
     if (parts[0] === "your-game") {
       wireYourGameChart();

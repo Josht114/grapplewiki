@@ -5,7 +5,7 @@ to: top-open-guard
 col: transition
 type: transition
 attire: both
-status: review
+status: learnt
 order: 470
 ---
 Posture up and stand to break the opponent's closed guard.

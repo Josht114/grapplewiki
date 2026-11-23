@@ -24,6 +24,8 @@ Then open <http://localhost:8417>. The server only listens on your own computer.
 | `pages/techniques/*.md` | One file per technique (subs and transitions), including its defense |
 | `pages/concepts/*.md` | One file per concept page |
 | `wiki.json` | Home grid layout, redirects for renamed pages, wanted pages |
+| `images/` | Your own photos, used on pages as `![Caption](images/file.jpg)` (see `images/README.md`) |
+| `study-guide.json` | The order of moves on the Study guide page |
 | `core-game.json` | Your picks on the Game picker page (any number of subs and transitions per position) |
 | `server.js` | Local server: serves the wiki and saves edits to `pages/` |
 | `pagefile.js` | Reads and writes the page file format |

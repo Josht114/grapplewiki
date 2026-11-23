@@ -5,7 +5,7 @@ to: bottom-turtle
 col: transition
 type: escape
 attire: both
-status: review
+status: complete
 order: 1750
 ---
 Make space and turn to your knees, keeping elbows tight.

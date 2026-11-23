@@ -5,7 +5,7 @@ to: top-side-control
 col: transition
 type: sweep
 attire: both
-status: review
+status: learnt
 order: 960
 ---
 From turtle, overhook the arm the top player has around you and roll to that side, taking them over you so you land on top. Wrestlers call this an arm roll; if you also grab their leg it becomes a Peterson roll.

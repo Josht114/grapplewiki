@@ -5,7 +5,7 @@ to: top-side-control
 col: transition
 type: pass
 attire: both
-status: review
+status: learnt
 order: 390
 ---
 One arm over a leg, one arm under the other, with heavy shoulder pressure.
