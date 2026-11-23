@@ -451,6 +451,9 @@ main.wide { max-width: 1680px; }
 .sg-list li.dragging { opacity: 0.45; border-style: dashed; }
 .sg-handle { color: var(--muted); letter-spacing: -3px; user-select: none; }
 .sg-name { flex: 1; }
+.sg-check { width: 18px; height: 18px; margin: 0; flex: none; cursor: pointer; accent-color: var(--cat-positive); }
+.sg-list li.done .sg-name { text-decoration: line-through; opacity: 0.6; }
+.sg-progress { margin: 4px 0 0; }
 .sg-btns { display: flex; gap: 4px; }
 .sg-move { font: inherit; width: 30px; height: 28px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); color: var(--text); cursor: pointer; }
 .sg-move:hover { border-color: var(--text); }

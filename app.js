@@ -1179,16 +1179,20 @@
     const moves = studyGuideMoves();
     if (!moves.length) return `<article class="page"><h1>Study guide</h1>
       <p class="lead">Your game is empty. Pick some moves on the <a href="#/core-game">Game picker</a> first.</p></article>`;
+    const done = new Set((BASE.studyGuide && BASE.studyGuide.done) || []);
+    const doneCount = moves.filter(t => done.has(t.id)).length;
     return `
       <article class="page sg-page">
         <div class="titlebar">
           <h1>Study guide</h1>
           <div class="actions"><button type="button" class="btn" id="sgCopy">Copy list</button></div>
         </div>
-        <p class="muted">${moves.length} moves. Drag a move, or use its ↑ ↓ buttons, to put them in the order you want to study them. The order saves automatically. <span id="sgStatus" role="status"></span></p>
+        <p class="sg-progress"><strong id="sgDone">${doneCount} of ${moves.length} done</strong></p>
+        <p class="muted">Tick a move off when you've studied it. Drag a move, or use its ↑ ↓ buttons, to put them in the order you want to study them. Changes save automatically. <span id="sgStatus" role="status"></span></p>
         <ol class="sg-list" id="sgList">${moves.map(t => `
-          <li draggable="true" data-id="${esc(t.id)}">
+          <li draggable="true" data-id="${esc(t.id)}"${done.has(t.id) ? ' class="done"' : ""}>
             <span class="sg-handle" aria-hidden="true">⋮⋮</span>
+            <input type="checkbox" class="sg-check"${done.has(t.id) ? " checked" : ""} aria-label="Done: ${esc(studyLine(t))}">
             <span class="sg-name">${link(t.id)} <span class="muted">(${esc((pages.get(t.from) || { name: t.from || "?" }).name)})</span></span>
             <span class="sg-btns">
               <button type="button" class="sg-move" data-dir="-1" aria-label="Move ${esc(t.name)} up">↑</button>
@@ -1210,14 +1214,27 @@
       const visible = currentOrder();
       const rest = ((BASE.studyGuide && BASE.studyGuide.order) || []).filter(id => !visible.includes(id));
       const order = visible.concat(rest);
-      BASE.studyGuide = { order };
+      // ticks on moves that are out of the game for now are kept too
+      const doneNow = [...list.querySelectorAll("li.done")].map(li => li.dataset.id);
+      const doneRest = ((BASE.studyGuide && BASE.studyGuide.done) || []).filter(id => !visible.includes(id));
+      const done = doneNow.concat(doneRest);
+      BASE.studyGuide = { order, done };
       status.textContent = "Saving…";
       clearTimeout(saveTimer);
       saveTimer = setTimeout(async () => {
-        try { await apiCall("PUT", "/api/study-guide", { order }); status.textContent = "Saved"; }
+        try { await apiCall("PUT", "/api/study-guide", { order, done }); status.textContent = "Saved"; }
         catch (e) { status.textContent = "Couldn't save: " + e.message; }
       }, 300);
     }
+
+    // tick boxes: mark a move done
+    list.addEventListener("change", e => {
+      const box = e.target.closest(".sg-check");
+      if (!box) return;
+      box.closest("li").classList.toggle("done", box.checked);
+      document.getElementById("sgDone").textContent = `${list.querySelectorAll("li.done").length} of ${list.children.length} done`;
+      save();
+    });
 
     // up / down buttons
     list.addEventListener("click", e => {

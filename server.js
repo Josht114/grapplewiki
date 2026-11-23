@@ -46,8 +46,11 @@ function readCoreGame() {
 }
 
 function readStudyGuide() {
-  try { const d = JSON.parse(fs.readFileSync(STUDY_GUIDE_FILE, "utf8")); return { order: Array.isArray(d.order) ? d.order : [] }; }
-  catch (e) { return { order: [] }; }
+  try {
+    const d = JSON.parse(fs.readFileSync(STUDY_GUIDE_FILE, "utf8"));
+    return { order: Array.isArray(d.order) ? d.order : [], done: Array.isArray(d.done) ? d.done : [] };
+  }
+  catch (e) { return { order: [], done: [] }; }
 }
 
 function readWikiJson() {
@@ -193,14 +196,19 @@ async function api(req, res, parts) {
     return send(res, 200, { picks });
   }
 
-  // PUT /api/study-guide  -> save the Study guide order: { order: [techniqueId, ...] }
+  // PUT /api/study-guide  -> save the Study guide: { order: [techniqueId, ...], done: [techniqueId, ...] }
+  // (either list may be left out to keep what's saved)
   if (req.method === "PUT" && parts[0] === "study-guide" && parts.length === 1) {
     checkOrigin(req);
     const body = await readBody(req);
-    if (!Array.isArray(body.order)) throw new HttpError(400, "Send order as an array.");
-    const order = [...new Set(body.order.slice(0, 1000).filter(v => typeof v === "string" && ID_RE.test(v)))];
-    writeFileAtomic(STUDY_GUIDE_FILE, JSON.stringify({ order }, null, 2) + "\n");
-    return send(res, 200, { order });
+    if ((body.order !== undefined && !Array.isArray(body.order)) || (body.done !== undefined && !Array.isArray(body.done)) || (!body.order && !body.done)) {
+      throw new HttpError(400, "Send order and/or done as arrays.");
+    }
+    const ids = list => [...new Set(list.slice(0, 1000).filter(v => typeof v === "string" && ID_RE.test(v)))];
+    const saved = readStudyGuide();
+    const out = { order: body.order ? ids(body.order) : saved.order, done: body.done ? ids(body.done) : saved.done };
+    writeFileAtomic(STUDY_GUIDE_FILE, JSON.stringify(out, null, 2) + "\n");
+    return send(res, 200, out);
   }
 
   if (req.method !== "GET") checkOrigin(req);

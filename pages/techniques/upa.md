@@ -48,9 +48,7 @@ Post your hand and foot wide on the side they bridge toward.
 
 ## Images
 
-![1. Trap their arm by hugging it to your chest (Pure Art BJJ Portsmouth)](https://i.ytimg.com/vi/RbxKgjjRZeY/hq1.jpg)
-![2. Trap their foot on the same side with your foot (Pure Art BJJ Portsmouth)](https://i.ytimg.com/vi/RbxKgjjRZeY/hq2.jpg)
-![4. Land in their closed guard with good posture (Pure Art BJJ Portsmouth)](https://i.ytimg.com/vi/RbxKgjjRZeY/hq3.jpg)
+![1. Trap their arm by hugging it to your chest (own image)](images/upa/trap%20and%20roll%20-%20trap.png)
 
 ## Video
 
@@ -62,4 +60,4 @@ Not to be confused with the [[Arm roll (turtle)]].
 
 Video: "How To Escape the Mount: Upa Trap And Roll BJJ Mount Escape" (Pure Art BJJ Portsmouth).
 
-Photos 1, 2, 4: frames from "How To Escape the Mount: Upa Trap And Roll BJJ Mount Escape", Pure Art BJJ Portsmouth (https://www.youtube.com/watch?v=RbxKgjjRZeY).
+Photo 1: own image, saved in images/upa/trap and roll - trap.png.
