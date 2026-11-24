@@ -47,9 +47,10 @@ Keep your weight back over your hips and whizzer the arm.
 
 ## Images
 
-![1. Underhook their trapped leg (Alavanca)](https://i.ytimg.com/vi/mE12o465CHk/hq1.jpg)
-![2. Turn your head and shoulders under their hips (Alavanca)](https://i.ytimg.com/vi/mE12o465CHk/hq2.jpg)
-![3. Hug the leg with both arms (Alavanca)](https://i.ytimg.com/vi/mE12o465CHk/hqdefault.jpg)
+![1. Underhook their trapped leg](needed)
+![2. Turn your head and shoulders under their hips](needed)
+![3. Hug the leg with both arms](needed)
+![4. Keep your legs locked around it](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=mE12o465CHk
 ## Notes
 
 Video: "Deep Half-Guard to the Truck" (Alavanca).
-
-Photos 1, 2, 3: frames from "Deep Half-Guard to the Truck", Alavanca (https://www.youtube.com/watch?v=mE12o465CHk).

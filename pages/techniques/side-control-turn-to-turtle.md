@@ -47,9 +47,10 @@ Follow and take the back or break them down.
 
 ## Images
 
-![1. Frame under their side control (Mario Roberto Jiu-Jitsu Academy)](https://i.ytimg.com/vi/enrE7tLX3bA/hq1.jpg)
-![3. Turn onto your knees (Mario Roberto Jiu-Jitsu Academy)](https://i.ytimg.com/vi/enrE7tLX3bA/hq2.jpg)
-![4. In turtle, elbows to knees (Mario Roberto Jiu-Jitsu Academy)](https://i.ytimg.com/vi/enrE7tLX3bA/hq3.jpg)
+![1. Frame and bridge](needed)
+![2. Shrimp away](needed)
+![3. Turn onto your knees](needed)
+![4. Elbows to knees, chin down](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=enrE7tLX3bA
 ## Notes
 
 Video: "Side Control Escape (To Near Side Turtle) - Brazilian Jiu-Jitsu [MRJJA IN CLASS 006]" (Mario Roberto Jiu-Jitsu Academy).
-
-Photos 1, 3, 4: frames from "Side Control Escape (To Near Side Turtle) - Brazilian Jiu-Jitsu [MRJJA IN CLASS 006]", Mario Roberto Jiu-Jitsu Academy (https://www.youtube.com/watch?v=enrE7tLX3bA).

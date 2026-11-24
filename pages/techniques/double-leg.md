@@ -52,9 +52,10 @@ Once the shot is stopped, follow up with a [[Snap down]] to the [[Top front head
 
 ## Images
 
-![1. Set up with a level change (Gracie Barra Jiu-jitsu)](https://i.ytimg.com/vi/IfDaAG6Fo0s/hq1.jpg)
-![2. Penetration step deep between their feet (Gracie Barra Jiu-jitsu)](https://i.ytimg.com/vi/IfDaAG6Fo0s/hqdefault.jpg)
-![3. Drive forward and turn the corner to land on top (Gracie Barra Jiu-jitsu)](https://i.ytimg.com/vi/IfDaAG6Fo0s/hq3.jpg)
+![1. Set up with a level change](needed)
+![2. Penetration step deep between their feet](needed)
+![3. Wrap behind both knees with your head on their side](needed)
+![4. Drive forward and turn the corner to land on top](needed)
 
 ## Video
 
@@ -63,5 +64,3 @@ https://www.youtube.com/watch?v=IfDaAG6Fo0s
 ## Notes
 
 Video: "Double Leg Takedown" (Gracie Barra Jiu-jitsu).
-
-Photos 1, 2, 3: frames from "Double Leg Takedown", Gracie Barra Jiu-jitsu (https://www.youtube.com/watch?v=IfDaAG6Fo0s).

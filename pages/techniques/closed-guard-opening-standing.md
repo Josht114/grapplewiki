@@ -47,9 +47,10 @@ Keep your ankles locked and break their posture as they stand.
 
 ## Images
 
-![1. Establish posture with grips on their chest or belt (Gallerr)](https://i.ytimg.com/vi/ec86htjh3eY/hq1.jpg)
-![2. Step one foot up, then the other (Gallerr)](https://i.ytimg.com/vi/ec86htjh3eY/hq3.jpg)
-![3. Keep your back straight and hips forward (Gallerr)](https://i.ytimg.com/vi/ec86htjh3eY/hqdefault.jpg)
+![1. Establish posture with grips on their chest or belt](needed)
+![2. Step one foot up, then the other](needed)
+![3. Keep your back straight and hips forward](needed)
+![4. Step back or drop a knee to break the locked ankles](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=ec86htjh3eY
 ## Notes
 
 Video: "BJJ: Renzo Gracie's tip for opening any guard" (Gallerr).
-
-Photos 1, 2: frames from "BJJ: Renzo Gracie's tip for opening any guard", Gallerr (https://www.youtube.com/watch?v=ec86htjh3eY). Photo 3: thumbnail from "BJJ: Renzo Gracie's tip for opening any guard", Gallerr (https://www.youtube.com/watch?v=ec86htjh3eY).

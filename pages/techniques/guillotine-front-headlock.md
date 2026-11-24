@@ -51,9 +51,10 @@ Clear the choking arm from your neck and keep your head moving toward the chokin
 
 ## Images
 
-![1. Wrap your arm under their chin from the front headlock (Rich Castro)](https://i.ytimg.com/vi/l4FWC_kYKas/hq3.jpg)
-![2. Sprawl your hips back to keep their weight on their knees (Rich Castro)](https://i.ytimg.com/vi/l4FWC_kYKas/hqdefault.jpg)
-![3. Lift your elbow and arch to finish, or pull guard to tighten (Bernardo Faria BJJ Fanatics)](https://i.ytimg.com/vi/0FO10dH_3RU/hqdefault.jpg)
+![1. Wrap your arm under their chin from the front headlock](needed)
+![2. Grip your wrist, or your own biceps for an arm-in version](needed)
+![3. Sprawl your hips back to keep their weight on their knees](needed)
+![4. Lift your elbow and arch to finish, or pull guard to tighten](needed)
 
 ## Video
 
@@ -62,5 +63,3 @@ https://www.youtube.com/watch?v=l4FWC_kYKas
 ## Notes
 
 Video: "High Elbow Guillotine from the Front Headlock" (Rich Castro).
-
-Photos 1, 2: frames from "High Elbow Guillotine from the Front Headlock", Rich Castro (https://www.youtube.com/watch?v=l4FWC_kYKas). Photo 3: frame from "How To Do The Perfect Guillotine From The Front Headlock by Giancarlo Bodoni", Bernardo Faria BJJ Fanatics (https://www.youtube.com/watch?v=0FO10dH_3RU).

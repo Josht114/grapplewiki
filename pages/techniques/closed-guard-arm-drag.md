@@ -48,9 +48,10 @@ Pull your elbow back and turn to face them.
 
 ## Images
 
-![1. Drag the arm across your body (Hurricane Jiu Jitsu)](https://i.ytimg.com/vi/eolJrphVaCU/hq2.jpg)
-![2. Open your guard and hip out (Hurricane Jiu Jitsu)](https://i.ytimg.com/vi/eolJrphVaCU/hq3.jpg)
-![4. Climb up onto their back (Knight Jiu-Jitsu)](https://i.ytimg.com/vi/6akdBshCAjE/hq3.jpg)
+![1. Grab their wrist and triceps](needed)
+![2. Drag the arm across your body](needed)
+![3. Open your guard and hip out](needed)
+![4. Climb to their back and insert hooks](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=eolJrphVaCU
 ## Notes
 
 Video: "Closed Guard: Arm Drag to the Back" (Hurricane Jiu Jitsu).
-
-Photos 1, 2: frames from "Closed Guard: Arm Drag to the Back", Hurricane Jiu Jitsu (https://www.youtube.com/watch?v=eolJrphVaCU). Photo 4: frame from "Arm Drag Back Take from Closed Guard", Knight Jiu-Jitsu (https://www.youtube.com/watch?v=6akdBshCAjE).

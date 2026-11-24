@@ -45,9 +45,9 @@ Turn into them as they walk around so they can't settle.
 
 ## Images
 
-![1. Start from side control with your hips low (Fuse Martial Arts & Fitness)](https://i.ytimg.com/vi/-O7SfSANtWU/hqdefault.jpg)
-![2. Walk your feet around past their head (JiuJitsuMania)](https://i.ytimg.com/vi/QoH_gJOxmLM/hqdefault.jpg)
-![3. Settle head-to-hips in north south (JiuJitsuMania)](https://i.ytimg.com/vi/QoH_gJOxmLM/hq2.jpg)
+![1. Keep your chest on theirs and your hips low](needed)
+![2. Walk your feet around past their head, keeping their arms away from it](needed)
+![3. Settle head-to-hips in north south](needed)
 
 ## Video
 
@@ -56,5 +56,3 @@ https://www.youtube.com/watch?v=QoH_gJOxmLM
 ## Notes
 
 Video: "Side Control Fundamentals: Transition to North South" (JiuJitsuMania).
-
-Photo 1: frame from "Top Side Control Drill: Side Control to North/South to Side Control", Fuse Martial Arts & Fitness (https://www.youtube.com/watch?v=-O7SfSANtWU). Photos 2, 3: frames from "Side Control Fundamentals: Transition to North South", JiuJitsuMania (https://www.youtube.com/watch?v=QoH_gJOxmLM).

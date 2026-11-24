@@ -48,9 +48,10 @@ Crossface and whizzer to stop the underhook, then flatten them.
 
 ## Images
 
-![1. Win the underhook and come up to your knees (Broadway JiuJitsu)](https://i.ytimg.com/vi/OAlwVyNmNqE/hq1.jpg)
-![2. Circle behind them, using the underhook to lift (Broadway JiuJitsu)](https://i.ytimg.com/vi/OAlwVyNmNqE/hq2.jpg)
-![3. Seatbelt and insert hooks (Broadway JiuJitsu)](https://i.ytimg.com/vi/OAlwVyNmNqE/hq3.jpg)
+![1. Win the underhook and come up to your knees](needed)
+![2. Keep your head tight to their chest](needed)
+![3. Circle behind them, using the underhook to lift](needed)
+![4. Seatbelt and insert hooks](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=OAlwVyNmNqE
 ## Notes
 
 Video: "The Bottom Half Guard to Dog Fight to Back Take" (Broadway JiuJitsu).
-
-Photos 1, 2, 3: frames from "The Bottom Half Guard to Dog Fight to Back Take", Broadway JiuJitsu (https://www.youtube.com/watch?v=OAlwVyNmNqE).

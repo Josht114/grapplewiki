@@ -47,9 +47,10 @@ Lift the hooked leg and step back.
 
 ## Images
 
-![1. Grip and push them back so they step (Shintaro Higashi)](https://i.ytimg.com/vi/tYP8JjuXClk/hq2.jpg)
-![2. Hook the inside of their leg with your leg (Shintaro Higashi)](https://i.ytimg.com/vi/tYP8JjuXClk/hq3.jpg)
-![3. Drive forward to land on top (Shintaro Higashi)](https://i.ytimg.com/vi/tYP8JjuXClk/hq1.jpg)
+![1. Grip and push them back so they step](needed)
+![2. Hook the inside of their leg with your leg](needed)
+![3. Sweep the leg out in a circle](needed)
+![4. Drive forward to land on top](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=tYP8JjuXClk
 ## Notes
 
 Video: "ouchi gari in depth" (Shintaro Higashi).
-
-Photos 1, 2, 3: frames from "ouchi gari in depth", Shintaro Higashi (https://www.youtube.com/watch?v=tYP8JjuXClk).

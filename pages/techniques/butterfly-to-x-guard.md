@@ -47,9 +47,10 @@ Keep your hips heavy and step out of the hooks.
 
 ## Images
 
-![1. Lift them with a butterfly hook (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/qLZU0Aw-m5U/hq1.jpg)
-![2. Slide under their hips (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/qLZU0Aw-m5U/hq2.jpg)
-![3. Set your X hooks (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/qLZU0Aw-m5U/hq3.jpg)
+![1. Lift them with a butterfly hook](needed)
+![2. Slide under their hips](needed)
+![3. Hug one leg](needed)
+![4. Set your X hooks](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=qLZU0Aw-m5U
 ## Notes
 
 Video: "Purple belt and up secret: Butterfly sweep to X guard!" (Matt Arroyo Jiu Jitsu).
-
-Photos 1, 2, 3: frames from "Purple belt and up secret: Butterfly sweep to X guard!", Matt Arroyo Jiu Jitsu (https://www.youtube.com/watch?v=qLZU0Aw-m5U).

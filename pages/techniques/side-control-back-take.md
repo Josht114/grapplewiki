@@ -48,10 +48,10 @@ Turn into them, not away, so you never show your back.
 
 ## Images
 
-![1. From side control, feel them start to turn away toward their knees (BJJ Fanatics)](https://i.ytimg.com/vi/k3-E9lVYN1A/hq1.jpg)
-![2. Follow the turn and get the seatbelt grip (Sticks and Stones BJJ)](https://i.ytimg.com/vi/GURKf2Jtvt0/hq2.jpg)
-![3. Insert your near hook as they come up (BJJ Fanatics)](https://i.ytimg.com/vi/k3-E9lVYN1A/hq2.jpg)
-![4. Roll to your side and get the second hook in: back mount (BJJ Fanatics)](https://i.ytimg.com/vi/k3-E9lVYN1A/hqdefault.jpg)
+![1. Feel them turn away toward their knees](needed)
+![2. Get a seatbelt grip as they turn](needed)
+![3. Insert your near hook as they come up](needed)
+![4. Roll to your side and insert the second hook](needed)
 
 ## Video
 
@@ -60,5 +60,3 @@ https://www.youtube.com/watch?v=k3-E9lVYN1A
 ## Notes
 
 Video: "Side Control to the Back by Roger Gracie" (BJJ Fanatics).
-
-Photos 1, 3, 4: frames from "Side Control to the Back by Roger Gracie", BJJ Fanatics (https://www.youtube.com/watch?v=k3-E9lVYN1A). Photo 2: frame from "2 Basic Side Control Back Takes: Exposing the back", Sticks and Stones BJJ (https://www.youtube.com/watch?v=GURKf2Jtvt0).

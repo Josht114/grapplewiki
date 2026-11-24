@@ -46,10 +46,10 @@ Stop them climbing high: keep your elbows tight and bridge when they move up.
 
 ## Images
 
-![1. Climb to high mount and push one arm across their face (Gracie Jiu-Jitsu Academy)](https://i.ytimg.com/vi/gc5YRdv-wSw/hq1.jpg)
-![2. Swing your leg over that arm and behind their neck (Gracie Jiu-Jitsu Academy)](https://i.ytimg.com/vi/gc5YRdv-wSw/hqdefault.jpg)
-![3. Lock the triangle with your other leg (Absolute MMA St Kilda)](https://i.ytimg.com/vi/Q0hYV74kWvU/hq1.jpg)
-![4. Pull their head up and squeeze, or roll for the arm bar (Gracie Jiu-Jitsu Academy)](https://i.ytimg.com/vi/gc5YRdv-wSw/hq2.jpg)
+![1. Climb to high mount and push one arm across their face](needed)
+![2. Swing your leg over that arm and behind their neck](needed)
+![3. Lock the triangle with your other leg](needed)
+![4. Pull their head up and squeeze, or roll for an arm bar](needed)
 
 ## Video
 
@@ -58,5 +58,3 @@ https://www.youtube.com/watch?v=gc5YRdv-wSw
 ## Notes
 
 Video: "Gracie Breakdown: Triangle Choke from the Mount" (Gracie Jiu-Jitsu Academy).
-
-Photos 1, 2, 4: frames from "Gracie Breakdown: Triangle Choke from the Mount", Gracie Jiu-Jitsu Academy (https://www.youtube.com/watch?v=gc5YRdv-wSw). Photo 3: frame from "Mounted triangle (Lachlan Giles)", Absolute MMA St Kilda (https://www.youtube.com/watch?v=Q0hYV74kWvU).

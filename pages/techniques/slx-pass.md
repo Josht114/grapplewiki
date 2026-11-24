@@ -49,9 +49,10 @@ Keep your single leg X hooks tight and keep extending to keep them off balance, 
 
 ## Images
 
-![1. Standing in their single leg X, trapped knee turned out (Ground Control MMA)](https://i.ytimg.com/vi/DYM3XRxmdZg/hq2.jpg)
-![3. Free the leg and come round (sequence, arrowed) (Ground Control MMA)](https://i.ytimg.com/vi/DYM3XRxmdZg/hqdefault.jpg)
-![4. Pass complete, chest down in side control (Ground Control MMA)](https://i.ytimg.com/vi/DYM3XRxmdZg/hq1.jpg)
+![1. Turn your trapped knee out and away from them](needed)
+![2. Push their foot off your hip](needed)
+![3. Pull your trapped leg free and step back](needed)
+![4. Step around their legs and drop into side control](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=DYM3XRxmdZg
 ## Notes
 
 Video: "How to Escape the Single Leg X" (Ground Control MMA).
-
-Photos 1, 3, 4: frame and thumbnails from "How to Escape the Single Leg X", Ground Control MMA (https://www.youtube.com/watch?v=DYM3XRxmdZg).

@@ -47,9 +47,10 @@ Don't post your hands on the mat; grab your belt if they lock the grip.
 
 ## Images
 
-![1. Sit up and thread your arm over their shoulder (BJJ Fanatics)](https://i.ytimg.com/vi/7lQ8eiYh-5w/hq1.jpg)
-![2. Lock your own wrist (BJJ Fanatics)](https://i.ytimg.com/vi/7lQ8eiYh-5w/hqdefault.jpg)
-![3. Fall back, hip out, and rotate the arm behind them (BJJ Fanatics)](https://i.ytimg.com/vi/7lQ8eiYh-5w/hq2.jpg)
+![1. Grip their wrist as they post](needed)
+![2. Sit up and thread your arm over their shoulder](needed)
+![3. Lock your own wrist](needed)
+![4. Fall back, hip out, and rotate the arm behind them](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=7lQ8eiYh-5w
 ## Notes
 
 Video: "Kimura from Closed Guard by Roy Dean" (BJJ Fanatics).
-
-Photos 1, 2, 3: frames from "Kimura from Closed Guard by Roy Dean", BJJ Fanatics (https://www.youtube.com/watch?v=7lQ8eiYh-5w).

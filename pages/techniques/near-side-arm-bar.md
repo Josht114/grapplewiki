@@ -46,10 +46,10 @@ Push the knee with your forearm and elbow tight, not a straight arm.
 
 ## Images
 
-![1. They push your knee with their near arm (Affinity Academy)](https://i.ytimg.com/vi/MHvgHY9m9qk/hq1.jpg)
-![2. Trap that arm against your body (Gorilla BJJ Academy)](https://i.ytimg.com/vi/91w2NdigMjk/hq1.jpg)
-![3. Step around their head, keeping the knee heavy (Affinity Academy)](https://i.ytimg.com/vi/MHvgHY9m9qk/hq2.jpg)
-![4. Sit back, pinch your knees and lift your hips (Affinity Academy)](https://i.ytimg.com/vi/MHvgHY9m9qk/hq3.jpg)
+![1. Wait for them to push the knee with their near arm](needed)
+![2. Trap that arm against your body](needed)
+![3. Step around their head, keeping the knee heavy](needed)
+![4. Sit back, pinch your knees and lift your hips](needed)
 
 ## Video
 
@@ -58,5 +58,3 @@ https://www.youtube.com/watch?v=MHvgHY9m9qk
 ## Notes
 
 Video: "Knee on Belly Armbar: Near Side" (Affinity Academy).
-
-Photos 1, 3, 4: frames from "Knee on Belly Armbar: Near Side", Affinity Academy (https://www.youtube.com/watch?v=MHvgHY9m9qk). Photo 2: frame from "Near Side Armbar, Knee on Belly", Gorilla BJJ Academy (https://www.youtube.com/watch?v=91w2NdigMjk).

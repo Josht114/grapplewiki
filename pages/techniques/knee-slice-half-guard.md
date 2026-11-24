@@ -47,9 +47,10 @@ Win the underhook and come up to your side, or switch to a knee shield.
 
 ## Images
 
-![1. Get the crossface and underhook (Ante Dzolic)](https://i.ytimg.com/vi/1guSnAAkPC0/hqdefault.jpg)
-![2. Knee pointed across their thigh, up on your toes (Smith Brazilian Jiu-jitsu)](https://i.ytimg.com/vi/kI6gbksdeoE/hq2.jpg)
-![3. Slice your knee across toward the mat (Ante Dzolic)](https://i.ytimg.com/vi/1guSnAAkPC0/hq3.jpg)
+![1. Get the crossface and underhook](needed)
+![2. Free your knee slightly so it points across their thigh](needed)
+![3. Slice your knee across toward the mat](needed)
+![4. Pull your trailing foot free and settle in side control](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=1guSnAAkPC0
 ## Notes
 
 Video: "BJJ Basics: Passing the Half Guard Knee Cut" (Ante Dzolic).
-
-Photos 1, 3: frames from "BJJ Basics: Passing the Half Guard Knee Cut", Ante Dzolic (https://www.youtube.com/watch?v=1guSnAAkPC0). Photo 2: frame from "Half guard pass knee slice same side", Smith Brazilian Jiu-jitsu (https://www.youtube.com/watch?v=kI6gbksdeoE).

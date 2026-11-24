@@ -50,9 +50,10 @@ Keep the reverse De La Riva hook connected and your grip on their far leg so the
 
 ## Images
 
-![1. In their reverse De La Riva: grip the hooking foot (Hayabusa)](https://i.ytimg.com/vi/l_t5hRzQMt4/hq2.jpg)
-![3. Knee turned in and down as you come round (Gameness Sports)](https://i.ytimg.com/vi/mbb0ShUw2S4/hqdefault.jpg)
-![4. Drop into side control (Gameness Sports)](https://i.ytimg.com/vi/mbb0ShUw2S4/hq3.jpg)
+![1. Grip their reverse DLR foot at the ankle](needed)
+![2. Push the hook off the inside of your leg](needed)
+![3. Turn your lead knee in and drop it to the mat](needed)
+![4. Pin their far leg and step around to side control](needed)
 
 ## Video
 
@@ -61,5 +62,3 @@ https://www.youtube.com/watch?v=l_t5hRzQMt4
 ## Notes
 
 Video: "Jiu Jitsu with Marcus Almeida: Reverse De La Riva Guard Pass" (Hayabusa).
-
-Photo 1: frame from "Jiu Jitsu with Marcus Almeida: Reverse De La Riva Guard Pass", Hayabusa (https://www.youtube.com/watch?v=l_t5hRzQMt4). Photos 3, 4: thumbnail and frames from "How to pass the guard from reverse De La Riva", Gameness Sports (https://www.youtube.com/watch?v=mbb0ShUw2S4).

@@ -52,9 +52,10 @@ Square up and keep your head up so they can't circle behind you.
 
 ## Images
 
-![1. Keep their head down with your chest and arm (Grappling Theory)](https://i.ytimg.com/vi/HWpzOku7qC4/hq1.jpg)
-![3. Walk your feet around toward their hip (Grappling Theory)](https://i.ytimg.com/vi/HWpzOku7qC4/hq3.jpg)
-![4. Land with your chest on their back (Seth Ciasulli)](https://i.ytimg.com/vi/54fpGBPYMRA/hqdefault.jpg)
+![1. Keep their head down with your chest and arm](needed)
+![2. Block their near arm so they can't grab your leg](needed)
+![3. Walk your feet around toward their hip](needed)
+![4. Land with your chest on their back](needed)
 
 ## Video
 
@@ -63,5 +64,3 @@ https://www.youtube.com/watch?v=HWpzOku7qC4
 ## Notes
 
 Video: "The Front Headlock Might Be the Best System in No-Gi" (Grappling Theory).
-
-Photos 1, 3: frames from "The Front Headlock Might Be the Best System in No-Gi", Grappling Theory (https://www.youtube.com/watch?v=HWpzOku7qC4). Photo 4: thumbnail from "Front Headlock - Head Under, Grab Hip, Go Behind", Seth Ciasulli (https://www.youtube.com/watch?v=54fpGBPYMRA).

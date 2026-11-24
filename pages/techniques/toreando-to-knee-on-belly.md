@@ -48,9 +48,10 @@ Turn into them as they circle and push the knee down.
 
 ## Images
 
-![1. Push their legs aside with the toreando grips (Ultra Jiu Jitsu Academy)](https://i.ytimg.com/vi/jwRqjAZetmg/hqdefault.jpg)
-![2. Circle around to their side (Ultra Jiu Jitsu Academy)](https://i.ytimg.com/vi/jwRqjAZetmg/hq2.jpg)
-![3. Drop your knee onto their belly (Ultra Jiu Jitsu Academy)](https://i.ytimg.com/vi/jwRqjAZetmg/hq3.jpg)
+![1. Push their legs aside with the toreando grips](needed)
+![2. Circle around to their side](needed)
+![3. Drop your knee onto their belly](needed)
+![4. Post the far leg wide](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=jwRqjAZetmg
 ## Notes
 
 Video: "Torreando to Knee Belly: BJJ Drills" (Ultra Jiu Jitsu Academy).
-
-Photos 1, 2, 3: frames from "Torreando to Knee Belly: BJJ Drills", Ultra Jiu Jitsu Academy (https://www.youtube.com/watch?v=jwRqjAZetmg).

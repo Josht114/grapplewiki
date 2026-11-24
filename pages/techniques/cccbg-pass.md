@@ -49,9 +49,10 @@ Keep the cuff and collar grips tight and keep your foot on their bicep so they c
 
 ## Images
 
-![1. Their foot on your bicep with sleeve and collar grips: strip the cuff grip first (JonThomasBJJ Plus)](https://i.ytimg.com/vi/h_fK_V560K0/hq1.jpg)
-![4. Drop into side control, knee into the armpit space (JonThomasBJJ Plus)](https://i.ytimg.com/vi/h_fK_V560K0/hq2.jpg)
-![4. Settled in side control after the pass (Rituals Jiu Jitsu)](https://i.ytimg.com/vi/RpcEpvIITdY/hqdefault.jpg)
+![1. Strip the cuff grip before anything else](needed)
+![2. Posture up and free your collar grip](needed)
+![3. Pin the foot on your bicep to the mat](needed)
+![4. Step around to the side of the pinned leg and drop to side control](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=h_fK_V560K0
 ## Notes
 
 Video: "How to Pass the Collar and Sleeve Guard in Jiu Jitsu" (JonThomasBJJ Plus).
-
-Photos 1, 4: frames from "How to Pass the Collar and Sleeve Guard in Jiu Jitsu", JonThomasBJJ Plus (https://www.youtube.com/watch?v=h_fK_V560K0). Photo 4: thumbnail from "How to Pass Collar and Sleeve Guard", Rituals Jiu Jitsu (https://www.youtube.com/watch?v=RpcEpvIITdY).

@@ -46,9 +46,10 @@ Keep your chin down and hand-fight so the forearm can't settle across your neck.
 
 ## Images
 
-![1. Slide the choking arm across their neck as far as you can (Cosens MMA LLC)](https://i.ytimg.com/vi/Sb-atqD_TqQ/hq1.jpg)
-![2. Squeeze your elbow and chest together (Cosens MMA LLC)](https://i.ytimg.com/vi/Sb-atqD_TqQ/hq2.jpg)
-![3. Lean back and tighten (Cosens MMA LLC)](https://i.ytimg.com/vi/Sb-atqD_TqQ/hq3.jpg)
+![1. Slide the choking arm across their neck as far as you can](needed)
+![2. Put the hand on their far shoulder or behind their head](needed)
+![3. Squeeze your elbow and chest together](needed)
+![4. Lean back and tighten](needed)
 
 ## Video
 
@@ -57,5 +58,3 @@ https://www.youtube.com/watch?v=Sb-atqD_TqQ
 ## Notes
 
 Video: "Short Choke from Back Position (Jiu Jitsu)" (Cosens MMA LLC).
-
-Photos 1, 2, 3: frames from "Short Choke from Back Position (Jiu Jitsu)", Cosens MMA LLC (https://www.youtube.com/watch?v=Sb-atqD_TqQ).

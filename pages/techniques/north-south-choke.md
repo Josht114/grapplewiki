@@ -46,9 +46,9 @@ Keep your near arm inside and turn toward the opponent so their chest can't seal
 
 ## Images
 
-![1. Thread an arm under their neck and grip near their armpit (BJJ Fanatics)](https://i.ytimg.com/vi/HuwV3-g2knA/hq2.jpg)
-![2. Line up the side of your chest with their neck (BJJ Fanatics)](https://i.ytimg.com/vi/HuwV3-g2knA/hq3.jpg)
-![3. Drop your hips and sprawl to close the choke (BJJ Fanatics)](https://i.ytimg.com/vi/HuwV3-g2knA/hqdefault.jpg)
+![1. Thread an arm under their neck and grip near their armpit](needed)
+![2. Line up the side of your chest with their neck](needed)
+![3. Drop your hips and sprawl to close the choke](needed)
 
 ## Video
 
@@ -57,5 +57,3 @@ https://www.youtube.com/watch?v=HuwV3-g2knA
 ## Notes
 
 Video: "North/South Strangle - Finishing With 2 Hands by John Danaher" (BJJ Fanatics).
-
-Photos 1, 2, 3: frames from "North/South Strangle - Finishing With 2 Hands by John Danaher", BJJ Fanatics (https://www.youtube.com/watch?v=HuwV3-g2knA).

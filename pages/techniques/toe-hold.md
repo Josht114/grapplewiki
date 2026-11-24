@@ -44,9 +44,9 @@ Point the toes and turn with the twist, then grab their grip.
 
 ## Images
 
-![1. In 50/50, grip the outside of their foot (Rodrigo Comprido)](https://i.ytimg.com/vi/fqyJDRRcKBU/hq3.jpg)
-![2. Figure-four grip on the foot (Pica Pau Jiu Jitsu & Grappling)](https://i.ytimg.com/vi/h_BYuPlK7HE/hqdefault.jpg)
-![3. Toe hold applied from 50/50 (Bernardo Faria BJJ Fanatics)](https://i.ytimg.com/vi/MbQ5f8rQiTM/hqdefault.jpg)
+![1. Grip the outside of the foot with your same-side hand](needed)
+![2. Thread the other arm behind the ankle and grab your wrist](needed)
+![3. Pull the foot toward their hip and rotate inward](needed)
 
 ## Video
 
@@ -55,5 +55,3 @@ https://www.youtube.com/watch?v=fqyJDRRcKBU
 ## Notes
 
 Video: "Rodrigo "Comprido" Medeiros, ToeHold From 50/50 Guard" (Rodrigo Comprido).
-
-Photo 1: frame from "Rodrigo "Comprido" Medeiros, ToeHold From 50/50 Guard", Rodrigo Comprido (https://www.youtube.com/watch?v=fqyJDRRcKBU). Photo 2: thumbnail from "Toe Hold Leg Lock Submission: Ashi, Single Leg X, 50/50 & More!", Pica Pau Jiu Jitsu & Grappling (https://www.youtube.com/watch?v=h_BYuPlK7HE). Photo 3: thumbnail from "Great Leg Attack Sequence From 50/50 (Toe Hold & Knee Bar) by Tarsis Humphreys", Bernardo Faria BJJ Fanatics (https://www.youtube.com/watch?v=MbQ5f8rQiTM).

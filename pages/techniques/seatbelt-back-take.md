@@ -50,10 +50,10 @@ Keep your elbows tight and turn into them before the hooks go in.
 
 ## Images
 
-![1. Seatbelt: one arm over the shoulder, one under the armpit, hands locked (Submission Systems American Jiu-Jitsu)](https://i.ytimg.com/vi/Bm6bAMVyxk0/hqdefault.jpg)
-![2. Glue your chest to their back (Submission Systems American Jiu-Jitsu)](https://i.ytimg.com/vi/Bm6bAMVyxk0/hq1.jpg)
-![3. Insert the near hook (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/bC5_zvXCtlY/hq2.jpg)
-![4. Roll to your underhook side and insert the second hook (BIG OSS Jiu-Jitsu Channel)](https://i.ytimg.com/vi/bC5_zvXCtlY/hq3.jpg)
+![1. Seatbelt: one arm over the shoulder, one under the armpit, hands locked](needed)
+![2. Glue your chest to their back](needed)
+![3. Insert the near hook](needed)
+![4. Roll to your underhook side and insert the second hook](needed)
 
 ## Video
 
@@ -62,5 +62,3 @@ https://www.youtube.com/watch?v=Bm6bAMVyxk0
 ## Notes
 
 Video: "Seatbelt Back Take - Turtle Curriculum" (Submission Systems American Jiu-Jitsu).
-
-Photos 1, 2: frames from "Seatbelt Back Take - Turtle Curriculum", Submission Systems American Jiu-Jitsu (https://www.youtube.com/watch?v=Bm6bAMVyxk0). Photos 3, 4: frames from "How to Take the Back From Turtle Like a Black Belt!", BIG OSS Jiu-Jitsu Channel (https://www.youtube.com/watch?v=bC5_zvXCtlY).

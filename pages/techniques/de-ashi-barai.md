@@ -49,9 +49,10 @@ Keep your steps short and your weight centred.
 
 ## Images
 
-![1. Move them so they step toward you (Brian Glick)](https://i.ytimg.com/vi/Z3j4q0UWvFc/hq1.jpg)
-![2. Sweep the foot with the sole of your foot (Brian Glick)](https://i.ytimg.com/vi/Z3j4q0UWvFc/hq2.jpg)
-![3. Pull their upper body down the same way (Brian Glick)](https://i.ytimg.com/vi/Z3j4q0UWvFc/hqdefault.jpg)
+![1. Move them so they step toward you](needed)
+![2. Time it as their foot is about to land](needed)
+![3. Sweep the foot with the sole of your foot](needed)
+![4. Pull their upper body down the same way](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=Z3j4q0UWvFc
 ## Notes
 
 Video: "How to Hit a No Gi Foot sweep: De-Ashi Barai (BJJ/Judo/Jiu-Jitsu)" (Brian Glick).
-
-Photos 1, 2, 3: frames from "How to Hit a No Gi Foot sweep: De-Ashi Barai (BJJ/Judo/Jiu-Jitsu)", Brian Glick (https://www.youtube.com/watch?v=Z3j4q0UWvFc).

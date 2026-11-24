@@ -48,9 +48,10 @@ Turn to face the side they step to and keep your knees in front.
 
 ## Images
 
-![1. Grip their knees or pants (Williams Jiu Jitsu)](https://i.ytimg.com/vi/KaQAG_wuvNo/hq1.jpg)
-![2. Step your far leg across in front of them (Williams Jiu Jitsu)](https://i.ytimg.com/vi/KaQAG_wuvNo/hq2.jpg)
-![3. Drop your knee and settle into side control (Williams Jiu Jitsu)](https://i.ytimg.com/vi/KaQAG_wuvNo/hq3.jpg)
+![1. Grip their knees or pants](needed)
+![2. Fake a pass to one side](needed)
+![3. Step your far leg across in front of them](needed)
+![4. Drop your knee and settle into side control](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=KaQAG_wuvNo
 ## Notes
 
 Video: "X Pass for BJJ (2019)" (Williams Jiu Jitsu).
-
-Photos 1, 2, 3: frames from "X Pass for BJJ (2019)", Williams Jiu Jitsu (https://www.youtube.com/watch?v=KaQAG_wuvNo).

@@ -48,10 +48,10 @@ Follow them down and start passing immediately.
 
 ## Images
 
-![1. Get grips first: collar and sleeve, or a collar tie (Alliance Jiu Jitsu Knoxville)](https://i.ytimg.com/vi/JDJYWBbzspQ/hq1.jpg)
-![2. Put one foot on their hip (Alliance Jiu Jitsu Knoxville)](https://i.ytimg.com/vi/JDJYWBbzspQ/hq2.jpg)
-![3. Sit down close to them, not far away (The Grapple Lab)](https://i.ytimg.com/vi/4R4bGO1c4CU/hqdefault.jpg)
-![4. Close your guard as you land (UAE Jiu Jitsu Federation)](https://i.ytimg.com/vi/sWK9QdT0I_M/hq2.jpg)
+![1. Get grips first: collar and sleeve, or a collar tie](needed)
+![2. Put one foot on their hip](needed)
+![3. Sit down close to them, not far away](needed)
+![4. Close your guard as you land](needed)
 
 ## Video
 
@@ -60,5 +60,3 @@ https://www.youtube.com/watch?v=JDJYWBbzspQ
 ## Notes
 
 Video: "BJJ for Beginners: How To Properly Pull Guard" (Alliance Jiu Jitsu Knoxville).
-
-Photos 1, 2: frames from "BJJ for Beginners: How To Properly Pull Guard", Alliance Jiu Jitsu Knoxville (https://www.youtube.com/watch?v=JDJYWBbzspQ). Photo 3: thumbnail from "How To GUARD PULL Correctly", The Grapple Lab (https://www.youtube.com/watch?v=4R4bGO1c4CU). Photo 4: frame from "06 - Pulling Closed Guard from Standing", UAE Jiu Jitsu Federation (https://www.youtube.com/watch?v=sWK9QdT0I_M).

@@ -66,10 +66,10 @@ Get your trapped arm and head free before the grip locks, and never roll for the
 
 ## Images
 
-![1. Thread your arm under their near arm and across the neck (LI MMA)](https://i.ytimg.com/vi/Pc2yhqtRxJA/hq2.jpg)
-![2. Lock onto your other biceps (LI MMA)](https://i.ytimg.com/vi/Pc2yhqtRxJA/hqdefault.jpg)
-![3. Walk toward their head and flatten them out (Chewjitsu)](https://i.ytimg.com/vi/kc8j-YrtRVM/hq1.jpg)
-![4. Squeeze, sprawling your hips to the mat (Hurricane Jiu Jitsu)](https://i.ytimg.com/vi/nkVrugu4yLY/hqdefault.jpg)
+![1. Thread your arm under their near arm and across the neck](needed)
+![2. Lock onto your other biceps](needed)
+![3. Walk toward their head and flatten them out](needed)
+![4. Squeeze, sprawling your hips to the mat](needed)
 
 ## Video
 
@@ -80,5 +80,3 @@ https://www.youtube.com/watch?v=Pc2yhqtRxJA
 Also common from top half guard when they come up on an underhook.
 
 Video: "How to do a D'arce choke from front headlock" (LI MMA).
-
-Photos 1, 2: frames from "How to do a D'arce choke from front headlock", LI MMA (https://www.youtube.com/watch?v=Pc2yhqtRxJA). Photo 3: frame from "Finish More Subs in Front Headlock with This 3 Choke Attack Sequence", Chewjitsu (https://www.youtube.com/watch?v=kc8j-YrtRVM). Photo 4: frame from "Four Horseman of the Front Headlock: Anaconda, Arm-In Guillotine, D'arce, Japanese Necktie", Hurricane Jiu Jitsu (https://www.youtube.com/watch?v=nkVrugu4yLY).

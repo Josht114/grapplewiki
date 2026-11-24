@@ -47,10 +47,10 @@ Post your free hand wide and keep your posture, then pull the arm free if they s
 
 ## Images
 
-![1. Sit up onto your elbow, then your hand (The Grappling Academy)](https://i.ytimg.com/vi/CCos35cv5T8/hq1.jpg)
-![2. Reach your other arm over their shoulder (The Grappling Academy)](https://i.ytimg.com/vi/CCos35cv5T8/hq2.jpg)
-![3. Bump your hips up and into them to roll them over (The Grappling Academy)](https://i.ytimg.com/vi/CCos35cv5T8/hq3.jpg)
-![4. They post their hand: switch to the kimura (The Grappling Academy)](https://i.ytimg.com/vi/CCos35cv5T8/hqdefault.jpg)
+![1. Sit up onto your elbow, then your hand](needed)
+![2. Reach your other arm over their shoulder](needed)
+![3. Bump your hips up and into them to roll them over](needed)
+![4. If they post their hand, switch to the kimura](needed)
 
 ## Video
 
@@ -59,5 +59,3 @@ https://www.youtube.com/watch?v=CCos35cv5T8
 ## Notes
 
 Video: "The Kimura Hip Bump Sweep - Kimura Combo" (The Grappling Academy).
-
-Photos 1, 2, 3: frames from "The Kimura Hip Bump Sweep - Kimura Combo", The Grappling Academy (https://www.youtube.com/watch?v=CCos35cv5T8). Photo 4: thumbnail from "The Kimura Hip Bump Sweep - Kimura Combo", The Grappling Academy (https://www.youtube.com/watch?v=CCos35cv5T8).

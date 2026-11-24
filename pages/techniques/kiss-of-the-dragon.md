@@ -48,10 +48,10 @@ Keep your hips back and your base wide, and kill their reverse De La Riva hook b
 
 ## Images
 
-![1. Reverse De La Riva hook on their lead leg (London Grapple)](https://i.ytimg.com/vi/L37LMsK8dA0/hq1.jpg)
-![2. Invert, bringing your head through toward their far heel (London Grapple)](https://i.ytimg.com/vi/L37LMsK8dA0/hqdefault.jpg)
-![3. Come out behind them between their legs (London Grapple)](https://i.ytimg.com/vi/L37LMsK8dA0/hq3.jpg)
-![4. Seatbelt from behind (Impact Hillsboro)](https://i.ytimg.com/vi/bliBPlmMduo/hqdefault.jpg)
+![1. Reverse DLR hook with a grip on the far leg](needed)
+![2. Invert, bringing your head toward their far heel](needed)
+![3. Slide between their legs to come out behind them](needed)
+![4. Seatbelt and insert hooks](needed)
 
 ## Video
 
@@ -60,5 +60,3 @@ https://www.youtube.com/watch?v=L37LMsK8dA0
 ## Notes
 
 Video: "Kiss of the Dragon Back Take - Ross Nicholls" (London Grapple).
-
-Photos 1, 2, 3: frame and thumbnails from "Kiss of the Dragon Back Take - Ross Nicholls", London Grapple (https://www.youtube.com/watch?v=L37LMsK8dA0). Photo 4: thumbnail from "Kiss of the Dragon (reverse De La Rive back take).", Impact Hillsboro (https://www.youtube.com/watch?v=bliBPlmMduo).

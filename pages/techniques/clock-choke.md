@@ -52,9 +52,10 @@ Block the collar grip, and turn or sit out toward the choke before they walk aro
 
 ## Images
 
-![1. Feed a deep collar grip under their neck (Rituals Jiu Jitsu)](https://i.ytimg.com/vi/1qVlaITDNGI/hq2.jpg)
-![3. Sprawl your weight onto their back (John Machado)](https://i.ytimg.com/vi/_qmq81d5X0M/hq2.jpg)
-![4. Walk your legs around toward their head to tighten (Rituals Jiu Jitsu)](https://i.ytimg.com/vi/1qVlaITDNGI/hqdefault.jpg)
+![1. Feed a deep collar grip under their neck](needed)
+![2. Block their arm with your other hand](needed)
+![3. Sprawl your weight onto their back](needed)
+![4. Walk your legs around toward their head to tighten](needed)
 
 ## Video
 
@@ -63,5 +64,3 @@ https://www.youtube.com/watch?v=1qVlaITDNGI
 ## Notes
 
 Video: "BJJ Basics How to do a Clock Choke from Turtle Position" (Rituals Jiu Jitsu).
-
-Photos 1, 3: frames from "BJJ Basics How to do a Clock Choke from Turtle Position", Rituals Jiu Jitsu (https://www.youtube.com/watch?v=1qVlaITDNGI). Photo 2: frame from "Secrets of Turtle Clock Choke", John Machado (https://www.youtube.com/watch?v=_qmq81d5X0M).

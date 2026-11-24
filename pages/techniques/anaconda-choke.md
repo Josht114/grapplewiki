@@ -56,10 +56,10 @@ Get your trapped arm and head free before the grip locks, and never roll for the
 
 ## Images
 
-![1. Shoot your arm under their neck and through their far armpit (The B-Team)](https://i.ytimg.com/vi/OWVMvV4gmIo/hq2.jpg)
-![2. Lock the arm-in grip on your biceps (The B-Team)](https://i.ytimg.com/vi/OWVMvV4gmIo/hqdefault.jpg)
-![3. Roll toward the trapped arm, under them (middle panel; Absolute MMA St Kilda)](https://i.ytimg.com/vi/AAC_xOZSz9I/hqdefault.jpg)
-![4. Walk your feet toward their hips and squeeze (Absolute MMA St Kilda)](https://i.ytimg.com/vi/AAC_xOZSz9I/hq2.jpg)
+![1. Shoot your arm under their neck and through their far armpit](needed)
+![2. Lock the arm-in grip on your biceps](needed)
+![3. Roll toward the trapped arm, under them](needed)
+![4. Walk your feet toward their hips and squeeze](needed)
 
 ## Video
 
@@ -68,5 +68,3 @@ https://www.youtube.com/watch?v=AAC_xOZSz9I
 ## Notes
 
 Video: "Anaconda Choke from Front Headlock" (Absolute MMA St Kilda).
-
-Photos 1, 2: frames from "Best No-Gi Submission for Wrestlers: The Anaconda Choke", The B-Team (https://www.youtube.com/watch?v=OWVMvV4gmIo). Photos 3, 4: thumbnail and frame from "Anaconda Choke from Front Headlock", Absolute MMA St Kilda (https://www.youtube.com/watch?v=AAC_xOZSz9I).

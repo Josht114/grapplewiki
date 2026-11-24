@@ -47,10 +47,10 @@ Strip the collar grip and stop the opponent getting the angle for the bow and ar
 
 ## Images
 
-![1. Get a deep collar grip with your choking hand (Evolve Mixed Martial Arts)](https://i.ytimg.com/vi/xqNhZVNhxnE/hq1.jpg)
-![2. Grab their pants at the knee with the other hand (Evolve Mixed Martial Arts)](https://i.ytimg.com/vi/xqNhZVNhxnE/hq3.jpg)
-![3. Swing your leg over their shoulder and turn to the side (Evolve Mixed Martial Arts)](https://i.ytimg.com/vi/xqNhZVNhxnE/hq2.jpg)
-![4. Stretch back with the collar and pull the leg toward you (Evolve Mixed Martial Arts)](https://i.ytimg.com/vi/xqNhZVNhxnE/hqdefault.jpg)
+![1. Get a deep collar grip with your choking hand](needed)
+![2. Grab their pants at the knee with the other hand](needed)
+![3. Swing your leg over their shoulder and turn to the side](needed)
+![4. Stretch back with the collar and pull the leg toward you](needed)
 
 ## Video
 
@@ -59,5 +59,3 @@ https://www.youtube.com/watch?v=xqNhZVNhxnE
 ## Notes
 
 Video: "BJJ" (Evolve Mixed Martial Arts).
-
-Photos 1–4: frames and thumbnail from "BJJ", Evolve Mixed Martial Arts (https://www.youtube.com/watch?v=xqNhZVNhxnE).

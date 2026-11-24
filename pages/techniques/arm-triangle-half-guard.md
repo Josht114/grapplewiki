@@ -47,9 +47,10 @@ Keep your elbow down and don't let the arm cross.
 
 ## Images
 
-![1. Push their arm across their face (CorePRO BJJ)](https://i.ytimg.com/vi/QDdbcvlTcSA/hq1.jpg)
-![2. Free your leg if possible (CorePRO BJJ)](https://i.ytimg.com/vi/QDdbcvlTcSA/hq2.jpg)
-![3. Drop your weight and squeeze (CorePRO BJJ)](https://i.ytimg.com/vi/QDdbcvlTcSA/hqdefault.jpg)
+![1. Push their arm across their face](needed)
+![2. Lock your hands behind their neck](needed)
+![3. Free your leg if possible](needed)
+![4. Drop your weight and squeeze](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=QDdbcvlTcSA
 ## Notes
 
 Video: "The Half Guard Arm Triangle System: Pass, Pin, Finish" (CorePRO BJJ).
-
-Photos 1, 2, 3: frames from "The Half Guard Arm Triangle System: Pass, Pin, Finish", CorePRO BJJ (https://www.youtube.com/watch?v=QDdbcvlTcSA).

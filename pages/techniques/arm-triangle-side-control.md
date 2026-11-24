@@ -50,9 +50,10 @@ Keep your arm from being pushed across your face, or turn into them before the g
 
 ## Images
 
-![1. Push their far arm across their face and pin it with your head (Howcast)](https://i.ytimg.com/vi/2kvM6ACOxHw/hq1.jpg)
-![2. Wrap behind the neck and lock your hands (Howcast)](https://i.ytimg.com/vi/2kvM6ACOxHw/hq3.jpg)
-![3. Walk your hips out to the far side, toward their head (Evolve Mixed Martial Arts)](https://i.ytimg.com/vi/8An-33URyYk/hq2.jpg)
+![1. Push their far arm across their face and put your head on it](needed)
+![2. Wrap your arm behind their neck and lock your hands](needed)
+![3. Walk your hips out toward their head to the far side](needed)
+![4. Drop your weight and squeeze your shoulder into their neck](needed)
 
 ## Video
 
@@ -61,5 +62,3 @@ https://www.youtube.com/watch?v=2kvM6ACOxHw
 ## Notes
 
 Video: "Arm Triangle Choke from Side Control" (Howcast).
-
-Photos 1, 2: frames from "Arm Triangle Choke from Side Control", Howcast (https://www.youtube.com/watch?v=2kvM6ACOxHw). Photo 3: frame from "How To Arm Triangle From Side Control", Evolve Mixed Martial Arts (https://www.youtube.com/watch?v=8An-33URyYk).

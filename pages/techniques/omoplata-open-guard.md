@@ -47,9 +47,10 @@ Roll forward before the lock is set, or posture up and grab their pants.
 
 ## Images
 
-![1. Control their wrist and angle off (JonThomasBJJ)](https://i.ytimg.com/vi/Zr6MasKm5_8/hqdefault.jpg)
-![2. Swing your leg over their shoulder from the outside (JonThomasBJJ)](https://i.ytimg.com/vi/Zr6MasKm5_8/hq1.jpg)
-![3. Sit up and face the same way as them (JonThomasBJJ)](https://i.ytimg.com/vi/Zr6MasKm5_8/hq2.jpg)
+![1. Control their wrist and angle off](needed)
+![2. Swing your leg over their shoulder from the outside](needed)
+![3. Sit up and face the same way as them](needed)
+![4. Control their hips and lean forward](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=Zr6MasKm5_8
 ## Notes
 
 Video: "Most effective Omoplata Set Up From Open Guard" (JonThomasBJJ).
-
-Photos 1, 2, 3: frames from "Most effective Omoplata Set Up From Open Guard", JonThomasBJJ (https://www.youtube.com/watch?v=Zr6MasKm5_8).

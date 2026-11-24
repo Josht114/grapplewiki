@@ -49,9 +49,10 @@ Step your leg over the chopping leg and keep your weight centred.
 
 ## Images
 
-![1. Grip collar and same-side sleeve (Cobrinha Brazilian Jiu-Jitsu & Fitness)](https://i.ytimg.com/vi/gE-B0IMK1CI/hq1.jpg)
-![2. Shrimp out and put your shin across their belly (Cobrinha Brazilian Jiu-Jitsu & Fitness)](https://i.ytimg.com/vi/gE-B0IMK1CI/hq2.jpg)
-![3. Drop your bottom leg against their knee (Cobrinha Brazilian Jiu-Jitsu & Fitness)](https://i.ytimg.com/vi/gE-B0IMK1CI/hq3.jpg)
+![1. Grip collar and same-side sleeve](needed)
+![2. Shrimp out and put your shin across their belly](needed)
+![3. Drop your bottom leg against their knee](needed)
+![4. Pull them forward, scissor your legs and roll to mount](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=gE-B0IMK1CI
 ## Notes
 
 Video: "Scissor Sweep From Overhook Closed Guard" (Cobrinha Brazilian Jiu-Jitsu & Fitness).
-
-Photos 1, 2, 3: frames from "Scissor Sweep From Overhook Closed Guard", Cobrinha Brazilian Jiu-Jitsu & Fitness (https://www.youtube.com/watch?v=gE-B0IMK1CI).

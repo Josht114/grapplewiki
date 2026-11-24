@@ -47,9 +47,10 @@ Keep your head up and don't dive in while they hold a deep collar grip.
 
 ## Images
 
-![1. Deep collar grip while their head is low (BJJ Fanatics)](https://i.ytimg.com/vi/1-oSlLk7kvo/hq2.jpg)
-![1. The same grip from guard as their head comes down (BJJ SAMBO | Submission Radio)](https://i.ytimg.com/vi/vQS_JrODDCI/hq2.jpg)
-![4. Roll to the side and drive their head down (BJJ SAMBO | Submission Radio)](https://i.ytimg.com/vi/vQS_JrODDCI/hqdefault.jpg)
+![1. Get a deep collar grip, palm down, while their head is low](needed)
+![2. Push their head under your arm](needed)
+![3. Loop the arm over the back of the neck](needed)
+![4. Roll to the side and drive their head down](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=1-oSlLk7kvo
 ## Notes
 
 Video: "Loop Choke by Rafael Lovato Jr." (BJJ Fanatics).
-
-Photo 1: frame from "Loop Choke by Rafael Lovato Jr.", BJJ Fanatics (https://www.youtube.com/watch?v=1-oSlLk7kvo). Photos 1, 4: frame and thumbnails from "How to do a really SIMPLE Loop Choke", BJJ SAMBO | Submission Radio (https://www.youtube.com/watch?v=vQS_JrODDCI).

@@ -48,9 +48,10 @@ Hide the heel, clear the knee line, and never spin against the lock.
 
 ## Images
 
-![1. Saddle: your legs triangled around their leg, knee line trapped (The Grappling Bloke)](https://i.ytimg.com/vi/n6EoUkDwUVc/hqdefault.jpg)
-![1. Inside saddle from another angle, as they try to turn out (Steven Strangles People)](https://i.ytimg.com/vi/2FM5t0hQVOU/hq2.jpg)
-![2. Heel wrapped in your arms, tight to your chest (The Grappling Bloke)](https://i.ytimg.com/vi/n6EoUkDwUVc/hq1.jpg)
+![1. Control the knee line from the [[Bottom saddle (inside sankaku)]]](needed)
+![2. Trap the heel in the crook of your elbow](needed)
+![3. Lock your hands together](needed)
+![4. Rotate your shoulders and body slowly](needed)
 
 ## Video
 
@@ -61,5 +62,3 @@ https://www.youtube.com/watch?v=n6EoUkDwUVc
 Not allowed at many white-belt and gi rulesets.
 
 Video: "4 Variations Of Heel Hook Finish From Saddle" (The Grappling Bloke).
-
-Photos 1, 2: thumbnail and frames from "4 Variations Of Heel Hook Finish From Saddle", The Grappling Bloke (https://www.youtube.com/watch?v=n6EoUkDwUVc). Photo 1: frame from "Inverted Heel Hook from Inside Saddle/Sankaku/Honey Hole/411 - Professor Steven Williams", Steven Strangles People (https://www.youtube.com/watch?v=2FM5t0hQVOU).

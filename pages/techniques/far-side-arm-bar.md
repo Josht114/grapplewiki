@@ -47,10 +47,10 @@ Don't push with a straight arm; frame with bent arms and keep your elbows tight.
 
 ## Images
 
-![1. They push on your knee or hip with the far arm (Fuse Martial Arts & Fitness)](https://i.ytimg.com/vi/uYYJp7SaT4E/hqdefault.jpg)
-![2. Grab that arm and keep it to your chest (Fuse Martial Arts & Fitness)](https://i.ytimg.com/vi/uYYJp7SaT4E/hq1.jpg)
-![3. Step your far leg over their head (Tarik BJJ)](https://i.ytimg.com/vi/gjwZYV4jlg0/hq2.jpg)
-![4. Sit back, pinch your knees and lift your hips (Fuse Martial Arts & Fitness)](https://i.ytimg.com/vi/uYYJp7SaT4E/hq3.jpg)
+![1. Wait for them to push on your knee or hip with the far arm](needed)
+![2. Grab that arm and keep it to your chest](needed)
+![3. Step your far leg over their head](needed)
+![4. Sit back, pinch your knees and lift your hips](needed)
 
 ## Video
 
@@ -59,5 +59,3 @@ https://www.youtube.com/watch?v=uYYJp7SaT4E
 ## Notes
 
 Video: "Knee on Belly Far Side Armbar" (Fuse Martial Arts & Fitness).
-
-Photos 1, 2, 4: frames from "Knee on Belly Far Side Armbar", Fuse Martial Arts & Fitness (https://www.youtube.com/watch?v=uYYJp7SaT4E). Photo 3: frame from "Far Side Arm Bar from Knee on Belly", Tarik BJJ (https://www.youtube.com/watch?v=gjwZYV4jlg0).

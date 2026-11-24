@@ -47,9 +47,10 @@ Keep your posture and base wide when the guard opens.
 
 ## Images
 
-![1. Break their posture and control an arm (Gentle Art Media)](https://i.ytimg.com/vi/dMcMblcXhF0/hqdefault.jpg)
-![2. Open your guard and slide a hook under one thigh (Gentle Art Media)](https://i.ytimg.com/vi/dMcMblcXhF0/hq1.jpg)
-![3. Lift with the hook and roll into mount (Gentle Art Media)](https://i.ytimg.com/vi/dMcMblcXhF0/hq3.jpg)
+![1. Break their posture and control an arm](needed)
+![2. Open your guard and slide a hook under one thigh](needed)
+![3. Pull them forward onto you](needed)
+![4. Lift with the hook and roll into mount](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=dMcMblcXhF0
 ## Notes
 
 Video: "Roger Gracie: sweep from closed guard" (Gentle Art Media).
-
-Photos 1, 2, 3: frames from "Roger Gracie: sweep from closed guard", Gentle Art Media (https://www.youtube.com/watch?v=dMcMblcXhF0).

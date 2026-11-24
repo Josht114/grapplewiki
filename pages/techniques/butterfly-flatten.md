@@ -47,9 +47,10 @@ Keep sitting up; don't let them push you flat.
 
 ## Images
 
-![1. Drive your weight in to push them flat (Giancarlo Bodoni)](https://i.ytimg.com/vi/XYPRBfjewPc/hq1.jpg)
-![1. Drive your head and shoulder in to flatten them (Giancarlo Bodoni)](https://i.ytimg.com/vi/XYPRBfjewPc/hqdefault.jpg)
-![4. Settle into top half guard (Giancarlo Bodoni)](https://i.ytimg.com/vi/XYPRBfjewPc/hq2.jpg)
+![1. Push their shoulders flat to the mat](needed)
+![2. Pin one hook with your knee](needed)
+![3. Step over that leg](needed)
+![4. Settle into top half guard](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=XYPRBfjewPc
 ## Notes
 
 Video: "Butterfly Guard Pass Using Underhook To Force Half Guard" (Giancarlo Bodoni).
-
-Photos 1, 4: frames from "Butterfly Guard Pass Using Underhook To Force Half Guard", Giancarlo Bodoni (https://www.youtube.com/watch?v=XYPRBfjewPc). Photo 1: thumbnail from "Butterfly Guard Pass Using Underhook To Force Half Guard", Giancarlo Bodoni (https://www.youtube.com/watch?v=XYPRBfjewPc).

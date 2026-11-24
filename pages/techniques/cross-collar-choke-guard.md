@@ -47,9 +47,10 @@ Keep your posture and strip the first grip before the second arrives.
 
 ## Images
 
-![1. Feed one hand deep into their collar (JeanJacquesMachado)](https://i.ytimg.com/vi/Krl3t53gVYY/hq1.jpg)
-![2. Get the second grip on the other collar (JeanJacquesMachado)](https://i.ytimg.com/vi/Krl3t53gVYY/hq2.jpg)
-![3. Pull your elbows out and down to finish (JeanJacquesMachado)](https://i.ytimg.com/vi/Krl3t53gVYY/hqdefault.jpg)
+![1. Break their posture with your legs](needed)
+![2. Feed one hand deep into their collar](needed)
+![3. Get the second grip on the other collar](needed)
+![4. Pull your elbows out and down to finish](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=Krl3t53gVYY
 ## Notes
 
 Video: "Mechanics of cross collar choke from closed guard" (JeanJacquesMachado).
-
-Photos 1, 2, 3: frames from "Mechanics of cross collar choke from closed guard", JeanJacquesMachado (https://www.youtube.com/watch?v=Krl3t53gVYY).

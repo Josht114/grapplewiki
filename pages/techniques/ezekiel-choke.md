@@ -44,9 +44,9 @@ Stop the hand from crossing your throat and escape while their arms are tied up.
 
 ## Images
 
-![1. Feed one arm behind their head and grab inside your opposite sleeve (Lucas Lepri)](https://i.ytimg.com/vi/dy5zpktYMa0/hq1.jpg)
-![2. Bring the free hand across their throat (Lucas Lepri)](https://i.ytimg.com/vi/dy5zpktYMa0/hq2.jpg)
-![3. Drive the blade of the hand down as you pull with the sleeve grip (Lucas Lepri)](https://i.ytimg.com/vi/dy5zpktYMa0/hq3.jpg)
+![1. Feed one arm behind their head and grab inside your opposite sleeve](needed)
+![2. Bring the free hand across their throat](needed)
+![3. Drive the blade of the hand down as you pull with the sleeve grip](needed)
 
 ## Video
 
@@ -57,5 +57,3 @@ https://www.youtube.com/watch?v=fuvgllnmp3g
 Works from [[Top mount]] and even from inside someone's guard. In no-gi, grip your own wrist or forearm instead of the sleeve.
 
 Video: "Rafael Lovato Jr Teaches Ezekiel Choke From The Mount" (BJJ Video Vault).
-
-Photos 1, 2, 3: frames from "Ezekiel Choke From Mount", Lucas Lepri (https://www.youtube.com/watch?v=dy5zpktYMa0).

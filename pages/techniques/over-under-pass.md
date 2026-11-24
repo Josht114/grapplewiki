@@ -48,9 +48,10 @@ Stopping pressure passes by keeping your knees between you and the opponent and 
 
 ## Images
 
-![1. Underhook one leg, go over the top of the other (Ultra Jiu Jitsu Academy)](https://i.ytimg.com/vi/JCJ6OmOF1R0/hq2.jpg)
-![2. Pressure with your head and shoulder (Ultra Jiu Jitsu Academy)](https://i.ytimg.com/vi/JCJ6OmOF1R0/hqdefault.jpg)
-![3. Walk your hips around to the side of the over arm (Ultra Jiu Jitsu Academy)](https://i.ytimg.com/vi/JCJ6OmOF1R0/hq3.jpg)
+![1. Underhook one leg, go over the top of the other](needed)
+![2. Connect the over arm to their far hip](needed)
+![3. Pressure with your head and shoulder](needed)
+![4. Walk your hips around to the side of the over arm](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=JCJ6OmOF1R0
 ## Notes
 
 Video: "Entering Over Under Pass - BJJ OPEN GUARD" (Ultra Jiu Jitsu Academy).
-
-Photos 1, 2, 3: frames from "Entering Over Under Pass - BJJ OPEN GUARD", Ultra Jiu Jitsu Academy (https://www.youtube.com/watch?v=JCJ6OmOF1R0).

@@ -48,9 +48,10 @@ Keep your ankles locked and break their posture before they open the guard.
 
 ## Images
 
-![1. Posture up with grips on their hips or belt (Chess Club Jiu-Jitsu)](https://i.ytimg.com/vi/eHMBWw4iZRQ/hq1.jpg)
-![2. Step the other knee back (Chess Club Jiu-Jitsu)](https://i.ytimg.com/vi/eHMBWw4iZRQ/hq2.jpg)
-![2. Posture up with a knee in their tailbone (Chess Club Jiu-Jitsu)](https://i.ytimg.com/vi/eHMBWw4iZRQ/hqdefault.jpg)
+![1. Posture up with grips on their hips or belt](needed)
+![2. Put one knee in their tailbone](needed)
+![3. Step the other knee back](needed)
+![4. Push down on their thigh with your elbow to open the ankles](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=eHMBWw4iZRQ
 ## Notes
 
 Video: "BJJ Beginners Tutorial - Opening Closed Guard from a Kneeling Position" (Chess Club Jiu-Jitsu).
-
-Photos 1, 2: frames from "BJJ Beginners Tutorial - Opening Closed Guard from a Kneeling Position", Chess Club Jiu-Jitsu (https://www.youtube.com/watch?v=eHMBWw4iZRQ). Photo 2: thumbnail from "BJJ Beginners Tutorial - Opening Closed Guard from a Kneeling Position", Chess Club Jiu-Jitsu (https://www.youtube.com/watch?v=eHMBWw4iZRQ).

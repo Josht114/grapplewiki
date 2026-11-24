@@ -47,9 +47,10 @@ Keep your head up and away from their armpit.
 
 ## Images
 
-![1. Wrap their head as it drops (Tyler Spangler)](https://i.ytimg.com/vi/vYEMu_8pX8k/hq1.jpg)
-![2. Lock your grip under their chin (Tyler Spangler)](https://i.ytimg.com/vi/vYEMu_8pX8k/hq3.jpg)
-![4. Arch your hips and pull to finish (Tyler Spangler)](https://i.ytimg.com/vi/vYEMu_8pX8k/hqdefault.jpg)
+![1. Wrap their head as it drops](needed)
+![2. Lock your grip under their chin](needed)
+![3. Hip out away from the trapped leg](needed)
+![4. Arch your hips and pull](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=vYEMu_8pX8k
 ## Notes
 
 Video: "How To Guillotine ANYONE In BJJ" (Tyler Spangler).
-
-Photos 1, 2: frames from "How To Guillotine ANYONE In BJJ", Tyler Spangler (https://www.youtube.com/watch?v=vYEMu_8pX8k). Photo 4: thumbnail from "How To Guillotine ANYONE In BJJ", Tyler Spangler (https://www.youtube.com/watch?v=vYEMu_8pX8k).

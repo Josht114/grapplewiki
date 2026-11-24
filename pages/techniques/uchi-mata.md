@@ -49,9 +49,10 @@ Keep your hips back and your feet wide.
 
 ## Images
 
-![1. Grip sleeve and collar (Teaching you MMA & BJJ)](https://i.ytimg.com/vi/uJjOj-uSIOI/hq3.jpg)
-![2. Turn in and reap up between their legs (Teaching you MMA & BJJ)](https://i.ytimg.com/vi/uJjOj-uSIOI/hq2.jpg)
-![4. Follow through as they go over (Teaching you MMA & BJJ)](https://i.ytimg.com/vi/uJjOj-uSIOI/hqdefault.jpg)
+![1. Grip sleeve and collar](needed)
+![2. Pull them forward onto their toes](needed)
+![3. Turn in and reap up between their legs](needed)
+![4. Turn your head and follow through to land on top](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=uJjOj-uSIOI
 ## Notes
 
 Video: "Easy Beginner Takedown - Uchi-Mata" (Teaching you MMA & BJJ).
-
-Photos 1, 2: frames from "Easy Beginner Takedown - Uchi-Mata", Teaching you MMA & BJJ (https://www.youtube.com/watch?v=uJjOj-uSIOI). Photo 4: thumbnail from "Easy Beginner Takedown - Uchi-Mata", Teaching you MMA & BJJ (https://www.youtube.com/watch?v=uJjOj-uSIOI).

@@ -48,10 +48,10 @@ Don't reach an arm around their body without your elbow tight; keep your weight 
 
 ## Images
 
-![1. Wait for them to reach an arm around your waist or chest (War Room Jiu Jitsu)](https://i.ytimg.com/vi/iDrF6IMTGjk/hq1.jpg)
-![2. Overhook that arm tight to your body at the elbow (War Room Jiu Jitsu)](https://i.ytimg.com/vi/iDrF6IMTGjk/hq2.jpg)
-![3. Drop your shoulder on that side, tuck your head and roll toward the trapped arm (War Room Jiu Jitsu)](https://i.ytimg.com/vi/iDrF6IMTGjk/hqdefault.jpg)
-![4. They go over you; follow through and come up chest to chest on top (War Room Jiu Jitsu)](https://i.ytimg.com/vi/iDrF6IMTGjk/hq3.jpg)
+![1. Wait for them to reach an arm around your waist or chest](needed)
+![2. Overhook that arm tight to your body at the elbow](needed)
+![3. Drop your shoulder on that side, tuck your head and roll toward the trapped arm](needed)
+![4. They go over you; follow through and come up chest to chest on top](needed)
 
 ## Video
 
@@ -62,5 +62,3 @@ https://www.youtube.com/watch?v=iDrF6IMTGjk
 Not the same as the mount escape [[Trap and roll (upa)]], which also uses the name "trap and roll".
 
 Video: "How to do the Turtle Trap Armbar and Sweep" (War Room Jiu Jitsu).
-
-Photos 1, 2, 3, 4: frames from "How to do the Turtle Trap Armbar and Sweep", War Room Jiu Jitsu (https://www.youtube.com/watch?v=iDrF6IMTGjk).

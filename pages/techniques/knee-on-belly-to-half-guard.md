@@ -47,9 +47,10 @@ Keep your far leg posted wide and don't let the knee cross over.
 
 ## Images
 
-![1. Push the knee across your belly (Francisco Lima)](https://i.ytimg.com/vi/M6gtWq2kxNE/hq1.jpg)
-![2. Hug the leg as it comes across (Francisco Lima)](https://i.ytimg.com/vi/M6gtWq2kxNE/hq2.jpg)
-![3. Trap it with your legs (Francisco Lima)](https://i.ytimg.com/vi/M6gtWq2kxNE/hq3.jpg)
+![1. Push the knee across your belly](needed)
+![2. Hug the leg as it comes across](needed)
+![3. Trap it with your legs](needed)
+![4. Get on your side in half guard](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=M6gtWq2kxNE
 ## Notes
 
 Video: "Escaping from Knee on Belly to Deep Half Guard" (Francisco Lima).
-
-Photos 1, 2, 3: frames from "Escaping from Knee on Belly to Deep Half Guard", Francisco Lima (https://www.youtube.com/watch?v=M6gtWq2kxNE).

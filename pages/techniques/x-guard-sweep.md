@@ -49,9 +49,10 @@ Keep your weight forward and free your leg from the X hooks before they can exte
 
 ## Images
 
-![1. X guard: hug the near leg, hooks on the other (Gold BJJ)](https://i.ytimg.com/vi/oO8nf73Am2s/hq1.jpg)
-![3. Technical stand-up as they fall (Gold BJJ)](https://i.ytimg.com/vi/oO8nf73Am2s/hq3.jpg)
-![4. Up on your feet holding the leg, ready to pass (Stuart Tomlinson)](https://i.ytimg.com/vi/8JMowLHg3Ws/hq2.jpg)
+![1. Hug the near leg and extend the X hooks](needed)
+![2. Push their weight backward](needed)
+![3. Technical stand-up as they fall](needed)
+![4. Land in a passing position](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=8JMowLHg3Ws
 ## Notes
 
 Video: "BJJ X-Guard Technical Stand up Sweep Tutorial" (Stuart Tomlinson).
-
-Photos 1, 3: frames from "Technical Stand Up Sweep From X Guard", Gold BJJ (https://www.youtube.com/watch?v=oO8nf73Am2s). Photo 4: frame from "BJJ X-Guard Technical Stand up Sweep Tutorial", Stuart Tomlinson (https://www.youtube.com/watch?v=8JMowLHg3Ws).

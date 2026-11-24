@@ -50,9 +50,10 @@ Get your trapped arm out and your head up before they sit and swing their legs o
 
 ## Images
 
-![1. Lock an arm-in grip (head and one arm) from the front headlock (Howcast)](https://i.ytimg.com/vi/ZG4nalSL6kw/hq1.jpg)
-![2. Step your leg over their back on the side of their head (Howcast)](https://i.ytimg.com/vi/ZG4nalSL6kw/hq2.jpg)
-![3. Drive your legs down onto their back to finish (Howcast)](https://i.ytimg.com/vi/ZG4nalSL6kw/hqdefault.jpg)
+![1. Lock an arm-in grip (head and one arm) from the front headlock](needed)
+![2. Step your leg over their back on the side of their head](needed)
+![3. Sit down to the side, keeping the grip](needed)
+![4. Drive your legs down onto their back to finish](needed)
 
 ## Video
 
@@ -61,5 +62,3 @@ https://www.youtube.com/watch?v=ZG4nalSL6kw
 ## Notes
 
 Video: "How to Do a Peruvian Necktie" (Howcast).
-
-Photos 1, 2, 3: frames from "How to Do a Peruvian Necktie", Howcast (https://www.youtube.com/watch?v=ZG4nalSL6kw).

@@ -48,9 +48,10 @@ Post your free hand and keep your weight back.
 
 ## Images
 
-![1. Hook under their opposite leg (Chewjitsu)](https://i.ytimg.com/vi/8zuFg-PigDc/hq2.jpg)
-![2. Swing your free leg up and over like a pendulum (Chewjitsu)](https://i.ytimg.com/vi/8zuFg-PigDc/hq3.jpg)
-![3. Use the momentum to roll them and come up on top (Chewjitsu)](https://i.ytimg.com/vi/8zuFg-PigDc/hqdefault.jpg)
+![1. Control their arm on one side](needed)
+![2. Hook under their opposite leg](needed)
+![3. Swing your free leg up and over like a pendulum](needed)
+![4. Use the momentum to roll them and come up on top](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=8zuFg-PigDc
 ## Notes
 
 Video: "Flower Sweep Vs Pendulum Sweep (How & When To Use Them)" (Chewjitsu).
-
-Photos 1, 2, 3: frames from "Flower Sweep Vs Pendulum Sweep (How & When To Use Them)", Chewjitsu (https://www.youtube.com/watch?v=8zuFg-PigDc).

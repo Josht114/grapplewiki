@@ -51,9 +51,10 @@ Stopping pressure passes by keeping your knees between you and the opponent and 
 
 ## Images
 
-![1. Grip their pants at the knee (Ultra Jiu Jitsu Academy)](https://i.ytimg.com/vi/eajzG1jFfwQ/hq1.jpg)
-![2. Drag their legs across your body to one side (Ultra Jiu Jitsu Academy)](https://i.ytimg.com/vi/eajzG1jFfwQ/hqdefault.jpg)
-![3. Pin their hip to the mat with your knee or hip (Ultra Jiu Jitsu Academy)](https://i.ytimg.com/vi/eajzG1jFfwQ/hq2.jpg)
+![1. Grip their pants at the knee](needed)
+![2. Drag their legs across your body to one side](needed)
+![3. Pin their hip to the mat with your knee or hip](needed)
+![4. Walk around to side control](needed)
 
 ## Video
 
@@ -62,5 +63,3 @@ https://www.youtube.com/watch?v=eajzG1jFfwQ
 ## Notes
 
 Video: "Passing Around Leg Drag - BJJ OPEN GUARD" (Ultra Jiu Jitsu Academy).
-
-Photos 1, 2, 3: frames from "Passing Around Leg Drag - BJJ OPEN GUARD", Ultra Jiu Jitsu Academy (https://www.youtube.com/watch?v=eajzG1jFfwQ).

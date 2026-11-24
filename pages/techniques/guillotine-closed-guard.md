@@ -47,9 +47,10 @@ Keep your head up and posture back.
 
 ## Images
 
-![1. Wrap their head as it comes down (BJJ Fanatics)](https://i.ytimg.com/vi/bkTJD6RIyKY/hq1.jpg)
-![2. Close your guard and push them away with your legs (BJJ Fanatics)](https://i.ytimg.com/vi/bkTJD6RIyKY/hq2.jpg)
-![3. Arch your hips up and pull (BJJ Fanatics)](https://i.ytimg.com/vi/bkTJD6RIyKY/hqdefault.jpg)
+![1. Wrap their head as it comes down](needed)
+![2. Lock your grip under their chin](needed)
+![3. Close your guard and push them away with your legs](needed)
+![4. Arch your hips up and pull](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=bkTJD6RIyKY
 ## Notes
 
 Video: "Gordon Ryan's Guillotine Escape Secrets - 4 Pointing From Bottom Side Head Position" (BJJ Fanatics).
-
-Photos 1, 2, 3: frames from "Gordon Ryan's Guillotine Escape Secrets - 4 Pointing From Bottom Side Head Position", BJJ Fanatics (https://www.youtube.com/watch?v=bkTJD6RIyKY).

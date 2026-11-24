@@ -48,9 +48,10 @@ Flex your foot and sit up, stepping over so the forearm comes off the Achilles.
 
 ## Images
 
-![1. Single leg X with their foot trapped (Stay Safe Martial Arts)](https://i.ytimg.com/vi/gI4hvmb2OB4/hq1.jpg)
-![2. Blade of the forearm under the Achilles (arrowed) (Stay Safe Martial Arts)](https://i.ytimg.com/vi/gI4hvmb2OB4/hqdefault.jpg)
-![4. Knees pinched on the leg, arch to finish (Stay Safe Martial Arts)](https://i.ytimg.com/vi/gI4hvmb2OB4/hq2.jpg)
+![1. Trap the foot in your armpit, toes pointing out](needed)
+![2. Blade of the forearm under the Achilles](needed)
+![3. Grip your own arm or lapel](needed)
+![4. Keep the knee pinched, arch back and lift the forearm](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=gI4hvmb2OB4
 ## Notes
 
 Video: "Straight Ankle Lock from Single Leg X" (Stay Safe Martial Arts).
-
-Photos 1, 2, 4: frame and thumbnails from "Straight Ankle Lock from Single Leg X", Stay Safe Martial Arts (https://www.youtube.com/watch?v=gI4hvmb2OB4).

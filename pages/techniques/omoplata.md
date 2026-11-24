@@ -48,9 +48,10 @@ Roll forward before the lock is set, or grab the belt and posture up.
 
 ## Images
 
-![1. Swing your leg over their shoulder from the outside (Gracie Barra Jupiter And Stuart)](https://i.ytimg.com/vi/_4VJSNyfMFI/hq1.jpg)
-![2. Sit up and turn so you face the same way they do (Gracie Barra Jupiter And Stuart)](https://i.ytimg.com/vi/_4VJSNyfMFI/hq2.jpg)
-![3. Control their hips and lean forward to finish (Gracie Barra Jupiter And Stuart)](https://i.ytimg.com/vi/_4VJSNyfMFI/hq3.jpg)
+![1. Control their wrist and angle off to that side](needed)
+![2. Swing your leg over their shoulder from the outside](needed)
+![3. Sit up and turn so you face the same way they do](needed)
+![4. Control their hips and lean forward to finish](needed)
 
 ## Video
 
@@ -61,5 +62,3 @@ https://www.youtube.com/watch?v=_4VJSNyfMFI
 Often set up from [[Bottom rubber guard]] and [[Bottom spider guard]]. If they roll, you sweep.
 
 Video: "Gracie Barra Jupiter Omoplata From Closed Guard" (Gracie Barra Jupiter And Stuart).
-
-Photos 1, 2, 3: frames from "Gracie Barra Jupiter Omoplata From Closed Guard", Gracie Barra Jupiter And Stuart (https://www.youtube.com/watch?v=_4VJSNyfMFI).

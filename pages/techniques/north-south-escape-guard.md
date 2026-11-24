@@ -47,9 +47,10 @@ Keep your chest heavy and walk to side control as they turn.
 
 ## Images
 
-![1. Frame on their hips (Chewjitsu)](https://i.ytimg.com/vi/A9PAlXwclPI/hq2.jpg)
-![3. Turn your hips toward their legs (Chewjitsu)](https://i.ytimg.com/vi/A9PAlXwclPI/hqdefault.jpg)
-![4. Bring your legs back in front (JonThomasBJJ)](https://i.ytimg.com/vi/1F00_QrUwFI/hq2.jpg)
+![1. Frame on their hips](needed)
+![2. Bridge to make space](needed)
+![3. Turn your hips toward their legs](needed)
+![4. Bring your legs back in front](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=A9PAlXwclPI
 ## Notes
 
 Video: "How to Escape a Tight North South in BJJ (2 BJJ Effective Options)" (Chewjitsu).
-
-Photos 1, 3: frames from "How to Escape a Tight North South in BJJ (2 BJJ Effective Options)", Chewjitsu (https://www.youtube.com/watch?v=A9PAlXwclPI). Photo 4: frame from "North South Escape - The easy way", JonThomasBJJ (https://www.youtube.com/watch?v=1F00_QrUwFI).

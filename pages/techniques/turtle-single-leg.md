@@ -47,9 +47,10 @@ Keep your legs back and away from their hands.
 
 ## Images
 
-![1. Reach and grab their near leg (Wim Deputter BJJ)](https://i.ytimg.com/vi/HE74rsRWziE/hq2.jpg)
-![2. Pull it to your chest (Wim Deputter BJJ)](https://i.ytimg.com/vi/HE74rsRWziE/hq3.jpg)
-![3. Drive through and come up on top (Wim Deputter BJJ)](https://i.ytimg.com/vi/HE74rsRWziE/hqdefault.jpg)
+![1. Reach and grab their near leg](needed)
+![2. Pull it to your chest](needed)
+![3. Come up to your knees](needed)
+![4. Drive through and come up on top](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=HE74rsRWziE
 ## Notes
 
 Video: "Single Leg From Turtle (3 options)" (Wim Deputter BJJ).
-
-Photos 1, 2, 3: frames from "Single Leg From Turtle (3 options)", Wim Deputter BJJ (https://www.youtube.com/watch?v=HE74rsRWziE).

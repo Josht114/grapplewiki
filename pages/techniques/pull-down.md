@@ -44,3 +44,10 @@ Keep your weight forward and break the grip before they can sit you down.
 1. Stay low with your weight forward.
 2. Peel their hands apart at the wrists.
 3. Turn into them as they sit.
+
+## Images
+
+![1. Lock your hands around their waist from behind](needed)
+![2. Step to one side and sit your hips down](needed)
+![3. Pull them down onto your lap](needed)
+![4. Insert your hooks as they land](needed)

@@ -49,9 +49,10 @@ Get your hips away and break the grip before they can pull you in and trip you.
 
 ## Images
 
-![1. Lock your hands tight around their waist (KD Grappling | Kieran Davern)](https://i.ytimg.com/vi/1V7a6LQkb0w/hq2.jpg)
-![2. Pull their hips into you, chest to chest (Danny Fung)](https://i.ytimg.com/vi/6waKvYNJOv0/hq2.jpg)
-![4. Drive them down and follow them to the mat (Joslin's MMA)](https://i.ytimg.com/vi/4jeDyQulyh0/hq2.jpg)
+![1. Lock hands tight around their waist](needed)
+![2. Pull their hips into you and step to the side](needed)
+![3. Block a leg with your foot (outside trip)](needed)
+![4. Drive them down and land in top half guard](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=1V7a6LQkb0w
 ## Notes
 
 Video: "Body Lock Takedowns | Outside & Inside Position Attacks | Trip | Wrestling for BJJ" (KD Grappling | Kieran Davern).
-
-Photo 1: frame from "Body Lock Takedowns | Outside & Inside Position Attacks | Trip | Wrestling for BJJ", KD Grappling | Kieran Davern (https://www.youtube.com/watch?v=1V7a6LQkb0w). Photo 2: frame from "Jiu-Jitsu | Body Lock Takedowns", Danny Fung (https://www.youtube.com/watch?v=6waKvYNJOv0). Photo 4: frame from "Front Body Lock Take down from the Over Under Position - Brazilian Jiu-Jitsu (BJJ) Technique", Joslin's MMA (https://www.youtube.com/watch?v=4jeDyQulyh0).

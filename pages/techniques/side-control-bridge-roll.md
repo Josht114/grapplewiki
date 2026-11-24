@@ -48,9 +48,10 @@ Keep your weight low and post when they bridge.
 
 ## Images
 
-![1. Trap their near arm to your chest (Brazilian Jiu Jitsu Incorporated)](https://i.ytimg.com/vi/nPbCG0lElOQ/hq1.jpg)
-![2. Bring your feet close to your hips (Brazilian Jiu Jitsu Incorporated)](https://i.ytimg.com/vi/nPbCG0lElOQ/hqdefault.jpg)
-![3. Bridge high toward the trapped side (Brazilian Jiu Jitsu Incorporated)](https://i.ytimg.com/vi/nPbCG0lElOQ/hq2.jpg)
+![1. Trap their near arm to your chest](needed)
+![2. Bring your feet close to your hips](needed)
+![3. Bridge high toward the trapped side](needed)
+![4. Roll them over and come up on top](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=nPbCG0lElOQ
 ## Notes
 
 Video: "Video 8 - Side Control Escape Bridge and Roll Series" (Brazilian Jiu Jitsu Incorporated).
-
-Photos 1, 2, 3: frames from "Video 8 - Side Control Escape Bridge and Roll Series", Brazilian Jiu Jitsu Incorporated (https://www.youtube.com/watch?v=nPbCG0lElOQ).

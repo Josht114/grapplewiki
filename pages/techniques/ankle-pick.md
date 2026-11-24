@@ -49,9 +49,10 @@ Keep weight off your lead foot and sprawl your hips back.
 
 ## Images
 
-![1. Collar tie and pull them forward so they step (Energia Martial Arts)](https://i.ytimg.com/vi/scSz133WGyA/hq2.jpg)
-![2. Level change and grab the heel of the lead foot (Energia Martial Arts)](https://i.ytimg.com/vi/scSz133WGyA/hqdefault.jpg)
-![4. Pull the heel as their head goes back and they fall (FANATIC WRESTLING)](https://i.ytimg.com/vi/Zgr9qNe6YSQ/hqdefault.jpg)
+![1. Collar tie and pull them forward so they step](needed)
+![2. Level change and grab the heel of the lead foot](needed)
+![3. Drive the head back and down](needed)
+![4. Pull the heel and land in a passing position](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=scSz133WGyA
 ## Notes
 
 Video: "The ANKLE PICK Explained" (Energia Martial Arts).
-
-Photos 1, 2: frames from "The ANKLE PICK Explained", Energia Martial Arts (https://www.youtube.com/watch?v=scSz133WGyA). Photo 4: thumbnail from "Ankle Pick Takedown From Collar Tie with Nate Jackson", FANATIC WRESTLING (https://www.youtube.com/watch?v=Zgr9qNe6YSQ).

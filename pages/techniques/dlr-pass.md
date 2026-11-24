@@ -48,9 +48,10 @@ Keep the De La Riva hook connected and your grip on their ankle so they can't ki
 
 ## Images
 
-![2. Knee dropped to the mat inside their legs, shin across the thigh (BJJLibrary)](https://i.ytimg.com/vi/iLXmD9Us7vc/hq3.jpg)
-![3. Pin their legs down with your hands (Fight Authority)](https://i.ytimg.com/vi/gyi-zUrcW2g/hq1.jpg)
-![4. Drop into side control (Mark Massey)](https://i.ytimg.com/vi/VyYne30SFA4/hq3.jpg)
+![1. Grip their DLR foot or ankle and push it off your leg](needed)
+![2. Drop your knee to the mat inside their hook to kill it](needed)
+![3. Pin their far leg with your hand](needed)
+![4. Step around and drop into side control](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=gyi-zUrcW2g
 ## Notes
 
 Video: "De La Riva Hook Defense and BJJ Guard Pass - Brazilian Jiu-Jitsu Technique" (Fight Authority).
-
-Photo 2: frame from "De la Riva Guard Pass - Headquarters Position or Shin Pressure by Saulo Ribeiro", BJJLibrary (https://www.youtube.com/watch?v=iLXmD9Us7vc). Photo 3: frame from "De La Riva Hook Defense and BJJ Guard Pass - Brazilian Jiu-Jitsu Technique", Fight Authority (https://www.youtube.com/watch?v=gyi-zUrcW2g). Photo 4: frame from "De La Riva Deep Hook Pass, Shin-Slide Method", Mark Massey (https://www.youtube.com/watch?v=VyYne30SFA4).

@@ -48,9 +48,10 @@ Keep both arms on the same side: never one in and one out.
 
 ## Images
 
-![1. Control both sleeves or wrists (Stephan Kesting)](https://i.ytimg.com/vi/tIPJrOFDpvw/hq1.jpg)
-![3. Shoot your leg over their shoulder and across the neck (Stephan Kesting)](https://i.ytimg.com/vi/tIPJrOFDpvw/hq2.jpg)
-![4. Lock the figure-four, angle off and squeeze (Stephan Kesting)](https://i.ytimg.com/vi/tIPJrOFDpvw/hq3.jpg)
+![1. Control both sleeves or wrists](needed)
+![2. Push one arm in and pull the other out](needed)
+![3. Shoot your leg over their shoulder and across the neck](needed)
+![4. Lock the figure-four, angle off and squeeze](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=tIPJrOFDpvw
 ## Notes
 
 Video: "How to Do the Triangle Choke from Open Guard, with Jon Thomas" (Stephan Kesting).
-
-Photos 1, 3, 4: frames from "How to Do the Triangle Choke from Open Guard, with Jon Thomas", Stephan Kesting (https://www.youtube.com/watch?v=tIPJrOFDpvw).

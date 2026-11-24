@@ -48,9 +48,10 @@ Stop the spin by turning into them and sitting to guard before they reach your b
 
 ## Images
 
-![1. Grip around their far armpit (a seatbelt from the front) (Procel Brazilian Jiu-Jitsu)](https://i.ytimg.com/vi/9QCJFDsDQmk/hqdefault.jpg)
-![2. Spin your hips around their shoulder to their back (Just Train)](https://i.ytimg.com/vi/iij324wAE80/hq1.jpg)
-![3. Keep your chest on their back as you go (Just Train)](https://i.ytimg.com/vi/iij324wAE80/hq2.jpg)
+![1. Grip around their far armpit (a seatbelt from the front)](needed)
+![2. Spin your hips around their shoulder to their back](needed)
+![3. Keep your chest on their back as you go](needed)
+![4. Insert your hooks and settle the seatbelt](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=9QCJFDsDQmk
 ## Notes
 
 Video: "Front Headlock Snap Down To Spin Behind" (Procel Brazilian Jiu-Jitsu).
-
-Photo 1: frame from "Front Headlock Snap Down To Spin Behind", Procel Brazilian Jiu-Jitsu (https://www.youtube.com/watch?v=9QCJFDsDQmk). Photos 2, 3: frames from "Sit Out Spin vs Front Headlock, Guillotine from Front Headlock", Just Train (https://www.youtube.com/watch?v=iij324wAE80).

@@ -48,9 +48,10 @@ Keep your weight forward and your free leg posted wide, so they can't lift it fr
 
 ## Images
 
-![1. Deep half guard: under their hips, hugging the leg (Brandon Mccaghren)](https://i.ytimg.com/vi/Hiq2KvtkJs0/hq3.jpg)
-![2. Hand under their far leg (Revolution BJJ)](https://i.ytimg.com/vi/u84CBOPxvyg/hq1.jpg)
-![3. Lift the far leg as you push into the trapped leg (Revolution BJJ)](https://i.ytimg.com/vi/u84CBOPxvyg/hqdefault.jpg)
+![1. Establish deep half guard](needed)
+![2. Put a hand under their far leg](needed)
+![3. Lift the leg as you push into the trapped leg](needed)
+![4. Come up on top](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=u84CBOPxvyg
 ## Notes
 
 Video: "Basic waiter sweep from deep half guard (BJJ)" (Revolution BJJ).
-
-Photo 1: frame from "(HOW TO) Waiter Sweep from Deep Half Guard", Brandon Mccaghren (https://www.youtube.com/watch?v=Hiq2KvtkJs0). Photos 2, 3: frame and thumbnails from "Basic waiter sweep from deep half guard (BJJ)", Revolution BJJ (https://www.youtube.com/watch?v=u84CBOPxvyg).

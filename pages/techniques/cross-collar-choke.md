@@ -45,10 +45,9 @@ Stop the second grip, then use the opponent's forward posture to escape.
 
 ## Images
 
-![1. Feed the first hand deep into the collar, fingers in (Gracie Barra)](https://i.ytimg.com/vi/_OsvE4wwJKI/hq1.jpg)
-![2. Place the second grip on the opposite collar (Gracie Barra)](https://i.ytimg.com/vi/_OsvE4wwJKI/hq2.jpg)
-![2. Both grips deep, wrists crossed (Stephan Kesting)](https://i.ytimg.com/vi/WXFIycNajOw/hq2.jpg)
-![3. Drop your elbows, pull them apart and bring your head down to finish (Stephan Kesting)](https://i.ytimg.com/vi/WXFIycNajOw/hq3.jpg)
+![1. Feed the first hand deep into the collar, fingers in](needed)
+![2. Place the second grip on the opposite collar](needed)
+![3. Drop your elbows toward the mat and pull them apart as you bring your head down](needed)
 
 ## Video
 
@@ -57,5 +56,3 @@ https://www.youtube.com/watch?v=WXFIycNajOw
 ## Notes
 
 Video: "How to Actually Finish the Cross Choke from Mount" (Stephan Kesting).
-
-Photos 1, 2: frames from "Cross Collar Choke from Mount Position", Gracie Barra (https://www.youtube.com/watch?v=_OsvE4wwJKI). Photos 3, 4: frames from "How to Actually Finish the Cross Choke from Mount", Stephan Kesting (https://www.youtube.com/watch?v=WXFIycNajOw).

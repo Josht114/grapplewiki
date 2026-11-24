@@ -47,9 +47,10 @@ Free your sleeve grips and keep your elbows inside your knees.
 
 ## Images
 
-![1. Control their sleeve or wrist (BJJ Fanatics)](https://i.ytimg.com/vi/tkMUGOKg4I8/hq1.jpg)
-![2. Put your foot on their hip and angle off (BJJ Fanatics)](https://i.ytimg.com/vi/tkMUGOKg4I8/hq2.jpg)
-![3. Pinch your knees, thumb up, and lift your hips (BJJ Fanatics)](https://i.ytimg.com/vi/tkMUGOKg4I8/hqdefault.jpg)
+![1. Control their sleeve or wrist](needed)
+![2. Put your foot on their hip and angle off](needed)
+![3. Swing your leg over their head](needed)
+![4. Pinch your knees, thumb up, and lift your hips](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=tkMUGOKg4I8
 ## Notes
 
 Video: "Arm Bar From Open Guard by Lucas Valente" (BJJ Fanatics).
-
-Photos 1, 2, 3: frames from "Arm Bar From Open Guard by Lucas Valente", BJJ Fanatics (https://www.youtube.com/watch?v=tkMUGOKg4I8).

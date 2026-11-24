@@ -90,10 +90,10 @@ function clean(kind, input) {
     name: str(input.name).replace(/\s+/g, " ").slice(0, 200),
     summary: str(input.summary),
     steps: Array.isArray(input.steps) ? input.steps.map(s => str(s).replace(/\s*\n\s*/g, " ")).filter(Boolean) : [],
-    // "![Caption](https://...)" or "![Caption](images/file.jpg)" lines; anything else is dropped
+    // "![Caption](https://...)", "![Caption](images/file.jpg)" or "![Caption](needed)" lines; anything else is dropped
     images: Array.isArray(input.images) ? input.images.map(s => str(s).replace(/\s*\n\s*/g, " ")).filter(s => {
       const m = s.match(/^!\[[^\]]*\]\(([^\s)]+)\)$/);
-      return !!m && (/^https?:\/\/\S+$/.test(m[1]) || LOCAL_IMAGE_RE.test(m[1]));
+      return !!m && (/^https?:\/\/\S+$/.test(m[1]) || LOCAL_IMAGE_RE.test(m[1]) || m[1] === "needed"); // "needed": a placeholder
     }) : [],
     // one or more video URLs, one per line
     video: str(input.video).split(/\s+/).filter(u => /^https?:\/\/\S+$/.test(u)).slice(0, 5).join("\n"),

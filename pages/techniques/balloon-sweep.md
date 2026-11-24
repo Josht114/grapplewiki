@@ -49,9 +49,10 @@ Keep your weight back and stay off their feet.
 
 ## Images
 
-![1. Put both feet on their hips (Danny Fung)](https://i.ytimg.com/vi/MaRCmgehjo8/hq1.jpg)
-![2. Pull them forward as you roll back (Danny Fung)](https://i.ytimg.com/vi/MaRCmgehjo8/hq3.jpg)
-![3. Extend your legs to send them overhead and follow into mount (Danny Fung)](https://i.ytimg.com/vi/MaRCmgehjo8/hqdefault.jpg)
+![1. Grip their collar and sleeve (or both sleeves)](needed)
+![2. Put both feet on their hips](needed)
+![3. Pull them forward as you roll back](needed)
+![4. Extend your legs to send them overhead and follow into mount](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=MaRCmgehjo8
 ## Notes
 
 Video: "Jiu-Jitsu Fundamentals: Balloon Sweep from the Open Guard" (Danny Fung).
-
-Photos 1, 2, 3: frames from "Jiu-Jitsu Fundamentals: Balloon Sweep from the Open Guard", Danny Fung (https://www.youtube.com/watch?v=MaRCmgehjo8).

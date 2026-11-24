@@ -49,9 +49,10 @@ Keep both sleeve grips tight and both feet pushing on their biceps, so their arm
 
 ## Images
 
-![1. In their spider guard, working to break a sleeve grip (MMA Leech)](https://i.ytimg.com/vi/9MKV2ANBP5Q/hqdefault.jpg)
-![2. Push the freed leg down (MMA Leech)](https://i.ytimg.com/vi/9MKV2ANBP5Q/hq2.jpg)
-![4. Pin the legs and step around (Ricardo Cavalcanti BJJ)](https://i.ytimg.com/vi/0eZiFFi2_iE/hqdefault.jpg)
+![1. Circle one hand to break that sleeve grip](needed)
+![2. Push the freed foot down to the mat](needed)
+![3. Break the other sleeve grip the same way](needed)
+![4. Pin their legs and step around to side control](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=9MKV2ANBP5Q
 ## Notes
 
 Video: "Breaking the Spider Guard - 4 Options" (MMA Leech).
-
-Photos 1, 2: thumbnail and frames from "Breaking the Spider Guard - 4 Options", MMA Leech (https://www.youtube.com/watch?v=9MKV2ANBP5Q). Photo 4: thumbnail from "Jiu Jitsu Techniques - Passing The Spider Guard", Ricardo Cavalcanti BJJ (https://www.youtube.com/watch?v=0eZiFFi2_iE).

@@ -52,10 +52,11 @@ Strip one of the grips and turn with them so the choke can't close.
 
 ## Images
 
-![1. From knee on belly, get one hand deep in the collar, thumb inside (Evolve Mixed Martial Arts)](https://i.ytimg.com/vi/AqjSmrHwVks/hq1.jpg)
-![2. Put the other hand close by with the thumb out (fingers inside) (Evolve Mixed Martial Arts)](https://i.ytimg.com/vi/AqjSmrHwVks/hq2.jpg)
-![3. Bring your head down and spin toward their head (Timeless Jiu-Jitsu Academy)](https://i.ytimg.com/vi/QlaLHFFGpUs/hq3.jpg)
-![4. Keep rotating until the choke closes (BJJ Fanatics)](https://i.ytimg.com/vi/YUcw3VoIV94/hq2.jpg)
+![1. Get one hand deep in the collar, thumb inside](needed)
+![2. Put the other hand close by with the thumb out](needed)
+![3. your arms are not crossed here](needed)
+![4. Bring your head down and spin toward their head](needed)
+![5. Rotate until the choke closes](needed)
 
 ## Video
 
@@ -64,5 +65,3 @@ https://www.youtube.com/watch?v=YUcw3VoIV94
 ## Notes
 
 Video: "Baseball Bat Choke From Knee on Belly by Bernardo Faria" (BJJ Fanatics).
-
-Photos 1, 2: frames from "Baseball Choke From The Knee On Belly Position", Evolve Mixed Martial Arts (https://www.youtube.com/watch?v=AqjSmrHwVks). Photo 3: frame from "Unstoppable Baseball Bat Choke From Knee On Belly", Timeless Jiu-Jitsu Academy (https://www.youtube.com/watch?v=QlaLHFFGpUs). Photo 4: frame from "Baseball Bat Choke From Knee on Belly by Bernardo Faria", BJJ Fanatics (https://www.youtube.com/watch?v=YUcw3VoIV94).

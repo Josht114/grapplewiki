@@ -46,9 +46,10 @@ Keep your head up and higher than theirs when you sit up.
 
 ## Images
 
-![1. Wrap their head as it drops (The Grapple Club)](https://i.ytimg.com/vi/-GPCSBWhT7A/hqdefault.jpg)
-![2. Lock your grip (The Grapple Club)](https://i.ytimg.com/vi/-GPCSBWhT7A/hq1.jpg)
-![3. Sprawl your hips back (The Grapple Club)](https://i.ytimg.com/vi/-GPCSBWhT7A/hq2.jpg)
+![1. Wrap their head as it drops](needed)
+![2. Lock your grip](needed)
+![3. Sprawl your hips back](needed)
+![4. Lift your elbow and arch](needed)
 
 ## Video
 
@@ -57,5 +58,3 @@ https://www.youtube.com/watch?v=-GPCSBWhT7A
 ## Notes
 
 Video: "HIGH PERCENTAGE GUILLOTINE From Butterfly - Darragh O Conaill BJJ" (The Grapple Club).
-
-Photos 1, 2, 3: frames from "HIGH PERCENTAGE GUILLOTINE From Butterfly - Darragh O Conaill BJJ", The Grapple Club (https://www.youtube.com/watch?v=-GPCSBWhT7A).

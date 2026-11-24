@@ -48,9 +48,10 @@ Ride their movement and step to mount or back to side control.
 
 ## Images
 
-![1. Push the knee down toward your hips (BJJ Fanatics)](https://i.ytimg.com/vi/_Rw8ZFep16w/hq1.jpg)
-![3. Turn in toward them (BJJ Fanatics)](https://i.ytimg.com/vi/_Rw8ZFep16w/hq2.jpg)
-![4. Bring your feet back in front (BJJ Fanatics)](https://i.ytimg.com/vi/_Rw8ZFep16w/hq3.jpg)
+![1. Push the knee down toward your hips](needed)
+![2. Shrimp away from the knee](needed)
+![3. Turn in toward them](needed)
+![4. Bring your feet back in front](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=_Rw8ZFep16w
 ## Notes
 
 Video: "How to Escape Knee on Belly Late Stage by Henry Akins" (BJJ Fanatics).
-
-Photos 1, 3, 4: frames from "How to Escape Knee on Belly Late Stage by Henry Akins", BJJ Fanatics (https://www.youtube.com/watch?v=_Rw8ZFep16w).

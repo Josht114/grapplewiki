@@ -48,9 +48,10 @@ Lower your hips and step around the reaping leg.
 
 ## Images
 
-![1. Grip sleeve and collar (Shintaro Higashi)](https://i.ytimg.com/vi/laGgFKh7xVc/hq1.jpg)
-![2. Step beside their leg, chest to chest (Shintaro Higashi)](https://i.ytimg.com/vi/laGgFKh7xVc/hq2.jpg)
-![3. Reap the leg back while pushing the upper body down (Shintaro Higashi)](https://i.ytimg.com/vi/laGgFKh7xVc/hq3.jpg)
+![1. Grip sleeve and collar](needed)
+![2. Step beside their leg, chest to chest](needed)
+![3. Drive their weight onto the near heel](needed)
+![4. Reap the leg back while pushing the upper body down](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=laGgFKh7xVc
 ## Notes
 
 Video: "Osoto gari bjj stance" (Shintaro Higashi).
-
-Photos 1, 2, 3: frames from "Osoto gari bjj stance", Shintaro Higashi (https://www.youtube.com/watch?v=laGgFKh7xVc).

@@ -48,9 +48,10 @@ Keep your hips back and don't let them pull you in.
 
 ## Images
 
-![2. Wrap both legs around their waist (Training Jiu Jitsu)](https://i.ytimg.com/vi/5Sd98SryeG4/hq1.jpg)
-![3. Lock your ankles (Training Jiu Jitsu)](https://i.ytimg.com/vi/5Sd98SryeG4/hqdefault.jpg)
-![4. Break their posture, pulling them down onto you (Training Jiu Jitsu)](https://i.ytimg.com/vi/5Sd98SryeG4/hq2.jpg)
+![1. Pull them in with your grips](needed)
+![2. Wrap both legs around their waist](needed)
+![3. Lock your ankles](needed)
+![4. Break their posture](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=5Sd98SryeG4
 ## Notes
 
 Video: "BJJ Half Guard 101, How To Recover Closed Guard" (Training Jiu Jitsu).
-
-Photos 2, 3: frame and thumbnail from "BJJ Half Guard 101, How To Recover Closed Guard", Training Jiu Jitsu (https://www.youtube.com/watch?v=5Sd98SryeG4). Photo 4: frame from "BJJ Half Guard 101, How To Recover Closed Guard", Training Jiu Jitsu (https://www.youtube.com/watch?v=5Sd98SryeG4).

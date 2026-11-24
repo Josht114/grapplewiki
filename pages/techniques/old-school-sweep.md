@@ -47,9 +47,10 @@ Sprawl your trapped leg back and keep your weight forward.
 
 ## Images
 
-![1. Reach the other arm under and grab their ankle (Stephan Kesting)](https://i.ytimg.com/vi/-S1lhWAX2ps/hqdefault.jpg)
-![2. Come up to your knees (Stephan Kesting)](https://i.ytimg.com/vi/-S1lhWAX2ps/hq2.jpg)
-![3. Drive into them to tip them over (Stephan Kesting)](https://i.ytimg.com/vi/-S1lhWAX2ps/hq3.jpg)
+![1. Win the underhook and get on your side](needed)
+![2. Reach the other arm under and grab their ankle](needed)
+![3. Come up to your knees](needed)
+![4. Drive into them to tip them over](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=-S1lhWAX2ps
 ## Notes
 
 Video: "Roberto 'Gordo' Correa Teaches the Old School Half Guard Sweep" (Stephan Kesting).
-
-Photos 1, 2, 3: frames from "Roberto 'Gordo' Correa Teaches the Old School Half Guard Sweep", Stephan Kesting (https://www.youtube.com/watch?v=-S1lhWAX2ps).

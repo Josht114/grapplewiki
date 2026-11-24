@@ -49,9 +49,10 @@ Stopping pressure passes by keeping your knees between you and the opponent and 
 
 ## Images
 
-![1. From a pressure position, keep your chest heavy on them (Gracie Barra HQ - California)](https://i.ytimg.com/vi/9QuRpaS7inQ/hq1.jpg)
-![2. Swing around to the side, keeping your weight on them (Gracie Barra HQ - California)](https://i.ytimg.com/vi/9QuRpaS7inQ/hq2.jpg)
-![3. Drop into side control (Gracie Barra HQ - California)](https://i.ytimg.com/vi/9QuRpaS7inQ/hq3.jpg)
+![1. From a pressure position, keep your chest heavy on them](needed)
+![2. Take a long step back with your leg, away from their legs](needed)
+![3. Swing around to the side, keeping your weight on them](needed)
+![4. Drop into side control](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=9QuRpaS7inQ
 ## Notes
 
 Video: "Long Step Guard Pass" (Gracie Barra HQ - California).
-
-Photos 1, 2, 3: frames from "Long Step Guard Pass", Gracie Barra HQ - California (https://www.youtube.com/watch?v=9QuRpaS7inQ).

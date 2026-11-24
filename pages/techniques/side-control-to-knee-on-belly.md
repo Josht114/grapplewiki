@@ -49,10 +49,10 @@ Turn into them as they pop up and push the knee down toward your hips.
 
 ## Images
 
-![1. Start in side control with the far collar and near hip gripped (A-Team BJJ)](https://i.ytimg.com/vi/8uWanwYyfaU/hqdefault.jpg)
-![2. Pop up onto your toes, keeping your weight over them (Fighter Training)](https://i.ytimg.com/vi/iEpga9txZe8/hq3.jpg)
-![3. Slide the near knee onto their belly and post the far leg wide (Fighter Training)](https://i.ytimg.com/vi/iEpga9txZe8/hq1.jpg)
-![4. Knee on belly: shin across the stomach, grips kept (Fighter Training)](https://i.ytimg.com/vi/iEpga9txZe8/hqdefault.jpg)
+![1. Grip the far collar and near pants or hip](needed)
+![2. Pop up onto your toes](needed)
+![3. Slide your near knee onto their belly](needed)
+![4. Post the far leg wide for base](needed)
 
 ## Video
 
@@ -61,5 +61,3 @@ https://www.youtube.com/watch?v=8uWanwYyfaU
 ## Notes
 
 Video: "How to go from side control to Knee on belly" (A-Team BJJ).
-
-Photo 1: frame from "How to go from side control to Knee on belly", A-Team BJJ (https://www.youtube.com/watch?v=8uWanwYyfaU). Photos 2, 3, 4: frames from "Side Control to Knee On Belly Transition", Fighter Training (https://www.youtube.com/watch?v=iEpga9txZe8).

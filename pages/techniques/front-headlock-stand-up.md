@@ -48,9 +48,10 @@ Keep their head down with your chest and stay square in front of them.
 
 ## Images
 
-![1. Hand-fight the arm around your neck (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/8zYqR57F8PE/hq1.jpg)
-![1. Under the front headlock, hand-fighting the arm on your neck (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/8zYqR57F8PE/hqdefault.jpg)
-![2. Square your hips under you (Matt Arroyo Jiu Jitsu)](https://i.ytimg.com/vi/8zYqR57F8PE/hq2.jpg)
+![1. Hand-fight the arm around your neck](needed)
+![2. Square your hips under you](needed)
+![3. Drive your head up into their chest](needed)
+![4. Step back and stand in your stance](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=8zYqR57F8PE
 ## Notes
 
 Video: "Front Headlock Escapes By Matt Arroyo" (Matt Arroyo Jiu Jitsu).
-
-Photos 1, 2: frames from "Front Headlock Escapes By Matt Arroyo", Matt Arroyo Jiu Jitsu (https://www.youtube.com/watch?v=8zYqR57F8PE). Photo 1: thumbnail from "Front Headlock Escapes By Matt Arroyo", Matt Arroyo Jiu Jitsu (https://www.youtube.com/watch?v=8zYqR57F8PE).

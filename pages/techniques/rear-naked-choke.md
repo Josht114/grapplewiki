@@ -47,9 +47,10 @@ Hand-fight the choking arm with both hands and tuck your chin.
 
 ## Images
 
-![1. From the seatbelt, slide the choking arm under their chin so the elbow lines up with the chin (Rez Jiujitsu)](https://i.ytimg.com/vi/svS5_yTn7M0/hq1.jpg)
-![2. Grab your own biceps with the choking hand (Rez Jiujitsu)](https://i.ytimg.com/vi/svS5_yTn7M0/hq2.jpg)
-![3. Squeeze your elbows together and expand your chest (Rez Jiujitsu)](https://i.ytimg.com/vi/svS5_yTn7M0/hq3.jpg)
+![1. From the seatbelt, slide the choking arm under their chin so the elbow lines up with the chin](needed)
+![2. Grab your own biceps with the choking hand](needed)
+![3. Put the other hand behind their head](needed)
+![4. Squeeze your elbows together and expand your chest](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=svS5_yTn7M0
 Hand fighting is the battle. Win the [[Grip fighting]] first, and keep your hooks or body triangle so they can't turn in.
 
 Video: "Rear Naked Choke Tutorial" (Rez Jiujitsu).
-
-Photos 1, 2, 3: frames from "Rear Naked Choke Tutorial", Rez Jiujitsu (https://www.youtube.com/watch?v=svS5_yTn7M0).

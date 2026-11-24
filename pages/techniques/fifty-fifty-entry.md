@@ -44,3 +44,10 @@ Keep your leg out of their legs, or match their entry so you're not caught under
 1. Keep your weight on top and your knee pointing away.
 2. Pummel your leg free as they sit.
 3. If they enter, hide your heel and grip their foot to even it up.
+
+## Images
+
+![1. From the top of single leg X, sit down next to their trapped leg](needed)
+![2. Swing your outside leg over their leg and across their hip](needed)
+![3. Triangle your legs around their leg](needed)
+![4. Hug the foot and settle in 50/50](needed)

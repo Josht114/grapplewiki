@@ -48,9 +48,10 @@ Base out wide and post your free hand on the side they fall to.
 
 ## Images
 
-![1. Underhook on one side, sleeve or overhook on the other (The B-Team)](https://i.ytimg.com/vi/9M0XeJN9dX4/hq1.jpg)
-![2. Pull them forward so their weight is on you (The B-Team)](https://i.ytimg.com/vi/9M0XeJN9dX4/hq3.jpg)
-![4. Elevate with the hook on the underhook side and follow them over (The B-Team)](https://i.ytimg.com/vi/9M0XeJN9dX4/hqdefault.jpg)
+![1. Underhook on one side, sleeve or overhook on the other](needed)
+![2. Pull them forward so their weight is on you](needed)
+![3. Fall to the overhook side](needed)
+![4. Elevate with the hook on the underhook side and follow them over](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=9M0XeJN9dX4
 ## Notes
 
 Video: "An Introduction to Butterfly Guard with Nicky Ryan" (The B-Team).
-
-Photos 1, 2, 4: frames from "An Introduction to Butterfly Guard with Nicky Ryan", The B-Team (https://www.youtube.com/watch?v=9M0XeJN9dX4).

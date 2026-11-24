@@ -48,9 +48,10 @@ Keep your knees together and stop the kneecap passing their hips.
 
 ## Images
 
-![1. Isolate one leg and slide your knee between their legs (Michael Currier BJJ)](https://i.ytimg.com/vi/fntuntEVKEs/hq1.jpg)
-![2. Roll or fall to the side, hugging the leg (Michael Currier BJJ)](https://i.ytimg.com/vi/fntuntEVKEs/hq2.jpg)
-![3. Pinch the knees, pull the foot to your chest and extend your hips (Michael Currier BJJ)](https://i.ytimg.com/vi/fntuntEVKEs/hq3.jpg)
+![1. Isolate one leg and slide your knee between their legs](needed)
+![2. Roll or fall to the side, hugging the leg](needed)
+![3. Get the kneecap past your hips](needed)
+![4. Pinch the knees, pull the foot to your chest and extend your hips](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=fntuntEVKEs
 ## Notes
 
 Video: "Kneebar basics from half guard top" (Michael Currier BJJ).
-
-Photos 1, 2, 3: frames from "Kneebar basics from half guard top", Michael Currier BJJ (https://www.youtube.com/watch?v=fntuntEVKEs).

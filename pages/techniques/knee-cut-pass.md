@@ -50,9 +50,10 @@ Stopping pressure passes by keeping your knees between you and the opponent and 
 
 ## Images
 
-![1. Control the near leg's pant or knee (JonThomasBJJ)](https://i.ytimg.com/vi/P9NWlCDSV4A/hq1.jpg)
-![2. Cut your knee across their thigh toward the mat (JonThomasBJJ)](https://i.ytimg.com/vi/P9NWlCDSV4A/hq2.jpg)
-![3. Free the trailing foot and settle into side control (JonThomasBJJ)](https://i.ytimg.com/vi/P9NWlCDSV4A/hq3.jpg)
+![1. Control the near leg's pant or knee](needed)
+![2. Cut your knee across their thigh toward the mat](needed)
+![3. Get an underhook or crossface](needed)
+![4. Free the trailing foot and settle into side control](needed)
 
 ## Video
 
@@ -61,5 +62,3 @@ https://www.youtube.com/watch?v=P9NWlCDSV4A
 ## Notes
 
 Video: "How to Force The Knee Cut Pass vs Any Guard" (JonThomasBJJ).
-
-Photos 1, 2, 3: frames from "How to Force The Knee Cut Pass vs Any Guard", JonThomasBJJ (https://www.youtube.com/watch?v=P9NWlCDSV4A).

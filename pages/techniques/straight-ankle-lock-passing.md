@@ -47,9 +47,10 @@ Flex your foot and sit up into them before they fall back.
 
 ## Images
 
-![1. Trap their foot in your armpit as they hook in (Fat Snake Jiu Jitsu)](https://i.ytimg.com/vi/kH9Fepg2NXI/hq2.jpg)
-![3. Fall back to the side, keeping your knees pinched on their leg (Fat Snake Jiu Jitsu)](https://i.ytimg.com/vi/kH9Fepg2NXI/hq3.jpg)
-![4. Arch back to finish (Gorilla BJJ Academy)](https://i.ytimg.com/vi/jhWxu6NejoQ/hqdefault.jpg)
+![1. Trap their foot in your armpit as they hook in](needed)
+![2. Blade your forearm under their Achilles](needed)
+![3. Fall back to the side, keeping your knees pinched on their leg](needed)
+![4. Arch back to finish](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=kH9Fepg2NXI
 ## Notes
 
 Video: "Straight Ankle Lock from Standing Guard Pass" (Fat Snake Jiu Jitsu).
-
-Photos 1, 3: frames from "Straight Ankle Lock from Standing Guard Pass", Fat Snake Jiu Jitsu (https://www.youtube.com/watch?v=kH9Fepg2NXI). Photo 4: thumbnail from "BJJ Basics • Straight Ankle Lock", Gorilla BJJ Academy (https://www.youtube.com/watch?v=jhWxu6NejoQ).

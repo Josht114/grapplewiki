@@ -104,10 +104,12 @@
   // Your own photos live in the project's images/ folder and are written as "images/<file>" (same rule as server.js).
   const LOCAL_IMAGE_RE = /^images\/(?:[A-Za-z0-9_-](?:[A-Za-z0-9._-]|%20)*\/)*[A-Za-z0-9_-](?:[A-Za-z0-9._-]|%20)*\.(?:jpe?g|png|gif|webp|avif)$/i;
   // Image lines look like "![Caption](https://...)" or "![Caption](images/file.jpg)"; a bare URL or path also works.
+  // "![Caption](needed)" is a placeholder for a photo the user still has to find: drawn as an empty "Photo needed" box.
   function imageList(lines) {
     return (lines || []).map(l => {
       const m = String(l).match(/^!\[([^\]]*)\]\((\S+?)\)$/);
       const raw = m ? m[2] : String(l).trim();
+      if (m && raw === "needed") return { needed: true, caption: m[1].trim() };
       const src = LOCAL_IMAGE_RE.test(raw) ? raw : safeUrl(raw);
       return src ? { src, caption: m ? m[1].trim() : "" } : null;
     }).filter(Boolean);
@@ -276,7 +278,9 @@
     if (p.breakdown) html += `<h2>Detailed breakdown</h2><div class="breakdown">${breakdownHtml(p.breakdown)}</div>`;
     if (p.kind === "technique") html += defenseBlock(p);
     const imgs = imageList(p.images);
-    if (imgs.length) html += `<h2>Images</h2><div class="gallery">${imgs.map(im => `<figure><a href="${esc(im.src)}" target="_blank" rel="noopener"><img src="${esc(im.src)}" alt="${esc(im.caption || p.name)}" loading="lazy" referrerpolicy="no-referrer"></a>${im.caption ? `<figcaption>${wikiInline(im.caption)}</figcaption>` : ""}</figure>`).join("")}</div>`;
+    if (imgs.length) html += `<h2>Images</h2><div class="gallery">${imgs.map(im => im.needed
+      ? `<figure class="needed"><div class="photo-needed" title="Save the photo in images/${esc(p.id)}/ and replace (needed) with its path in the Images section"><span aria-hidden="true">📷</span>Photo needed</div>${im.caption ? `<figcaption>${wikiInline(im.caption)}</figcaption>` : ""}</figure>`
+      : `<figure><a href="${esc(im.src)}" target="_blank" rel="noopener"><img src="${esc(im.src)}" alt="${esc(im.caption || p.name)}" loading="lazy" referrerpolicy="no-referrer"></a>${im.caption ? `<figcaption>${wikiInline(im.caption)}</figcaption>` : ""}</figure>`).join("")}</div>`;
     // one video URL per line: YouTube links embed, other links are listed
     const vids = String(p.video || "").split(/\s+/).filter(Boolean);
     const vidHtml = vids.map((u, i) => {
@@ -1537,7 +1541,7 @@
           <label class="tech-only"${isTech ? "" : " hidden"}>Detailed breakdown <small>("### Heading" lines, "- bullet" lines, plain paragraphs)</small><textarea name="breakdown" rows="10">${esc(p.breakdown || "")}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense <small>(how to stop this move)</small><textarea name="defense" rows="3">${esc(p.defense || "")}</textarea></label>
           <label class="tech-only"${isTech ? "" : " hidden"}>Defense steps <small>(one per line)</small><textarea name="defenseSteps" rows="4">${esc((p.defenseSteps || []).join("\n"))}</textarea></label>
-          <label>Images <small>(one per line: ![Caption](https://image-url) or, for your own photos in the images folder, ![Caption](images/file.jpg))</small><textarea name="images" rows="3">${esc((p.images || []).join("\n"))}</textarea></label>
+          <label>Images <small>(one per line: ![Caption](images/folder/file.jpg) for your own photos in the images folder, ![Caption](https://image-url), or ![Caption](needed) for a photo you still need to find)</small><textarea name="images" rows="3">${esc((p.images || []).join("\n"))}</textarea></label>
           <label>Videos <small>(one URL per line; YouTube links embed)</small><textarea name="video" rows="2">${esc(p.video || "")}</textarea></label>
           <label>Notes <small>(link other pages with [[Page name]])</small><textarea name="notes" rows="6">${esc(p.notes || "")}</textarea></label>
           <p class="form-error" id="formError" role="alert" hidden></p>
@@ -1693,7 +1697,7 @@
     const a = e.target.closest(".gallery a");
     if (!a) return;
     e.preventDefault();
-    const figs = [...a.closest(".gallery").querySelectorAll("figure")];
+    const figs = [...a.closest(".gallery").querySelectorAll("figure:not(.needed)")];
     lbItems = figs.map(f => ({ src: f.querySelector("img").src, alt: f.querySelector("img").alt, caption: f.querySelector("figcaption") ? f.querySelector("figcaption").innerHTML : "" }));
     lbShow(figs.indexOf(a.closest("figure")));
     viewer.showModal();

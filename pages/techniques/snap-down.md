@@ -49,9 +49,10 @@ Keep your head up and your posture back.
 
 ## Images
 
-![1. Collar tie and triceps control (BJJ Fanatics)](https://i.ytimg.com/vi/gyf7Oh9lCiI/hq1.jpg)
-![2. Push into them so they push back (BJJ Fanatics)](https://i.ytimg.com/vi/gyf7Oh9lCiI/hq2.jpg)
-![3. Snap the head down with your body weight (BJJ Fanatics)](https://i.ytimg.com/vi/gyf7Oh9lCiI/hqdefault.jpg)
+![1. Collar tie and triceps control](needed)
+![2. Push into them so they push back](needed)
+![3. Snap the head down with your body weight](needed)
+![4. Sprawl into the [[Top front headlock]]](needed)
 
 ## Video
 
@@ -60,5 +61,3 @@ https://www.youtube.com/watch?v=gyf7Oh9lCiI
 ## Notes
 
 Video: "Inside Tie Side to Side Snap Downs by John Danaher" (BJJ Fanatics).
-
-Photos 1, 2, 3: frames from "Inside Tie Side to Side Snap Downs by John Danaher", BJJ Fanatics (https://www.youtube.com/watch?v=gyf7Oh9lCiI).

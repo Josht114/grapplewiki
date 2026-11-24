@@ -51,9 +51,10 @@ Keep your hips square and your weight back so they can't tip you, and clear the 
 
 ## Images
 
-![1. De La Riva hook in, gripping their ankle (Gemini Fitness & Combat)](https://i.ytimg.com/vi/-P3zbc_7k7Y/hq1.jpg)
-![3. Invert under them, using the hook to steer their hips (Stephan Kesting)](https://i.ytimg.com/vi/A6rFk8pUCIc/hqdefault.jpg)
-![4. Come up behind them and take the back (Vital Jiu Jitsu)](https://i.ytimg.com/vi/5MgDf-1bEpo/hq2.jpg)
+![1. DLR hook with a belt or pants grip on the far side](needed)
+![2. Off-balance them so they sit](needed)
+![3. Invert, using the DLR hook to steer their hips](needed)
+![4. Come up behind them and take the back](needed)
 
 ## Video
 
@@ -62,5 +63,3 @@ https://www.youtube.com/watch?v=A6rFk8pUCIc
 ## Notes
 
 Video: "How To Do The Berimbolo The Easiest Way" (Stephan Kesting).
-
-Photo 1: frame from "BJJ FUNDAMENTAL - HOW TO DO A BERIMBOLO", Gemini Fitness & Combat (https://www.youtube.com/watch?v=-P3zbc_7k7Y). Photo 3: thumbnail from "How To Do The Berimbolo The Easiest Way", Stephan Kesting (https://www.youtube.com/watch?v=A6rFk8pUCIc). Photo 4: frame from "Beginners' Guide to the Berimbolo", Vital Jiu Jitsu (https://www.youtube.com/watch?v=5MgDf-1bEpo).

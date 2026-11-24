@@ -47,9 +47,10 @@ Follow and take the back.
 
 ## Images
 
-![1. Push the knee down (The BJJ Project)](https://i.ytimg.com/vi/00oDYDml8ac/hq1.jpg)
-![2. Turn onto your side (The BJJ Project)](https://i.ytimg.com/vi/00oDYDml8ac/hq2.jpg)
-![3. Come up to your knees (The BJJ Project)](https://i.ytimg.com/vi/00oDYDml8ac/hq3.jpg)
+![1. Push the knee down](needed)
+![2. Turn onto your side](needed)
+![3. Come up to your knees](needed)
+![4. Elbows tight](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=00oDYDml8ac
 ## Notes
 
 Video: "Surviving Knee On Belly - Objective and Mechanics" (The BJJ Project).
-
-Photos 1, 2, 3: frames from "Surviving Knee On Belly - Objective and Mechanics", The BJJ Project (https://www.youtube.com/watch?v=00oDYDml8ac).

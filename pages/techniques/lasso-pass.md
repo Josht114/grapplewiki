@@ -47,9 +47,10 @@ Keep the lasso deep and your sleeve grip tight so they can't free their arm.
 
 ## Images
 
-![1. In their lasso: grip the lassoing leg (GRACIEMAG)](https://i.ytimg.com/vi/RmeptYbx1to/hq1.jpg)
-![3. Arm free, pinning the leg as you step (BJJ Fanatics)](https://i.ytimg.com/vi/A6a567XyypU/hq2.jpg)
-![4. Pin the leg and pass to side control (BJJ Fanatics)](https://i.ytimg.com/vi/A6a567XyypU/hq3.jpg)
+![1. Grip their lasso foot or knee](needed)
+![2. Turn your arm inward to loosen the lasso](needed)
+![3. Pull your arm free and step back](needed)
+![4. Pin the leg and step around to side control](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=RmeptYbx1to
 ## Notes
 
 Video: "HOW-TO: Pass the lasso guard with Guilherme Mendes" (GRACIEMAG).
-
-Photo 1: frame from "HOW-TO: Pass the lasso guard with Guilherme Mendes", GRACIEMAG (https://www.youtube.com/watch?v=RmeptYbx1to). Photos 3, 4: frames from "Lasso Guard Pass with Lucas "Hulk" Barbosa", BJJ Fanatics (https://www.youtube.com/watch?v=A6a567XyypU).

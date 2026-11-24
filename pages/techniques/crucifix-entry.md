@@ -51,9 +51,10 @@ Keep your elbows glued to your knees so an arm can't be hooked.
 
 ## Images
 
-![1. Hook their near arm with your inside leg (JeanJacquesMachado)](https://i.ytimg.com/vi/IVcFrF5nDUE/hqdefault.jpg)
-![2. Trap it with your other leg too (JeanJacquesMachado)](https://i.ytimg.com/vi/IVcFrF5nDUE/hq2.jpg)
-![3. Roll or slide onto your side (JeanJacquesMachado)](https://i.ytimg.com/vi/IVcFrF5nDUE/hq3.jpg)
+![1. Hook their near arm with your inside leg](needed)
+![2. Trap it with your other leg too](needed)
+![3. Roll or slide onto your side](needed)
+![4. Control their other arm with your arm](needed)
 
 ## Video
 
@@ -62,5 +63,3 @@ https://www.youtube.com/watch?v=IVcFrF5nDUE
 ## Notes
 
 Video: "The primer to entering the crucifix from turtle" (JeanJacquesMachado).
-
-Photos 1, 2, 3: frames from "The primer to entering the crucifix from turtle", JeanJacquesMachado (https://www.youtube.com/watch?v=IVcFrF5nDUE).

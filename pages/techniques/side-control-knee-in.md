@@ -47,9 +47,10 @@ Block the near hip with your knee and keep your weight heavy.
 
 ## Images
 
-![1. Frame on the neck and hip (FIT Jiu Jitsu Jordan/ Samy Aljamal)](https://i.ytimg.com/vi/1zY2DT7ufKM/hq1.jpg)
-![2. Bridge into them (FIT Jiu Jitsu Jordan/ Samy Aljamal)](https://i.ytimg.com/vi/1zY2DT7ufKM/hq2.jpg)
-![3. Shrimp away and slide your knee into the gap (FIT Jiu Jitsu Jordan/ Samy Aljamal)](https://i.ytimg.com/vi/1zY2DT7ufKM/hq3.jpg)
+![1. Frame on the neck and hip](needed)
+![2. Bridge into them](needed)
+![3. Shrimp away and slide your knee into the gap](needed)
+![4. Trap their leg to recover half guard](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=1zY2DT7ufKM
 ## Notes
 
 Video: "side control: escape to half guard" (FIT Jiu Jitsu Jordan/ Samy Aljamal).
-
-Photos 1, 2, 3: frames from "side control: escape to half guard", FIT Jiu Jitsu Jordan/ Samy Aljamal (https://www.youtube.com/watch?v=1zY2DT7ufKM).

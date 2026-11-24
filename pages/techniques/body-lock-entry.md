@@ -48,9 +48,10 @@ Win the underhooks and keep your hips back.
 
 ## Images
 
-![1. Pummel for underhooks (Energia Martial Arts)](https://i.ytimg.com/vi/MS8CBTho6lM/hq1.jpg)
-![2. Lock your hands low around their waist (Energia Martial Arts)](https://i.ytimg.com/vi/MS8CBTho6lM/hq2.jpg)
-![3. Arms locked around their waist, head tight to their chest (TeachMeGrappling Coach Brian)](https://i.ytimg.com/vi/EVVdF8YPy1Y/hq1.jpg)
+![1. Pummel for underhooks](needed)
+![2. Step in close with your head tight to their chest](needed)
+![3. Lock your hands low around their waist](needed)
+![4. Pull their hips into you](needed)
 
 ## Video
 
@@ -59,5 +60,3 @@ https://www.youtube.com/watch?v=MS8CBTho6lM
 ## Notes
 
 Video: "Bodylock takedowns for BEGINNERS" (Energia Martial Arts).
-
-Photos 1, 2: frames from "Bodylock takedowns for BEGINNERS", Energia Martial Arts (https://www.youtube.com/watch?v=MS8CBTho6lM). Photo 3: frame from "Basic CLINCH Bodylock Takedowns for EVERYONE!", TeachMeGrappling Coach Brian (https://www.youtube.com/watch?v=EVVdF8YPy1Y).

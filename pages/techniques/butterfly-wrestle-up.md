@@ -47,9 +47,10 @@ Sprawl your hips back and crossface.
 
 ## Images
 
-![1. Get an underhook (Ben Kool Tech)](https://i.ytimg.com/vi/odfKlQq8Lzg/hqdefault.jpg)
-![2. Come up to your knees on a single leg (Ben Kool Tech)](https://i.ytimg.com/vi/odfKlQq8Lzg/hq2.jpg)
-![3. Come up to your knees on a single leg (Masterskya Jiu Jitsu)](https://i.ytimg.com/vi/Hwtlh5D8BXs/hqdefault.jpg)
+![1. Get an underhook](needed)
+![2. Post on your free hand](needed)
+![3. Come up to your knees on a single leg](needed)
+![4. Drive through to finish on top](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=odfKlQq8Lzg
 ## Notes
 
 Video: "Easy Wrestle Up From Butterfly Guard" (Ben Kool Tech).
-
-Photos 1, 2: frames from "Easy Wrestle Up From Butterfly Guard", Ben Kool Tech (https://www.youtube.com/watch?v=odfKlQq8Lzg). Photo 3: thumbnail from "Masterskya BJJ NYC - Single Leg & Double Leg Wrestle Up", Masterskya Jiu Jitsu (https://www.youtube.com/watch?v=Hwtlh5D8BXs).

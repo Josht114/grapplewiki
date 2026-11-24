@@ -47,9 +47,10 @@ Stay heavy and follow them to the back or side control.
 
 ## Images
 
-![1. Frame on their hips (two twelve)](https://i.ytimg.com/vi/m3tgJL1Hh14/hq1.jpg)
-![2. Turn onto your side (two twelve)](https://i.ytimg.com/vi/m3tgJL1Hh14/hq2.jpg)
-![4. End in turtle with your elbows tight to your knees (two twelve)](https://i.ytimg.com/vi/m3tgJL1Hh14/hqdefault.jpg)
+![1. Frame on their hips](needed)
+![2. Turn onto your side](needed)
+![3. Come up to your knees](needed)
+![4. End in turtle with your elbows tight to your knees](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=m3tgJL1Hh14
 ## Notes
 
 Video: "25 Core Escapes Lesson 5    North South Escape to Knees" (two twelve).
-
-Photos 1, 2, 4: frames from "25 Core Escapes Lesson 5    North South Escape to Knees", two twelve (https://www.youtube.com/watch?v=m3tgJL1Hh14).

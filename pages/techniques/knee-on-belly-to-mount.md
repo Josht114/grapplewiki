@@ -44,9 +44,9 @@ Push the knee toward your hips and turn in, so there's no room to step over.
 
 ## Images
 
-![1. From knee on belly, wait for them to push your knee or turn away (Great Grappling)](https://i.ytimg.com/vi/hboiOvqegus/hqdefault.jpg)
-![2. Slide your knee across their belly (Great Grappling)](https://i.ytimg.com/vi/hboiOvqegus/hq2.jpg)
-![3. Step your far leg over and settle into mount (Great Grappling)](https://i.ytimg.com/vi/hboiOvqegus/hq3.jpg)
+![1. Wait for them to push your knee or turn away](needed)
+![2. Slide your knee across their belly](needed)
+![3. Step your far leg over and settle into mount](needed)
 
 ## Video
 
@@ -55,5 +55,3 @@ https://www.youtube.com/watch?v=hboiOvqegus
 ## Notes
 
 Video: "Knee on Belly Transition: Knee on Belly to Mount" (Great Grappling).
-
-Photos 1, 2, 3: frames from "Knee on Belly Transition: Knee on Belly to Mount", Great Grappling (https://www.youtube.com/watch?v=hboiOvqegus).

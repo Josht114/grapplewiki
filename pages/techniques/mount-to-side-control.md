@@ -47,9 +47,10 @@ Keep moving: recover guard as they come off mount.
 
 ## Images
 
-![1. Feel them turn onto their side toward you (MMA Leech)](https://i.ytimg.com/vi/KsmXhupkqZU/hq1.jpg)
-![2. Step one leg back to the mat (MMA Leech)](https://i.ytimg.com/vi/KsmXhupkqZU/hq2.jpg)
-![3. Slide off to the side, keeping your chest on them (MMA Leech)](https://i.ytimg.com/vi/KsmXhupkqZU/hq3.jpg)
+![1. Feel them turn onto their side toward you](needed)
+![2. Step one leg back to the mat](needed)
+![3. Slide off to the side, keeping your chest on them](needed)
+![4. Get the crossface and underhook](needed)
 
 ## Video
 
@@ -58,5 +59,3 @@ https://www.youtube.com/watch?v=KsmXhupkqZU
 ## Notes
 
 Video: "Mount Retention Against The Elbow Escape" (MMA Leech).
-
-Photos 1, 2, 3: frames from "Mount Retention Against The Elbow Escape", MMA Leech (https://www.youtube.com/watch?v=KsmXhupkqZU).
