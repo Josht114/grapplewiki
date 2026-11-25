@@ -188,7 +188,6 @@
     "bottom-side-control": {
       "transitions": [
         "side-control-escape-shrimp",
-        "side-control-knee-in",
         "side-control-turn-to-turtle",
         "side-control-bridge-roll"
       ]
