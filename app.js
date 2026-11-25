@@ -1213,7 +1213,7 @@
     const status = document.getElementById("sgStatus");
     const currentOrder = () => [...list.children].map(li => li.dataset.id);
     let saveTimer = null;
-    function save() {
+    function save(now) {
       // keep moves that are out of the game for now at their saved place, after the visible ones
       const visible = currentOrder();
       const rest = ((BASE.studyGuide && BASE.studyGuide.order) || []).filter(id => !visible.includes(id));
@@ -1228,7 +1228,7 @@
       saveTimer = setTimeout(async () => {
         try { await apiCall("PUT", "/api/study-guide", { order, done }); status.textContent = "Saved"; }
         catch (e) { status.textContent = "Couldn't save: " + e.message; }
-      }, 300);
+      }, now ? 0 : 300); // ticks save straight away; re-orders wait a moment so a run of ↑ ↓ clicks saves once
     }
 
     // tick boxes: mark a move done
@@ -1237,7 +1237,7 @@
       if (!box) return;
       box.closest("li").classList.toggle("done", box.checked);
       document.getElementById("sgDone").textContent = `${list.querySelectorAll("li.done").length} of ${list.children.length} done`;
-      save();
+      save(true);
     });
 
     // up / down buttons
